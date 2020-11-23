@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.opentech</groupId>
+    <artifactId>acsemv3ds-ProxyApi</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>
+            server
+        </module>
+        <module>
+            client
+        </module>
+    </modules>
+
+    <distributionManagement>
+        <repository>
+            <id>archiva.internal</id>
+            <name>Opentech Internal Repository</name>
+            <url>http://maven.opentech.com/repository/internal/</url>
+        </repository>
+        <snapshotRepository>
+            <id>archiva.snapshots</id>
+            <name>Archiva Managed Snapshot Repository</name>
+            <url>http://maven.opentech.com/repository/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <scm>
+        <developerConnection>scm:git:ssh://git@svn/~/git/acsemv3ds-ProxyApi</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <repositories>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </releases>
+            <id>Opentech Internal Repository</id>
+            <name>internal</name>
+            <url>http://maven.opentech.com/repository/internal</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </releases>
+            <id>Opentech Snapshot Repository</id>
+            <name>internal</name>
+            <url>http://maven.opentech.com/repository/snapshots/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.1</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

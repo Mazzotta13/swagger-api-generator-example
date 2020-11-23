@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>acsemv3ds-ProxyApi-Server</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <parent>
+        <groupId>com.opentech</groupId>
+        <artifactId>acsemv3ds-ProxyApi</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-codegen-maven-plugin</artifactId> <!-- vedi nota su openapi 3 -->
+                <version>2.3.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <configHelp>false</configHelp> <!-- Mettere a true per stampare help -->
+                            <language>java</language>
+                            <inputSpec>${project.basedir}/src/main/resources/swagger_api.json</inputSpec>  <!-- Riferimento a file swagger -->
+                            <output>${project.basedir}/../client</output>
+                            <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
+                            <artifactVersion>${project.version}</artifactVersion>
+                            <groupId>${project.groupId}</groupId>
+                            <addCompileSourceRoot>false</addCompileSourceRoot>
+                            <library>resttemplate</library>
+                            <apiPackage>com.opentech.acsemv3dsProxyApiClient.api</apiPackage>
+                            <modelPackage>com.opentech.acsemv3dsProxyApiClient.model</modelPackage>
+                            <invokerPackage>com.opentech.acsemv3dsProxyApiClient</invokerPackage>
+                            <configOptions>
+                                <hideGenerationTimestamp>true</hideGenerationTimestamp>
+                                <dateLibrary>legacy</dateLibrary>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.1</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
