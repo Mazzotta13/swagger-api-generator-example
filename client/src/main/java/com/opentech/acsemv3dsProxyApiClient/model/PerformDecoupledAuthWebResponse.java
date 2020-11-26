@@ -14,38 +14,12 @@
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 /**
  * PerformDecoupledAuthWebResponse
  */
 
 public class PerformDecoupledAuthWebResponse {
-  @JsonProperty("setupCompletedSuccessfully")
-  private Boolean setupCompletedSuccessfully = null;
-
-  public PerformDecoupledAuthWebResponse setupCompletedSuccessfully(Boolean setupCompletedSuccessfully) {
-    this.setupCompletedSuccessfully = setupCompletedSuccessfully;
-    return this;
-  }
-
-   /**
-   * Get setupCompletedSuccessfully
-   * @return setupCompletedSuccessfully
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean isSetupCompletedSuccessfully() {
-    return setupCompletedSuccessfully;
-  }
-
-  public void setSetupCompletedSuccessfully(Boolean setupCompletedSuccessfully) {
-    this.setupCompletedSuccessfully = setupCompletedSuccessfully;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,13 +29,12 @@ public class PerformDecoupledAuthWebResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PerformDecoupledAuthWebResponse performDecoupledAuthWebResponse = (PerformDecoupledAuthWebResponse) o;
-    return Objects.equals(this.setupCompletedSuccessfully, performDecoupledAuthWebResponse.setupCompletedSuccessfully);
+    return true;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(setupCompletedSuccessfully);
+    return Objects.hash();
   }
 
 
@@ -70,7 +43,6 @@ public class PerformDecoupledAuthWebResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class PerformDecoupledAuthWebResponse {\n");
     
-    sb.append("    setupCompletedSuccessfully: ").append(toIndentedString(setupCompletedSuccessfully)).append("\n");
     sb.append("}");
     return sb.toString();
   }
