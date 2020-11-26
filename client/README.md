@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.opentech</groupId>
     <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.opentech:acsemv3ds-ProxyApi-Client:1.0-SNAPSHOT"
+compile "com.opentech:acsemv3ds-ProxyApi-Client:1.1-SNAPSHOT"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/acsemv3ds-ProxyApi-Client-1.0-SNAPSHOT.jar
+* target/acsemv3ds-ProxyApi-Client-1.1-SNAPSHOT.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -106,6 +106,9 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [AReq](docs/AReq.md)
+ - [AppChallengeInfo](docs/AppChallengeInfo.md)
+ - [BrowserChallengeInfo](docs/BrowserChallengeInfo.md)
+ - [CResInfo](docs/CResInfo.md)
  - [DetokenizeWebRequest](docs/DetokenizeWebRequest.md)
  - [DetokenizeWebResponse](docs/DetokenizeWebResponse.md)
  - [EvaluateAuthenticationWebRequest](docs/EvaluateAuthenticationWebRequest.md)
@@ -114,6 +117,7 @@ Class | Method | HTTP request | Description
  - [EvaluateChallengeStepAuthenticatorWebResponse](docs/EvaluateChallengeStepAuthenticatorWebResponse.md)
  - [EvaluateChallengeStepCMWebRequest](docs/EvaluateChallengeStepCMWebRequest.md)
  - [EvaluateChallengeStepCMWebResponse](docs/EvaluateChallengeStepCMWebResponse.md)
+ - [ExpectedChallengeType](docs/ExpectedChallengeType.md)
  - [Extension](docs/Extension.md)
  - [InitChallengeAuthenticatorWebRequest](docs/InitChallengeAuthenticatorWebRequest.md)
  - [InitChallengeAuthenticatorWebResponse](docs/InitChallengeAuthenticatorWebResponse.md)
@@ -124,11 +128,12 @@ Class | Method | HTTP request | Description
  - [PerformDecoupledAuthWebRequest](docs/PerformDecoupledAuthWebRequest.md)
  - [PerformDecoupledAuthWebResponse](docs/PerformDecoupledAuthWebResponse.md)
  - [Phone](docs/Phone.md)
- - [RenderingType](docs/RenderingType.md)
  - [ResendChallengeWebRequest](docs/ResendChallengeWebRequest.md)
  - [ResendChallengeWebResponse](docs/ResendChallengeWebResponse.md)
  - [SdkEphemPubKey](docs/SdkEphemPubKey.md)
+ - [ThreeDSAcsRenderingType](docs/ThreeDSAcsRenderingType.md)
  - [ThreeDSCardholderAccountInfo](docs/ThreeDSCardholderAccountInfo.md)
+ - [ThreeDSImage](docs/ThreeDSImage.md)
  - [ThreeDSMerchantRiskIndicator](docs/ThreeDSMerchantRiskIndicator.md)
  - [ThreeDSRequestorAuthInfo](docs/ThreeDSRequestorAuthInfo.md)
  - [ThreeDSRequestorPriorAuthInfo](docs/ThreeDSRequestorPriorAuthInfo.md)
@@ -136,8 +141,7 @@ Class | Method | HTTP request | Description
  - [ThreeRIInfo](docs/ThreeRIInfo.md)
  - [TokenizeWebRequest](docs/TokenizeWebRequest.md)
  - [TokenizeWebResponse](docs/TokenizeWebResponse.md)
- - [Transaction](docs/Transaction.md)
- - [TransactionInformation](docs/TransactionInformation.md)
+ - [TransactionInfo](docs/TransactionInfo.md)
 
 
 ## Documentation for Authorization
