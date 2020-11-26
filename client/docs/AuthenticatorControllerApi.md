@@ -148,7 +148,7 @@ No authorization required
 
 <a name="performDecoupledAuthenticationUsingPOST"></a>
 # **performDecoupledAuthenticationUsingPOST**
-> PerformDecoupledAuthWebResponse performDecoupledAuthenticationUsingPOST(issuerCode, performDecoupledAuthWebRequest)
+> ResponseEntity performDecoupledAuthenticationUsingPOST(issuerCode, performDecoupledAuthWebRequest)
 
 performDecoupledAuthentication
 
@@ -163,7 +163,7 @@ AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
 String issuerCode = "issuerCode_example"; // String | issuer-code
 PerformDecoupledAuthWebRequest performDecoupledAuthWebRequest = new PerformDecoupledAuthWebRequest(); // PerformDecoupledAuthWebRequest | performDecoupledAuthWebRequest
 try {
-    PerformDecoupledAuthWebResponse result = apiInstance.performDecoupledAuthenticationUsingPOST(issuerCode, performDecoupledAuthWebRequest);
+    ResponseEntity result = apiInstance.performDecoupledAuthenticationUsingPOST(issuerCode, performDecoupledAuthWebRequest);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthenticatorControllerApi#performDecoupledAuthenticationUsingPOST");
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PerformDecoupledAuthWebResponse**](PerformDecoupledAuthWebResponse.md)
+[**ResponseEntity**](ResponseEntity.md)
 
 ### Authorization
 

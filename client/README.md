@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.opentech</groupId>
     <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.opentech:acsemv3ds-ProxyApi-Client:1.1-SNAPSHOT"
+compile "com.opentech:acsemv3ds-ProxyApi-Client:1.2-SNAPSHOT"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/acsemv3ds-ProxyApi-Client-1.1-SNAPSHOT.jar
+* target/acsemv3ds-ProxyApi-Client-1.2-SNAPSHOT.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -126,10 +126,10 @@ Class | Method | HTTP request | Description
  - [IsChallengeSupportedWebRequest](docs/IsChallengeSupportedWebRequest.md)
  - [IsChallengeSupportedWebResponse](docs/IsChallengeSupportedWebResponse.md)
  - [PerformDecoupledAuthWebRequest](docs/PerformDecoupledAuthWebRequest.md)
- - [PerformDecoupledAuthWebResponse](docs/PerformDecoupledAuthWebResponse.md)
  - [Phone](docs/Phone.md)
  - [ResendChallengeWebRequest](docs/ResendChallengeWebRequest.md)
  - [ResendChallengeWebResponse](docs/ResendChallengeWebResponse.md)
+ - [ResponseEntity](docs/ResponseEntity.md)
  - [SdkEphemPubKey](docs/SdkEphemPubKey.md)
  - [ThreeDSAcsRenderingType](docs/ThreeDSAcsRenderingType.md)
  - [ThreeDSCardholderAccountInfo](docs/ThreeDSCardholderAccountInfo.md)

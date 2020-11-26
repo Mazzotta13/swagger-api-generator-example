@@ -9,9 +9,9 @@ import com.opentech.acsemv3dsProxyApiClient.model.EvaluateChallengeStepAuthentic
 import com.opentech.acsemv3dsProxyApiClient.model.InitChallengeAuthenticatorWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.InitChallengeAuthenticatorWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.PerformDecoupledAuthWebRequest;
-import com.opentech.acsemv3dsProxyApiClient.model.PerformDecoupledAuthWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.ResendChallengeWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.ResendChallengeWebResponse;
+import com.opentech.acsemv3dsProxyApiClient.model.ResponseEntity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -195,10 +195,10 @@ public class AuthenticatorControllerApi {
      * <p><b>200</b> - OK
      * @param issuerCode issuer-code
      * @param performDecoupledAuthWebRequest performDecoupledAuthWebRequest
-     * @return PerformDecoupledAuthWebResponse
+     * @return ResponseEntity
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public PerformDecoupledAuthWebResponse performDecoupledAuthenticationUsingPOST(String issuerCode, PerformDecoupledAuthWebRequest performDecoupledAuthWebRequest) throws RestClientException {
+    public ResponseEntity performDecoupledAuthenticationUsingPOST(String issuerCode, PerformDecoupledAuthWebRequest performDecoupledAuthWebRequest) throws RestClientException {
         Object postBody = performDecoupledAuthWebRequest;
         
         // verify the required parameter 'issuerCode' is set
@@ -231,7 +231,7 @@ public class AuthenticatorControllerApi {
 
         String[] authNames = new String[] {  };
 
-        ParameterizedTypeReference<PerformDecoupledAuthWebResponse> returnType = new ParameterizedTypeReference<PerformDecoupledAuthWebResponse>() {};
+        ParameterizedTypeReference<ResponseEntity> returnType = new ParameterizedTypeReference<ResponseEntity>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     }
     /**
