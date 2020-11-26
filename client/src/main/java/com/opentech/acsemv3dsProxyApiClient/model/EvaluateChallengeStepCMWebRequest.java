@@ -17,7 +17,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.opentech.acsemv3dsProxyApiClient.model.Transaction;
+import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -35,8 +35,8 @@ public class EvaluateChallengeStepCMWebRequest {
   @JsonProperty("currStepId")
   private String currStepId = null;
 
-  @JsonProperty("transaction")
-  private Transaction transaction = null;
+  @JsonProperty("transactionInfo")
+  private TransactionInfo transactionInfo = null;
 
   public EvaluateChallengeStepCMWebRequest arrivalCondition(String arrivalCondition) {
     this.arrivalCondition = arrivalCondition;
@@ -92,22 +92,22 @@ public class EvaluateChallengeStepCMWebRequest {
     this.currStepId = currStepId;
   }
 
-  public EvaluateChallengeStepCMWebRequest transaction(Transaction transaction) {
-    this.transaction = transaction;
+  public EvaluateChallengeStepCMWebRequest transactionInfo(TransactionInfo transactionInfo) {
+    this.transactionInfo = transactionInfo;
     return this;
   }
 
    /**
-   * Get transaction
-   * @return transaction
+   * Get transactionInfo
+   * @return transactionInfo
   **/
   @ApiModelProperty(value = "")
-  public Transaction getTransaction() {
-    return transaction;
+  public TransactionInfo getTransactionInfo() {
+    return transactionInfo;
   }
 
-  public void setTransaction(Transaction transaction) {
-    this.transaction = transaction;
+  public void setTransactionInfo(TransactionInfo transactionInfo) {
+    this.transactionInfo = transactionInfo;
   }
 
 
@@ -123,12 +123,12 @@ public class EvaluateChallengeStepCMWebRequest {
     return Objects.equals(this.arrivalCondition, evaluateChallengeStepCMWebRequest.arrivalCondition) &&
         Objects.equals(this.authenticationName, evaluateChallengeStepCMWebRequest.authenticationName) &&
         Objects.equals(this.currStepId, evaluateChallengeStepCMWebRequest.currStepId) &&
-        Objects.equals(this.transaction, evaluateChallengeStepCMWebRequest.transaction);
+        Objects.equals(this.transactionInfo, evaluateChallengeStepCMWebRequest.transactionInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(arrivalCondition, authenticationName, currStepId, transaction);
+    return Objects.hash(arrivalCondition, authenticationName, currStepId, transactionInfo);
   }
 
 
@@ -140,7 +140,7 @@ public class EvaluateChallengeStepCMWebRequest {
     sb.append("    arrivalCondition: ").append(toIndentedString(arrivalCondition)).append("\n");
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
     sb.append("    currStepId: ").append(toIndentedString(currStepId)).append("\n");
-    sb.append("    transaction: ").append(toIndentedString(transaction)).append("\n");
+    sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

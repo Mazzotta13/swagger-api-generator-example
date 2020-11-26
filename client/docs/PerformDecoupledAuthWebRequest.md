@@ -4,8 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**timeoutInMinutes** | **Integer** |  |  [optional]
-**transactionInformation** | [**TransactionInformation**](TransactionInformation.md) |  |  [optional]
+**cardNumber** | **String** |  |  [optional]
+**timeout** | **Integer** |  |  [optional]
+**transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
 
 
 

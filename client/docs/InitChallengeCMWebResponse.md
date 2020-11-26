@@ -4,10 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**browserChallengeInfo** | **List&lt;String&gt;** |  |  [optional]
-**cResInfo** | **Map&lt;String, String&gt;** |  |  [optional]
+**appNextChallengeInfo** | [**AppChallengeInfo**](AppChallengeInfo.md) |  |  [optional]
+**browserNextChallengeInfo** | [**BrowserChallengeInfo**](BrowserChallengeInfo.md) |  |  [optional]
+**cResInfo** | [**CResInfo**](CResInfo.md) |  |  [optional]
 **currentStepId** | **String** |  |  [optional]
-**htmlPage** | **String** |  |  [optional]
 
 
 

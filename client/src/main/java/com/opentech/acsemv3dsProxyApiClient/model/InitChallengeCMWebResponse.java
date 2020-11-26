@@ -17,66 +17,67 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.opentech.acsemv3dsProxyApiClient.model.AppChallengeInfo;
+import com.opentech.acsemv3dsProxyApiClient.model.BrowserChallengeInfo;
+import com.opentech.acsemv3dsProxyApiClient.model.CResInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * InitChallengeCMWebResponse
  */
 
 public class InitChallengeCMWebResponse {
-  @JsonProperty("browserChallengeInfo")
-  private List<String> browserChallengeInfo = null;
+  @JsonProperty("appNextChallengeInfo")
+  private AppChallengeInfo appNextChallengeInfo = null;
+
+  @JsonProperty("browserNextChallengeInfo")
+  private BrowserChallengeInfo browserNextChallengeInfo = null;
 
   @JsonProperty("cResInfo")
-  private Map<String, String> cResInfo = null;
+  private CResInfo cResInfo = null;
 
   @JsonProperty("currentStepId")
   private String currentStepId = null;
 
-  @JsonProperty("htmlPage")
-  private String htmlPage = null;
-
-  public InitChallengeCMWebResponse browserChallengeInfo(List<String> browserChallengeInfo) {
-    this.browserChallengeInfo = browserChallengeInfo;
-    return this;
-  }
-
-  public InitChallengeCMWebResponse addBrowserChallengeInfoItem(String browserChallengeInfoItem) {
-    if (this.browserChallengeInfo == null) {
-      this.browserChallengeInfo = new ArrayList<String>();
-    }
-    this.browserChallengeInfo.add(browserChallengeInfoItem);
+  public InitChallengeCMWebResponse appNextChallengeInfo(AppChallengeInfo appNextChallengeInfo) {
+    this.appNextChallengeInfo = appNextChallengeInfo;
     return this;
   }
 
    /**
-   * Get browserChallengeInfo
-   * @return browserChallengeInfo
+   * Get appNextChallengeInfo
+   * @return appNextChallengeInfo
   **/
   @ApiModelProperty(value = "")
-  public List<String> getBrowserChallengeInfo() {
-    return browserChallengeInfo;
+  public AppChallengeInfo getAppNextChallengeInfo() {
+    return appNextChallengeInfo;
   }
 
-  public void setBrowserChallengeInfo(List<String> browserChallengeInfo) {
-    this.browserChallengeInfo = browserChallengeInfo;
+  public void setAppNextChallengeInfo(AppChallengeInfo appNextChallengeInfo) {
+    this.appNextChallengeInfo = appNextChallengeInfo;
   }
 
-  public InitChallengeCMWebResponse cResInfo(Map<String, String> cResInfo) {
-    this.cResInfo = cResInfo;
+  public InitChallengeCMWebResponse browserNextChallengeInfo(BrowserChallengeInfo browserNextChallengeInfo) {
+    this.browserNextChallengeInfo = browserNextChallengeInfo;
     return this;
   }
 
-  public InitChallengeCMWebResponse putCResInfoItem(String key, String cResInfoItem) {
-    if (this.cResInfo == null) {
-      this.cResInfo = new HashMap<String, String>();
-    }
-    this.cResInfo.put(key, cResInfoItem);
+   /**
+   * Get browserNextChallengeInfo
+   * @return browserNextChallengeInfo
+  **/
+  @ApiModelProperty(value = "")
+  public BrowserChallengeInfo getBrowserNextChallengeInfo() {
+    return browserNextChallengeInfo;
+  }
+
+  public void setBrowserNextChallengeInfo(BrowserChallengeInfo browserNextChallengeInfo) {
+    this.browserNextChallengeInfo = browserNextChallengeInfo;
+  }
+
+  public InitChallengeCMWebResponse cResInfo(CResInfo cResInfo) {
+    this.cResInfo = cResInfo;
     return this;
   }
 
@@ -85,11 +86,11 @@ public class InitChallengeCMWebResponse {
    * @return cResInfo
   **/
   @ApiModelProperty(value = "")
-  public Map<String, String> getCResInfo() {
+  public CResInfo getCResInfo() {
     return cResInfo;
   }
 
-  public void setCResInfo(Map<String, String> cResInfo) {
+  public void setCResInfo(CResInfo cResInfo) {
     this.cResInfo = cResInfo;
   }
 
@@ -111,24 +112,6 @@ public class InitChallengeCMWebResponse {
     this.currentStepId = currentStepId;
   }
 
-  public InitChallengeCMWebResponse htmlPage(String htmlPage) {
-    this.htmlPage = htmlPage;
-    return this;
-  }
-
-   /**
-   * Get htmlPage
-   * @return htmlPage
-  **/
-  @ApiModelProperty(value = "")
-  public String getHtmlPage() {
-    return htmlPage;
-  }
-
-  public void setHtmlPage(String htmlPage) {
-    this.htmlPage = htmlPage;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -139,15 +122,15 @@ public class InitChallengeCMWebResponse {
       return false;
     }
     InitChallengeCMWebResponse initChallengeCMWebResponse = (InitChallengeCMWebResponse) o;
-    return Objects.equals(this.browserChallengeInfo, initChallengeCMWebResponse.browserChallengeInfo) &&
+    return Objects.equals(this.appNextChallengeInfo, initChallengeCMWebResponse.appNextChallengeInfo) &&
+        Objects.equals(this.browserNextChallengeInfo, initChallengeCMWebResponse.browserNextChallengeInfo) &&
         Objects.equals(this.cResInfo, initChallengeCMWebResponse.cResInfo) &&
-        Objects.equals(this.currentStepId, initChallengeCMWebResponse.currentStepId) &&
-        Objects.equals(this.htmlPage, initChallengeCMWebResponse.htmlPage);
+        Objects.equals(this.currentStepId, initChallengeCMWebResponse.currentStepId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(browserChallengeInfo, cResInfo, currentStepId, htmlPage);
+    return Objects.hash(appNextChallengeInfo, browserNextChallengeInfo, cResInfo, currentStepId);
   }
 
 
@@ -156,10 +139,10 @@ public class InitChallengeCMWebResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class InitChallengeCMWebResponse {\n");
     
-    sb.append("    browserChallengeInfo: ").append(toIndentedString(browserChallengeInfo)).append("\n");
+    sb.append("    appNextChallengeInfo: ").append(toIndentedString(appNextChallengeInfo)).append("\n");
+    sb.append("    browserNextChallengeInfo: ").append(toIndentedString(browserNextChallengeInfo)).append("\n");
     sb.append("    cResInfo: ").append(toIndentedString(cResInfo)).append("\n");
     sb.append("    currentStepId: ").append(toIndentedString(currentStepId)).append("\n");
-    sb.append("    htmlPage: ").append(toIndentedString(htmlPage)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -17,7 +17,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.opentech.acsemv3dsProxyApiClient.model.RenderingType;
+import com.opentech.acsemv3dsProxyApiClient.model.ThreeDSAcsRenderingType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,8 +32,8 @@ public class IsChallengeSupportedWebResponse {
   @JsonProperty("performDecoupledAuthentication")
   private Boolean performDecoupledAuthentication = null;
 
-  @JsonProperty("renderingType")
-  private RenderingType renderingType = null;
+  @JsonProperty("threeDSAcsRenderingType")
+  private ThreeDSAcsRenderingType threeDSAcsRenderingType = null;
 
   public IsChallengeSupportedWebResponse challengeSupported(Boolean challengeSupported) {
     this.challengeSupported = challengeSupported;
@@ -71,22 +71,22 @@ public class IsChallengeSupportedWebResponse {
     this.performDecoupledAuthentication = performDecoupledAuthentication;
   }
 
-  public IsChallengeSupportedWebResponse renderingType(RenderingType renderingType) {
-    this.renderingType = renderingType;
+  public IsChallengeSupportedWebResponse threeDSAcsRenderingType(ThreeDSAcsRenderingType threeDSAcsRenderingType) {
+    this.threeDSAcsRenderingType = threeDSAcsRenderingType;
     return this;
   }
 
    /**
-   * Get renderingType
-   * @return renderingType
+   * Get threeDSAcsRenderingType
+   * @return threeDSAcsRenderingType
   **/
   @ApiModelProperty(value = "")
-  public RenderingType getRenderingType() {
-    return renderingType;
+  public ThreeDSAcsRenderingType getThreeDSAcsRenderingType() {
+    return threeDSAcsRenderingType;
   }
 
-  public void setRenderingType(RenderingType renderingType) {
-    this.renderingType = renderingType;
+  public void setThreeDSAcsRenderingType(ThreeDSAcsRenderingType threeDSAcsRenderingType) {
+    this.threeDSAcsRenderingType = threeDSAcsRenderingType;
   }
 
 
@@ -101,12 +101,12 @@ public class IsChallengeSupportedWebResponse {
     IsChallengeSupportedWebResponse isChallengeSupportedWebResponse = (IsChallengeSupportedWebResponse) o;
     return Objects.equals(this.challengeSupported, isChallengeSupportedWebResponse.challengeSupported) &&
         Objects.equals(this.performDecoupledAuthentication, isChallengeSupportedWebResponse.performDecoupledAuthentication) &&
-        Objects.equals(this.renderingType, isChallengeSupportedWebResponse.renderingType);
+        Objects.equals(this.threeDSAcsRenderingType, isChallengeSupportedWebResponse.threeDSAcsRenderingType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(challengeSupported, performDecoupledAuthentication, renderingType);
+    return Objects.hash(challengeSupported, performDecoupledAuthentication, threeDSAcsRenderingType);
   }
 
 
@@ -117,7 +117,7 @@ public class IsChallengeSupportedWebResponse {
     
     sb.append("    challengeSupported: ").append(toIndentedString(challengeSupported)).append("\n");
     sb.append("    performDecoupledAuthentication: ").append(toIndentedString(performDecoupledAuthentication)).append("\n");
-    sb.append("    renderingType: ").append(toIndentedString(renderingType)).append("\n");
+    sb.append("    threeDSAcsRenderingType: ").append(toIndentedString(threeDSAcsRenderingType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

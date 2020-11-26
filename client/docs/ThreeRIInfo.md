@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**relatedTransaction** | [**Transaction**](Transaction.md) |  |  [optional]
+**relatedTransaction** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
 **threeRI** | **Boolean** |  |  [optional]
 
 

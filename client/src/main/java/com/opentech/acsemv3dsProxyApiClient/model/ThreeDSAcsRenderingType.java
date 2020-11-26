@@ -17,55 +17,54 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ThreeRIInfo
+ * ThreeDSAcsRenderingType
  */
 
-public class ThreeRIInfo {
-  @JsonProperty("relatedTransaction")
-  private TransactionInfo relatedTransaction = null;
+public class ThreeDSAcsRenderingType {
+  @JsonProperty("acsInterface")
+  private String acsInterface = null;
 
-  @JsonProperty("threeRI")
-  private Boolean threeRI = null;
+  @JsonProperty("acsUiTemplate")
+  private String acsUiTemplate = null;
 
-  public ThreeRIInfo relatedTransaction(TransactionInfo relatedTransaction) {
-    this.relatedTransaction = relatedTransaction;
+  public ThreeDSAcsRenderingType acsInterface(String acsInterface) {
+    this.acsInterface = acsInterface;
     return this;
   }
 
    /**
-   * Get relatedTransaction
-   * @return relatedTransaction
+   * Get acsInterface
+   * @return acsInterface
   **/
   @ApiModelProperty(value = "")
-  public TransactionInfo getRelatedTransaction() {
-    return relatedTransaction;
+  public String getAcsInterface() {
+    return acsInterface;
   }
 
-  public void setRelatedTransaction(TransactionInfo relatedTransaction) {
-    this.relatedTransaction = relatedTransaction;
+  public void setAcsInterface(String acsInterface) {
+    this.acsInterface = acsInterface;
   }
 
-  public ThreeRIInfo threeRI(Boolean threeRI) {
-    this.threeRI = threeRI;
+  public ThreeDSAcsRenderingType acsUiTemplate(String acsUiTemplate) {
+    this.acsUiTemplate = acsUiTemplate;
     return this;
   }
 
    /**
-   * Get threeRI
-   * @return threeRI
+   * Get acsUiTemplate
+   * @return acsUiTemplate
   **/
   @ApiModelProperty(value = "")
-  public Boolean isThreeRI() {
-    return threeRI;
+  public String getAcsUiTemplate() {
+    return acsUiTemplate;
   }
 
-  public void setThreeRI(Boolean threeRI) {
-    this.threeRI = threeRI;
+  public void setAcsUiTemplate(String acsUiTemplate) {
+    this.acsUiTemplate = acsUiTemplate;
   }
 
 
@@ -77,24 +76,24 @@ public class ThreeRIInfo {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ThreeRIInfo threeRIInfo = (ThreeRIInfo) o;
-    return Objects.equals(this.relatedTransaction, threeRIInfo.relatedTransaction) &&
-        Objects.equals(this.threeRI, threeRIInfo.threeRI);
+    ThreeDSAcsRenderingType threeDSAcsRenderingType = (ThreeDSAcsRenderingType) o;
+    return Objects.equals(this.acsInterface, threeDSAcsRenderingType.acsInterface) &&
+        Objects.equals(this.acsUiTemplate, threeDSAcsRenderingType.acsUiTemplate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(relatedTransaction, threeRI);
+    return Objects.hash(acsInterface, acsUiTemplate);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ThreeRIInfo {\n");
+    sb.append("class ThreeDSAcsRenderingType {\n");
     
-    sb.append("    relatedTransaction: ").append(toIndentedString(relatedTransaction)).append("\n");
-    sb.append("    threeRI: ").append(toIndentedString(threeRI)).append("\n");
+    sb.append("    acsInterface: ").append(toIndentedString(acsInterface)).append("\n");
+    sb.append("    acsUiTemplate: ").append(toIndentedString(acsUiTemplate)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -17,33 +17,35 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.opentech.acsemv3dsProxyApiClient.model.AppChallengeInfo;
+import com.opentech.acsemv3dsProxyApiClient.model.BrowserChallengeInfo;
+import com.opentech.acsemv3dsProxyApiClient.model.CResInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * EvaluateChallengeStepCMWebResponse
  */
 
 public class EvaluateChallengeStepCMWebResponse {
-  @JsonProperty("browserChallengeInfo")
-  private List<String> browserChallengeInfo = null;
+  @JsonProperty("appNextChallengeInfo")
+  private AppChallengeInfo appNextChallengeInfo = null;
+
+  @JsonProperty("browserNextChallengeInfo")
+  private BrowserChallengeInfo browserNextChallengeInfo = null;
 
   @JsonProperty("cResInfo")
-  private Map<String, String> cResInfo = null;
+  private CResInfo cResInfo = null;
 
   /**
    * Gets or Sets challengeStatus
    */
   public enum ChallengeStatusEnum {
-    ONGOING_NAME_ONGOING_ORDINAL_0_("ChallengeStatus{value=ONGOING, name=ONGOING, ordinal=0}"),
+    ONGOING("ONGOING"),
     
-    TERMINATED_WITH_SUCCESS_NAME_TERMINATED_WITH_SUCCESS_ORDINAL_1_("ChallengeStatus{value=TERMINATED_WITH_SUCCESS, name=TERMINATED_WITH_SUCCESS, ordinal=1}"),
+    TERMINATED_WITH_SUCCESS("TERMINATED_WITH_SUCCESS"),
     
-    TERMINATED_WITH_FAILURE_NAME_TERMINATED_WITH_FAILURE_ORDINAL_2_("ChallengeStatus{value=TERMINATED_WITH_FAILURE, name=TERMINATED_WITH_FAILURE, ordinal=2}");
+    TERMINATED_WITH_FAILURE("TERMINATED_WITH_FAILURE");
 
     private String value;
 
@@ -75,48 +77,47 @@ public class EvaluateChallengeStepCMWebResponse {
   @JsonProperty("challengeStatus")
   private ChallengeStatusEnum challengeStatus = null;
 
-  @JsonProperty("htmlPage")
-  private String htmlPage = null;
-
   @JsonProperty("nextStepId")
   private String nextStepId = null;
 
-  public EvaluateChallengeStepCMWebResponse browserChallengeInfo(List<String> browserChallengeInfo) {
-    this.browserChallengeInfo = browserChallengeInfo;
-    return this;
-  }
-
-  public EvaluateChallengeStepCMWebResponse addBrowserChallengeInfoItem(String browserChallengeInfoItem) {
-    if (this.browserChallengeInfo == null) {
-      this.browserChallengeInfo = new ArrayList<String>();
-    }
-    this.browserChallengeInfo.add(browserChallengeInfoItem);
+  public EvaluateChallengeStepCMWebResponse appNextChallengeInfo(AppChallengeInfo appNextChallengeInfo) {
+    this.appNextChallengeInfo = appNextChallengeInfo;
     return this;
   }
 
    /**
-   * Get browserChallengeInfo
-   * @return browserChallengeInfo
+   * Get appNextChallengeInfo
+   * @return appNextChallengeInfo
   **/
   @ApiModelProperty(value = "")
-  public List<String> getBrowserChallengeInfo() {
-    return browserChallengeInfo;
+  public AppChallengeInfo getAppNextChallengeInfo() {
+    return appNextChallengeInfo;
   }
 
-  public void setBrowserChallengeInfo(List<String> browserChallengeInfo) {
-    this.browserChallengeInfo = browserChallengeInfo;
+  public void setAppNextChallengeInfo(AppChallengeInfo appNextChallengeInfo) {
+    this.appNextChallengeInfo = appNextChallengeInfo;
   }
 
-  public EvaluateChallengeStepCMWebResponse cResInfo(Map<String, String> cResInfo) {
-    this.cResInfo = cResInfo;
+  public EvaluateChallengeStepCMWebResponse browserNextChallengeInfo(BrowserChallengeInfo browserNextChallengeInfo) {
+    this.browserNextChallengeInfo = browserNextChallengeInfo;
     return this;
   }
 
-  public EvaluateChallengeStepCMWebResponse putCResInfoItem(String key, String cResInfoItem) {
-    if (this.cResInfo == null) {
-      this.cResInfo = new HashMap<String, String>();
-    }
-    this.cResInfo.put(key, cResInfoItem);
+   /**
+   * Get browserNextChallengeInfo
+   * @return browserNextChallengeInfo
+  **/
+  @ApiModelProperty(value = "")
+  public BrowserChallengeInfo getBrowserNextChallengeInfo() {
+    return browserNextChallengeInfo;
+  }
+
+  public void setBrowserNextChallengeInfo(BrowserChallengeInfo browserNextChallengeInfo) {
+    this.browserNextChallengeInfo = browserNextChallengeInfo;
+  }
+
+  public EvaluateChallengeStepCMWebResponse cResInfo(CResInfo cResInfo) {
+    this.cResInfo = cResInfo;
     return this;
   }
 
@@ -125,11 +126,11 @@ public class EvaluateChallengeStepCMWebResponse {
    * @return cResInfo
   **/
   @ApiModelProperty(value = "")
-  public Map<String, String> getCResInfo() {
+  public CResInfo getCResInfo() {
     return cResInfo;
   }
 
-  public void setCResInfo(Map<String, String> cResInfo) {
+  public void setCResInfo(CResInfo cResInfo) {
     this.cResInfo = cResInfo;
   }
 
@@ -149,24 +150,6 @@ public class EvaluateChallengeStepCMWebResponse {
 
   public void setChallengeStatus(ChallengeStatusEnum challengeStatus) {
     this.challengeStatus = challengeStatus;
-  }
-
-  public EvaluateChallengeStepCMWebResponse htmlPage(String htmlPage) {
-    this.htmlPage = htmlPage;
-    return this;
-  }
-
-   /**
-   * Get htmlPage
-   * @return htmlPage
-  **/
-  @ApiModelProperty(value = "")
-  public String getHtmlPage() {
-    return htmlPage;
-  }
-
-  public void setHtmlPage(String htmlPage) {
-    this.htmlPage = htmlPage;
   }
 
   public EvaluateChallengeStepCMWebResponse nextStepId(String nextStepId) {
@@ -197,16 +180,16 @@ public class EvaluateChallengeStepCMWebResponse {
       return false;
     }
     EvaluateChallengeStepCMWebResponse evaluateChallengeStepCMWebResponse = (EvaluateChallengeStepCMWebResponse) o;
-    return Objects.equals(this.browserChallengeInfo, evaluateChallengeStepCMWebResponse.browserChallengeInfo) &&
+    return Objects.equals(this.appNextChallengeInfo, evaluateChallengeStepCMWebResponse.appNextChallengeInfo) &&
+        Objects.equals(this.browserNextChallengeInfo, evaluateChallengeStepCMWebResponse.browserNextChallengeInfo) &&
         Objects.equals(this.cResInfo, evaluateChallengeStepCMWebResponse.cResInfo) &&
         Objects.equals(this.challengeStatus, evaluateChallengeStepCMWebResponse.challengeStatus) &&
-        Objects.equals(this.htmlPage, evaluateChallengeStepCMWebResponse.htmlPage) &&
         Objects.equals(this.nextStepId, evaluateChallengeStepCMWebResponse.nextStepId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(browserChallengeInfo, cResInfo, challengeStatus, htmlPage, nextStepId);
+    return Objects.hash(appNextChallengeInfo, browserNextChallengeInfo, cResInfo, challengeStatus, nextStepId);
   }
 
 
@@ -215,10 +198,10 @@ public class EvaluateChallengeStepCMWebResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class EvaluateChallengeStepCMWebResponse {\n");
     
-    sb.append("    browserChallengeInfo: ").append(toIndentedString(browserChallengeInfo)).append("\n");
+    sb.append("    appNextChallengeInfo: ").append(toIndentedString(appNextChallengeInfo)).append("\n");
+    sb.append("    browserNextChallengeInfo: ").append(toIndentedString(browserNextChallengeInfo)).append("\n");
     sb.append("    cResInfo: ").append(toIndentedString(cResInfo)).append("\n");
     sb.append("    challengeStatus: ").append(toIndentedString(challengeStatus)).append("\n");
-    sb.append("    htmlPage: ").append(toIndentedString(htmlPage)).append("\n");
     sb.append("    nextStepId: ").append(toIndentedString(nextStepId)).append("\n");
     sb.append("}");
     return sb.toString();

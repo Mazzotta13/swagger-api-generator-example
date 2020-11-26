@@ -32,8 +32,45 @@ public class IsChallengeSupportedWebRequest {
   @JsonProperty("authenticationName")
   private String authenticationName = null;
 
+  /**
+   * Gets or Sets authenticationType
+   */
+  public enum AuthenticationTypeEnum {
+    _01_NAME_STATIC_ORDINAL_0_("AuthenticationType{code=01, name=STATIC, ordinal=0}"),
+    
+    _02_NAME_DYNAMIC_ORDINAL_1_("AuthenticationType{code=02, name=DYNAMIC, ordinal=1}"),
+    
+    _03_NAME_OOB_ORDINAL_2_("AuthenticationType{code=03, name=OOB, ordinal=2}");
+
+    private String value;
+
+    AuthenticationTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static AuthenticationTypeEnum fromValue(String text) {
+      for (AuthenticationTypeEnum b : AuthenticationTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
   @JsonProperty("authenticationType")
-  private String authenticationType = null;
+  private AuthenticationTypeEnum authenticationType = null;
 
   public IsChallengeSupportedWebRequest aReq(AReq aReq) {
     this.aReq = aReq;
@@ -71,7 +108,7 @@ public class IsChallengeSupportedWebRequest {
     this.authenticationName = authenticationName;
   }
 
-  public IsChallengeSupportedWebRequest authenticationType(String authenticationType) {
+  public IsChallengeSupportedWebRequest authenticationType(AuthenticationTypeEnum authenticationType) {
     this.authenticationType = authenticationType;
     return this;
   }
@@ -81,11 +118,11 @@ public class IsChallengeSupportedWebRequest {
    * @return authenticationType
   **/
   @ApiModelProperty(value = "")
-  public String getAuthenticationType() {
+  public AuthenticationTypeEnum getAuthenticationType() {
     return authenticationType;
   }
 
-  public void setAuthenticationType(String authenticationType) {
+  public void setAuthenticationType(AuthenticationTypeEnum authenticationType) {
     this.authenticationType = authenticationType;
   }
 

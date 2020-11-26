@@ -17,7 +17,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.opentech.acsemv3dsProxyApiClient.model.TransactionInformation;
+import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,46 +26,67 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class PerformDecoupledAuthWebRequest {
-  @JsonProperty("timeoutInMinutes")
-  private Integer timeoutInMinutes = null;
+  @JsonProperty("cardNumber")
+  private String cardNumber = null;
 
-  @JsonProperty("transactionInformation")
-  private TransactionInformation transactionInformation = null;
+  @JsonProperty("timeout")
+  private Integer timeout = null;
 
-  public PerformDecoupledAuthWebRequest timeoutInMinutes(Integer timeoutInMinutes) {
-    this.timeoutInMinutes = timeoutInMinutes;
+  @JsonProperty("transactionInfo")
+  private TransactionInfo transactionInfo = null;
+
+  public PerformDecoupledAuthWebRequest cardNumber(String cardNumber) {
+    this.cardNumber = cardNumber;
     return this;
   }
 
    /**
-   * Get timeoutInMinutes
-   * @return timeoutInMinutes
+   * Get cardNumber
+   * @return cardNumber
   **/
   @ApiModelProperty(value = "")
-  public Integer getTimeoutInMinutes() {
-    return timeoutInMinutes;
+  public String getCardNumber() {
+    return cardNumber;
   }
 
-  public void setTimeoutInMinutes(Integer timeoutInMinutes) {
-    this.timeoutInMinutes = timeoutInMinutes;
+  public void setCardNumber(String cardNumber) {
+    this.cardNumber = cardNumber;
   }
 
-  public PerformDecoupledAuthWebRequest transactionInformation(TransactionInformation transactionInformation) {
-    this.transactionInformation = transactionInformation;
+  public PerformDecoupledAuthWebRequest timeout(Integer timeout) {
+    this.timeout = timeout;
     return this;
   }
 
    /**
-   * Get transactionInformation
-   * @return transactionInformation
+   * Get timeout
+   * @return timeout
   **/
   @ApiModelProperty(value = "")
-  public TransactionInformation getTransactionInformation() {
-    return transactionInformation;
+  public Integer getTimeout() {
+    return timeout;
   }
 
-  public void setTransactionInformation(TransactionInformation transactionInformation) {
-    this.transactionInformation = transactionInformation;
+  public void setTimeout(Integer timeout) {
+    this.timeout = timeout;
+  }
+
+  public PerformDecoupledAuthWebRequest transactionInfo(TransactionInfo transactionInfo) {
+    this.transactionInfo = transactionInfo;
+    return this;
+  }
+
+   /**
+   * Get transactionInfo
+   * @return transactionInfo
+  **/
+  @ApiModelProperty(value = "")
+  public TransactionInfo getTransactionInfo() {
+    return transactionInfo;
+  }
+
+  public void setTransactionInfo(TransactionInfo transactionInfo) {
+    this.transactionInfo = transactionInfo;
   }
 
 
@@ -78,13 +99,14 @@ public class PerformDecoupledAuthWebRequest {
       return false;
     }
     PerformDecoupledAuthWebRequest performDecoupledAuthWebRequest = (PerformDecoupledAuthWebRequest) o;
-    return Objects.equals(this.timeoutInMinutes, performDecoupledAuthWebRequest.timeoutInMinutes) &&
-        Objects.equals(this.transactionInformation, performDecoupledAuthWebRequest.transactionInformation);
+    return Objects.equals(this.cardNumber, performDecoupledAuthWebRequest.cardNumber) &&
+        Objects.equals(this.timeout, performDecoupledAuthWebRequest.timeout) &&
+        Objects.equals(this.transactionInfo, performDecoupledAuthWebRequest.transactionInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(timeoutInMinutes, transactionInformation);
+    return Objects.hash(cardNumber, timeout, transactionInfo);
   }
 
 
@@ -93,8 +115,9 @@ public class PerformDecoupledAuthWebRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class PerformDecoupledAuthWebRequest {\n");
     
-    sb.append("    timeoutInMinutes: ").append(toIndentedString(timeoutInMinutes)).append("\n");
-    sb.append("    transactionInformation: ").append(toIndentedString(transactionInformation)).append("\n");
+    sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
+    sb.append("    timeout: ").append(toIndentedString(timeout)).append("\n");
+    sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

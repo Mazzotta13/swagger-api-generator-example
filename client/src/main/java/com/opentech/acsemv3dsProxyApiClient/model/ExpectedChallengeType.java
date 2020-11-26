@@ -17,55 +17,54 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ThreeRIInfo
+ * ExpectedChallengeType
  */
 
-public class ThreeRIInfo {
-  @JsonProperty("relatedTransaction")
-  private TransactionInfo relatedTransaction = null;
+public class ExpectedChallengeType {
+  @JsonProperty("authenticationType")
+  private String authenticationType = null;
 
-  @JsonProperty("threeRI")
-  private Boolean threeRI = null;
+  @JsonProperty("fieldName")
+  private String fieldName = null;
 
-  public ThreeRIInfo relatedTransaction(TransactionInfo relatedTransaction) {
-    this.relatedTransaction = relatedTransaction;
+  public ExpectedChallengeType authenticationType(String authenticationType) {
+    this.authenticationType = authenticationType;
     return this;
   }
 
    /**
-   * Get relatedTransaction
-   * @return relatedTransaction
+   * Get authenticationType
+   * @return authenticationType
   **/
   @ApiModelProperty(value = "")
-  public TransactionInfo getRelatedTransaction() {
-    return relatedTransaction;
+  public String getAuthenticationType() {
+    return authenticationType;
   }
 
-  public void setRelatedTransaction(TransactionInfo relatedTransaction) {
-    this.relatedTransaction = relatedTransaction;
+  public void setAuthenticationType(String authenticationType) {
+    this.authenticationType = authenticationType;
   }
 
-  public ThreeRIInfo threeRI(Boolean threeRI) {
-    this.threeRI = threeRI;
+  public ExpectedChallengeType fieldName(String fieldName) {
+    this.fieldName = fieldName;
     return this;
   }
 
    /**
-   * Get threeRI
-   * @return threeRI
+   * Get fieldName
+   * @return fieldName
   **/
   @ApiModelProperty(value = "")
-  public Boolean isThreeRI() {
-    return threeRI;
+  public String getFieldName() {
+    return fieldName;
   }
 
-  public void setThreeRI(Boolean threeRI) {
-    this.threeRI = threeRI;
+  public void setFieldName(String fieldName) {
+    this.fieldName = fieldName;
   }
 
 
@@ -77,24 +76,24 @@ public class ThreeRIInfo {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ThreeRIInfo threeRIInfo = (ThreeRIInfo) o;
-    return Objects.equals(this.relatedTransaction, threeRIInfo.relatedTransaction) &&
-        Objects.equals(this.threeRI, threeRIInfo.threeRI);
+    ExpectedChallengeType expectedChallengeType = (ExpectedChallengeType) o;
+    return Objects.equals(this.authenticationType, expectedChallengeType.authenticationType) &&
+        Objects.equals(this.fieldName, expectedChallengeType.fieldName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(relatedTransaction, threeRI);
+    return Objects.hash(authenticationType, fieldName);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ThreeRIInfo {\n");
+    sb.append("class ExpectedChallengeType {\n");
     
-    sb.append("    relatedTransaction: ").append(toIndentedString(relatedTransaction)).append("\n");
-    sb.append("    threeRI: ").append(toIndentedString(threeRI)).append("\n");
+    sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
+    sb.append("    fieldName: ").append(toIndentedString(fieldName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

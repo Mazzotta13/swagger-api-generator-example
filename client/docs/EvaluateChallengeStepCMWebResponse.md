@@ -4,10 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**browserChallengeInfo** | **List&lt;String&gt;** |  |  [optional]
-**cResInfo** | **Map&lt;String, String&gt;** |  |  [optional]
+**appNextChallengeInfo** | [**AppChallengeInfo**](AppChallengeInfo.md) |  |  [optional]
+**browserNextChallengeInfo** | [**BrowserChallengeInfo**](BrowserChallengeInfo.md) |  |  [optional]
+**cResInfo** | [**CResInfo**](CResInfo.md) |  |  [optional]
 **challengeStatus** | [**ChallengeStatusEnum**](#ChallengeStatusEnum) |  |  [optional]
-**htmlPage** | **String** |  |  [optional]
 **nextStepId** | **String** |  |  [optional]
 
 
@@ -15,9 +15,9 @@ Name | Type | Description | Notes
 ## Enum: ChallengeStatusEnum
 Name | Value
 ---- | -----
-ONGOING_NAME_ONGOING_ORDINAL_0_ | &quot;ChallengeStatus{value&#x3D;ONGOING, name&#x3D;ONGOING, ordinal&#x3D;0}&quot;
-TERMINATED_WITH_SUCCESS_NAME_TERMINATED_WITH_SUCCESS_ORDINAL_1_ | &quot;ChallengeStatus{value&#x3D;TERMINATED_WITH_SUCCESS, name&#x3D;TERMINATED_WITH_SUCCESS, ordinal&#x3D;1}&quot;
-TERMINATED_WITH_FAILURE_NAME_TERMINATED_WITH_FAILURE_ORDINAL_2_ | &quot;ChallengeStatus{value&#x3D;TERMINATED_WITH_FAILURE, name&#x3D;TERMINATED_WITH_FAILURE, ordinal&#x3D;2}&quot;
+ONGOING | &quot;ONGOING&quot;
+TERMINATED_WITH_SUCCESS | &quot;TERMINATED_WITH_SUCCESS&quot;
+TERMINATED_WITH_FAILURE | &quot;TERMINATED_WITH_FAILURE&quot;
 
 
 

@@ -80,6 +80,46 @@ public class EvaluateAuthenticationWebResponse {
   @JsonProperty("authenticationResult")
   private AuthenticationResultEnum authenticationResult = null;
 
+  /**
+   * Gets or Sets authenticationType
+   */
+  public enum AuthenticationTypeEnum {
+    _01_NAME_STATIC_ORDINAL_0_("AuthenticationType{code=01, name=STATIC, ordinal=0}"),
+    
+    _02_NAME_DYNAMIC_ORDINAL_1_("AuthenticationType{code=02, name=DYNAMIC, ordinal=1}"),
+    
+    _03_NAME_OOB_ORDINAL_2_("AuthenticationType{code=03, name=OOB, ordinal=2}");
+
+    private String value;
+
+    AuthenticationTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static AuthenticationTypeEnum fromValue(String text) {
+      for (AuthenticationTypeEnum b : AuthenticationTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
+  @JsonProperty("authenticationType")
+  private AuthenticationTypeEnum authenticationType = null;
+
   @JsonProperty("cardEnrolled")
   private Boolean cardEnrolled = null;
 
@@ -120,6 +160,24 @@ public class EvaluateAuthenticationWebResponse {
 
   public void setAuthenticationResult(AuthenticationResultEnum authenticationResult) {
     this.authenticationResult = authenticationResult;
+  }
+
+  public EvaluateAuthenticationWebResponse authenticationType(AuthenticationTypeEnum authenticationType) {
+    this.authenticationType = authenticationType;
+    return this;
+  }
+
+   /**
+   * Get authenticationType
+   * @return authenticationType
+  **/
+  @ApiModelProperty(value = "")
+  public AuthenticationTypeEnum getAuthenticationType() {
+    return authenticationType;
+  }
+
+  public void setAuthenticationType(AuthenticationTypeEnum authenticationType) {
+    this.authenticationType = authenticationType;
   }
 
   public EvaluateAuthenticationWebResponse cardEnrolled(Boolean cardEnrolled) {
@@ -170,13 +228,14 @@ public class EvaluateAuthenticationWebResponse {
     EvaluateAuthenticationWebResponse evaluateAuthenticationWebResponse = (EvaluateAuthenticationWebResponse) o;
     return Objects.equals(this.authenticationName, evaluateAuthenticationWebResponse.authenticationName) &&
         Objects.equals(this.authenticationResult, evaluateAuthenticationWebResponse.authenticationResult) &&
+        Objects.equals(this.authenticationType, evaluateAuthenticationWebResponse.authenticationType) &&
         Objects.equals(this.cardEnrolled, evaluateAuthenticationWebResponse.cardEnrolled) &&
         Objects.equals(this.challengeMandatory, evaluateAuthenticationWebResponse.challengeMandatory);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationName, authenticationResult, cardEnrolled, challengeMandatory);
+    return Objects.hash(authenticationName, authenticationResult, authenticationType, cardEnrolled, challengeMandatory);
   }
 
 
@@ -187,6 +246,7 @@ public class EvaluateAuthenticationWebResponse {
     
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
     sb.append("    authenticationResult: ").append(toIndentedString(authenticationResult)).append("\n");
+    sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
     sb.append("    cardEnrolled: ").append(toIndentedString(cardEnrolled)).append("\n");
     sb.append("    challengeMandatory: ").append(toIndentedString(challengeMandatory)).append("\n");
     sb.append("}");
