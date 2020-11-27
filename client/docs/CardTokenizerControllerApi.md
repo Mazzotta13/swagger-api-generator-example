@@ -4,8 +4,8 @@ All URIs are relative to *https://localhost:8080/acsemv3dsproxy*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**detokenizeUsingPOST**](CardTokenizerControllerApi.md#detokenizeUsingPOST) | **POST** /3ds/detokenize | detokenize
-[**tokenizeUsingPOST**](CardTokenizerControllerApi.md#tokenizeUsingPOST) | **POST** /3ds/tokenize | tokenize
+[**detokenizeUsingPOST**](CardTokenizerControllerApi.md#detokenizeUsingPOST) | **POST** /3ds/{issuer-code}/detokenize | detokenize
+[**tokenizeUsingPOST**](CardTokenizerControllerApi.md#tokenizeUsingPOST) | **POST** /3ds/{issuer-code}/tokenize | tokenize
 
 
 <a name="detokenizeUsingPOST"></a>

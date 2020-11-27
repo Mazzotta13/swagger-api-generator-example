@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.opentech.acsemv3dsProxyApiClient.model.Mapstringstring;
 import com.opentech.acsemv3dsProxyApiClient.model.ThreeDSImage;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -53,7 +54,7 @@ public class CResInfo {
   private String challengeInfoTextIndicator = null;
 
   @JsonProperty("challengeSelectInfo")
-  private List<java.util.Map> challengeSelectInfo = null;
+  private List<Mapstringstring> challengeSelectInfo = null;
 
   @JsonProperty("expandInfoLabel")
   private String expandInfoLabel = null;
@@ -238,14 +239,14 @@ public class CResInfo {
     this.challengeInfoTextIndicator = challengeInfoTextIndicator;
   }
 
-  public CResInfo challengeSelectInfo(List<java.util.Map> challengeSelectInfo) {
+  public CResInfo challengeSelectInfo(List<Mapstringstring> challengeSelectInfo) {
     this.challengeSelectInfo = challengeSelectInfo;
     return this;
   }
 
-  public CResInfo addChallengeSelectInfoItem(java.util.Map challengeSelectInfoItem) {
+  public CResInfo addChallengeSelectInfoItem(Mapstringstring challengeSelectInfoItem) {
     if (this.challengeSelectInfo == null) {
-      this.challengeSelectInfo = new ArrayList<java.util.Map>();
+      this.challengeSelectInfo = new ArrayList<Mapstringstring>();
     }
     this.challengeSelectInfo.add(challengeSelectInfoItem);
     return this;
@@ -256,11 +257,11 @@ public class CResInfo {
    * @return challengeSelectInfo
   **/
   @ApiModelProperty(value = "")
-  public List<java.util.Map> getChallengeSelectInfo() {
+  public List<Mapstringstring> getChallengeSelectInfo() {
     return challengeSelectInfo;
   }
 
-  public void setChallengeSelectInfo(List<java.util.Map> challengeSelectInfo) {
+  public void setChallengeSelectInfo(List<Mapstringstring> challengeSelectInfo) {
     this.challengeSelectInfo = challengeSelectInfo;
   }
 

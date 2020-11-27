@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.opentech</groupId>
     <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.3-SNAPSHOT</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.opentech:acsemv3ds-ProxyApi-Client:1.2-SNAPSHOT"
+compile "com.opentech:acsemv3ds-ProxyApi-Client:1.3-SNAPSHOT"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/acsemv3ds-ProxyApi-Client-1.2-SNAPSHOT.jar
+* target/acsemv3ds-ProxyApi-Client-1.3-SNAPSHOT.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -96,8 +96,8 @@ Class | Method | HTTP request | Description
 *AuthenticatorControllerApi* | [**initChallengeUsingPOST**](docs/AuthenticatorControllerApi.md#initChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/initChallenge | initChallenge
 *AuthenticatorControllerApi* | [**performDecoupledAuthenticationUsingPOST**](docs/AuthenticatorControllerApi.md#performDecoupledAuthenticationUsingPOST) | **POST** /3ds/auth/{issuer-code}/performDecoupledAuthentication | performDecoupledAuthentication
 *AuthenticatorControllerApi* | [**resendChallengeUsingPOST**](docs/AuthenticatorControllerApi.md#resendChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/resendChallenge | resendChallenge
-*CardTokenizerControllerApi* | [**detokenizeUsingPOST**](docs/CardTokenizerControllerApi.md#detokenizeUsingPOST) | **POST** /3ds/detokenize | detokenize
-*CardTokenizerControllerApi* | [**tokenizeUsingPOST**](docs/CardTokenizerControllerApi.md#tokenizeUsingPOST) | **POST** /3ds/tokenize | tokenize
+*CardTokenizerControllerApi* | [**detokenizeUsingPOST**](docs/CardTokenizerControllerApi.md#detokenizeUsingPOST) | **POST** /3ds/{issuer-code}/detokenize | detokenize
+*CardTokenizerControllerApi* | [**tokenizeUsingPOST**](docs/CardTokenizerControllerApi.md#tokenizeUsingPOST) | **POST** /3ds/{issuer-code}/tokenize | tokenize
 *ChallengeManagerControllerApi* | [**evaluateChallengeStepUsingPOST1**](docs/ChallengeManagerControllerApi.md#evaluateChallengeStepUsingPOST1) | **POST** /3ds/challenge/{issuer-code}/evaluateChallengeStep | evaluateChallengeStep
 *ChallengeManagerControllerApi* | [**initChallengeUsingPOST1**](docs/ChallengeManagerControllerApi.md#initChallengeUsingPOST1) | **POST** /3ds/challenge/{issuer-code}/initChallenge | initChallenge
 *ChallengeManagerControllerApi* | [**isChallengeSupportedUsingPOST**](docs/ChallengeManagerControllerApi.md#isChallengeSupportedUsingPOST) | **POST** /3ds/challenge/{issuer-code}/isChallengeSupported | isChallengeSupported
@@ -125,6 +125,7 @@ Class | Method | HTTP request | Description
  - [InitChallengeCMWebResponse](docs/InitChallengeCMWebResponse.md)
  - [IsChallengeSupportedWebRequest](docs/IsChallengeSupportedWebRequest.md)
  - [IsChallengeSupportedWebResponse](docs/IsChallengeSupportedWebResponse.md)
+ - [Mapstringstring](docs/Mapstringstring.md)
  - [PerformDecoupledAuthWebRequest](docs/PerformDecoupledAuthWebRequest.md)
  - [Phone](docs/Phone.md)
  - [ResendChallengeWebRequest](docs/ResendChallengeWebRequest.md)

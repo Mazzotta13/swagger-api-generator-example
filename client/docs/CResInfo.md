@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **challengeInfoLabel** | **String** |  |  [optional]
 **challengeInfoText** | **String** |  |  [optional]
 **challengeInfoTextIndicator** | **String** |  |  [optional]
-**challengeSelectInfo** | [**List&lt;java.util.Map&gt;**](java.util.Map.md) |  |  [optional]
+**challengeSelectInfo** | [**List&lt;Mapstringstring&gt;**](Mapstringstring.md) |  |  [optional]
 **expandInfoLabel** | **String** |  |  [optional]
 **expandInfoText** | **String** |  |  [optional]
 **issuerImage** | [**ThreeDSImage**](ThreeDSImage.md) |  |  [optional]

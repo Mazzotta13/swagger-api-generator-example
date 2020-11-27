@@ -73,7 +73,7 @@ public class CardTokenizerControllerApi {
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
-        String path = UriComponentsBuilder.fromPath("/3ds/detokenize").buildAndExpand(uriVariables).toUriString();
+        String path = UriComponentsBuilder.fromPath("/3ds/{issuer-code}/detokenize").buildAndExpand(uriVariables).toUriString();
         
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
@@ -118,7 +118,7 @@ public class CardTokenizerControllerApi {
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
-        String path = UriComponentsBuilder.fromPath("/3ds/tokenize").buildAndExpand(uriVariables).toUriString();
+        String path = UriComponentsBuilder.fromPath("/3ds/{issuer-code}/tokenize").buildAndExpand(uriVariables).toUriString();
         
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
