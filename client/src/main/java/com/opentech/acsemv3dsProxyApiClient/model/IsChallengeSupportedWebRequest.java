@@ -37,11 +37,11 @@ public class IsChallengeSupportedWebRequest {
    * Gets or Sets authenticationType
    */
   public enum AuthenticationTypeEnum {
-    _01_NAME_STATIC_ORDINAL_0_("AuthenticationType{code=01, name=STATIC, ordinal=0}"),
+    STATIC("STATIC"),
     
-    _02_NAME_DYNAMIC_ORDINAL_1_("AuthenticationType{code=02, name=DYNAMIC, ordinal=1}"),
+    DYNAMIC("DYNAMIC"),
     
-    _03_NAME_OOB_ORDINAL_2_("AuthenticationType{code=03, name=OOB, ordinal=2}");
+    OOB("OOB");
 
     private String value;
 
