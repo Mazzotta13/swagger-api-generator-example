@@ -18,6 +18,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.AReq;
+import com.opentech.acsemv3dsProxyApiClient.model.BrowserInfo;
 import com.opentech.acsemv3dsProxyApiClient.model.ThreeRIInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -29,6 +30,9 @@ import io.swagger.annotations.ApiModelProperty;
 public class EvaluateAuthenticationWebRequest {
   @JsonProperty("aReq")
   private AReq aReq = null;
+
+  @JsonProperty("browserInfo")
+  private BrowserInfo browserInfo = null;
 
   @JsonProperty("threeRIInfo")
   private ThreeRIInfo threeRIInfo = null;
@@ -49,6 +53,24 @@ public class EvaluateAuthenticationWebRequest {
 
   public void setAReq(AReq aReq) {
     this.aReq = aReq;
+  }
+
+  public EvaluateAuthenticationWebRequest browserInfo(BrowserInfo browserInfo) {
+    this.browserInfo = browserInfo;
+    return this;
+  }
+
+   /**
+   * Get browserInfo
+   * @return browserInfo
+  **/
+  @ApiModelProperty(value = "")
+  public BrowserInfo getBrowserInfo() {
+    return browserInfo;
+  }
+
+  public void setBrowserInfo(BrowserInfo browserInfo) {
+    this.browserInfo = browserInfo;
   }
 
   public EvaluateAuthenticationWebRequest threeRIInfo(ThreeRIInfo threeRIInfo) {
@@ -80,12 +102,13 @@ public class EvaluateAuthenticationWebRequest {
     }
     EvaluateAuthenticationWebRequest evaluateAuthenticationWebRequest = (EvaluateAuthenticationWebRequest) o;
     return Objects.equals(this.aReq, evaluateAuthenticationWebRequest.aReq) &&
+        Objects.equals(this.browserInfo, evaluateAuthenticationWebRequest.browserInfo) &&
         Objects.equals(this.threeRIInfo, evaluateAuthenticationWebRequest.threeRIInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aReq, threeRIInfo);
+    return Objects.hash(aReq, browserInfo, threeRIInfo);
   }
 
 
@@ -95,6 +118,7 @@ public class EvaluateAuthenticationWebRequest {
     sb.append("class EvaluateAuthenticationWebRequest {\n");
     
     sb.append("    aReq: ").append(toIndentedString(aReq)).append("\n");
+    sb.append("    browserInfo: ").append(toIndentedString(browserInfo)).append("\n");
     sb.append("    threeRIInfo: ").append(toIndentedString(threeRIInfo)).append("\n");
     sb.append("}");
     return sb.toString();

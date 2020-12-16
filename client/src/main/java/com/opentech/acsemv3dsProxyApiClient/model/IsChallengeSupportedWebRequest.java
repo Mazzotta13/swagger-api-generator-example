@@ -18,6 +18,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.AReq;
+import com.opentech.acsemv3dsProxyApiClient.model.BrowserInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -71,6 +72,9 @@ public class IsChallengeSupportedWebRequest {
 
   @JsonProperty("authenticationType")
   private AuthenticationTypeEnum authenticationType = null;
+
+  @JsonProperty("browserInfo")
+  private BrowserInfo browserInfo = null;
 
   public IsChallengeSupportedWebRequest aReq(AReq aReq) {
     this.aReq = aReq;
@@ -126,6 +130,24 @@ public class IsChallengeSupportedWebRequest {
     this.authenticationType = authenticationType;
   }
 
+  public IsChallengeSupportedWebRequest browserInfo(BrowserInfo browserInfo) {
+    this.browserInfo = browserInfo;
+    return this;
+  }
+
+   /**
+   * Get browserInfo
+   * @return browserInfo
+  **/
+  @ApiModelProperty(value = "")
+  public BrowserInfo getBrowserInfo() {
+    return browserInfo;
+  }
+
+  public void setBrowserInfo(BrowserInfo browserInfo) {
+    this.browserInfo = browserInfo;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -138,12 +160,13 @@ public class IsChallengeSupportedWebRequest {
     IsChallengeSupportedWebRequest isChallengeSupportedWebRequest = (IsChallengeSupportedWebRequest) o;
     return Objects.equals(this.aReq, isChallengeSupportedWebRequest.aReq) &&
         Objects.equals(this.authenticationName, isChallengeSupportedWebRequest.authenticationName) &&
-        Objects.equals(this.authenticationType, isChallengeSupportedWebRequest.authenticationType);
+        Objects.equals(this.authenticationType, isChallengeSupportedWebRequest.authenticationType) &&
+        Objects.equals(this.browserInfo, isChallengeSupportedWebRequest.browserInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aReq, authenticationName, authenticationType);
+    return Objects.hash(aReq, authenticationName, authenticationType, browserInfo);
   }
 
 
@@ -155,6 +178,7 @@ public class IsChallengeSupportedWebRequest {
     sb.append("    aReq: ").append(toIndentedString(aReq)).append("\n");
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
     sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
+    sb.append("    browserInfo: ").append(toIndentedString(browserInfo)).append("\n");
     sb.append("}");
     return sb.toString();
   }
