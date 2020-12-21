@@ -26,6 +26,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class IsChallengeSupportedWebResponse {
+  @JsonProperty("acsMaxChallenges")
+  private Integer acsMaxChallenges = null;
+
   @JsonProperty("challengeSupported")
   private Boolean challengeSupported = null;
 
@@ -34,6 +37,24 @@ public class IsChallengeSupportedWebResponse {
 
   @JsonProperty("threeDSAcsRenderingType")
   private ThreeDSAcsRenderingType threeDSAcsRenderingType = null;
+
+  public IsChallengeSupportedWebResponse acsMaxChallenges(Integer acsMaxChallenges) {
+    this.acsMaxChallenges = acsMaxChallenges;
+    return this;
+  }
+
+   /**
+   * Get acsMaxChallenges
+   * @return acsMaxChallenges
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getAcsMaxChallenges() {
+    return acsMaxChallenges;
+  }
+
+  public void setAcsMaxChallenges(Integer acsMaxChallenges) {
+    this.acsMaxChallenges = acsMaxChallenges;
+  }
 
   public IsChallengeSupportedWebResponse challengeSupported(Boolean challengeSupported) {
     this.challengeSupported = challengeSupported;
@@ -99,14 +120,15 @@ public class IsChallengeSupportedWebResponse {
       return false;
     }
     IsChallengeSupportedWebResponse isChallengeSupportedWebResponse = (IsChallengeSupportedWebResponse) o;
-    return Objects.equals(this.challengeSupported, isChallengeSupportedWebResponse.challengeSupported) &&
+    return Objects.equals(this.acsMaxChallenges, isChallengeSupportedWebResponse.acsMaxChallenges) &&
+        Objects.equals(this.challengeSupported, isChallengeSupportedWebResponse.challengeSupported) &&
         Objects.equals(this.performDecoupledAuthentication, isChallengeSupportedWebResponse.performDecoupledAuthentication) &&
         Objects.equals(this.threeDSAcsRenderingType, isChallengeSupportedWebResponse.threeDSAcsRenderingType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(challengeSupported, performDecoupledAuthentication, threeDSAcsRenderingType);
+    return Objects.hash(acsMaxChallenges, challengeSupported, performDecoupledAuthentication, threeDSAcsRenderingType);
   }
 
 
@@ -115,6 +137,7 @@ public class IsChallengeSupportedWebResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class IsChallengeSupportedWebResponse {\n");
     
+    sb.append("    acsMaxChallenges: ").append(toIndentedString(acsMaxChallenges)).append("\n");
     sb.append("    challengeSupported: ").append(toIndentedString(challengeSupported)).append("\n");
     sb.append("    performDecoupledAuthentication: ").append(toIndentedString(performDecoupledAuthentication)).append("\n");
     sb.append("    threeDSAcsRenderingType: ").append(toIndentedString(threeDSAcsRenderingType)).append("\n");
