@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **arrivalCondition** | **String** |  |  [optional]
 **authenticationName** | **String** |  |  [optional]
+**cReq** | [**CReq**](CReq.md) |  |  [optional]
 **deviceChannel** | **String** |  |  [optional]
 **transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
 

@@ -158,6 +158,12 @@ public class AReq {
   @JsonProperty("messageExtension")
   private List<Extension> messageExtension = null;
 
+  @JsonProperty("messageType")
+  private String messageType = null;
+
+  @JsonProperty("messageVersion")
+  private String messageVersion = null;
+
   @JsonProperty("mobilePhone")
   private Phone mobilePhone = null;
 
@@ -193,9 +199,6 @@ public class AReq {
 
   @JsonProperty("sdkAppID")
   private String sdkAppID = null;
-
-  @JsonProperty("sdkEncData")
-  private String sdkEncData = null;
 
   @JsonProperty("sdkEphemPubKey")
   private SdkEphemPubKey sdkEphemPubKey = null;
@@ -1036,6 +1039,42 @@ public class AReq {
     this.messageExtension = messageExtension;
   }
 
+  public AReq messageType(String messageType) {
+    this.messageType = messageType;
+    return this;
+  }
+
+   /**
+   * Get messageType
+   * @return messageType
+  **/
+  @ApiModelProperty(value = "")
+  public String getMessageType() {
+    return messageType;
+  }
+
+  public void setMessageType(String messageType) {
+    this.messageType = messageType;
+  }
+
+  public AReq messageVersion(String messageVersion) {
+    this.messageVersion = messageVersion;
+    return this;
+  }
+
+   /**
+   * Get messageVersion
+   * @return messageVersion
+  **/
+  @ApiModelProperty(value = "")
+  public String getMessageVersion() {
+    return messageVersion;
+  }
+
+  public void setMessageVersion(String messageVersion) {
+    this.messageVersion = messageVersion;
+  }
+
   public AReq mobilePhone(Phone mobilePhone) {
     this.mobilePhone = mobilePhone;
     return this;
@@ -1250,24 +1289,6 @@ public class AReq {
 
   public void setSdkAppID(String sdkAppID) {
     this.sdkAppID = sdkAppID;
-  }
-
-  public AReq sdkEncData(String sdkEncData) {
-    this.sdkEncData = sdkEncData;
-    return this;
-  }
-
-   /**
-   * Get sdkEncData
-   * @return sdkEncData
-  **/
-  @ApiModelProperty(value = "")
-  public String getSdkEncData() {
-    return sdkEncData;
-  }
-
-  public void setSdkEncData(String sdkEncData) {
-    this.sdkEncData = sdkEncData;
   }
 
   public AReq sdkEphemPubKey(SdkEphemPubKey sdkEphemPubKey) {
@@ -1879,6 +1900,8 @@ public class AReq {
         Objects.equals(this.merchantRiskIndicator, areq.merchantRiskIndicator) &&
         Objects.equals(this.messageCategory, areq.messageCategory) &&
         Objects.equals(this.messageExtension, areq.messageExtension) &&
+        Objects.equals(this.messageType, areq.messageType) &&
+        Objects.equals(this.messageVersion, areq.messageVersion) &&
         Objects.equals(this.mobilePhone, areq.mobilePhone) &&
         Objects.equals(this.notificationURL, areq.notificationURL) &&
         Objects.equals(this.payTokenInd, areq.payTokenInd) &&
@@ -1891,7 +1914,6 @@ public class AReq {
         Objects.equals(this.recurringExpiry, areq.recurringExpiry) &&
         Objects.equals(this.recurringFrequency, areq.recurringFrequency) &&
         Objects.equals(this.sdkAppID, areq.sdkAppID) &&
-        Objects.equals(this.sdkEncData, areq.sdkEncData) &&
         Objects.equals(this.sdkEphemPubKey, areq.sdkEphemPubKey) &&
         Objects.equals(this.sdkMaxTimeout, areq.sdkMaxTimeout) &&
         Objects.equals(this.sdkReferenceNumber, areq.sdkReferenceNumber) &&
@@ -1927,7 +1949,7 @@ public class AReq {
 
   @Override
   public int hashCode() {
-    return Objects.hash(acctID, acctInfo, acctNumber, acctType, acquirerBIN, acquirerMerchantID, addrMatch, billAddrCity, billAddrCountry, billAddrLine1, billAddrLine2, billAddrLine3, billAddrPostCode, billAddrState, broadInfo, browserAcceptHeader, browserColorDepth, browserIP, browserJavaEnabled, browserJavascriptEnabled, browserLanguage, browserScreenHeight, browserScreenWidth, browserTZ, browserUserAgent, cardExpiryDate, cardholderName, deviceChannel, deviceInfo, deviceRenderOptions, dsReferenceNumber, dsTransID, dsURL, email, homePhone, mcc, merchantCountryCode, merchantName, merchantRiskIndicator, messageCategory, messageExtension, mobilePhone, notificationURL, payTokenInd, payTokenSource, purchaseAmount, purchaseCurrency, purchaseDate, purchaseExponent, purchaseInstalData, recurringExpiry, recurringFrequency, sdkAppID, sdkEncData, sdkEphemPubKey, sdkMaxTimeout, sdkReferenceNumber, sdkTransID, shipAddrCity, shipAddrCountry, shipAddrLine1, shipAddrLine2, shipAddrLine3, shipAddrPostCode, shipAddrState, threeDSCompInd, threeDSReqAuthMethodInd, threeDSRequestorAuthenticationInd, threeDSRequestorAuthenticationInfo, threeDSRequestorChallengeInd, threeDSRequestorDecMaxTime, threeDSRequestorDecReqInd, threeDSRequestorID, threeDSRequestorName, threeDSRequestorPriorAuthenticationInfo, threeDSRequestorURL, threeDSServerOperatorID, threeDSServerRefNumber, threeDSServerTransID, threeDSServerURL, threeRIInd, transType, whiteListStatus, whiteListStatusSource, workPhone);
+    return Objects.hash(acctID, acctInfo, acctNumber, acctType, acquirerBIN, acquirerMerchantID, addrMatch, billAddrCity, billAddrCountry, billAddrLine1, billAddrLine2, billAddrLine3, billAddrPostCode, billAddrState, broadInfo, browserAcceptHeader, browserColorDepth, browserIP, browserJavaEnabled, browserJavascriptEnabled, browserLanguage, browserScreenHeight, browserScreenWidth, browserTZ, browserUserAgent, cardExpiryDate, cardholderName, deviceChannel, deviceInfo, deviceRenderOptions, dsReferenceNumber, dsTransID, dsURL, email, homePhone, mcc, merchantCountryCode, merchantName, merchantRiskIndicator, messageCategory, messageExtension, messageType, messageVersion, mobilePhone, notificationURL, payTokenInd, payTokenSource, purchaseAmount, purchaseCurrency, purchaseDate, purchaseExponent, purchaseInstalData, recurringExpiry, recurringFrequency, sdkAppID, sdkEphemPubKey, sdkMaxTimeout, sdkReferenceNumber, sdkTransID, shipAddrCity, shipAddrCountry, shipAddrLine1, shipAddrLine2, shipAddrLine3, shipAddrPostCode, shipAddrState, threeDSCompInd, threeDSReqAuthMethodInd, threeDSRequestorAuthenticationInd, threeDSRequestorAuthenticationInfo, threeDSRequestorChallengeInd, threeDSRequestorDecMaxTime, threeDSRequestorDecReqInd, threeDSRequestorID, threeDSRequestorName, threeDSRequestorPriorAuthenticationInfo, threeDSRequestorURL, threeDSServerOperatorID, threeDSServerRefNumber, threeDSServerTransID, threeDSServerURL, threeRIInd, transType, whiteListStatus, whiteListStatusSource, workPhone);
   }
 
 
@@ -1977,6 +1999,8 @@ public class AReq {
     sb.append("    merchantRiskIndicator: ").append(toIndentedString(merchantRiskIndicator)).append("\n");
     sb.append("    messageCategory: ").append(toIndentedString(messageCategory)).append("\n");
     sb.append("    messageExtension: ").append(toIndentedString(messageExtension)).append("\n");
+    sb.append("    messageType: ").append(toIndentedString(messageType)).append("\n");
+    sb.append("    messageVersion: ").append(toIndentedString(messageVersion)).append("\n");
     sb.append("    mobilePhone: ").append(toIndentedString(mobilePhone)).append("\n");
     sb.append("    notificationURL: ").append(toIndentedString(notificationURL)).append("\n");
     sb.append("    payTokenInd: ").append(toIndentedString(payTokenInd)).append("\n");
@@ -1989,7 +2013,6 @@ public class AReq {
     sb.append("    recurringExpiry: ").append(toIndentedString(recurringExpiry)).append("\n");
     sb.append("    recurringFrequency: ").append(toIndentedString(recurringFrequency)).append("\n");
     sb.append("    sdkAppID: ").append(toIndentedString(sdkAppID)).append("\n");
-    sb.append("    sdkEncData: ").append(toIndentedString(sdkEncData)).append("\n");
     sb.append("    sdkEphemPubKey: ").append(toIndentedString(sdkEphemPubKey)).append("\n");
     sb.append("    sdkMaxTimeout: ").append(toIndentedString(sdkMaxTimeout)).append("\n");
     sb.append("    sdkReferenceNumber: ").append(toIndentedString(sdkReferenceNumber)).append("\n");

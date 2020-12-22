@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.opentech.acsemv3dsProxyApiClient.model.CReq;
 import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -31,6 +32,9 @@ public class EvaluateChallengeStepCMWebRequest {
 
   @JsonProperty("authenticationName")
   private String authenticationName = null;
+
+  @JsonProperty("cReq")
+  private CReq cReq = null;
 
   @JsonProperty("currStepId")
   private String currStepId = null;
@@ -72,6 +76,24 @@ public class EvaluateChallengeStepCMWebRequest {
 
   public void setAuthenticationName(String authenticationName) {
     this.authenticationName = authenticationName;
+  }
+
+  public EvaluateChallengeStepCMWebRequest cReq(CReq cReq) {
+    this.cReq = cReq;
+    return this;
+  }
+
+   /**
+   * Get cReq
+   * @return cReq
+  **/
+  @ApiModelProperty(value = "")
+  public CReq getCReq() {
+    return cReq;
+  }
+
+  public void setCReq(CReq cReq) {
+    this.cReq = cReq;
   }
 
   public EvaluateChallengeStepCMWebRequest currStepId(String currStepId) {
@@ -122,13 +144,14 @@ public class EvaluateChallengeStepCMWebRequest {
     EvaluateChallengeStepCMWebRequest evaluateChallengeStepCMWebRequest = (EvaluateChallengeStepCMWebRequest) o;
     return Objects.equals(this.arrivalCondition, evaluateChallengeStepCMWebRequest.arrivalCondition) &&
         Objects.equals(this.authenticationName, evaluateChallengeStepCMWebRequest.authenticationName) &&
+        Objects.equals(this.cReq, evaluateChallengeStepCMWebRequest.cReq) &&
         Objects.equals(this.currStepId, evaluateChallengeStepCMWebRequest.currStepId) &&
         Objects.equals(this.transactionInfo, evaluateChallengeStepCMWebRequest.transactionInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(arrivalCondition, authenticationName, currStepId, transactionInfo);
+    return Objects.hash(arrivalCondition, authenticationName, cReq, currStepId, transactionInfo);
   }
 
 
@@ -139,6 +162,7 @@ public class EvaluateChallengeStepCMWebRequest {
     
     sb.append("    arrivalCondition: ").append(toIndentedString(arrivalCondition)).append("\n");
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
+    sb.append("    cReq: ").append(toIndentedString(cReq)).append("\n");
     sb.append("    currStepId: ").append(toIndentedString(currStepId)).append("\n");
     sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
     sb.append("}");

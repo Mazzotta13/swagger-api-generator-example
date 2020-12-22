@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.opentech.acsemv3dsProxyApiClient.model.CReq;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -27,6 +28,9 @@ import io.swagger.annotations.ApiModelProperty;
 public class ResendChallengeWebRequest {
   @JsonProperty("authenticationName")
   private String authenticationName = null;
+
+  @JsonProperty("cReq")
+  private CReq cReq = null;
 
   @JsonProperty("cardNumber")
   private String cardNumber = null;
@@ -47,6 +51,24 @@ public class ResendChallengeWebRequest {
 
   public void setAuthenticationName(String authenticationName) {
     this.authenticationName = authenticationName;
+  }
+
+  public ResendChallengeWebRequest cReq(CReq cReq) {
+    this.cReq = cReq;
+    return this;
+  }
+
+   /**
+   * Get cReq
+   * @return cReq
+  **/
+  @ApiModelProperty(value = "")
+  public CReq getCReq() {
+    return cReq;
+  }
+
+  public void setCReq(CReq cReq) {
+    this.cReq = cReq;
   }
 
   public ResendChallengeWebRequest cardNumber(String cardNumber) {
@@ -78,12 +100,13 @@ public class ResendChallengeWebRequest {
     }
     ResendChallengeWebRequest resendChallengeWebRequest = (ResendChallengeWebRequest) o;
     return Objects.equals(this.authenticationName, resendChallengeWebRequest.authenticationName) &&
+        Objects.equals(this.cReq, resendChallengeWebRequest.cReq) &&
         Objects.equals(this.cardNumber, resendChallengeWebRequest.cardNumber);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationName, cardNumber);
+    return Objects.hash(authenticationName, cReq, cardNumber);
   }
 
 
@@ -93,6 +116,7 @@ public class ResendChallengeWebRequest {
     sb.append("class ResendChallengeWebRequest {\n");
     
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
+    sb.append("    cReq: ").append(toIndentedString(cReq)).append("\n");
     sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
     sb.append("}");
     return sb.toString();

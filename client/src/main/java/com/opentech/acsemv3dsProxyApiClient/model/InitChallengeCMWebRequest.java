@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.opentech.acsemv3dsProxyApiClient.model.CReq;
 import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -31,6 +32,9 @@ public class InitChallengeCMWebRequest {
 
   @JsonProperty("authenticationName")
   private String authenticationName = null;
+
+  @JsonProperty("cReq")
+  private CReq cReq = null;
 
   @JsonProperty("deviceChannel")
   private String deviceChannel = null;
@@ -72,6 +76,24 @@ public class InitChallengeCMWebRequest {
 
   public void setAuthenticationName(String authenticationName) {
     this.authenticationName = authenticationName;
+  }
+
+  public InitChallengeCMWebRequest cReq(CReq cReq) {
+    this.cReq = cReq;
+    return this;
+  }
+
+   /**
+   * Get cReq
+   * @return cReq
+  **/
+  @ApiModelProperty(value = "")
+  public CReq getCReq() {
+    return cReq;
+  }
+
+  public void setCReq(CReq cReq) {
+    this.cReq = cReq;
   }
 
   public InitChallengeCMWebRequest deviceChannel(String deviceChannel) {
@@ -122,13 +144,14 @@ public class InitChallengeCMWebRequest {
     InitChallengeCMWebRequest initChallengeCMWebRequest = (InitChallengeCMWebRequest) o;
     return Objects.equals(this.arrivalCondition, initChallengeCMWebRequest.arrivalCondition) &&
         Objects.equals(this.authenticationName, initChallengeCMWebRequest.authenticationName) &&
+        Objects.equals(this.cReq, initChallengeCMWebRequest.cReq) &&
         Objects.equals(this.deviceChannel, initChallengeCMWebRequest.deviceChannel) &&
         Objects.equals(this.transactionInfo, initChallengeCMWebRequest.transactionInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(arrivalCondition, authenticationName, deviceChannel, transactionInfo);
+    return Objects.hash(arrivalCondition, authenticationName, cReq, deviceChannel, transactionInfo);
   }
 
 
@@ -139,6 +162,7 @@ public class InitChallengeCMWebRequest {
     
     sb.append("    arrivalCondition: ").append(toIndentedString(arrivalCondition)).append("\n");
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
+    sb.append("    cReq: ").append(toIndentedString(cReq)).append("\n");
     sb.append("    deviceChannel: ").append(toIndentedString(deviceChannel)).append("\n");
     sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
     sb.append("}");
