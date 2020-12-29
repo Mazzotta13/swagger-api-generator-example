@@ -28,6 +28,82 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
   @JsonProperty("result")
   private String result = null;
 
+  /**
+   * Gets or Sets transactionStatusReason
+   */
+  public enum TransactionStatusReasonEnum {
+    CARD("CARD"),
+    
+    UNKNOWN_DEVICE("UNKNOWN_DEVICE"),
+    
+    UNSUPPORTED_DEVICE("UNSUPPORTED_DEVICE"),
+    
+    EXCEEDS_AUTHENTICATION_LIMIT("EXCEEDS_AUTHENTICATION_LIMIT"),
+    
+    EXPIRED_CARD("EXPIRED_CARD"),
+    
+    INVALID_CARD_NUMBER("INVALID_CARD_NUMBER"),
+    
+    INVALID_TRANSACTION("INVALID_TRANSACTION"),
+    
+    NO_CARD_RECORD("NO_CARD_RECORD"),
+    
+    SECURITY_FAILURE("SECURITY_FAILURE"),
+    
+    STOLEN_CARD("STOLEN_CARD"),
+    
+    SUSPECTED_FRAUD("SUSPECTED_FRAUD"),
+    
+    TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER("TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER"),
+    
+    CARDHOLDER_NOT_ENROLLED_IN_SERVICE("CARDHOLDER_NOT_ENROLLED_IN_SERVICE"),
+    
+    TRANSACTION_TIMED_OUT_AT_THE_ACS("TRANSACTION_TIMED_OUT_AT_THE_ACS"),
+    
+    LOW_CONFIDENCE("LOW_CONFIDENCE"),
+    
+    MEDIUM_CONFIDENCE("MEDIUM_CONFIDENCE"),
+    
+    HIGH_CONFIDENCE("HIGH_CONFIDENCE"),
+    
+    VERY_HIGH_CONFIDENCE("VERY_HIGH_CONFIDENCE"),
+    
+    EXCEEDS_ACS_MAXIMUM_CHALLENGES("EXCEEDS_ACS_MAXIMUM_CHALLENGES"),
+    
+    NON_PAYMENT_TRANSACTION_NOT_SUPPORTED("NON_PAYMENT_TRANSACTION_NOT_SUPPORTED"),
+    
+    THREE_RI_TRANSACTION_NOT_SUPPORTED("THREE_RI_TRANSACTION_NOT_SUPPORTED");
+
+    private String value;
+
+    TransactionStatusReasonEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static TransactionStatusReasonEnum fromValue(String text) {
+      for (TransactionStatusReasonEnum b : TransactionStatusReasonEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
+  @JsonProperty("transactionStatusReason")
+  private TransactionStatusReasonEnum transactionStatusReason = null;
+
   public EvaluateChallengeStepAuthenticatorWebResponse result(String result) {
     this.result = result;
     return this;
@@ -46,6 +122,24 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
     this.result = result;
   }
 
+  public EvaluateChallengeStepAuthenticatorWebResponse transactionStatusReason(TransactionStatusReasonEnum transactionStatusReason) {
+    this.transactionStatusReason = transactionStatusReason;
+    return this;
+  }
+
+   /**
+   * Get transactionStatusReason
+   * @return transactionStatusReason
+  **/
+  @ApiModelProperty(value = "")
+  public TransactionStatusReasonEnum getTransactionStatusReason() {
+    return transactionStatusReason;
+  }
+
+  public void setTransactionStatusReason(TransactionStatusReasonEnum transactionStatusReason) {
+    this.transactionStatusReason = transactionStatusReason;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -56,12 +150,13 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
       return false;
     }
     EvaluateChallengeStepAuthenticatorWebResponse evaluateChallengeStepAuthenticatorWebResponse = (EvaluateChallengeStepAuthenticatorWebResponse) o;
-    return Objects.equals(this.result, evaluateChallengeStepAuthenticatorWebResponse.result);
+    return Objects.equals(this.result, evaluateChallengeStepAuthenticatorWebResponse.result) &&
+        Objects.equals(this.transactionStatusReason, evaluateChallengeStepAuthenticatorWebResponse.transactionStatusReason);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(result);
+    return Objects.hash(result, transactionStatusReason);
   }
 
 
@@ -71,6 +166,7 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
     sb.append("class EvaluateChallengeStepAuthenticatorWebResponse {\n");
     
     sb.append("    result: ").append(toIndentedString(result)).append("\n");
+    sb.append("    transactionStatusReason: ").append(toIndentedString(transactionStatusReason)).append("\n");
     sb.append("}");
     return sb.toString();
   }
