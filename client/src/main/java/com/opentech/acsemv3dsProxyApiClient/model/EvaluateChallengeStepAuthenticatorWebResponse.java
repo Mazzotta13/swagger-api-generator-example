@@ -32,7 +32,7 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
    * Gets or Sets transactionStatusReason
    */
   public enum TransactionStatusReasonEnum {
-    CARD("CARD"),
+    CARD_AUTHENTICATION_FAILED("CARD_AUTHENTICATION_FAILED"),
     
     UNKNOWN_DEVICE("UNKNOWN_DEVICE"),
     

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Enum: TransactionStatusReasonEnum
 Name | Value
 ---- | -----
-CARD | &quot;CARD&quot;
+CARD_AUTHENTICATION_FAILED | &quot;CARD_AUTHENTICATION_FAILED&quot;
 UNKNOWN_DEVICE | &quot;UNKNOWN_DEVICE&quot;
 UNSUPPORTED_DEVICE | &quot;UNSUPPORTED_DEVICE&quot;
 EXCEEDS_AUTHENTICATION_LIMIT | &quot;EXCEEDS_AUTHENTICATION_LIMIT&quot;
