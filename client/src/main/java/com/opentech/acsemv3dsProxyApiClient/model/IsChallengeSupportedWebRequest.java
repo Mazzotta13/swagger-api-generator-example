@@ -41,7 +41,9 @@ public class IsChallengeSupportedWebRequest {
     
     DYNAMIC("DYNAMIC"),
     
-    OOB("OOB");
+    OOB("OOB"),
+    
+    DECOUPLED("DECOUPLED");
 
     private String value;
 

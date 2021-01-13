@@ -88,7 +88,9 @@ public class EvaluateAuthenticationWebResponse {
     
     DYNAMIC("DYNAMIC"),
     
-    OOB("OOB");
+    OOB("OOB"),
+    
+    DECOUPLED("DECOUPLED");
 
     private String value;
 

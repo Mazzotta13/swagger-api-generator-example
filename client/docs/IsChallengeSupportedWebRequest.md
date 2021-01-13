@@ -17,6 +17,7 @@ Name | Value
 STATIC | &quot;STATIC&quot;
 DYNAMIC | &quot;DYNAMIC&quot;
 OOB | &quot;OOB&quot;
+DECOUPLED | &quot;DECOUPLED&quot;
 
 
 
