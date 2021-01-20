@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **cardNumber** | **String** |  |  [optional]
 **challengeType** | **String** |  |  [optional]
 **challengeValue** | **String** |  |  [optional]
+**transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
 
 
 

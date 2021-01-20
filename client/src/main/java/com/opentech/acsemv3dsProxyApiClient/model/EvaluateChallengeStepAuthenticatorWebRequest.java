@@ -18,6 +18,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.CReq;
+import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -40,6 +41,9 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
 
   @JsonProperty("challengeValue")
   private String challengeValue = null;
+
+  @JsonProperty("transactionInfo")
+  private TransactionInfo transactionInfo = null;
 
   public EvaluateChallengeStepAuthenticatorWebRequest authenticationName(String authenticationName) {
     this.authenticationName = authenticationName;
@@ -131,6 +135,24 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
     this.challengeValue = challengeValue;
   }
 
+  public EvaluateChallengeStepAuthenticatorWebRequest transactionInfo(TransactionInfo transactionInfo) {
+    this.transactionInfo = transactionInfo;
+    return this;
+  }
+
+   /**
+   * Get transactionInfo
+   * @return transactionInfo
+  **/
+  @ApiModelProperty(value = "")
+  public TransactionInfo getTransactionInfo() {
+    return transactionInfo;
+  }
+
+  public void setTransactionInfo(TransactionInfo transactionInfo) {
+    this.transactionInfo = transactionInfo;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -145,12 +167,13 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
         Objects.equals(this.cReq, evaluateChallengeStepAuthenticatorWebRequest.cReq) &&
         Objects.equals(this.cardNumber, evaluateChallengeStepAuthenticatorWebRequest.cardNumber) &&
         Objects.equals(this.challengeType, evaluateChallengeStepAuthenticatorWebRequest.challengeType) &&
-        Objects.equals(this.challengeValue, evaluateChallengeStepAuthenticatorWebRequest.challengeValue);
+        Objects.equals(this.challengeValue, evaluateChallengeStepAuthenticatorWebRequest.challengeValue) &&
+        Objects.equals(this.transactionInfo, evaluateChallengeStepAuthenticatorWebRequest.transactionInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationName, cReq, cardNumber, challengeType, challengeValue);
+    return Objects.hash(authenticationName, cReq, cardNumber, challengeType, challengeValue, transactionInfo);
   }
 
 
@@ -164,6 +187,7 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
     sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
     sb.append("    challengeType: ").append(toIndentedString(challengeType)).append("\n");
     sb.append("    challengeValue: ").append(toIndentedString(challengeValue)).append("\n");
+    sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

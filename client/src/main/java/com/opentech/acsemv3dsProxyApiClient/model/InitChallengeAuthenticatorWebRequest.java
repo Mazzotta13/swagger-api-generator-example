@@ -18,6 +18,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.CReq;
+import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -34,6 +35,9 @@ public class InitChallengeAuthenticatorWebRequest {
 
   @JsonProperty("cardNumber")
   private String cardNumber = null;
+
+  @JsonProperty("transactionInfo")
+  private TransactionInfo transactionInfo = null;
 
   public InitChallengeAuthenticatorWebRequest authenticationName(String authenticationName) {
     this.authenticationName = authenticationName;
@@ -89,6 +93,24 @@ public class InitChallengeAuthenticatorWebRequest {
     this.cardNumber = cardNumber;
   }
 
+  public InitChallengeAuthenticatorWebRequest transactionInfo(TransactionInfo transactionInfo) {
+    this.transactionInfo = transactionInfo;
+    return this;
+  }
+
+   /**
+   * Get transactionInfo
+   * @return transactionInfo
+  **/
+  @ApiModelProperty(value = "")
+  public TransactionInfo getTransactionInfo() {
+    return transactionInfo;
+  }
+
+  public void setTransactionInfo(TransactionInfo transactionInfo) {
+    this.transactionInfo = transactionInfo;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -101,12 +123,13 @@ public class InitChallengeAuthenticatorWebRequest {
     InitChallengeAuthenticatorWebRequest initChallengeAuthenticatorWebRequest = (InitChallengeAuthenticatorWebRequest) o;
     return Objects.equals(this.authenticationName, initChallengeAuthenticatorWebRequest.authenticationName) &&
         Objects.equals(this.cReq, initChallengeAuthenticatorWebRequest.cReq) &&
-        Objects.equals(this.cardNumber, initChallengeAuthenticatorWebRequest.cardNumber);
+        Objects.equals(this.cardNumber, initChallengeAuthenticatorWebRequest.cardNumber) &&
+        Objects.equals(this.transactionInfo, initChallengeAuthenticatorWebRequest.transactionInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationName, cReq, cardNumber);
+    return Objects.hash(authenticationName, cReq, cardNumber, transactionInfo);
   }
 
 
@@ -118,6 +141,7 @@ public class InitChallengeAuthenticatorWebRequest {
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
     sb.append("    cReq: ").append(toIndentedString(cReq)).append("\n");
     sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
+    sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
     sb.append("}");
     return sb.toString();
   }
