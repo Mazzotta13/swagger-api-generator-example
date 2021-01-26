@@ -2,6 +2,8 @@ package com.opentech.acsemv3dsProxyApiClient.api;
 
 import com.opentech.acsemv3dsProxyApiClient.ApiClient;
 
+import com.opentech.acsemv3dsProxyApiClient.model.CheckAuthResultWebRequest;
+import com.opentech.acsemv3dsProxyApiClient.model.CheckAuthResultWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateAuthenticationWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateAuthenticationWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateChallengeStepAuthenticatorWebRequest;
@@ -54,6 +56,51 @@ public class AuthenticatorControllerApi {
         this.apiClient = apiClient;
     }
 
+    /**
+     * checkAuthResult
+     * 
+     * <p><b>200</b> - OK
+     * @param checkAuthResultWebRequest checkAuthResultWebRequest
+     * @param issuerCode issuer-code
+     * @return CheckAuthResultWebResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public CheckAuthResultWebResponse checkAuthResultUsingPOST(CheckAuthResultWebRequest checkAuthResultWebRequest, String issuerCode) throws RestClientException {
+        Object postBody = checkAuthResultWebRequest;
+        
+        // verify the required parameter 'checkAuthResultWebRequest' is set
+        if (checkAuthResultWebRequest == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'checkAuthResultWebRequest' when calling checkAuthResultUsingPOST");
+        }
+        
+        // verify the required parameter 'issuerCode' is set
+        if (issuerCode == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling checkAuthResultUsingPOST");
+        }
+        
+        // create path and map variables
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        uriVariables.put("issuer-code", issuerCode);
+        String path = UriComponentsBuilder.fromPath("/3ds/auth/{issuer-code}/checkAuthResult").buildAndExpand(uriVariables).toUriString();
+        
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] accepts = { 
+            "application/json"
+        };
+        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
+        final String[] contentTypes = { 
+            "application/json"
+        };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] {  };
+
+        ParameterizedTypeReference<CheckAuthResultWebResponse> returnType = new ParameterizedTypeReference<CheckAuthResultWebResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    }
     /**
      * evaluateAuthentication
      * 

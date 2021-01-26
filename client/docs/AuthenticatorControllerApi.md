@@ -4,12 +4,58 @@ All URIs are relative to *https://localhost:8080/acsemv3dsproxy*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**checkAuthResultUsingPOST**](AuthenticatorControllerApi.md#checkAuthResultUsingPOST) | **POST** /3ds/auth/{issuer-code}/checkAuthResult | checkAuthResult
 [**evaluateAuthenticationUsingPOST**](AuthenticatorControllerApi.md#evaluateAuthenticationUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateAuthentication | evaluateAuthentication
 [**evaluateChallengeStepUsingPOST**](AuthenticatorControllerApi.md#evaluateChallengeStepUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateChallengeStep | evaluateChallengeStep
 [**initChallengeUsingPOST**](AuthenticatorControllerApi.md#initChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/initChallenge | initChallenge
 [**performDecoupledAuthenticationUsingPOST**](AuthenticatorControllerApi.md#performDecoupledAuthenticationUsingPOST) | **POST** /3ds/auth/{issuer-code}/performDecoupledAuthentication | performDecoupledAuthentication
 [**resendChallengeUsingPOST**](AuthenticatorControllerApi.md#resendChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/resendChallenge | resendChallenge
 
+
+<a name="checkAuthResultUsingPOST"></a>
+# **checkAuthResultUsingPOST**
+> CheckAuthResultWebResponse checkAuthResultUsingPOST(checkAuthResultWebRequest, issuerCode)
+
+checkAuthResult
+
+### Example
+```java
+// Import classes:
+//import com.opentech.acsemv3dsProxyApiClient.ApiException;
+//import com.opentech.acsemv3dsProxyApiClient.api.AuthenticatorControllerApi;
+
+
+AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
+CheckAuthResultWebRequest checkAuthResultWebRequest = new CheckAuthResultWebRequest(); // CheckAuthResultWebRequest | checkAuthResultWebRequest
+String issuerCode = "issuerCode_example"; // String | issuer-code
+try {
+    CheckAuthResultWebResponse result = apiInstance.checkAuthResultUsingPOST(checkAuthResultWebRequest, issuerCode);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AuthenticatorControllerApi#checkAuthResultUsingPOST");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **checkAuthResultWebRequest** | [**CheckAuthResultWebRequest**](CheckAuthResultWebRequest.md)| checkAuthResultWebRequest |
+ **issuerCode** | **String**| issuer-code |
+
+### Return type
+
+[**CheckAuthResultWebResponse**](CheckAuthResultWebResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="evaluateAuthenticationUsingPOST"></a>
 # **evaluateAuthenticationUsingPOST**

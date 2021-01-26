@@ -13,6 +13,8 @@
 
 package com.opentech.acsemv3dsProxyApiClient.api;
 
+import com.opentech.acsemv3dsProxyApiClient.model.CheckAuthResultWebRequest;
+import com.opentech.acsemv3dsProxyApiClient.model.CheckAuthResultWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateAuthenticationWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateAuthenticationWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateChallengeStepAuthenticatorWebRequest;
@@ -39,6 +41,23 @@ public class AuthenticatorControllerApiTest {
 
     private final AuthenticatorControllerApi api = new AuthenticatorControllerApi();
 
+    
+    /**
+     * checkAuthResult
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void checkAuthResultUsingPOSTTest() {
+        CheckAuthResultWebRequest checkAuthResultWebRequest = null;
+        String issuerCode = null;
+        CheckAuthResultWebResponse response = api.checkAuthResultUsingPOST(checkAuthResultWebRequest, issuerCode);
+
+        // TODO: test validations
+    }
     
     /**
      * evaluateAuthentication
