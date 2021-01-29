@@ -22,9 +22,9 @@ import com.opentech.acsemv3dsProxyApiClient.model.EvaluateChallengeStepAuthentic
 import com.opentech.acsemv3dsProxyApiClient.model.InitChallengeAuthenticatorWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.InitChallengeAuthenticatorWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.PerformDecoupledAuthWebRequest;
+import com.opentech.acsemv3dsProxyApiClient.model.PerformDecoupledAuthWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.ResendChallengeWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.ResendChallengeWebResponse;
-import com.opentech.acsemv3dsProxyApiClient.model.ResponseEntity;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -122,7 +122,7 @@ public class AuthenticatorControllerApiTest {
     public void performDecoupledAuthenticationUsingPOSTTest() {
         String issuerCode = null;
         PerformDecoupledAuthWebRequest performDecoupledAuthWebRequest = null;
-        ResponseEntity response = api.performDecoupledAuthenticationUsingPOST(issuerCode, performDecoupledAuthWebRequest);
+        PerformDecoupledAuthWebResponse response = api.performDecoupledAuthenticationUsingPOST(issuerCode, performDecoupledAuthWebRequest);
 
         // TODO: test validations
     }

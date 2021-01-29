@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **authenticationResult** | [**AuthenticationResultEnum**](#AuthenticationResultEnum) |  |  [optional]
 **authenticationType** | [**AuthenticationTypeEnum**](#AuthenticationTypeEnum) |  |  [optional]
 **cardEnrolled** | **Boolean** |  |  [optional]
+**cardholderInfo** | **String** |  |  [optional]
 **challengeMandatory** | **Boolean** |  |  [optional]
 **transactionStatusReason** | [**TransactionStatusReasonEnum**](#TransactionStatusReasonEnum) |  |  [optional]
 

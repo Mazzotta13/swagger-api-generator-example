@@ -125,6 +125,9 @@ public class EvaluateAuthenticationWebResponse {
   @JsonProperty("cardEnrolled")
   private Boolean cardEnrolled = null;
 
+  @JsonProperty("cardholderInfo")
+  private String cardholderInfo = null;
+
   @JsonProperty("challengeMandatory")
   private Boolean challengeMandatory = null;
 
@@ -276,6 +279,24 @@ public class EvaluateAuthenticationWebResponse {
     this.cardEnrolled = cardEnrolled;
   }
 
+  public EvaluateAuthenticationWebResponse cardholderInfo(String cardholderInfo) {
+    this.cardholderInfo = cardholderInfo;
+    return this;
+  }
+
+   /**
+   * Get cardholderInfo
+   * @return cardholderInfo
+  **/
+  @ApiModelProperty(value = "")
+  public String getCardholderInfo() {
+    return cardholderInfo;
+  }
+
+  public void setCardholderInfo(String cardholderInfo) {
+    this.cardholderInfo = cardholderInfo;
+  }
+
   public EvaluateAuthenticationWebResponse challengeMandatory(Boolean challengeMandatory) {
     this.challengeMandatory = challengeMandatory;
     return this;
@@ -326,13 +347,14 @@ public class EvaluateAuthenticationWebResponse {
         Objects.equals(this.authenticationResult, evaluateAuthenticationWebResponse.authenticationResult) &&
         Objects.equals(this.authenticationType, evaluateAuthenticationWebResponse.authenticationType) &&
         Objects.equals(this.cardEnrolled, evaluateAuthenticationWebResponse.cardEnrolled) &&
+        Objects.equals(this.cardholderInfo, evaluateAuthenticationWebResponse.cardholderInfo) &&
         Objects.equals(this.challengeMandatory, evaluateAuthenticationWebResponse.challengeMandatory) &&
         Objects.equals(this.transactionStatusReason, evaluateAuthenticationWebResponse.transactionStatusReason);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationName, authenticationResult, authenticationType, cardEnrolled, challengeMandatory, transactionStatusReason);
+    return Objects.hash(authenticationName, authenticationResult, authenticationType, cardEnrolled, cardholderInfo, challengeMandatory, transactionStatusReason);
   }
 
 
@@ -345,6 +367,7 @@ public class EvaluateAuthenticationWebResponse {
     sb.append("    authenticationResult: ").append(toIndentedString(authenticationResult)).append("\n");
     sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
     sb.append("    cardEnrolled: ").append(toIndentedString(cardEnrolled)).append("\n");
+    sb.append("    cardholderInfo: ").append(toIndentedString(cardholderInfo)).append("\n");
     sb.append("    challengeMandatory: ").append(toIndentedString(challengeMandatory)).append("\n");
     sb.append("    transactionStatusReason: ").append(toIndentedString(transactionStatusReason)).append("\n");
     sb.append("}");
