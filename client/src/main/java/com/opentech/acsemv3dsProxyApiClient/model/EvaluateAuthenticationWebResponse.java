@@ -25,6 +25,60 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class EvaluateAuthenticationWebResponse {
+  /**
+   * Gets or Sets authenticationMethod
+   */
+  public enum AuthenticationMethodEnum {
+    PASSCODE("PASSCODE"),
+    
+    SMS_OTP("SMS_OTP"),
+    
+    KEY_FOB_OR_EMV_CARD_READER_OTP("KEY_FOB_OR_EMV_CARD_READER_OTP"),
+    
+    APP_OTP("APP_OTP"),
+    
+    APP_OTHER("APP_OTHER"),
+    
+    KBA("KBA"),
+    
+    OOB_BIOMETRICS("OOB_BIOMETRICS"),
+    
+    OOB_LOGIN("OOB_LOGIN"),
+    
+    OOB_OTHER("OOB_OTHER"),
+    
+    OTHER("OTHER");
+
+    private String value;
+
+    AuthenticationMethodEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static AuthenticationMethodEnum fromValue(String text) {
+      for (AuthenticationMethodEnum b : AuthenticationMethodEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
+  @JsonProperty("authenticationMethod")
+  private AuthenticationMethodEnum authenticationMethod = null;
+
   @JsonProperty("authenticationName")
   private String authenticationName = null;
 
@@ -207,6 +261,24 @@ public class EvaluateAuthenticationWebResponse {
   @JsonProperty("transactionStatusReason")
   private TransactionStatusReasonEnum transactionStatusReason = null;
 
+  public EvaluateAuthenticationWebResponse authenticationMethod(AuthenticationMethodEnum authenticationMethod) {
+    this.authenticationMethod = authenticationMethod;
+    return this;
+  }
+
+   /**
+   * Get authenticationMethod
+   * @return authenticationMethod
+  **/
+  @ApiModelProperty(value = "")
+  public AuthenticationMethodEnum getAuthenticationMethod() {
+    return authenticationMethod;
+  }
+
+  public void setAuthenticationMethod(AuthenticationMethodEnum authenticationMethod) {
+    this.authenticationMethod = authenticationMethod;
+  }
+
   public EvaluateAuthenticationWebResponse authenticationName(String authenticationName) {
     this.authenticationName = authenticationName;
     return this;
@@ -343,7 +415,8 @@ public class EvaluateAuthenticationWebResponse {
       return false;
     }
     EvaluateAuthenticationWebResponse evaluateAuthenticationWebResponse = (EvaluateAuthenticationWebResponse) o;
-    return Objects.equals(this.authenticationName, evaluateAuthenticationWebResponse.authenticationName) &&
+    return Objects.equals(this.authenticationMethod, evaluateAuthenticationWebResponse.authenticationMethod) &&
+        Objects.equals(this.authenticationName, evaluateAuthenticationWebResponse.authenticationName) &&
         Objects.equals(this.authenticationResult, evaluateAuthenticationWebResponse.authenticationResult) &&
         Objects.equals(this.authenticationType, evaluateAuthenticationWebResponse.authenticationType) &&
         Objects.equals(this.cardEnrolled, evaluateAuthenticationWebResponse.cardEnrolled) &&
@@ -354,7 +427,7 @@ public class EvaluateAuthenticationWebResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationName, authenticationResult, authenticationType, cardEnrolled, cardholderInfo, challengeMandatory, transactionStatusReason);
+    return Objects.hash(authenticationMethod, authenticationName, authenticationResult, authenticationType, cardEnrolled, cardholderInfo, challengeMandatory, transactionStatusReason);
   }
 
 
@@ -363,6 +436,7 @@ public class EvaluateAuthenticationWebResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class EvaluateAuthenticationWebResponse {\n");
     
+    sb.append("    authenticationMethod: ").append(toIndentedString(authenticationMethod)).append("\n");
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
     sb.append("    authenticationResult: ").append(toIndentedString(authenticationResult)).append("\n");
     sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");

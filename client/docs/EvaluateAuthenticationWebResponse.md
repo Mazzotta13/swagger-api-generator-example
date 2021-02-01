@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**authenticationMethod** | [**AuthenticationMethodEnum**](#AuthenticationMethodEnum) |  |  [optional]
 **authenticationName** | **String** |  |  [optional]
 **authenticationResult** | [**AuthenticationResultEnum**](#AuthenticationResultEnum) |  |  [optional]
 **authenticationType** | [**AuthenticationTypeEnum**](#AuthenticationTypeEnum) |  |  [optional]
@@ -11,6 +12,22 @@ Name | Type | Description | Notes
 **cardholderInfo** | **String** |  |  [optional]
 **challengeMandatory** | **Boolean** |  |  [optional]
 **transactionStatusReason** | [**TransactionStatusReasonEnum**](#TransactionStatusReasonEnum) |  |  [optional]
+
+
+<a name="AuthenticationMethodEnum"></a>
+## Enum: AuthenticationMethodEnum
+Name | Value
+---- | -----
+PASSCODE | &quot;PASSCODE&quot;
+SMS_OTP | &quot;SMS_OTP&quot;
+KEY_FOB_OR_EMV_CARD_READER_OTP | &quot;KEY_FOB_OR_EMV_CARD_READER_OTP&quot;
+APP_OTP | &quot;APP_OTP&quot;
+APP_OTHER | &quot;APP_OTHER&quot;
+KBA | &quot;KBA&quot;
+OOB_BIOMETRICS | &quot;OOB_BIOMETRICS&quot;
+OOB_LOGIN | &quot;OOB_LOGIN&quot;
+OOB_OTHER | &quot;OOB_OTHER&quot;
+OTHER | &quot;OTHER&quot;
 
 
 <a name="AuthenticationResultEnum"></a>
