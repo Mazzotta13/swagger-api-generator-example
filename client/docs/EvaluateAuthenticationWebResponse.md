@@ -28,6 +28,7 @@ OOB_BIOMETRICS | &quot;OOB_BIOMETRICS&quot;
 OOB_LOGIN | &quot;OOB_LOGIN&quot;
 OOB_OTHER | &quot;OOB_OTHER&quot;
 OTHER | &quot;OTHER&quot;
+PUSH_CONFIRMATION | &quot;PUSH_CONFIRMATION&quot;
 
 
 <a name="AuthenticationResultEnum"></a>

@@ -47,7 +47,9 @@ public class EvaluateAuthenticationWebResponse {
     
     OOB_OTHER("OOB_OTHER"),
     
-    OTHER("OTHER");
+    OTHER("OTHER"),
+    
+    PUSH_CONFIRMATION("PUSH_CONFIRMATION");
 
     private String value;
 

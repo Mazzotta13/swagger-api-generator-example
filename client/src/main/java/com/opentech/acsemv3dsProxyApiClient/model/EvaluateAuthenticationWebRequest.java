@@ -31,6 +31,9 @@ public class EvaluateAuthenticationWebRequest {
   @JsonProperty("aReq")
   private AReq aReq = null;
 
+  @JsonProperty("acsTransactionId")
+  private String acsTransactionId = null;
+
   @JsonProperty("browserInfo")
   private BrowserInfo browserInfo = null;
 
@@ -53,6 +56,24 @@ public class EvaluateAuthenticationWebRequest {
 
   public void setAReq(AReq aReq) {
     this.aReq = aReq;
+  }
+
+  public EvaluateAuthenticationWebRequest acsTransactionId(String acsTransactionId) {
+    this.acsTransactionId = acsTransactionId;
+    return this;
+  }
+
+   /**
+   * Get acsTransactionId
+   * @return acsTransactionId
+  **/
+  @ApiModelProperty(value = "")
+  public String getAcsTransactionId() {
+    return acsTransactionId;
+  }
+
+  public void setAcsTransactionId(String acsTransactionId) {
+    this.acsTransactionId = acsTransactionId;
   }
 
   public EvaluateAuthenticationWebRequest browserInfo(BrowserInfo browserInfo) {
@@ -102,13 +123,14 @@ public class EvaluateAuthenticationWebRequest {
     }
     EvaluateAuthenticationWebRequest evaluateAuthenticationWebRequest = (EvaluateAuthenticationWebRequest) o;
     return Objects.equals(this.aReq, evaluateAuthenticationWebRequest.aReq) &&
+        Objects.equals(this.acsTransactionId, evaluateAuthenticationWebRequest.acsTransactionId) &&
         Objects.equals(this.browserInfo, evaluateAuthenticationWebRequest.browserInfo) &&
         Objects.equals(this.threeRIInfo, evaluateAuthenticationWebRequest.threeRIInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aReq, browserInfo, threeRIInfo);
+    return Objects.hash(aReq, acsTransactionId, browserInfo, threeRIInfo);
   }
 
 
@@ -118,6 +140,7 @@ public class EvaluateAuthenticationWebRequest {
     sb.append("class EvaluateAuthenticationWebRequest {\n");
     
     sb.append("    aReq: ").append(toIndentedString(aReq)).append("\n");
+    sb.append("    acsTransactionId: ").append(toIndentedString(acsTransactionId)).append("\n");
     sb.append("    browserInfo: ").append(toIndentedString(browserInfo)).append("\n");
     sb.append("    threeRIInfo: ").append(toIndentedString(threeRIInfo)).append("\n");
     sb.append("}");
