@@ -39,6 +39,9 @@ public class InitChallengeCMWebRequest {
   @JsonProperty("deviceChannel")
   private String deviceChannel = null;
 
+  @JsonProperty("requestWhitelist")
+  private Boolean requestWhitelist = null;
+
   @JsonProperty("transactionInfo")
   private TransactionInfo transactionInfo = null;
 
@@ -114,6 +117,24 @@ public class InitChallengeCMWebRequest {
     this.deviceChannel = deviceChannel;
   }
 
+  public InitChallengeCMWebRequest requestWhitelist(Boolean requestWhitelist) {
+    this.requestWhitelist = requestWhitelist;
+    return this;
+  }
+
+   /**
+   * Get requestWhitelist
+   * @return requestWhitelist
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isRequestWhitelist() {
+    return requestWhitelist;
+  }
+
+  public void setRequestWhitelist(Boolean requestWhitelist) {
+    this.requestWhitelist = requestWhitelist;
+  }
+
   public InitChallengeCMWebRequest transactionInfo(TransactionInfo transactionInfo) {
     this.transactionInfo = transactionInfo;
     return this;
@@ -146,12 +167,13 @@ public class InitChallengeCMWebRequest {
         Objects.equals(this.authenticationName, initChallengeCMWebRequest.authenticationName) &&
         Objects.equals(this.cReq, initChallengeCMWebRequest.cReq) &&
         Objects.equals(this.deviceChannel, initChallengeCMWebRequest.deviceChannel) &&
+        Objects.equals(this.requestWhitelist, initChallengeCMWebRequest.requestWhitelist) &&
         Objects.equals(this.transactionInfo, initChallengeCMWebRequest.transactionInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(arrivalCondition, authenticationName, cReq, deviceChannel, transactionInfo);
+    return Objects.hash(arrivalCondition, authenticationName, cReq, deviceChannel, requestWhitelist, transactionInfo);
   }
 
 
@@ -164,6 +186,7 @@ public class InitChallengeCMWebRequest {
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
     sb.append("    cReq: ").append(toIndentedString(cReq)).append("\n");
     sb.append("    deviceChannel: ").append(toIndentedString(deviceChannel)).append("\n");
+    sb.append("    requestWhitelist: ").append(toIndentedString(requestWhitelist)).append("\n");
     sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
     sb.append("}");
     return sb.toString();

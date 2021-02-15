@@ -25,6 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class EvaluateChallengeStepAuthenticatorWebResponse {
+  @JsonProperty("requestWhitelist")
+  private Boolean requestWhitelist = null;
+
   @JsonProperty("result")
   private String result = null;
 
@@ -104,6 +107,24 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
   @JsonProperty("transactionStatusReason")
   private TransactionStatusReasonEnum transactionStatusReason = null;
 
+  public EvaluateChallengeStepAuthenticatorWebResponse requestWhitelist(Boolean requestWhitelist) {
+    this.requestWhitelist = requestWhitelist;
+    return this;
+  }
+
+   /**
+   * Get requestWhitelist
+   * @return requestWhitelist
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isRequestWhitelist() {
+    return requestWhitelist;
+  }
+
+  public void setRequestWhitelist(Boolean requestWhitelist) {
+    this.requestWhitelist = requestWhitelist;
+  }
+
   public EvaluateChallengeStepAuthenticatorWebResponse result(String result) {
     this.result = result;
     return this;
@@ -150,13 +171,14 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
       return false;
     }
     EvaluateChallengeStepAuthenticatorWebResponse evaluateChallengeStepAuthenticatorWebResponse = (EvaluateChallengeStepAuthenticatorWebResponse) o;
-    return Objects.equals(this.result, evaluateChallengeStepAuthenticatorWebResponse.result) &&
+    return Objects.equals(this.requestWhitelist, evaluateChallengeStepAuthenticatorWebResponse.requestWhitelist) &&
+        Objects.equals(this.result, evaluateChallengeStepAuthenticatorWebResponse.result) &&
         Objects.equals(this.transactionStatusReason, evaluateChallengeStepAuthenticatorWebResponse.transactionStatusReason);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(result, transactionStatusReason);
+    return Objects.hash(requestWhitelist, result, transactionStatusReason);
   }
 
 
@@ -165,6 +187,7 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class EvaluateChallengeStepAuthenticatorWebResponse {\n");
     
+    sb.append("    requestWhitelist: ").append(toIndentedString(requestWhitelist)).append("\n");
     sb.append("    result: ").append(toIndentedString(result)).append("\n");
     sb.append("    transactionStatusReason: ").append(toIndentedString(transactionStatusReason)).append("\n");
     sb.append("}");

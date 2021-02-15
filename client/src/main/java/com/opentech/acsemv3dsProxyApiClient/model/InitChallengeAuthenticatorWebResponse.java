@@ -25,8 +25,29 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class InitChallengeAuthenticatorWebResponse {
+  @JsonProperty("requestWhitelist")
+  private Boolean requestWhitelist = null;
+
   @JsonProperty("result")
   private String result = null;
+
+  public InitChallengeAuthenticatorWebResponse requestWhitelist(Boolean requestWhitelist) {
+    this.requestWhitelist = requestWhitelist;
+    return this;
+  }
+
+   /**
+   * Get requestWhitelist
+   * @return requestWhitelist
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isRequestWhitelist() {
+    return requestWhitelist;
+  }
+
+  public void setRequestWhitelist(Boolean requestWhitelist) {
+    this.requestWhitelist = requestWhitelist;
+  }
 
   public InitChallengeAuthenticatorWebResponse result(String result) {
     this.result = result;
@@ -56,12 +77,13 @@ public class InitChallengeAuthenticatorWebResponse {
       return false;
     }
     InitChallengeAuthenticatorWebResponse initChallengeAuthenticatorWebResponse = (InitChallengeAuthenticatorWebResponse) o;
-    return Objects.equals(this.result, initChallengeAuthenticatorWebResponse.result);
+    return Objects.equals(this.requestWhitelist, initChallengeAuthenticatorWebResponse.requestWhitelist) &&
+        Objects.equals(this.result, initChallengeAuthenticatorWebResponse.result);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(result);
+    return Objects.hash(requestWhitelist, result);
   }
 
 
@@ -70,6 +92,7 @@ public class InitChallengeAuthenticatorWebResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class InitChallengeAuthenticatorWebResponse {\n");
     
+    sb.append("    requestWhitelist: ").append(toIndentedString(requestWhitelist)).append("\n");
     sb.append("    result: ").append(toIndentedString(result)).append("\n");
     sb.append("}");
     return sb.toString();

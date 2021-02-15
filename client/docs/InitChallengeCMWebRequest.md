@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **authenticationName** | **String** |  |  [optional]
 **cReq** | [**CReq**](CReq.md) |  |  [optional]
 **deviceChannel** | **String** |  |  [optional]
+**requestWhitelist** | **Boolean** |  |  [optional]
 **transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
 
 

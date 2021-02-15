@@ -39,6 +39,9 @@ public class EvaluateChallengeStepCMWebRequest {
   @JsonProperty("currStepId")
   private String currStepId = null;
 
+  @JsonProperty("requestWhitelist")
+  private Boolean requestWhitelist = null;
+
   @JsonProperty("transactionInfo")
   private TransactionInfo transactionInfo = null;
 
@@ -114,6 +117,24 @@ public class EvaluateChallengeStepCMWebRequest {
     this.currStepId = currStepId;
   }
 
+  public EvaluateChallengeStepCMWebRequest requestWhitelist(Boolean requestWhitelist) {
+    this.requestWhitelist = requestWhitelist;
+    return this;
+  }
+
+   /**
+   * Get requestWhitelist
+   * @return requestWhitelist
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isRequestWhitelist() {
+    return requestWhitelist;
+  }
+
+  public void setRequestWhitelist(Boolean requestWhitelist) {
+    this.requestWhitelist = requestWhitelist;
+  }
+
   public EvaluateChallengeStepCMWebRequest transactionInfo(TransactionInfo transactionInfo) {
     this.transactionInfo = transactionInfo;
     return this;
@@ -146,12 +167,13 @@ public class EvaluateChallengeStepCMWebRequest {
         Objects.equals(this.authenticationName, evaluateChallengeStepCMWebRequest.authenticationName) &&
         Objects.equals(this.cReq, evaluateChallengeStepCMWebRequest.cReq) &&
         Objects.equals(this.currStepId, evaluateChallengeStepCMWebRequest.currStepId) &&
+        Objects.equals(this.requestWhitelist, evaluateChallengeStepCMWebRequest.requestWhitelist) &&
         Objects.equals(this.transactionInfo, evaluateChallengeStepCMWebRequest.transactionInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(arrivalCondition, authenticationName, cReq, currStepId, transactionInfo);
+    return Objects.hash(arrivalCondition, authenticationName, cReq, currStepId, requestWhitelist, transactionInfo);
   }
 
 
@@ -164,6 +186,7 @@ public class EvaluateChallengeStepCMWebRequest {
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
     sb.append("    cReq: ").append(toIndentedString(cReq)).append("\n");
     sb.append("    currStepId: ").append(toIndentedString(currStepId)).append("\n");
+    sb.append("    requestWhitelist: ").append(toIndentedString(requestWhitelist)).append("\n");
     sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
     sb.append("}");
     return sb.toString();
