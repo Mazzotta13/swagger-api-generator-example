@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.opentech</groupId>
     <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
-    <version>1.16-SNAPSHOT</version>
+    <version>1.17-SNAPSHOT</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.opentech:acsemv3ds-ProxyApi-Client:1.16-SNAPSHOT"
+compile "com.opentech:acsemv3ds-ProxyApi-Client:1.17-SNAPSHOT"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/acsemv3ds-ProxyApi-Client-1.16-SNAPSHOT.jar
+* target/acsemv3ds-ProxyApi-Client-1.17-SNAPSHOT.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -92,6 +92,7 @@ All URIs are relative to *https://localhost:8080/acsemv3dsproxy*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AuthenticatorControllerApi* | [**checkAuthResultUsingPOST**](docs/AuthenticatorControllerApi.md#checkAuthResultUsingPOST) | **POST** /3ds/auth/{issuer-code}/checkAuthResult | checkAuthResult
+*AuthenticatorControllerApi* | [**confirmWhitelistingResultsUsingPOST**](docs/AuthenticatorControllerApi.md#confirmWhitelistingResultsUsingPOST) | **POST** /3ds/auth/{issuer-code}/confirmWhitelistingResults | confirmWhitelistingResults
 *AuthenticatorControllerApi* | [**evaluateAuthenticationUsingPOST**](docs/AuthenticatorControllerApi.md#evaluateAuthenticationUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateAuthentication | evaluateAuthentication
 *AuthenticatorControllerApi* | [**evaluateChallengeStepUsingPOST**](docs/AuthenticatorControllerApi.md#evaluateChallengeStepUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateChallengeStep | evaluateChallengeStep
 *AuthenticatorControllerApi* | [**initChallengeUsingPOST**](docs/AuthenticatorControllerApi.md#initChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/initChallenge | initChallenge
@@ -114,6 +115,7 @@ Class | Method | HTTP request | Description
  - [CResInfo](docs/CResInfo.md)
  - [CheckAuthResultWebRequest](docs/CheckAuthResultWebRequest.md)
  - [CheckAuthResultWebResponse](docs/CheckAuthResultWebResponse.md)
+ - [ConfirmWhitelistingResultsWebRequest](docs/ConfirmWhitelistingResultsWebRequest.md)
  - [DetokenizeWebRequest](docs/DetokenizeWebRequest.md)
  - [DetokenizeWebResponse](docs/DetokenizeWebResponse.md)
  - [EvaluateAuthenticationWebRequest](docs/EvaluateAuthenticationWebRequest.md)
@@ -136,6 +138,7 @@ Class | Method | HTTP request | Description
  - [Phone](docs/Phone.md)
  - [ResendChallengeWebRequest](docs/ResendChallengeWebRequest.md)
  - [ResendChallengeWebResponse](docs/ResendChallengeWebResponse.md)
+ - [ResponseEntity](docs/ResponseEntity.md)
  - [SdkEphemPubKey](docs/SdkEphemPubKey.md)
  - [ThreeDSAcsRenderingType](docs/ThreeDSAcsRenderingType.md)
  - [ThreeDSCardholderAccountInfo](docs/ThreeDSCardholderAccountInfo.md)

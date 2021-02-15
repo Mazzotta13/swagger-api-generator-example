@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **challengeType** | **String** |  |  [optional]
 **challengeValue** | **String** |  |  [optional]
 **transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
+**whitelistingEnabled** | **Boolean** |  |  [optional]
 
 
 

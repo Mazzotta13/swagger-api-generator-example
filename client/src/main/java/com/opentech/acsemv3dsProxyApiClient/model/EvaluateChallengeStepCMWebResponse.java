@@ -80,6 +80,9 @@ public class EvaluateChallengeStepCMWebResponse {
   @JsonProperty("nextStepId")
   private String nextStepId = null;
 
+  @JsonProperty("requestingWhitelist")
+  private Boolean requestingWhitelist = null;
+
   public EvaluateChallengeStepCMWebResponse appNextChallengeInfo(AppChallengeInfo appNextChallengeInfo) {
     this.appNextChallengeInfo = appNextChallengeInfo;
     return this;
@@ -170,6 +173,24 @@ public class EvaluateChallengeStepCMWebResponse {
     this.nextStepId = nextStepId;
   }
 
+  public EvaluateChallengeStepCMWebResponse requestingWhitelist(Boolean requestingWhitelist) {
+    this.requestingWhitelist = requestingWhitelist;
+    return this;
+  }
+
+   /**
+   * Get requestingWhitelist
+   * @return requestingWhitelist
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isRequestingWhitelist() {
+    return requestingWhitelist;
+  }
+
+  public void setRequestingWhitelist(Boolean requestingWhitelist) {
+    this.requestingWhitelist = requestingWhitelist;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -184,12 +205,13 @@ public class EvaluateChallengeStepCMWebResponse {
         Objects.equals(this.browserNextChallengeInfo, evaluateChallengeStepCMWebResponse.browserNextChallengeInfo) &&
         Objects.equals(this.cResInfo, evaluateChallengeStepCMWebResponse.cResInfo) &&
         Objects.equals(this.challengeStatus, evaluateChallengeStepCMWebResponse.challengeStatus) &&
-        Objects.equals(this.nextStepId, evaluateChallengeStepCMWebResponse.nextStepId);
+        Objects.equals(this.nextStepId, evaluateChallengeStepCMWebResponse.nextStepId) &&
+        Objects.equals(this.requestingWhitelist, evaluateChallengeStepCMWebResponse.requestingWhitelist);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appNextChallengeInfo, browserNextChallengeInfo, cResInfo, challengeStatus, nextStepId);
+    return Objects.hash(appNextChallengeInfo, browserNextChallengeInfo, cResInfo, challengeStatus, nextStepId, requestingWhitelist);
   }
 
 
@@ -203,6 +225,7 @@ public class EvaluateChallengeStepCMWebResponse {
     sb.append("    cResInfo: ").append(toIndentedString(cResInfo)).append("\n");
     sb.append("    challengeStatus: ").append(toIndentedString(challengeStatus)).append("\n");
     sb.append("    nextStepId: ").append(toIndentedString(nextStepId)).append("\n");
+    sb.append("    requestingWhitelist: ").append(toIndentedString(requestingWhitelist)).append("\n");
     sb.append("}");
     return sb.toString();
   }

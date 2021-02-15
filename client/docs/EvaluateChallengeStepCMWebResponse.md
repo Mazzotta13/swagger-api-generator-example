@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **cResInfo** | [**CResInfo**](CResInfo.md) |  |  [optional]
 **challengeStatus** | [**ChallengeStatusEnum**](#ChallengeStatusEnum) |  |  [optional]
 **nextStepId** | **String** |  |  [optional]
+**requestingWhitelist** | **Boolean** |  |  [optional]
 
 
 <a name="ChallengeStatusEnum"></a>

@@ -5,6 +5,7 @@ All URIs are relative to *https://localhost:8080/acsemv3dsproxy*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**checkAuthResultUsingPOST**](AuthenticatorControllerApi.md#checkAuthResultUsingPOST) | **POST** /3ds/auth/{issuer-code}/checkAuthResult | checkAuthResult
+[**confirmWhitelistingResultsUsingPOST**](AuthenticatorControllerApi.md#confirmWhitelistingResultsUsingPOST) | **POST** /3ds/auth/{issuer-code}/confirmWhitelistingResults | confirmWhitelistingResults
 [**evaluateAuthenticationUsingPOST**](AuthenticatorControllerApi.md#evaluateAuthenticationUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateAuthentication | evaluateAuthentication
 [**evaluateChallengeStepUsingPOST**](AuthenticatorControllerApi.md#evaluateChallengeStepUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateChallengeStep | evaluateChallengeStep
 [**initChallengeUsingPOST**](AuthenticatorControllerApi.md#initChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/initChallenge | initChallenge
@@ -47,6 +48,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CheckAuthResultWebResponse**](CheckAuthResultWebResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="confirmWhitelistingResultsUsingPOST"></a>
+# **confirmWhitelistingResultsUsingPOST**
+> ResponseEntity confirmWhitelistingResultsUsingPOST(confirmWhitelistingResultsWebRequest, issuerCode)
+
+confirmWhitelistingResults
+
+### Example
+```java
+// Import classes:
+//import com.opentech.acsemv3dsProxyApiClient.ApiException;
+//import com.opentech.acsemv3dsProxyApiClient.api.AuthenticatorControllerApi;
+
+
+AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
+ConfirmWhitelistingResultsWebRequest confirmWhitelistingResultsWebRequest = new ConfirmWhitelistingResultsWebRequest(); // ConfirmWhitelistingResultsWebRequest | confirmWhitelistingResultsWebRequest
+String issuerCode = "issuerCode_example"; // String | issuer-code
+try {
+    ResponseEntity result = apiInstance.confirmWhitelistingResultsUsingPOST(confirmWhitelistingResultsWebRequest, issuerCode);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AuthenticatorControllerApi#confirmWhitelistingResultsUsingPOST");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **confirmWhitelistingResultsWebRequest** | [**ConfirmWhitelistingResultsWebRequest**](ConfirmWhitelistingResultsWebRequest.md)| confirmWhitelistingResultsWebRequest |
+ **issuerCode** | **String**| issuer-code |
+
+### Return type
+
+[**ResponseEntity**](ResponseEntity.md)
 
 ### Authorization
 

@@ -40,6 +40,9 @@ public class InitChallengeCMWebResponse {
   @JsonProperty("currentStepId")
   private String currentStepId = null;
 
+  @JsonProperty("requestingWhitelist")
+  private Boolean requestingWhitelist = null;
+
   public InitChallengeCMWebResponse appNextChallengeInfo(AppChallengeInfo appNextChallengeInfo) {
     this.appNextChallengeInfo = appNextChallengeInfo;
     return this;
@@ -112,6 +115,24 @@ public class InitChallengeCMWebResponse {
     this.currentStepId = currentStepId;
   }
 
+  public InitChallengeCMWebResponse requestingWhitelist(Boolean requestingWhitelist) {
+    this.requestingWhitelist = requestingWhitelist;
+    return this;
+  }
+
+   /**
+   * Get requestingWhitelist
+   * @return requestingWhitelist
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isRequestingWhitelist() {
+    return requestingWhitelist;
+  }
+
+  public void setRequestingWhitelist(Boolean requestingWhitelist) {
+    this.requestingWhitelist = requestingWhitelist;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -125,12 +146,13 @@ public class InitChallengeCMWebResponse {
     return Objects.equals(this.appNextChallengeInfo, initChallengeCMWebResponse.appNextChallengeInfo) &&
         Objects.equals(this.browserNextChallengeInfo, initChallengeCMWebResponse.browserNextChallengeInfo) &&
         Objects.equals(this.cResInfo, initChallengeCMWebResponse.cResInfo) &&
-        Objects.equals(this.currentStepId, initChallengeCMWebResponse.currentStepId);
+        Objects.equals(this.currentStepId, initChallengeCMWebResponse.currentStepId) &&
+        Objects.equals(this.requestingWhitelist, initChallengeCMWebResponse.requestingWhitelist);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appNextChallengeInfo, browserNextChallengeInfo, cResInfo, currentStepId);
+    return Objects.hash(appNextChallengeInfo, browserNextChallengeInfo, cResInfo, currentStepId, requestingWhitelist);
   }
 
 
@@ -143,6 +165,7 @@ public class InitChallengeCMWebResponse {
     sb.append("    browserNextChallengeInfo: ").append(toIndentedString(browserNextChallengeInfo)).append("\n");
     sb.append("    cResInfo: ").append(toIndentedString(cResInfo)).append("\n");
     sb.append("    currentStepId: ").append(toIndentedString(currentStepId)).append("\n");
+    sb.append("    requestingWhitelist: ").append(toIndentedString(requestingWhitelist)).append("\n");
     sb.append("}");
     return sb.toString();
   }

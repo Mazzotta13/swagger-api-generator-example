@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **browserNextChallengeInfo** | [**BrowserChallengeInfo**](BrowserChallengeInfo.md) |  |  [optional]
 **cResInfo** | [**CResInfo**](CResInfo.md) |  |  [optional]
 **currentStepId** | **String** |  |  [optional]
+**requestingWhitelist** | **Boolean** |  |  [optional]
 
 
 

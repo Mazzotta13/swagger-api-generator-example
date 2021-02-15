@@ -39,6 +39,9 @@ public class InitChallengeAuthenticatorWebRequest {
   @JsonProperty("transactionInfo")
   private TransactionInfo transactionInfo = null;
 
+  @JsonProperty("whitelistingEnabled")
+  private Boolean whitelistingEnabled = null;
+
   public InitChallengeAuthenticatorWebRequest authenticationName(String authenticationName) {
     this.authenticationName = authenticationName;
     return this;
@@ -111,6 +114,24 @@ public class InitChallengeAuthenticatorWebRequest {
     this.transactionInfo = transactionInfo;
   }
 
+  public InitChallengeAuthenticatorWebRequest whitelistingEnabled(Boolean whitelistingEnabled) {
+    this.whitelistingEnabled = whitelistingEnabled;
+    return this;
+  }
+
+   /**
+   * Get whitelistingEnabled
+   * @return whitelistingEnabled
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isWhitelistingEnabled() {
+    return whitelistingEnabled;
+  }
+
+  public void setWhitelistingEnabled(Boolean whitelistingEnabled) {
+    this.whitelistingEnabled = whitelistingEnabled;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -124,12 +145,13 @@ public class InitChallengeAuthenticatorWebRequest {
     return Objects.equals(this.authenticationName, initChallengeAuthenticatorWebRequest.authenticationName) &&
         Objects.equals(this.cReq, initChallengeAuthenticatorWebRequest.cReq) &&
         Objects.equals(this.cardNumber, initChallengeAuthenticatorWebRequest.cardNumber) &&
-        Objects.equals(this.transactionInfo, initChallengeAuthenticatorWebRequest.transactionInfo);
+        Objects.equals(this.transactionInfo, initChallengeAuthenticatorWebRequest.transactionInfo) &&
+        Objects.equals(this.whitelistingEnabled, initChallengeAuthenticatorWebRequest.whitelistingEnabled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationName, cReq, cardNumber, transactionInfo);
+    return Objects.hash(authenticationName, cReq, cardNumber, transactionInfo, whitelistingEnabled);
   }
 
 
@@ -142,6 +164,7 @@ public class InitChallengeAuthenticatorWebRequest {
     sb.append("    cReq: ").append(toIndentedString(cReq)).append("\n");
     sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
     sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
+    sb.append("    whitelistingEnabled: ").append(toIndentedString(whitelistingEnabled)).append("\n");
     sb.append("}");
     return sb.toString();
   }
