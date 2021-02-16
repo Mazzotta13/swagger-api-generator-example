@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **cardholderInfo** | **String** |  |  [optional]
 **challengeMandatory** | **Boolean** |  |  [optional]
 **transactionStatusReason** | [**TransactionStatusReasonEnum**](#TransactionStatusReasonEnum) |  |  [optional]
+**whitelistStatus** | **String** |  |  [optional]
 
 
 <a name="AuthenticationMethodEnum"></a>

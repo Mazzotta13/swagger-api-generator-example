@@ -263,6 +263,9 @@ public class EvaluateAuthenticationWebResponse {
   @JsonProperty("transactionStatusReason")
   private TransactionStatusReasonEnum transactionStatusReason = null;
 
+  @JsonProperty("whitelistStatus")
+  private String whitelistStatus = null;
+
   public EvaluateAuthenticationWebResponse authenticationMethod(AuthenticationMethodEnum authenticationMethod) {
     this.authenticationMethod = authenticationMethod;
     return this;
@@ -407,6 +410,24 @@ public class EvaluateAuthenticationWebResponse {
     this.transactionStatusReason = transactionStatusReason;
   }
 
+  public EvaluateAuthenticationWebResponse whitelistStatus(String whitelistStatus) {
+    this.whitelistStatus = whitelistStatus;
+    return this;
+  }
+
+   /**
+   * Get whitelistStatus
+   * @return whitelistStatus
+  **/
+  @ApiModelProperty(value = "")
+  public String getWhitelistStatus() {
+    return whitelistStatus;
+  }
+
+  public void setWhitelistStatus(String whitelistStatus) {
+    this.whitelistStatus = whitelistStatus;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -424,12 +445,13 @@ public class EvaluateAuthenticationWebResponse {
         Objects.equals(this.cardEnrolled, evaluateAuthenticationWebResponse.cardEnrolled) &&
         Objects.equals(this.cardholderInfo, evaluateAuthenticationWebResponse.cardholderInfo) &&
         Objects.equals(this.challengeMandatory, evaluateAuthenticationWebResponse.challengeMandatory) &&
-        Objects.equals(this.transactionStatusReason, evaluateAuthenticationWebResponse.transactionStatusReason);
+        Objects.equals(this.transactionStatusReason, evaluateAuthenticationWebResponse.transactionStatusReason) &&
+        Objects.equals(this.whitelistStatus, evaluateAuthenticationWebResponse.whitelistStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationMethod, authenticationName, authenticationResult, authenticationType, cardEnrolled, cardholderInfo, challengeMandatory, transactionStatusReason);
+    return Objects.hash(authenticationMethod, authenticationName, authenticationResult, authenticationType, cardEnrolled, cardholderInfo, challengeMandatory, transactionStatusReason, whitelistStatus);
   }
 
 
@@ -446,6 +468,7 @@ public class EvaluateAuthenticationWebResponse {
     sb.append("    cardholderInfo: ").append(toIndentedString(cardholderInfo)).append("\n");
     sb.append("    challengeMandatory: ").append(toIndentedString(challengeMandatory)).append("\n");
     sb.append("    transactionStatusReason: ").append(toIndentedString(transactionStatusReason)).append("\n");
+    sb.append("    whitelistStatus: ").append(toIndentedString(whitelistStatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }
