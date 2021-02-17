@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **challengeValue** | **String** |  |  [optional]
 **transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
 **whitelistingEnabled** | **Boolean** |  |  [optional]
+**whitelistingResult** | **String** |  |  [optional]
 
 
 

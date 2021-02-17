@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.opentech'
-version = '1.18-SNAPSHOT'
+version = '1.19-SNAPSHOT'
 
 buildscript {
     repositories {

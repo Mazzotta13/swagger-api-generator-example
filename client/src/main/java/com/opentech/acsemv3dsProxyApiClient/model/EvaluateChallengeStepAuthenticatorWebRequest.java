@@ -48,6 +48,9 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
   @JsonProperty("whitelistingEnabled")
   private Boolean whitelistingEnabled = null;
 
+  @JsonProperty("whitelistingResult")
+  private String whitelistingResult = null;
+
   public EvaluateChallengeStepAuthenticatorWebRequest authenticationName(String authenticationName) {
     this.authenticationName = authenticationName;
     return this;
@@ -174,6 +177,24 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
     this.whitelistingEnabled = whitelistingEnabled;
   }
 
+  public EvaluateChallengeStepAuthenticatorWebRequest whitelistingResult(String whitelistingResult) {
+    this.whitelistingResult = whitelistingResult;
+    return this;
+  }
+
+   /**
+   * Get whitelistingResult
+   * @return whitelistingResult
+  **/
+  @ApiModelProperty(value = "")
+  public String getWhitelistingResult() {
+    return whitelistingResult;
+  }
+
+  public void setWhitelistingResult(String whitelistingResult) {
+    this.whitelistingResult = whitelistingResult;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -190,12 +211,13 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
         Objects.equals(this.challengeType, evaluateChallengeStepAuthenticatorWebRequest.challengeType) &&
         Objects.equals(this.challengeValue, evaluateChallengeStepAuthenticatorWebRequest.challengeValue) &&
         Objects.equals(this.transactionInfo, evaluateChallengeStepAuthenticatorWebRequest.transactionInfo) &&
-        Objects.equals(this.whitelistingEnabled, evaluateChallengeStepAuthenticatorWebRequest.whitelistingEnabled);
+        Objects.equals(this.whitelistingEnabled, evaluateChallengeStepAuthenticatorWebRequest.whitelistingEnabled) &&
+        Objects.equals(this.whitelistingResult, evaluateChallengeStepAuthenticatorWebRequest.whitelistingResult);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationName, cReq, cardNumber, challengeType, challengeValue, transactionInfo, whitelistingEnabled);
+    return Objects.hash(authenticationName, cReq, cardNumber, challengeType, challengeValue, transactionInfo, whitelistingEnabled, whitelistingResult);
   }
 
 
@@ -211,6 +233,7 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
     sb.append("    challengeValue: ").append(toIndentedString(challengeValue)).append("\n");
     sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
     sb.append("    whitelistingEnabled: ").append(toIndentedString(whitelistingEnabled)).append("\n");
+    sb.append("    whitelistingResult: ").append(toIndentedString(whitelistingResult)).append("\n");
     sb.append("}");
     return sb.toString();
   }
