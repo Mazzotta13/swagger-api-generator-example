@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.opentech</groupId>
     <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
-    <version>1.19-SNAPSHOT</version>
+    <version>1.20-SNAPSHOT</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.opentech:acsemv3ds-ProxyApi-Client:1.19-SNAPSHOT"
+compile "com.opentech:acsemv3ds-ProxyApi-Client:1.20-SNAPSHOT"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/acsemv3ds-ProxyApi-Client-1.19-SNAPSHOT.jar
+* target/acsemv3ds-ProxyApi-Client-1.20-SNAPSHOT.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -92,11 +92,11 @@ All URIs are relative to *https://localhost:8080/acsemv3dsproxy*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AuthenticatorControllerApi* | [**checkAuthResultUsingPOST**](docs/AuthenticatorControllerApi.md#checkAuthResultUsingPOST) | **POST** /3ds/auth/{issuer-code}/checkAuthResult | checkAuthResult
-*AuthenticatorControllerApi* | [**confirmWhitelistingResultsUsingPOST**](docs/AuthenticatorControllerApi.md#confirmWhitelistingResultsUsingPOST) | **POST** /3ds/auth/{issuer-code}/confirmWhitelistingResults | confirmWhitelistingResults
 *AuthenticatorControllerApi* | [**evaluateAuthenticationUsingPOST**](docs/AuthenticatorControllerApi.md#evaluateAuthenticationUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateAuthentication | evaluateAuthentication
 *AuthenticatorControllerApi* | [**evaluateChallengeStepUsingPOST**](docs/AuthenticatorControllerApi.md#evaluateChallengeStepUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateChallengeStep | evaluateChallengeStep
 *AuthenticatorControllerApi* | [**initChallengeUsingPOST**](docs/AuthenticatorControllerApi.md#initChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/initChallenge | initChallenge
 *AuthenticatorControllerApi* | [**performDecoupledAuthenticationUsingPOST**](docs/AuthenticatorControllerApi.md#performDecoupledAuthenticationUsingPOST) | **POST** /3ds/auth/{issuer-code}/performDecoupledAuthentication | performDecoupledAuthentication
+*AuthenticatorControllerApi* | [**prepareAuthenticationCompletionUsingPOST**](docs/AuthenticatorControllerApi.md#prepareAuthenticationCompletionUsingPOST) | **POST** /3ds/auth/{issuer-code}/prepareAuthenticationCompletion | prepareAuthenticationCompletion
 *AuthenticatorControllerApi* | [**resendChallengeUsingPOST**](docs/AuthenticatorControllerApi.md#resendChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/resendChallenge | resendChallenge
 *CardTokenizerControllerApi* | [**detokenizeUsingPOST**](docs/CardTokenizerControllerApi.md#detokenizeUsingPOST) | **POST** /3ds/{issuer-code}/detokenize | detokenize
 *CardTokenizerControllerApi* | [**tokenizeUsingPOST**](docs/CardTokenizerControllerApi.md#tokenizeUsingPOST) | **POST** /3ds/{issuer-code}/tokenize | tokenize
@@ -115,7 +115,6 @@ Class | Method | HTTP request | Description
  - [CResInfo](docs/CResInfo.md)
  - [CheckAuthResultWebRequest](docs/CheckAuthResultWebRequest.md)
  - [CheckAuthResultWebResponse](docs/CheckAuthResultWebResponse.md)
- - [ConfirmWhitelistingResultsWebRequest](docs/ConfirmWhitelistingResultsWebRequest.md)
  - [DetokenizeWebRequest](docs/DetokenizeWebRequest.md)
  - [DetokenizeWebResponse](docs/DetokenizeWebResponse.md)
  - [EvaluateAuthenticationWebRequest](docs/EvaluateAuthenticationWebRequest.md)
@@ -136,9 +135,11 @@ Class | Method | HTTP request | Description
  - [PerformDecoupledAuthWebRequest](docs/PerformDecoupledAuthWebRequest.md)
  - [PerformDecoupledAuthWebResponse](docs/PerformDecoupledAuthWebResponse.md)
  - [Phone](docs/Phone.md)
+ - [PrepareAuthenticationCompletionWebRequest](docs/PrepareAuthenticationCompletionWebRequest.md)
+ - [PrepareAuthenticationCompletionWebResponse](docs/PrepareAuthenticationCompletionWebResponse.md)
+ - [RReqInfo](docs/RReqInfo.md)
  - [ResendChallengeWebRequest](docs/ResendChallengeWebRequest.md)
  - [ResendChallengeWebResponse](docs/ResendChallengeWebResponse.md)
- - [ResponseEntity](docs/ResponseEntity.md)
  - [SdkEphemPubKey](docs/SdkEphemPubKey.md)
  - [ThreeDSAcsRenderingType](docs/ThreeDSAcsRenderingType.md)
  - [ThreeDSCardholderAccountInfo](docs/ThreeDSCardholderAccountInfo.md)

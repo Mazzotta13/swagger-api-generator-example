@@ -4,7 +4,6 @@ import com.opentech.acsemv3dsProxyApiClient.ApiClient;
 
 import com.opentech.acsemv3dsProxyApiClient.model.CheckAuthResultWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.CheckAuthResultWebResponse;
-import com.opentech.acsemv3dsProxyApiClient.model.ConfirmWhitelistingResultsWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateAuthenticationWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateAuthenticationWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateChallengeStepAuthenticatorWebRequest;
@@ -13,9 +12,10 @@ import com.opentech.acsemv3dsProxyApiClient.model.InitChallengeAuthenticatorWebR
 import com.opentech.acsemv3dsProxyApiClient.model.InitChallengeAuthenticatorWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.PerformDecoupledAuthWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.PerformDecoupledAuthWebResponse;
+import com.opentech.acsemv3dsProxyApiClient.model.PrepareAuthenticationCompletionWebRequest;
+import com.opentech.acsemv3dsProxyApiClient.model.PrepareAuthenticationCompletionWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.ResendChallengeWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.ResendChallengeWebResponse;
-import com.opentech.acsemv3dsProxyApiClient.model.ResponseEntity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -101,51 +101,6 @@ public class AuthenticatorControllerApi {
         String[] authNames = new String[] {  };
 
         ParameterizedTypeReference<CheckAuthResultWebResponse> returnType = new ParameterizedTypeReference<CheckAuthResultWebResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    }
-    /**
-     * confirmWhitelistingResults
-     * 
-     * <p><b>200</b> - OK
-     * @param confirmWhitelistingResultsWebRequest confirmWhitelistingResultsWebRequest
-     * @param issuerCode issuer-code
-     * @return ResponseEntity
-     * @throws RestClientException if an error occurs while attempting to invoke the API
-     */
-    public ResponseEntity confirmWhitelistingResultsUsingPOST(ConfirmWhitelistingResultsWebRequest confirmWhitelistingResultsWebRequest, String issuerCode) throws RestClientException {
-        Object postBody = confirmWhitelistingResultsWebRequest;
-        
-        // verify the required parameter 'confirmWhitelistingResultsWebRequest' is set
-        if (confirmWhitelistingResultsWebRequest == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'confirmWhitelistingResultsWebRequest' when calling confirmWhitelistingResultsUsingPOST");
-        }
-        
-        // verify the required parameter 'issuerCode' is set
-        if (issuerCode == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling confirmWhitelistingResultsUsingPOST");
-        }
-        
-        // create path and map variables
-        final Map<String, Object> uriVariables = new HashMap<String, Object>();
-        uriVariables.put("issuer-code", issuerCode);
-        String path = UriComponentsBuilder.fromPath("/3ds/auth/{issuer-code}/confirmWhitelistingResults").buildAndExpand(uriVariables).toUriString();
-        
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
-
-        final String[] accepts = { 
-            "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
-        final String[] contentTypes = { 
-            "application/json"
-        };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
-
-        String[] authNames = new String[] {  };
-
-        ParameterizedTypeReference<ResponseEntity> returnType = new ParameterizedTypeReference<ResponseEntity>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     }
     /**
@@ -326,6 +281,51 @@ public class AuthenticatorControllerApi {
         String[] authNames = new String[] {  };
 
         ParameterizedTypeReference<PerformDecoupledAuthWebResponse> returnType = new ParameterizedTypeReference<PerformDecoupledAuthWebResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    }
+    /**
+     * prepareAuthenticationCompletion
+     * 
+     * <p><b>200</b> - OK
+     * @param issuerCode issuer-code
+     * @param prepareAuthenticationCompletionWebRequest prepareAuthenticationCompletionWebRequest
+     * @return PrepareAuthenticationCompletionWebResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public PrepareAuthenticationCompletionWebResponse prepareAuthenticationCompletionUsingPOST(String issuerCode, PrepareAuthenticationCompletionWebRequest prepareAuthenticationCompletionWebRequest) throws RestClientException {
+        Object postBody = prepareAuthenticationCompletionWebRequest;
+        
+        // verify the required parameter 'issuerCode' is set
+        if (issuerCode == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling prepareAuthenticationCompletionUsingPOST");
+        }
+        
+        // verify the required parameter 'prepareAuthenticationCompletionWebRequest' is set
+        if (prepareAuthenticationCompletionWebRequest == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'prepareAuthenticationCompletionWebRequest' when calling prepareAuthenticationCompletionUsingPOST");
+        }
+        
+        // create path and map variables
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        uriVariables.put("issuer-code", issuerCode);
+        String path = UriComponentsBuilder.fromPath("/3ds/auth/{issuer-code}/prepareAuthenticationCompletion").buildAndExpand(uriVariables).toUriString();
+        
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] accepts = { 
+            "application/json"
+        };
+        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
+        final String[] contentTypes = { 
+            "application/json"
+        };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] {  };
+
+        ParameterizedTypeReference<PrepareAuthenticationCompletionWebResponse> returnType = new ParameterizedTypeReference<PrepareAuthenticationCompletionWebResponse>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     }
     /**

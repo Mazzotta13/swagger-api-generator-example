@@ -40,6 +40,9 @@ public class EvaluateAuthenticationWebRequest {
   @JsonProperty("threeRIInfo")
   private ThreeRIInfo threeRIInfo = null;
 
+  @JsonProperty("whitelistingEnabled")
+  private Boolean whitelistingEnabled = null;
+
   public EvaluateAuthenticationWebRequest aReq(AReq aReq) {
     this.aReq = aReq;
     return this;
@@ -112,6 +115,24 @@ public class EvaluateAuthenticationWebRequest {
     this.threeRIInfo = threeRIInfo;
   }
 
+  public EvaluateAuthenticationWebRequest whitelistingEnabled(Boolean whitelistingEnabled) {
+    this.whitelistingEnabled = whitelistingEnabled;
+    return this;
+  }
+
+   /**
+   * Get whitelistingEnabled
+   * @return whitelistingEnabled
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isWhitelistingEnabled() {
+    return whitelistingEnabled;
+  }
+
+  public void setWhitelistingEnabled(Boolean whitelistingEnabled) {
+    this.whitelistingEnabled = whitelistingEnabled;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -125,12 +146,13 @@ public class EvaluateAuthenticationWebRequest {
     return Objects.equals(this.aReq, evaluateAuthenticationWebRequest.aReq) &&
         Objects.equals(this.acsTransactionId, evaluateAuthenticationWebRequest.acsTransactionId) &&
         Objects.equals(this.browserInfo, evaluateAuthenticationWebRequest.browserInfo) &&
-        Objects.equals(this.threeRIInfo, evaluateAuthenticationWebRequest.threeRIInfo);
+        Objects.equals(this.threeRIInfo, evaluateAuthenticationWebRequest.threeRIInfo) &&
+        Objects.equals(this.whitelistingEnabled, evaluateAuthenticationWebRequest.whitelistingEnabled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aReq, acsTransactionId, browserInfo, threeRIInfo);
+    return Objects.hash(aReq, acsTransactionId, browserInfo, threeRIInfo, whitelistingEnabled);
   }
 
 
@@ -143,6 +165,7 @@ public class EvaluateAuthenticationWebRequest {
     sb.append("    acsTransactionId: ").append(toIndentedString(acsTransactionId)).append("\n");
     sb.append("    browserInfo: ").append(toIndentedString(browserInfo)).append("\n");
     sb.append("    threeRIInfo: ").append(toIndentedString(threeRIInfo)).append("\n");
+    sb.append("    whitelistingEnabled: ").append(toIndentedString(whitelistingEnabled)).append("\n");
     sb.append("}");
     return sb.toString();
   }

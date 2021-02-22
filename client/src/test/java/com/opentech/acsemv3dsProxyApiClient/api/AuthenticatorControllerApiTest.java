@@ -15,7 +15,6 @@ package com.opentech.acsemv3dsProxyApiClient.api;
 
 import com.opentech.acsemv3dsProxyApiClient.model.CheckAuthResultWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.CheckAuthResultWebResponse;
-import com.opentech.acsemv3dsProxyApiClient.model.ConfirmWhitelistingResultsWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateAuthenticationWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateAuthenticationWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateChallengeStepAuthenticatorWebRequest;
@@ -24,9 +23,10 @@ import com.opentech.acsemv3dsProxyApiClient.model.InitChallengeAuthenticatorWebR
 import com.opentech.acsemv3dsProxyApiClient.model.InitChallengeAuthenticatorWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.PerformDecoupledAuthWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.PerformDecoupledAuthWebResponse;
+import com.opentech.acsemv3dsProxyApiClient.model.PrepareAuthenticationCompletionWebRequest;
+import com.opentech.acsemv3dsProxyApiClient.model.PrepareAuthenticationCompletionWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.ResendChallengeWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.ResendChallengeWebResponse;
-import com.opentech.acsemv3dsProxyApiClient.model.ResponseEntity;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -57,23 +57,6 @@ public class AuthenticatorControllerApiTest {
         CheckAuthResultWebRequest checkAuthResultWebRequest = null;
         String issuerCode = null;
         CheckAuthResultWebResponse response = api.checkAuthResultUsingPOST(checkAuthResultWebRequest, issuerCode);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * confirmWhitelistingResults
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void confirmWhitelistingResultsUsingPOSTTest() {
-        ConfirmWhitelistingResultsWebRequest confirmWhitelistingResultsWebRequest = null;
-        String issuerCode = null;
-        ResponseEntity response = api.confirmWhitelistingResultsUsingPOST(confirmWhitelistingResultsWebRequest, issuerCode);
 
         // TODO: test validations
     }
@@ -142,6 +125,23 @@ public class AuthenticatorControllerApiTest {
         String issuerCode = null;
         PerformDecoupledAuthWebRequest performDecoupledAuthWebRequest = null;
         PerformDecoupledAuthWebResponse response = api.performDecoupledAuthenticationUsingPOST(issuerCode, performDecoupledAuthWebRequest);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * prepareAuthenticationCompletion
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void prepareAuthenticationCompletionUsingPOSTTest() {
+        String issuerCode = null;
+        PrepareAuthenticationCompletionWebRequest prepareAuthenticationCompletionWebRequest = null;
+        PrepareAuthenticationCompletionWebResponse response = api.prepareAuthenticationCompletionUsingPOST(issuerCode, prepareAuthenticationCompletionWebRequest);
 
         // TODO: test validations
     }

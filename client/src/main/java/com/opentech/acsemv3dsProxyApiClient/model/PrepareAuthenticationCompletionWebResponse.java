@@ -24,25 +24,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * InitChallengeAuthenticatorWebResponse
+ * PrepareAuthenticationCompletionWebResponse
  */
 
-public class InitChallengeAuthenticatorWebResponse {
+public class PrepareAuthenticationCompletionWebResponse {
   @JsonProperty("extensions")
   private List<Extension> extensions = null;
 
-  @JsonProperty("requestWhitelist")
-  private Boolean requestWhitelist = null;
+  @JsonProperty("whitelistResult")
+  private String whitelistResult = null;
 
-  @JsonProperty("result")
-  private String result = null;
-
-  public InitChallengeAuthenticatorWebResponse extensions(List<Extension> extensions) {
+  public PrepareAuthenticationCompletionWebResponse extensions(List<Extension> extensions) {
     this.extensions = extensions;
     return this;
   }
 
-  public InitChallengeAuthenticatorWebResponse addExtensionsItem(Extension extensionsItem) {
+  public PrepareAuthenticationCompletionWebResponse addExtensionsItem(Extension extensionsItem) {
     if (this.extensions == null) {
       this.extensions = new ArrayList<Extension>();
     }
@@ -63,40 +60,22 @@ public class InitChallengeAuthenticatorWebResponse {
     this.extensions = extensions;
   }
 
-  public InitChallengeAuthenticatorWebResponse requestWhitelist(Boolean requestWhitelist) {
-    this.requestWhitelist = requestWhitelist;
+  public PrepareAuthenticationCompletionWebResponse whitelistResult(String whitelistResult) {
+    this.whitelistResult = whitelistResult;
     return this;
   }
 
    /**
-   * Get requestWhitelist
-   * @return requestWhitelist
+   * Get whitelistResult
+   * @return whitelistResult
   **/
   @ApiModelProperty(value = "")
-  public Boolean isRequestWhitelist() {
-    return requestWhitelist;
+  public String getWhitelistResult() {
+    return whitelistResult;
   }
 
-  public void setRequestWhitelist(Boolean requestWhitelist) {
-    this.requestWhitelist = requestWhitelist;
-  }
-
-  public InitChallengeAuthenticatorWebResponse result(String result) {
-    this.result = result;
-    return this;
-  }
-
-   /**
-   * Get result
-   * @return result
-  **/
-  @ApiModelProperty(value = "")
-  public String getResult() {
-    return result;
-  }
-
-  public void setResult(String result) {
-    this.result = result;
+  public void setWhitelistResult(String whitelistResult) {
+    this.whitelistResult = whitelistResult;
   }
 
 
@@ -108,26 +87,24 @@ public class InitChallengeAuthenticatorWebResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InitChallengeAuthenticatorWebResponse initChallengeAuthenticatorWebResponse = (InitChallengeAuthenticatorWebResponse) o;
-    return Objects.equals(this.extensions, initChallengeAuthenticatorWebResponse.extensions) &&
-        Objects.equals(this.requestWhitelist, initChallengeAuthenticatorWebResponse.requestWhitelist) &&
-        Objects.equals(this.result, initChallengeAuthenticatorWebResponse.result);
+    PrepareAuthenticationCompletionWebResponse prepareAuthenticationCompletionWebResponse = (PrepareAuthenticationCompletionWebResponse) o;
+    return Objects.equals(this.extensions, prepareAuthenticationCompletionWebResponse.extensions) &&
+        Objects.equals(this.whitelistResult, prepareAuthenticationCompletionWebResponse.whitelistResult);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(extensions, requestWhitelist, result);
+    return Objects.hash(extensions, whitelistResult);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InitChallengeAuthenticatorWebResponse {\n");
+    sb.append("class PrepareAuthenticationCompletionWebResponse {\n");
     
     sb.append("    extensions: ").append(toIndentedString(extensions)).append("\n");
-    sb.append("    requestWhitelist: ").append(toIndentedString(requestWhitelist)).append("\n");
-    sb.append("    result: ").append(toIndentedString(result)).append("\n");
+    sb.append("    whitelistResult: ").append(toIndentedString(whitelistResult)).append("\n");
     sb.append("}");
     return sb.toString();
   }

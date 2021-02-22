@@ -17,14 +17,20 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.opentech.acsemv3dsProxyApiClient.model.Extension;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * EvaluateChallengeStepAuthenticatorWebResponse
  */
 
 public class EvaluateChallengeStepAuthenticatorWebResponse {
+  @JsonProperty("extensions")
+  private List<Extension> extensions = null;
+
   @JsonProperty("requestWhitelist")
   private Boolean requestWhitelist = null;
 
@@ -107,6 +113,32 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
   @JsonProperty("transactionStatusReason")
   private TransactionStatusReasonEnum transactionStatusReason = null;
 
+  public EvaluateChallengeStepAuthenticatorWebResponse extensions(List<Extension> extensions) {
+    this.extensions = extensions;
+    return this;
+  }
+
+  public EvaluateChallengeStepAuthenticatorWebResponse addExtensionsItem(Extension extensionsItem) {
+    if (this.extensions == null) {
+      this.extensions = new ArrayList<Extension>();
+    }
+    this.extensions.add(extensionsItem);
+    return this;
+  }
+
+   /**
+   * Get extensions
+   * @return extensions
+  **/
+  @ApiModelProperty(value = "")
+  public List<Extension> getExtensions() {
+    return extensions;
+  }
+
+  public void setExtensions(List<Extension> extensions) {
+    this.extensions = extensions;
+  }
+
   public EvaluateChallengeStepAuthenticatorWebResponse requestWhitelist(Boolean requestWhitelist) {
     this.requestWhitelist = requestWhitelist;
     return this;
@@ -171,14 +203,15 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
       return false;
     }
     EvaluateChallengeStepAuthenticatorWebResponse evaluateChallengeStepAuthenticatorWebResponse = (EvaluateChallengeStepAuthenticatorWebResponse) o;
-    return Objects.equals(this.requestWhitelist, evaluateChallengeStepAuthenticatorWebResponse.requestWhitelist) &&
+    return Objects.equals(this.extensions, evaluateChallengeStepAuthenticatorWebResponse.extensions) &&
+        Objects.equals(this.requestWhitelist, evaluateChallengeStepAuthenticatorWebResponse.requestWhitelist) &&
         Objects.equals(this.result, evaluateChallengeStepAuthenticatorWebResponse.result) &&
         Objects.equals(this.transactionStatusReason, evaluateChallengeStepAuthenticatorWebResponse.transactionStatusReason);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(requestWhitelist, result, transactionStatusReason);
+    return Objects.hash(extensions, requestWhitelist, result, transactionStatusReason);
   }
 
 
@@ -187,6 +220,7 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class EvaluateChallengeStepAuthenticatorWebResponse {\n");
     
+    sb.append("    extensions: ").append(toIndentedString(extensions)).append("\n");
     sb.append("    requestWhitelist: ").append(toIndentedString(requestWhitelist)).append("\n");
     sb.append("    result: ").append(toIndentedString(result)).append("\n");
     sb.append("    transactionStatusReason: ").append(toIndentedString(transactionStatusReason)).append("\n");

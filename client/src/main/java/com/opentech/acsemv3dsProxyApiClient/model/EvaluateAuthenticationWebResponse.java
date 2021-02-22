@@ -17,8 +17,11 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.opentech.acsemv3dsProxyApiClient.model.Extension;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * EvaluateAuthenticationWebResponse
@@ -186,6 +189,9 @@ public class EvaluateAuthenticationWebResponse {
 
   @JsonProperty("challengeMandatory")
   private Boolean challengeMandatory = null;
+
+  @JsonProperty("extensions")
+  private List<Extension> extensions = null;
 
   /**
    * Gets or Sets transactionStatusReason
@@ -392,6 +398,32 @@ public class EvaluateAuthenticationWebResponse {
     this.challengeMandatory = challengeMandatory;
   }
 
+  public EvaluateAuthenticationWebResponse extensions(List<Extension> extensions) {
+    this.extensions = extensions;
+    return this;
+  }
+
+  public EvaluateAuthenticationWebResponse addExtensionsItem(Extension extensionsItem) {
+    if (this.extensions == null) {
+      this.extensions = new ArrayList<Extension>();
+    }
+    this.extensions.add(extensionsItem);
+    return this;
+  }
+
+   /**
+   * Get extensions
+   * @return extensions
+  **/
+  @ApiModelProperty(value = "")
+  public List<Extension> getExtensions() {
+    return extensions;
+  }
+
+  public void setExtensions(List<Extension> extensions) {
+    this.extensions = extensions;
+  }
+
   public EvaluateAuthenticationWebResponse transactionStatusReason(TransactionStatusReasonEnum transactionStatusReason) {
     this.transactionStatusReason = transactionStatusReason;
     return this;
@@ -445,13 +477,14 @@ public class EvaluateAuthenticationWebResponse {
         Objects.equals(this.cardEnrolled, evaluateAuthenticationWebResponse.cardEnrolled) &&
         Objects.equals(this.cardholderInfo, evaluateAuthenticationWebResponse.cardholderInfo) &&
         Objects.equals(this.challengeMandatory, evaluateAuthenticationWebResponse.challengeMandatory) &&
+        Objects.equals(this.extensions, evaluateAuthenticationWebResponse.extensions) &&
         Objects.equals(this.transactionStatusReason, evaluateAuthenticationWebResponse.transactionStatusReason) &&
         Objects.equals(this.whitelistStatus, evaluateAuthenticationWebResponse.whitelistStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationMethod, authenticationName, authenticationResult, authenticationType, cardEnrolled, cardholderInfo, challengeMandatory, transactionStatusReason, whitelistStatus);
+    return Objects.hash(authenticationMethod, authenticationName, authenticationResult, authenticationType, cardEnrolled, cardholderInfo, challengeMandatory, extensions, transactionStatusReason, whitelistStatus);
   }
 
 
@@ -467,6 +500,7 @@ public class EvaluateAuthenticationWebResponse {
     sb.append("    cardEnrolled: ").append(toIndentedString(cardEnrolled)).append("\n");
     sb.append("    cardholderInfo: ").append(toIndentedString(cardholderInfo)).append("\n");
     sb.append("    challengeMandatory: ").append(toIndentedString(challengeMandatory)).append("\n");
+    sb.append("    extensions: ").append(toIndentedString(extensions)).append("\n");
     sb.append("    transactionStatusReason: ").append(toIndentedString(transactionStatusReason)).append("\n");
     sb.append("    whitelistStatus: ").append(toIndentedString(whitelistStatus)).append("\n");
     sb.append("}");

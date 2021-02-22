@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **acsTransactionId** | **String** |  |  [optional]
 **browserInfo** | [**BrowserInfo**](BrowserInfo.md) |  |  [optional]
 **threeRIInfo** | [**ThreeRIInfo**](ThreeRIInfo.md) |  |  [optional]
+**whitelistingEnabled** | **Boolean** |  |  [optional]
 
 
 
