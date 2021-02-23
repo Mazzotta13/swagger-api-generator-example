@@ -3,5 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**extensions** | [**List&lt;Extension&gt;**](Extension.md) |  |  [optional]
+**cResExtensions** | [**List&lt;Extension&gt;**](Extension.md) |  |  [optional]
+**rReqExtensions** | [**List&lt;Extension&gt;**](Extension.md) |  |  [optional]
 **whitelistResult** | **String** |  |  [optional]

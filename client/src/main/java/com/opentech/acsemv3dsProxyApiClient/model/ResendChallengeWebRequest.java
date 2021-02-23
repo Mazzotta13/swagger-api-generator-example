@@ -38,6 +38,9 @@ public class ResendChallengeWebRequest {
   @JsonProperty("transactionInfo")
   private TransactionInfo transactionInfo = null;
 
+  @JsonProperty("whitelistingEnabled")
+  private Boolean whitelistingEnabled = null;
+
   public ResendChallengeWebRequest authenticationName(String authenticationName) {
     this.authenticationName = authenticationName;
     return this;
@@ -110,6 +113,24 @@ public class ResendChallengeWebRequest {
     this.transactionInfo = transactionInfo;
   }
 
+  public ResendChallengeWebRequest whitelistingEnabled(Boolean whitelistingEnabled) {
+    this.whitelistingEnabled = whitelistingEnabled;
+    return this;
+  }
+
+   /**
+   * Get whitelistingEnabled
+   * @return whitelistingEnabled
+  **/
+  @Schema(description = "")
+  public Boolean isWhitelistingEnabled() {
+    return whitelistingEnabled;
+  }
+
+  public void setWhitelistingEnabled(Boolean whitelistingEnabled) {
+    this.whitelistingEnabled = whitelistingEnabled;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -123,12 +144,13 @@ public class ResendChallengeWebRequest {
     return Objects.equals(this.authenticationName, resendChallengeWebRequest.authenticationName) &&
         Objects.equals(this.cReq, resendChallengeWebRequest.cReq) &&
         Objects.equals(this.cardNumber, resendChallengeWebRequest.cardNumber) &&
-        Objects.equals(this.transactionInfo, resendChallengeWebRequest.transactionInfo);
+        Objects.equals(this.transactionInfo, resendChallengeWebRequest.transactionInfo) &&
+        Objects.equals(this.whitelistingEnabled, resendChallengeWebRequest.whitelistingEnabled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationName, cReq, cardNumber, transactionInfo);
+    return Objects.hash(authenticationName, cReq, cardNumber, transactionInfo, whitelistingEnabled);
   }
 
 
@@ -141,6 +163,7 @@ public class ResendChallengeWebRequest {
     sb.append("    cReq: ").append(toIndentedString(cReq)).append("\n");
     sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
     sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
+    sb.append("    whitelistingEnabled: ").append(toIndentedString(whitelistingEnabled)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -27,36 +27,65 @@ import java.util.List;
 
 
 public class PrepareAuthenticationCompletionWebResponse {
-  @JsonProperty("extensions")
-  private List<Extension> extensions = null;
+  @JsonProperty("cResExtensions")
+  private List<Extension> cResExtensions = null;
+
+  @JsonProperty("rReqExtensions")
+  private List<Extension> rReqExtensions = null;
 
   @JsonProperty("whitelistResult")
   private String whitelistResult = null;
 
-  public PrepareAuthenticationCompletionWebResponse extensions(List<Extension> extensions) {
-    this.extensions = extensions;
+  public PrepareAuthenticationCompletionWebResponse cResExtensions(List<Extension> cResExtensions) {
+    this.cResExtensions = cResExtensions;
     return this;
   }
 
-  public PrepareAuthenticationCompletionWebResponse addExtensionsItem(Extension extensionsItem) {
-    if (this.extensions == null) {
-      this.extensions = new ArrayList<Extension>();
+  public PrepareAuthenticationCompletionWebResponse addCResExtensionsItem(Extension cResExtensionsItem) {
+    if (this.cResExtensions == null) {
+      this.cResExtensions = new ArrayList<Extension>();
     }
-    this.extensions.add(extensionsItem);
+    this.cResExtensions.add(cResExtensionsItem);
     return this;
   }
 
    /**
-   * Get extensions
-   * @return extensions
+   * Get cResExtensions
+   * @return cResExtensions
   **/
   @Schema(description = "")
-  public List<Extension> getExtensions() {
-    return extensions;
+  public List<Extension> getCResExtensions() {
+    return cResExtensions;
   }
 
-  public void setExtensions(List<Extension> extensions) {
-    this.extensions = extensions;
+  public void setCResExtensions(List<Extension> cResExtensions) {
+    this.cResExtensions = cResExtensions;
+  }
+
+  public PrepareAuthenticationCompletionWebResponse rReqExtensions(List<Extension> rReqExtensions) {
+    this.rReqExtensions = rReqExtensions;
+    return this;
+  }
+
+  public PrepareAuthenticationCompletionWebResponse addRReqExtensionsItem(Extension rReqExtensionsItem) {
+    if (this.rReqExtensions == null) {
+      this.rReqExtensions = new ArrayList<Extension>();
+    }
+    this.rReqExtensions.add(rReqExtensionsItem);
+    return this;
+  }
+
+   /**
+   * Get rReqExtensions
+   * @return rReqExtensions
+  **/
+  @Schema(description = "")
+  public List<Extension> getRReqExtensions() {
+    return rReqExtensions;
+  }
+
+  public void setRReqExtensions(List<Extension> rReqExtensions) {
+    this.rReqExtensions = rReqExtensions;
   }
 
   public PrepareAuthenticationCompletionWebResponse whitelistResult(String whitelistResult) {
@@ -87,13 +116,14 @@ public class PrepareAuthenticationCompletionWebResponse {
       return false;
     }
     PrepareAuthenticationCompletionWebResponse prepareAuthenticationCompletionWebResponse = (PrepareAuthenticationCompletionWebResponse) o;
-    return Objects.equals(this.extensions, prepareAuthenticationCompletionWebResponse.extensions) &&
+    return Objects.equals(this.cResExtensions, prepareAuthenticationCompletionWebResponse.cResExtensions) &&
+        Objects.equals(this.rReqExtensions, prepareAuthenticationCompletionWebResponse.rReqExtensions) &&
         Objects.equals(this.whitelistResult, prepareAuthenticationCompletionWebResponse.whitelistResult);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(extensions, whitelistResult);
+    return Objects.hash(cResExtensions, rReqExtensions, whitelistResult);
   }
 
 
@@ -102,7 +132,8 @@ public class PrepareAuthenticationCompletionWebResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class PrepareAuthenticationCompletionWebResponse {\n");
     
-    sb.append("    extensions: ").append(toIndentedString(extensions)).append("\n");
+    sb.append("    cResExtensions: ").append(toIndentedString(cResExtensions)).append("\n");
+    sb.append("    rReqExtensions: ").append(toIndentedString(rReqExtensions)).append("\n");
     sb.append("    whitelistResult: ").append(toIndentedString(whitelistResult)).append("\n");
     sb.append("}");
     return sb.toString();

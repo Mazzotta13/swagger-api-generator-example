@@ -17,15 +17,68 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.opentech.acsemv3dsProxyApiClient.model.Extension;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * ResendChallengeWebResponse
  */
 
 
 public class ResendChallengeWebResponse {
+  @JsonProperty("extensions")
+  private List<Extension> extensions = null;
+
+  @JsonProperty("requestWhitelist")
+  private Boolean requestWhitelist = null;
+
   @JsonProperty("result")
   private String result = null;
+
+  public ResendChallengeWebResponse extensions(List<Extension> extensions) {
+    this.extensions = extensions;
+    return this;
+  }
+
+  public ResendChallengeWebResponse addExtensionsItem(Extension extensionsItem) {
+    if (this.extensions == null) {
+      this.extensions = new ArrayList<Extension>();
+    }
+    this.extensions.add(extensionsItem);
+    return this;
+  }
+
+   /**
+   * Get extensions
+   * @return extensions
+  **/
+  @Schema(description = "")
+  public List<Extension> getExtensions() {
+    return extensions;
+  }
+
+  public void setExtensions(List<Extension> extensions) {
+    this.extensions = extensions;
+  }
+
+  public ResendChallengeWebResponse requestWhitelist(Boolean requestWhitelist) {
+    this.requestWhitelist = requestWhitelist;
+    return this;
+  }
+
+   /**
+   * Get requestWhitelist
+   * @return requestWhitelist
+  **/
+  @Schema(description = "")
+  public Boolean isRequestWhitelist() {
+    return requestWhitelist;
+  }
+
+  public void setRequestWhitelist(Boolean requestWhitelist) {
+    this.requestWhitelist = requestWhitelist;
+  }
 
   public ResendChallengeWebResponse result(String result) {
     this.result = result;
@@ -55,12 +108,14 @@ public class ResendChallengeWebResponse {
       return false;
     }
     ResendChallengeWebResponse resendChallengeWebResponse = (ResendChallengeWebResponse) o;
-    return Objects.equals(this.result, resendChallengeWebResponse.result);
+    return Objects.equals(this.extensions, resendChallengeWebResponse.extensions) &&
+        Objects.equals(this.requestWhitelist, resendChallengeWebResponse.requestWhitelist) &&
+        Objects.equals(this.result, resendChallengeWebResponse.result);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(result);
+    return Objects.hash(extensions, requestWhitelist, result);
   }
 
 
@@ -69,6 +124,8 @@ public class ResendChallengeWebResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResendChallengeWebResponse {\n");
     
+    sb.append("    extensions: ").append(toIndentedString(extensions)).append("\n");
+    sb.append("    requestWhitelist: ").append(toIndentedString(requestWhitelist)).append("\n");
     sb.append("    result: ").append(toIndentedString(result)).append("\n");
     sb.append("}");
     return sb.toString();

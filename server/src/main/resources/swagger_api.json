@@ -1524,7 +1524,13 @@
     "PrepareAuthenticationCompletionWebResponse": {
       "type": "object",
       "properties": {
-        "extensions": {
+        "cResExtensions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          }
+        },
+        "rReqExtensions": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Extension"
@@ -1565,6 +1571,9 @@
         },
         "transactionInfo": {
           "$ref": "#/definitions/TransactionInfo"
+        },
+        "whitelistingEnabled": {
+          "type": "boolean"
         }
       },
       "title": "ResendChallengeWebRequest"
@@ -1572,6 +1581,15 @@
     "ResendChallengeWebResponse": {
       "type": "object",
       "properties": {
+        "extensions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          }
+        },
+        "requestWhitelist": {
+          "type": "boolean"
+        },
         "result": {
           "type": "string"
         }
