@@ -4,20 +4,20 @@
   <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
   <packaging>jar</packaging>
   <name>acsemv3ds-ProxyApi-Client</name>
-  <version>1.22</version>
+  <version>1.23-SNAPSHOT</version>
   <url>https://github.com/swagger-api/swagger-codegen</url>
   <description>Swagger Java</description>
   <scm>
     <connection>scm:git:git@github.com:swagger-api/swagger-codegen.git</connection>
     <developerConnection>scm:git:git@github.com:swagger-api/swagger-codegen.git</developerConnection>
     <url>https://github.com/swagger-api/swagger-codegen</url>
-    <tag>acsemv3ds-ProxyApi-1.22</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <parent>
     <groupId>com.opentech</groupId>
     <artifactId>acsemv3ds-ProxyApi</artifactId>
-    <version>1.22</version>
+    <version>1.23-SNAPSHOT</version>
   </parent>
 
   <prerequisites>
