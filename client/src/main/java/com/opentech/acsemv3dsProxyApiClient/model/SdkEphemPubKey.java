@@ -10,19 +10,18 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * SdkEphemPubKey
  */
+
 
 public class SdkEphemPubKey {
   @JsonProperty("crv")
@@ -46,7 +45,7 @@ public class SdkEphemPubKey {
    * Get crv
    * @return crv
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCrv() {
     return crv;
   }
@@ -64,7 +63,7 @@ public class SdkEphemPubKey {
    * Get kty
    * @return kty
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getKty() {
     return kty;
   }
@@ -82,7 +81,7 @@ public class SdkEphemPubKey {
    * Get x
    * @return x
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getX() {
     return x;
   }
@@ -100,7 +99,7 @@ public class SdkEphemPubKey {
    * Get y
    * @return y
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getY() {
     return y;
   }
@@ -156,4 +155,3 @@ public class SdkEphemPubKey {
   }
 
 }
-

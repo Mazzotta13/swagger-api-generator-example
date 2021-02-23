@@ -10,21 +10,20 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.CReq;
 import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * ResendChallengeWebRequest
  */
+
 
 public class ResendChallengeWebRequest {
   @JsonProperty("authenticationName")
@@ -48,7 +47,7 @@ public class ResendChallengeWebRequest {
    * Get authenticationName
    * @return authenticationName
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthenticationName() {
     return authenticationName;
   }
@@ -66,7 +65,7 @@ public class ResendChallengeWebRequest {
    * Get cReq
    * @return cReq
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public CReq getCReq() {
     return cReq;
   }
@@ -84,7 +83,7 @@ public class ResendChallengeWebRequest {
    * Get cardNumber
    * @return cardNumber
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCardNumber() {
     return cardNumber;
   }
@@ -102,7 +101,7 @@ public class ResendChallengeWebRequest {
    * Get transactionInfo
    * @return transactionInfo
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public TransactionInfo getTransactionInfo() {
     return transactionInfo;
   }
@@ -158,4 +157,3 @@ public class ResendChallengeWebRequest {
   }
 
 }
-

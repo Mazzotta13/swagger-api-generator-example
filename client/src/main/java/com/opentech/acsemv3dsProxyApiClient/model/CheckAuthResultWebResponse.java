@@ -10,19 +10,18 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * CheckAuthResultWebResponse
  */
+
 
 public class CheckAuthResultWebResponse {
   /**
@@ -30,19 +29,12 @@ public class CheckAuthResultWebResponse {
    */
   public enum TransactionStatusEnum {
     AUTHENTICATED("AUTHENTICATED"),
-    
     NOT_AUTHENTICATED("NOT_AUTHENTICATED"),
-    
     CHALLENGE_NEEDED("CHALLENGE_NEEDED"),
-    
     AUTHENTICATION_ATTEMPT_GENERATED("AUTHENTICATION_ATTEMPT_GENERATED"),
-    
     UNABLE_TO_AUTHENTICATE("UNABLE_TO_AUTHENTICATE"),
-    
     REJECT("REJECT"),
-    
     DECOUPLED("DECOUPLED"),
-    
     INFORMATIONAL("INFORMATIONAL");
 
     private String value;
@@ -50,7 +42,6 @@ public class CheckAuthResultWebResponse {
     TransactionStatusEnum(String value) {
       this.value = value;
     }
-
     @JsonValue
     public String getValue() {
       return value;
@@ -60,7 +51,6 @@ public class CheckAuthResultWebResponse {
     public String toString() {
       return String.valueOf(value);
     }
-
     @JsonCreator
     public static TransactionStatusEnum fromValue(String text) {
       for (TransactionStatusEnum b : TransactionStatusEnum.values()) {
@@ -70,9 +60,8 @@ public class CheckAuthResultWebResponse {
       }
       return null;
     }
-  }
 
-  @JsonProperty("transactionStatus")
+  }  @JsonProperty("transactionStatus")
   private TransactionStatusEnum transactionStatus = null;
 
   /**
@@ -80,45 +69,25 @@ public class CheckAuthResultWebResponse {
    */
   public enum TransactionStatusReasonEnum {
     CARD_AUTHENTICATION_FAILED("CARD_AUTHENTICATION_FAILED"),
-    
     UNKNOWN_DEVICE("UNKNOWN_DEVICE"),
-    
     UNSUPPORTED_DEVICE("UNSUPPORTED_DEVICE"),
-    
     EXCEEDS_AUTHENTICATION_LIMIT("EXCEEDS_AUTHENTICATION_LIMIT"),
-    
     EXPIRED_CARD("EXPIRED_CARD"),
-    
     INVALID_CARD_NUMBER("INVALID_CARD_NUMBER"),
-    
     INVALID_TRANSACTION("INVALID_TRANSACTION"),
-    
     NO_CARD_RECORD("NO_CARD_RECORD"),
-    
     SECURITY_FAILURE("SECURITY_FAILURE"),
-    
     STOLEN_CARD("STOLEN_CARD"),
-    
     SUSPECTED_FRAUD("SUSPECTED_FRAUD"),
-    
     TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER("TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER"),
-    
     CARDHOLDER_NOT_ENROLLED_IN_SERVICE("CARDHOLDER_NOT_ENROLLED_IN_SERVICE"),
-    
     TRANSACTION_TIMED_OUT_AT_THE_ACS("TRANSACTION_TIMED_OUT_AT_THE_ACS"),
-    
     LOW_CONFIDENCE("LOW_CONFIDENCE"),
-    
     MEDIUM_CONFIDENCE("MEDIUM_CONFIDENCE"),
-    
     HIGH_CONFIDENCE("HIGH_CONFIDENCE"),
-    
     VERY_HIGH_CONFIDENCE("VERY_HIGH_CONFIDENCE"),
-    
     EXCEEDS_ACS_MAXIMUM_CHALLENGES("EXCEEDS_ACS_MAXIMUM_CHALLENGES"),
-    
     NON_PAYMENT_TRANSACTION_NOT_SUPPORTED("NON_PAYMENT_TRANSACTION_NOT_SUPPORTED"),
-    
     THREE_RI_TRANSACTION_NOT_SUPPORTED("THREE_RI_TRANSACTION_NOT_SUPPORTED");
 
     private String value;
@@ -126,7 +95,6 @@ public class CheckAuthResultWebResponse {
     TransactionStatusReasonEnum(String value) {
       this.value = value;
     }
-
     @JsonValue
     public String getValue() {
       return value;
@@ -136,7 +104,6 @@ public class CheckAuthResultWebResponse {
     public String toString() {
       return String.valueOf(value);
     }
-
     @JsonCreator
     public static TransactionStatusReasonEnum fromValue(String text) {
       for (TransactionStatusReasonEnum b : TransactionStatusReasonEnum.values()) {
@@ -146,9 +113,8 @@ public class CheckAuthResultWebResponse {
       }
       return null;
     }
-  }
 
-  @JsonProperty("transactionStatusReason")
+  }  @JsonProperty("transactionStatusReason")
   private TransactionStatusReasonEnum transactionStatusReason = null;
 
   public CheckAuthResultWebResponse transactionStatus(TransactionStatusEnum transactionStatus) {
@@ -160,7 +126,7 @@ public class CheckAuthResultWebResponse {
    * Get transactionStatus
    * @return transactionStatus
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public TransactionStatusEnum getTransactionStatus() {
     return transactionStatus;
   }
@@ -178,7 +144,7 @@ public class CheckAuthResultWebResponse {
    * Get transactionStatusReason
    * @return transactionStatusReason
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public TransactionStatusReasonEnum getTransactionStatusReason() {
     return transactionStatusReason;
   }
@@ -230,4 +196,3 @@ public class CheckAuthResultWebResponse {
   }
 
 }
-

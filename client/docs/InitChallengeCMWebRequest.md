@@ -1,4 +1,3 @@
-
 # InitChallengeCMWebRequest
 
 ## Properties
@@ -10,6 +9,3 @@ Name | Type | Description | Notes
 **deviceChannel** | **String** |  |  [optional]
 **requestWhitelist** | **Boolean** |  |  [optional]
 **transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
-
-
-

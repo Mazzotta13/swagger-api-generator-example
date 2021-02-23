@@ -1,4 +1,3 @@
-
 # ThreeDSRequestorPriorAuthInfo
 
 ## Properties
@@ -8,6 +7,3 @@ Name | Type | Description | Notes
 **threeDSReqPriorAuthMethod** | **String** |  |  [optional]
 **threeDSReqPriorAuthTimestamp** | **String** |  |  [optional]
 **threeDSReqPriorRef** | **String** |  |  [optional]
-
-
-

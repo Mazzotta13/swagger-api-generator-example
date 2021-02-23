@@ -1,1 +1,1887 @@
-{"swagger":"2.0","info":{"description":"Api Documentation","version":"1.0","title":"Api Documentation","termsOfService":"urn:tos","contact":{},"license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0"}},"host":"localhost:8080","basePath":"/acsemv3dsproxy","tags":[{"name":"authenticator-controller","description":"Authenticator Controller"},{"name":"card-tokenizer-controller","description":"Card Tokenizer Controller"},{"name":"challenge-manager-controller","description":"Challenge Manager Controller"}],"paths":{"/3ds/auth/{issuer-code}/checkAuthResult":{"post":{"tags":["authenticator-controller"],"summary":"checkAuthResult","operationId":"checkAuthResultUsingPOST","consumes":["application/json"],"produces":["application/json"],"parameters":[{"in":"body","name":"checkAuthResultWebRequest","description":"checkAuthResultWebRequest","required":true,"schema":{"$ref":"#/definitions/CheckAuthResultWebRequest"}},{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/CheckAuthResultWebResponse"}}},"deprecated":false}},"/3ds/auth/{issuer-code}/evaluateAuthentication":{"post":{"tags":["authenticator-controller"],"summary":"evaluateAuthentication","operationId":"evaluateAuthenticationUsingPOST","consumes":["application/json"],"produces":["application/json"],"parameters":[{"in":"body","name":"evaluateAuthenticationWebRequest","description":"evaluateAuthenticationWebRequest","required":true,"schema":{"$ref":"#/definitions/EvaluateAuthenticationWebRequest"}},{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/EvaluateAuthenticationWebResponse"}}},"deprecated":false}},"/3ds/auth/{issuer-code}/evaluateChallengeStep":{"post":{"tags":["authenticator-controller"],"summary":"evaluateChallengeStep","operationId":"evaluateChallengeStepUsingPOST","consumes":["application/json"],"produces":["application/json"],"parameters":[{"in":"body","name":"evaluateChallengeStepAuthenticatorWebRequest","description":"evaluateChallengeStepAuthenticatorWebRequest","required":true,"schema":{"$ref":"#/definitions/EvaluateChallengeStepAuthenticatorWebRequest"}},{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/EvaluateChallengeStepAuthenticatorWebResponse"}}},"deprecated":false}},"/3ds/auth/{issuer-code}/initChallenge":{"post":{"tags":["authenticator-controller"],"summary":"initChallenge","operationId":"initChallengeUsingPOST","consumes":["application/json"],"produces":["application/json"],"parameters":[{"in":"body","name":"initChallengeAuthenticatorWebRequest","description":"initChallengeAuthenticatorWebRequest","required":true,"schema":{"$ref":"#/definitions/InitChallengeAuthenticatorWebRequest"}},{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/InitChallengeAuthenticatorWebResponse"}}},"deprecated":false}},"/3ds/auth/{issuer-code}/performDecoupledAuthentication":{"post":{"tags":["authenticator-controller"],"summary":"performDecoupledAuthentication","operationId":"performDecoupledAuthenticationUsingPOST","consumes":["application/json"],"produces":["application/json"],"parameters":[{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"},{"in":"body","name":"performDecoupledAuthWebRequest","description":"performDecoupledAuthWebRequest","required":true,"schema":{"$ref":"#/definitions/PerformDecoupledAuthWebRequest"}}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/PerformDecoupledAuthWebResponse"}}},"deprecated":false}},"/3ds/auth/{issuer-code}/prepareAuthenticationCompletion":{"post":{"tags":["authenticator-controller"],"summary":"prepareAuthenticationCompletion","operationId":"prepareAuthenticationCompletionUsingPOST","consumes":["application/json"],"produces":["application/json"],"parameters":[{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"},{"in":"body","name":"prepareAuthenticationCompletionWebRequest","description":"prepareAuthenticationCompletionWebRequest","required":true,"schema":{"$ref":"#/definitions/PrepareAuthenticationCompletionWebRequest"}}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/PrepareAuthenticationCompletionWebResponse"}}},"deprecated":false}},"/3ds/auth/{issuer-code}/resendChallenge":{"post":{"tags":["authenticator-controller"],"summary":"resendChallenge","operationId":"resendChallengeUsingPOST","consumes":["application/json"],"produces":["application/json"],"parameters":[{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"},{"in":"body","name":"resendChallengeWebRequest","description":"resendChallengeWebRequest","required":true,"schema":{"$ref":"#/definitions/ResendChallengeWebRequest"}}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/ResendChallengeWebResponse"}}},"deprecated":false}},"/3ds/challenge/{issuer-code}/evaluateChallengeStep":{"post":{"tags":["challenge-manager-controller"],"summary":"evaluateChallengeStep","operationId":"evaluateChallengeStepUsingPOST_1","consumes":["application/json"],"produces":["application/json"],"parameters":[{"in":"body","name":"evaluateChallengeStepCMWebRequest","description":"evaluateChallengeStepCMWebRequest","required":true,"schema":{"$ref":"#/definitions/EvaluateChallengeStepCMWebRequest"}},{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/EvaluateChallengeStepCMWebResponse"}}},"deprecated":false}},"/3ds/challenge/{issuer-code}/initChallenge":{"post":{"tags":["challenge-manager-controller"],"summary":"initChallenge","operationId":"initChallengeUsingPOST_1","consumes":["application/json"],"produces":["application/json"],"parameters":[{"in":"body","name":"initChallengeCMWebRequest","description":"initChallengeCMWebRequest","required":true,"schema":{"$ref":"#/definitions/InitChallengeCMWebRequest"}},{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/InitChallengeCMWebResponse"}}},"deprecated":false}},"/3ds/challenge/{issuer-code}/isChallengeSupported":{"post":{"tags":["challenge-manager-controller"],"summary":"isChallengeSupported","operationId":"isChallengeSupportedUsingPOST","consumes":["application/json"],"produces":["application/json"],"parameters":[{"in":"body","name":"isChallengeSupportedWebRequest","description":"isChallengeSupportedWebRequest","required":true,"schema":{"$ref":"#/definitions/IsChallengeSupportedWebRequest"}},{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/IsChallengeSupportedWebResponse"}}},"deprecated":false}},"/3ds/{issuer-code}/detokenize":{"post":{"tags":["card-tokenizer-controller"],"summary":"detokenize","operationId":"detokenizeUsingPOST","consumes":["application/json"],"produces":["application/json"],"parameters":[{"in":"body","name":"detokenizeWebRequest","description":"detokenizeWebRequest","required":true,"schema":{"$ref":"#/definitions/DetokenizeWebRequest"}},{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/DetokenizeWebResponse"}}},"deprecated":false}},"/3ds/{issuer-code}/tokenize":{"post":{"tags":["card-tokenizer-controller"],"summary":"tokenize","operationId":"tokenizeUsingPOST","consumes":["application/json"],"produces":["application/json"],"parameters":[{"name":"issuer-code","in":"path","description":"issuer-code","required":true,"type":"string"},{"in":"body","name":"tokenizeWebRequest","description":"tokenizeWebRequest","required":true,"schema":{"$ref":"#/definitions/TokenizeWebRequest"}}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/TokenizeWebResponse"}}},"deprecated":false}}},"definitions":{"AReq":{"type":"object","properties":{"acctID":{"type":"string"},"acctInfo":{"$ref":"#/definitions/ThreeDSCardholderAccountInfo"},"acctNumber":{"type":"string"},"acctType":{"type":"string"},"acquirerBIN":{"type":"string"},"acquirerMerchantID":{"type":"string"},"addrMatch":{"type":"string"},"billAddrCity":{"type":"string"},"billAddrCountry":{"type":"string"},"billAddrLine1":{"type":"string"},"billAddrLine2":{"type":"string"},"billAddrLine3":{"type":"string"},"billAddrPostCode":{"type":"string"},"billAddrState":{"type":"string"},"broadInfo":{"type":"object"},"browserAcceptHeader":{"type":"string"},"browserColorDepth":{"type":"string"},"browserIP":{"type":"string"},"browserJavaEnabled":{"type":"boolean"},"browserJavascriptEnabled":{"type":"boolean"},"browserLanguage":{"type":"string"},"browserScreenHeight":{"type":"string"},"browserScreenWidth":{"type":"string"},"browserTZ":{"type":"string"},"browserUserAgent":{"type":"string"},"cardExpiryDate":{"type":"string"},"cardholderName":{"type":"string"},"deviceChannel":{"type":"string"},"deviceInfo":{"type":"object"},"deviceRenderOptions":{"$ref":"#/definitions/ThreeDSSdkRenderingOptions"},"dsReferenceNumber":{"type":"string"},"dsTransID":{"type":"string"},"dsURL":{"type":"string"},"email":{"type":"string"},"homePhone":{"$ref":"#/definitions/Phone"},"mcc":{"type":"string"},"merchantCountryCode":{"type":"string"},"merchantName":{"type":"string"},"merchantRiskIndicator":{"$ref":"#/definitions/ThreeDSMerchantRiskIndicator"},"messageCategory":{"type":"string"},"messageExtension":{"type":"array","items":{"$ref":"#/definitions/Extension"}},"messageType":{"type":"string"},"messageVersion":{"type":"string"},"mobilePhone":{"$ref":"#/definitions/Phone"},"notificationURL":{"type":"string"},"payTokenInd":{"type":"boolean"},"payTokenSource":{"type":"string"},"purchaseAmount":{"type":"string"},"purchaseCurrency":{"type":"string"},"purchaseDate":{"type":"string"},"purchaseExponent":{"type":"string"},"purchaseInstalData":{"type":"string"},"recurringExpiry":{"type":"string"},"recurringFrequency":{"type":"string"},"sdkAppID":{"type":"string"},"sdkEphemPubKey":{"$ref":"#/definitions/SdkEphemPubKey"},"sdkMaxTimeout":{"type":"string"},"sdkReferenceNumber":{"type":"string"},"sdkTransID":{"type":"string"},"shipAddrCity":{"type":"string"},"shipAddrCountry":{"type":"string"},"shipAddrLine1":{"type":"string"},"shipAddrLine2":{"type":"string"},"shipAddrLine3":{"type":"string"},"shipAddrPostCode":{"type":"string"},"shipAddrState":{"type":"string"},"threeDSCompInd":{"type":"string"},"threeDSReqAuthMethodInd":{"type":"string"},"threeDSRequestorAuthenticationInd":{"type":"string"},"threeDSRequestorAuthenticationInfo":{"$ref":"#/definitions/ThreeDSRequestorAuthInfo"},"threeDSRequestorChallengeInd":{"type":"string"},"threeDSRequestorDecMaxTime":{"type":"string"},"threeDSRequestorDecReqInd":{"type":"string"},"threeDSRequestorID":{"type":"string"},"threeDSRequestorName":{"type":"string"},"threeDSRequestorPriorAuthenticationInfo":{"$ref":"#/definitions/ThreeDSRequestorPriorAuthInfo"},"threeDSRequestorURL":{"type":"string"},"threeDSServerOperatorID":{"type":"string"},"threeDSServerRefNumber":{"type":"string"},"threeDSServerTransID":{"type":"string"},"threeDSServerURL":{"type":"string"},"threeRIInd":{"type":"string"},"transType":{"type":"string"},"whiteListStatus":{"type":"string"},"whiteListStatusSource":{"type":"string"},"workPhone":{"$ref":"#/definitions/Phone"}},"title":"AReq"},"AppChallengeInfo":{"type":"object","properties":{"expectedChallengeTypes":{"type":"array","items":{"$ref":"#/definitions/ExpectedChallengeType"}}},"title":"AppChallengeInfo"},"BrowserChallengeInfo":{"type":"object","properties":{"expectedChallengeTypes":{"type":"array","items":{"$ref":"#/definitions/ExpectedChallengeType"}}},"title":"BrowserChallengeInfo"},"BrowserInfo":{"type":"object","properties":{"browser":{"type":"string"},"browserMajorVersion":{"type":"string"},"browserType":{"type":"string"},"deviceType":{"type":"string"},"platform":{"type":"string"},"platformVersion":{"type":"string"},"threeDsServerTransId":{"type":"string"}},"title":"BrowserInfo"},"CReq":{"type":"object","properties":{"acsTransID":{"type":"string"},"challengeCancel":{"type":"string"},"challengeDataEntry":{"type":"string"},"challengeHTMLDataEntry":{"type":"string"},"challengeNoEntry":{"type":"string"},"challengeWindowSize":{"type":"string"},"messageExtension":{"type":"array","items":{"$ref":"#/definitions/Extension"}},"messageType":{"type":"string"},"messageVersion":{"type":"string"},"oobContinue":{"type":"boolean"},"resendChallenge":{"type":"string"},"sdkCounterStoA":{"type":"string"},"sdkTransID":{"type":"string"},"threeDSRequestorAppURL":{"type":"string"},"threeDSServerTransID":{"type":"string"},"whitelistingDataEntry":{"type":"string"}},"title":"CReq"},"CResInfo":{"type":"object","properties":{"acsHTML":{"type":"string"},"acsUiType":{"type":"string"},"challengeAddInfo":{"type":"string"},"challengeCompletionInd":{"type":"string"},"challengeInfoHeader":{"type":"string"},"challengeInfoLabel":{"type":"string"},"challengeInfoText":{"type":"string"},"challengeInfoTextIndicator":{"type":"string"},"challengeSelectInfo":{"type":"array","items":{"$ref":"#/definitions/Map«string,string»"}},"expandInfoLabel":{"type":"string"},"expandInfoText":{"type":"string"},"issuerImage":{"$ref":"#/definitions/ThreeDSImage"},"oobAppLabel":{"type":"string"},"oobAppURL":{"type":"string"},"oobContinueLabel":{"type":"string"},"psImage":{"$ref":"#/definitions/ThreeDSImage"},"resendInformationLabel":{"type":"string"},"submitAuthenticationLabel":{"type":"string"},"transStatus":{"type":"string"},"whitelistingInfoText":{"type":"string"},"whyInfoLabel":{"type":"string"},"whyInfoText":{"type":"string"}},"title":"CResInfo"},"CheckAuthResultWebRequest":{"type":"object","properties":{"acsTransactionId":{"type":"string"}},"title":"CheckAuthResultWebRequest"},"CheckAuthResultWebResponse":{"type":"object","properties":{"transactionStatus":{"type":"string","enum":["AUTHENTICATED","NOT_AUTHENTICATED","CHALLENGE_NEEDED","AUTHENTICATION_ATTEMPT_GENERATED","UNABLE_TO_AUTHENTICATE","REJECT","DECOUPLED","INFORMATIONAL"]},"transactionStatusReason":{"type":"string","enum":["CARD_AUTHENTICATION_FAILED","UNKNOWN_DEVICE","UNSUPPORTED_DEVICE","EXCEEDS_AUTHENTICATION_LIMIT","EXPIRED_CARD","INVALID_CARD_NUMBER","INVALID_TRANSACTION","NO_CARD_RECORD","SECURITY_FAILURE","STOLEN_CARD","SUSPECTED_FRAUD","TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER","CARDHOLDER_NOT_ENROLLED_IN_SERVICE","TRANSACTION_TIMED_OUT_AT_THE_ACS","LOW_CONFIDENCE","MEDIUM_CONFIDENCE","HIGH_CONFIDENCE","VERY_HIGH_CONFIDENCE","EXCEEDS_ACS_MAXIMUM_CHALLENGES","NON_PAYMENT_TRANSACTION_NOT_SUPPORTED","THREE_RI_TRANSACTION_NOT_SUPPORTED"]}},"title":"CheckAuthResultWebResponse"},"DetokenizeWebRequest":{"type":"object","properties":{"token":{"type":"string"}},"title":"DetokenizeWebRequest"},"DetokenizeWebResponse":{"type":"object","properties":{"cardNumber":{"type":"string"}},"title":"DetokenizeWebResponse"},"EvaluateAuthenticationWebRequest":{"type":"object","properties":{"aReq":{"$ref":"#/definitions/AReq"},"acsTransactionId":{"type":"string"},"browserInfo":{"$ref":"#/definitions/BrowserInfo"},"threeRIInfo":{"$ref":"#/definitions/ThreeRIInfo"},"whitelistingEnabled":{"type":"boolean"}},"title":"EvaluateAuthenticationWebRequest"},"EvaluateAuthenticationWebResponse":{"type":"object","properties":{"authenticationMethod":{"type":"string","enum":["PASSCODE","SMS_OTP","KEY_FOB_OR_EMV_CARD_READER_OTP","APP_OTP","APP_OTHER","KBA","OOB_BIOMETRICS","OOB_LOGIN","OOB_OTHER","OTHER","PUSH_CONFIRMATION"]},"authenticationName":{"type":"string"},"authenticationResult":{"type":"string","enum":["CHALLENGE_NEEDED","AUTHENTICATED","UNABLE_TO_AUTHENTICATE","NOT_AUTHENTICATED","AUTHENTICATION_ATTEMPT","REJECTED","INFORMATIONAL_OK","INFORMATIONAL_DENIED","DECOUPLED_AUTHENTICATION"]},"authenticationType":{"type":"string","enum":["STATIC","DYNAMIC","OOB","DECOUPLED"]},"cardEnrolled":{"type":"boolean"},"cardholderInfo":{"type":"string"},"challengeMandatory":{"type":"boolean"},"extensions":{"type":"array","items":{"$ref":"#/definitions/Extension"}},"transactionStatusReason":{"type":"string","enum":["CARD_AUTHENTICATION_FAILED","UNKNOWN_DEVICE","UNSUPPORTED_DEVICE","EXCEEDS_AUTHENTICATION_LIMIT","EXPIRED_CARD","INVALID_CARD_NUMBER","INVALID_TRANSACTION","NO_CARD_RECORD","SECURITY_FAILURE","STOLEN_CARD","SUSPECTED_FRAUD","TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER","CARDHOLDER_NOT_ENROLLED_IN_SERVICE","TRANSACTION_TIMED_OUT_AT_THE_ACS","LOW_CONFIDENCE","MEDIUM_CONFIDENCE","HIGH_CONFIDENCE","VERY_HIGH_CONFIDENCE","EXCEEDS_ACS_MAXIMUM_CHALLENGES","NON_PAYMENT_TRANSACTION_NOT_SUPPORTED","THREE_RI_TRANSACTION_NOT_SUPPORTED"]},"whitelistStatus":{"type":"string"}},"title":"EvaluateAuthenticationWebResponse"},"EvaluateChallengeStepAuthenticatorWebRequest":{"type":"object","properties":{"authenticationName":{"type":"string"},"cReq":{"$ref":"#/definitions/CReq"},"cardNumber":{"type":"string"},"challengeType":{"type":"string"},"challengeValue":{"type":"string"},"transactionInfo":{"$ref":"#/definitions/TransactionInfo"},"whitelistingEnabled":{"type":"boolean"},"whitelistingResult":{"type":"string"}},"title":"EvaluateChallengeStepAuthenticatorWebRequest"},"EvaluateChallengeStepAuthenticatorWebResponse":{"type":"object","properties":{"extensions":{"type":"array","items":{"$ref":"#/definitions/Extension"}},"requestWhitelist":{"type":"boolean"},"result":{"type":"string"},"transactionStatusReason":{"type":"string","enum":["CARD_AUTHENTICATION_FAILED","UNKNOWN_DEVICE","UNSUPPORTED_DEVICE","EXCEEDS_AUTHENTICATION_LIMIT","EXPIRED_CARD","INVALID_CARD_NUMBER","INVALID_TRANSACTION","NO_CARD_RECORD","SECURITY_FAILURE","STOLEN_CARD","SUSPECTED_FRAUD","TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER","CARDHOLDER_NOT_ENROLLED_IN_SERVICE","TRANSACTION_TIMED_OUT_AT_THE_ACS","LOW_CONFIDENCE","MEDIUM_CONFIDENCE","HIGH_CONFIDENCE","VERY_HIGH_CONFIDENCE","EXCEEDS_ACS_MAXIMUM_CHALLENGES","NON_PAYMENT_TRANSACTION_NOT_SUPPORTED","THREE_RI_TRANSACTION_NOT_SUPPORTED"]}},"title":"EvaluateChallengeStepAuthenticatorWebResponse"},"EvaluateChallengeStepCMWebRequest":{"type":"object","properties":{"arrivalCondition":{"type":"string"},"authenticationName":{"type":"string"},"cReq":{"$ref":"#/definitions/CReq"},"currStepId":{"type":"string"},"requestWhitelist":{"type":"boolean"},"transactionInfo":{"$ref":"#/definitions/TransactionInfo"}},"title":"EvaluateChallengeStepCMWebRequest"},"EvaluateChallengeStepCMWebResponse":{"type":"object","properties":{"appNextChallengeInfo":{"$ref":"#/definitions/AppChallengeInfo"},"browserNextChallengeInfo":{"$ref":"#/definitions/BrowserChallengeInfo"},"cResInfo":{"$ref":"#/definitions/CResInfo"},"challengeStatus":{"type":"string","enum":["ONGOING","TERMINATED_WITH_SUCCESS","TERMINATED_WITH_FAILURE"]},"nextStepId":{"type":"string"},"requestingWhitelist":{"type":"boolean"}},"title":"EvaluateChallengeStepCMWebResponse"},"ExpectedChallengeType":{"type":"object","properties":{"authenticationType":{"type":"string"},"fieldName":{"type":"string"}},"title":"ExpectedChallengeType"},"Extension":{"type":"object","properties":{"criticalityIndicator":{"type":"boolean"},"data":{"type":"object"},"id":{"type":"string"},"name":{"type":"string"}},"title":"Extension"},"InitChallengeAuthenticatorWebRequest":{"type":"object","properties":{"authenticationName":{"type":"string"},"cReq":{"$ref":"#/definitions/CReq"},"cardNumber":{"type":"string"},"transactionInfo":{"$ref":"#/definitions/TransactionInfo"},"whitelistingEnabled":{"type":"boolean"}},"title":"InitChallengeAuthenticatorWebRequest"},"InitChallengeAuthenticatorWebResponse":{"type":"object","properties":{"extensions":{"type":"array","items":{"$ref":"#/definitions/Extension"}},"requestWhitelist":{"type":"boolean"},"result":{"type":"string"}},"title":"InitChallengeAuthenticatorWebResponse"},"InitChallengeCMWebRequest":{"type":"object","properties":{"arrivalCondition":{"type":"string"},"authenticationName":{"type":"string"},"cReq":{"$ref":"#/definitions/CReq"},"deviceChannel":{"type":"string"},"requestWhitelist":{"type":"boolean"},"transactionInfo":{"$ref":"#/definitions/TransactionInfo"}},"title":"InitChallengeCMWebRequest"},"InitChallengeCMWebResponse":{"type":"object","properties":{"appNextChallengeInfo":{"$ref":"#/definitions/AppChallengeInfo"},"browserNextChallengeInfo":{"$ref":"#/definitions/BrowserChallengeInfo"},"cResInfo":{"$ref":"#/definitions/CResInfo"},"currentStepId":{"type":"string"},"requestingWhitelist":{"type":"boolean"}},"title":"InitChallengeCMWebResponse"},"IsChallengeSupportedWebRequest":{"type":"object","properties":{"aReq":{"$ref":"#/definitions/AReq"},"authenticationName":{"type":"string"},"authenticationType":{"type":"string","enum":["STATIC","DYNAMIC","OOB","DECOUPLED"]},"browserInfo":{"$ref":"#/definitions/BrowserInfo"}},"title":"IsChallengeSupportedWebRequest"},"IsChallengeSupportedWebResponse":{"type":"object","properties":{"acsMaxChallenges":{"type":"integer","format":"int32"},"challengeSupported":{"type":"boolean"},"performDecoupledAuthentication":{"type":"boolean"},"threeDSAcsRenderingType":{"$ref":"#/definitions/ThreeDSAcsRenderingType"}},"title":"IsChallengeSupportedWebResponse"},"Map«string,string»":{"type":"object","title":"Map«string,string»","additionalProperties":{"type":"string"}},"PerformDecoupledAuthWebRequest":{"type":"object","properties":{"cardNumber":{"type":"string"},"timeout":{"type":"integer","format":"int32"},"transactionInfo":{"$ref":"#/definitions/TransactionInfo"}},"title":"PerformDecoupledAuthWebRequest"},"PerformDecoupledAuthWebResponse":{"type":"object","properties":{"cardholderInfo":{"type":"string"}},"title":"PerformDecoupledAuthWebResponse"},"Phone":{"type":"object","properties":{"cc":{"type":"string"},"subscriber":{"type":"string"}},"title":"Phone"},"PrepareAuthenticationCompletionWebRequest":{"type":"object","properties":{"acsTransactionId":{"type":"string"},"cardNumber":{"type":"string"},"rReqInfo":{"$ref":"#/definitions/RReqInfo"},"whitelistConfirmed":{"type":"boolean"},"whitelistResultProposal":{"type":"string"}},"title":"PrepareAuthenticationCompletionWebRequest"},"PrepareAuthenticationCompletionWebResponse":{"type":"object","properties":{"extensions":{"type":"array","items":{"$ref":"#/definitions/Extension"}},"whitelistResult":{"type":"string"}},"title":"PrepareAuthenticationCompletionWebResponse"},"RReqInfo":{"type":"object","properties":{"challengeCancel":{"type":"string"},"transactionStatus":{"type":"string"},"transactionStatusReason":{"type":"string"}},"title":"RReqInfo"},"ResendChallengeWebRequest":{"type":"object","properties":{"authenticationName":{"type":"string"},"cReq":{"$ref":"#/definitions/CReq"},"cardNumber":{"type":"string"},"transactionInfo":{"$ref":"#/definitions/TransactionInfo"}},"title":"ResendChallengeWebRequest"},"ResendChallengeWebResponse":{"type":"object","properties":{"result":{"type":"string"}},"title":"ResendChallengeWebResponse"},"SdkEphemPubKey":{"type":"object","properties":{"crv":{"type":"string"},"kty":{"type":"string"},"x":{"type":"string"},"y":{"type":"string"}},"title":"SdkEphemPubKey"},"ThreeDSAcsRenderingType":{"type":"object","properties":{"acsInterface":{"type":"string"},"acsUiTemplate":{"type":"string"}},"title":"ThreeDSAcsRenderingType"},"ThreeDSCardholderAccountInfo":{"type":"object","properties":{"chAccAgeInd":{"type":"string"},"chAccChange":{"type":"string"},"chAccChangeInd":{"type":"string"},"chAccDate":{"type":"string"},"chAccPwChange":{"type":"string"},"chAccPwChangeInd":{"type":"string"},"nbPurchaseAccount":{"type":"string"},"paymentAccAge":{"type":"string"},"paymentAccInd":{"type":"string"},"provisionAttemptsDay":{"type":"string"},"shipAddressUsage":{"type":"string"},"shipAddressUsageInd":{"type":"string"},"shipNameIndicator":{"type":"string"},"suspiciousAccActivity":{"type":"string"},"txnActivityDay":{"type":"string"},"txnActivityYear":{"type":"string"}},"title":"ThreeDSCardholderAccountInfo"},"ThreeDSImage":{"type":"object","properties":{"extraHigh":{"type":"string"},"high":{"type":"string"},"medium":{"type":"string"}},"title":"ThreeDSImage"},"ThreeDSMerchantRiskIndicator":{"type":"object","properties":{"deliveryEmailAddress":{"type":"string"},"deliveryTimeframe":{"type":"string"},"giftCardAmount":{"type":"string"},"giftCardCount":{"type":"string"},"giftCardCurr":{"type":"string"},"preOrderDate":{"type":"string"},"preOrderPurchaseInd":{"type":"string"},"reorderItemsInd":{"type":"string"},"shipIndicator":{"type":"string"}},"title":"ThreeDSMerchantRiskIndicator"},"ThreeDSRequestorAuthInfo":{"type":"object","properties":{"threeDSReqAuthData":{"type":"string"},"threeDSReqAuthMethod":{"type":"string"},"threeDSReqAuthTimestamp":{"type":"string"}},"title":"ThreeDSRequestorAuthInfo"},"ThreeDSRequestorPriorAuthInfo":{"type":"object","properties":{"threeDSReqPriorAuthData":{"type":"object"},"threeDSReqPriorAuthMethod":{"type":"string"},"threeDSReqPriorAuthTimestamp":{"type":"string"},"threeDSReqPriorRef":{"type":"string"}},"title":"ThreeDSRequestorPriorAuthInfo"},"ThreeDSSdkRenderingOptions":{"type":"object","properties":{"sdkInterface":{"type":"string"},"sdkUiType":{"type":"array","items":{"type":"string"}}},"title":"ThreeDSSdkRenderingOptions"},"ThreeRIInfo":{"type":"object","properties":{"relatedTransaction":{"$ref":"#/definitions/TransactionInfo"},"threeRI":{"type":"boolean"}},"title":"ThreeRIInfo"},"TokenizeWebRequest":{"type":"object","properties":{"cardNumber":{"type":"string"}},"title":"TokenizeWebRequest"},"TokenizeWebResponse":{"type":"object","properties":{"token":{"type":"string"}},"title":"TokenizeWebResponse"},"TransactionInfo":{"type":"object","properties":{"aav":{"type":"string"},"acsMaxChallenges":{"type":"integer","format":"int32"},"acsRenderingType":{"$ref":"#/definitions/ThreeDSAcsRenderingType"},"acsTransactionId":{"type":"string"},"authenticationMethod":{"type":"string"},"authenticationName":{"type":"string"},"authenticationType":{"type":"string"},"binRangeId":{"type":"string"},"cRes":{"type":"string","format":"byte"},"completionDate":{"type":"string","format":"date-time"},"creationDate":{"type":"string","format":"date-time"},"currentStepId":{"type":"string"},"deviceChannel":{"type":"string"},"dsTransactionId":{"type":"string"},"dsUrl":{"type":"string"},"eci":{"type":"string"},"instalment":{"type":"boolean"},"interactionCounter":{"type":"integer","format":"int32"},"issuerCode":{"type":"string"},"messageCategory":{"type":"string"},"parentTransactionId":{"type":"string"},"processingStep":{"type":"string"},"recurring":{"type":"boolean"},"sdkTransactionId":{"type":"string"},"secureVersion":{"type":"string"},"threedsServerTransactionId":{"type":"string"},"transactionStatus":{"type":"string"},"validationReason":{"type":"string"}},"title":"TransactionInfo"}}}
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Api Documentation",
+    "version": "1.0",
+    "title": "Api Documentation",
+    "termsOfService": "urn:tos",
+    "contact": {},
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "/acsemv3dsproxy",
+  "tags": [
+    {
+      "name": "authenticator-controller",
+      "description": "Authenticator Controller"
+    },
+    {
+      "name": "card-tokenizer-controller",
+      "description": "Card Tokenizer Controller"
+    },
+    {
+      "name": "challenge-manager-controller",
+      "description": "Challenge Manager Controller"
+    }
+  ],
+  "paths": {
+    "/3ds/auth/{issuer-code}/checkAuthResult": {
+      "post": {
+        "tags": [
+          "authenticator-controller"
+        ],
+        "summary": "checkAuthResult",
+        "operationId": "checkAuthResultUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "checkAuthResultWebRequest",
+            "description": "checkAuthResultWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CheckAuthResultWebRequest"
+            }
+          },
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CheckAuthResultWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/3ds/auth/{issuer-code}/evaluateAuthentication": {
+      "post": {
+        "tags": [
+          "authenticator-controller"
+        ],
+        "summary": "evaluateAuthentication",
+        "operationId": "evaluateAuthenticationUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "evaluateAuthenticationWebRequest",
+            "description": "evaluateAuthenticationWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/EvaluateAuthenticationWebRequest"
+            }
+          },
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EvaluateAuthenticationWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/3ds/auth/{issuer-code}/evaluateChallengeStep": {
+      "post": {
+        "tags": [
+          "authenticator-controller"
+        ],
+        "summary": "evaluateChallengeStep",
+        "operationId": "evaluateChallengeStepUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "evaluateChallengeStepAuthenticatorWebRequest",
+            "description": "evaluateChallengeStepAuthenticatorWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/EvaluateChallengeStepAuthenticatorWebRequest"
+            }
+          },
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EvaluateChallengeStepAuthenticatorWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/3ds/auth/{issuer-code}/initChallenge": {
+      "post": {
+        "tags": [
+          "authenticator-controller"
+        ],
+        "summary": "initChallenge",
+        "operationId": "initChallengeUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "initChallengeAuthenticatorWebRequest",
+            "description": "initChallengeAuthenticatorWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InitChallengeAuthenticatorWebRequest"
+            }
+          },
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/InitChallengeAuthenticatorWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/3ds/auth/{issuer-code}/performDecoupledAuthentication": {
+      "post": {
+        "tags": [
+          "authenticator-controller"
+        ],
+        "summary": "performDecoupledAuthentication",
+        "operationId": "performDecoupledAuthenticationUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "performDecoupledAuthWebRequest",
+            "description": "performDecoupledAuthWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PerformDecoupledAuthWebRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/PerformDecoupledAuthWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/3ds/auth/{issuer-code}/prepareAuthenticationCompletion": {
+      "post": {
+        "tags": [
+          "authenticator-controller"
+        ],
+        "summary": "prepareAuthenticationCompletion",
+        "operationId": "prepareAuthenticationCompletionUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "prepareAuthenticationCompletionWebRequest",
+            "description": "prepareAuthenticationCompletionWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PrepareAuthenticationCompletionWebRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/PrepareAuthenticationCompletionWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/3ds/auth/{issuer-code}/resendChallenge": {
+      "post": {
+        "tags": [
+          "authenticator-controller"
+        ],
+        "summary": "resendChallenge",
+        "operationId": "resendChallengeUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "resendChallengeWebRequest",
+            "description": "resendChallengeWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ResendChallengeWebRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResendChallengeWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/3ds/challenge/{issuer-code}/evaluateChallengeStep": {
+      "post": {
+        "tags": [
+          "challenge-manager-controller"
+        ],
+        "summary": "evaluateChallengeStep",
+        "operationId": "evaluateChallengeStepUsingPOST_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "evaluateChallengeStepCMWebRequest",
+            "description": "evaluateChallengeStepCMWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/EvaluateChallengeStepCMWebRequest"
+            }
+          },
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EvaluateChallengeStepCMWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/3ds/challenge/{issuer-code}/initChallenge": {
+      "post": {
+        "tags": [
+          "challenge-manager-controller"
+        ],
+        "summary": "initChallenge",
+        "operationId": "initChallengeUsingPOST_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "initChallengeCMWebRequest",
+            "description": "initChallengeCMWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InitChallengeCMWebRequest"
+            }
+          },
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/InitChallengeCMWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/3ds/challenge/{issuer-code}/isChallengeSupported": {
+      "post": {
+        "tags": [
+          "challenge-manager-controller"
+        ],
+        "summary": "isChallengeSupported",
+        "operationId": "isChallengeSupportedUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "isChallengeSupportedWebRequest",
+            "description": "isChallengeSupportedWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/IsChallengeSupportedWebRequest"
+            }
+          },
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/IsChallengeSupportedWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/3ds/{issuer-code}/detokenize": {
+      "post": {
+        "tags": [
+          "card-tokenizer-controller"
+        ],
+        "summary": "detokenize",
+        "operationId": "detokenizeUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "detokenizeWebRequest",
+            "description": "detokenizeWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DetokenizeWebRequest"
+            }
+          },
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/DetokenizeWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/3ds/{issuer-code}/tokenize": {
+      "post": {
+        "tags": [
+          "card-tokenizer-controller"
+        ],
+        "summary": "tokenize",
+        "operationId": "tokenizeUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "tokenizeWebRequest",
+            "description": "tokenizeWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TokenizeWebRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TokenizeWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "AReq": {
+      "type": "object",
+      "properties": {
+        "acctID": {
+          "type": "string"
+        },
+        "acctInfo": {
+          "$ref": "#/definitions/ThreeDSCardholderAccountInfo"
+        },
+        "acctNumber": {
+          "type": "string"
+        },
+        "acctType": {
+          "type": "string"
+        },
+        "acquirerBIN": {
+          "type": "string"
+        },
+        "acquirerMerchantID": {
+          "type": "string"
+        },
+        "addrMatch": {
+          "type": "string"
+        },
+        "billAddrCity": {
+          "type": "string"
+        },
+        "billAddrCountry": {
+          "type": "string"
+        },
+        "billAddrLine1": {
+          "type": "string"
+        },
+        "billAddrLine2": {
+          "type": "string"
+        },
+        "billAddrLine3": {
+          "type": "string"
+        },
+        "billAddrPostCode": {
+          "type": "string"
+        },
+        "billAddrState": {
+          "type": "string"
+        },
+        "broadInfo": {
+          "type": "object"
+        },
+        "browserAcceptHeader": {
+          "type": "string"
+        },
+        "browserColorDepth": {
+          "type": "string"
+        },
+        "browserIP": {
+          "type": "string"
+        },
+        "browserJavaEnabled": {
+          "type": "boolean"
+        },
+        "browserJavascriptEnabled": {
+          "type": "boolean"
+        },
+        "browserLanguage": {
+          "type": "string"
+        },
+        "browserScreenHeight": {
+          "type": "string"
+        },
+        "browserScreenWidth": {
+          "type": "string"
+        },
+        "browserTZ": {
+          "type": "string"
+        },
+        "browserUserAgent": {
+          "type": "string"
+        },
+        "cardExpiryDate": {
+          "type": "string"
+        },
+        "cardholderName": {
+          "type": "string"
+        },
+        "deviceChannel": {
+          "type": "string"
+        },
+        "deviceInfo": {
+          "type": "object"
+        },
+        "deviceRenderOptions": {
+          "$ref": "#/definitions/ThreeDSSdkRenderingOptions"
+        },
+        "dsReferenceNumber": {
+          "type": "string"
+        },
+        "dsTransID": {
+          "type": "string"
+        },
+        "dsURL": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "homePhone": {
+          "$ref": "#/definitions/Phone"
+        },
+        "mcc": {
+          "type": "string"
+        },
+        "merchantCountryCode": {
+          "type": "string"
+        },
+        "merchantName": {
+          "type": "string"
+        },
+        "merchantRiskIndicator": {
+          "$ref": "#/definitions/ThreeDSMerchantRiskIndicator"
+        },
+        "messageCategory": {
+          "type": "string"
+        },
+        "messageExtension": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          }
+        },
+        "messageType": {
+          "type": "string"
+        },
+        "messageVersion": {
+          "type": "string"
+        },
+        "mobilePhone": {
+          "$ref": "#/definitions/Phone"
+        },
+        "notificationURL": {
+          "type": "string"
+        },
+        "payTokenInd": {
+          "type": "boolean"
+        },
+        "payTokenSource": {
+          "type": "string"
+        },
+        "purchaseAmount": {
+          "type": "string"
+        },
+        "purchaseCurrency": {
+          "type": "string"
+        },
+        "purchaseDate": {
+          "type": "string"
+        },
+        "purchaseExponent": {
+          "type": "string"
+        },
+        "purchaseInstalData": {
+          "type": "string"
+        },
+        "recurringExpiry": {
+          "type": "string"
+        },
+        "recurringFrequency": {
+          "type": "string"
+        },
+        "sdkAppID": {
+          "type": "string"
+        },
+        "sdkEphemPubKey": {
+          "$ref": "#/definitions/SdkEphemPubKey"
+        },
+        "sdkMaxTimeout": {
+          "type": "string"
+        },
+        "sdkReferenceNumber": {
+          "type": "string"
+        },
+        "sdkTransID": {
+          "type": "string"
+        },
+        "shipAddrCity": {
+          "type": "string"
+        },
+        "shipAddrCountry": {
+          "type": "string"
+        },
+        "shipAddrLine1": {
+          "type": "string"
+        },
+        "shipAddrLine2": {
+          "type": "string"
+        },
+        "shipAddrLine3": {
+          "type": "string"
+        },
+        "shipAddrPostCode": {
+          "type": "string"
+        },
+        "shipAddrState": {
+          "type": "string"
+        },
+        "threeDSCompInd": {
+          "type": "string"
+        },
+        "threeDSReqAuthMethodInd": {
+          "type": "string"
+        },
+        "threeDSRequestorAuthenticationInd": {
+          "type": "string"
+        },
+        "threeDSRequestorAuthenticationInfo": {
+          "$ref": "#/definitions/ThreeDSRequestorAuthInfo"
+        },
+        "threeDSRequestorChallengeInd": {
+          "type": "string"
+        },
+        "threeDSRequestorDecMaxTime": {
+          "type": "string"
+        },
+        "threeDSRequestorDecReqInd": {
+          "type": "string"
+        },
+        "threeDSRequestorID": {
+          "type": "string"
+        },
+        "threeDSRequestorName": {
+          "type": "string"
+        },
+        "threeDSRequestorPriorAuthenticationInfo": {
+          "$ref": "#/definitions/ThreeDSRequestorPriorAuthInfo"
+        },
+        "threeDSRequestorURL": {
+          "type": "string"
+        },
+        "threeDSServerOperatorID": {
+          "type": "string"
+        },
+        "threeDSServerRefNumber": {
+          "type": "string"
+        },
+        "threeDSServerTransID": {
+          "type": "string"
+        },
+        "threeDSServerURL": {
+          "type": "string"
+        },
+        "threeRIInd": {
+          "type": "string"
+        },
+        "transType": {
+          "type": "string"
+        },
+        "whiteListStatus": {
+          "type": "string"
+        },
+        "whiteListStatusSource": {
+          "type": "string"
+        },
+        "workPhone": {
+          "$ref": "#/definitions/Phone"
+        }
+      },
+      "title": "AReq"
+    },
+    "AppChallengeInfo": {
+      "type": "object",
+      "properties": {
+        "expectedChallengeTypes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ExpectedChallengeType"
+          }
+        }
+      },
+      "title": "AppChallengeInfo"
+    },
+    "BrowserChallengeInfo": {
+      "type": "object",
+      "properties": {
+        "expectedChallengeTypes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ExpectedChallengeType"
+          }
+        }
+      },
+      "title": "BrowserChallengeInfo"
+    },
+    "BrowserInfo": {
+      "type": "object",
+      "properties": {
+        "browser": {
+          "type": "string"
+        },
+        "browserMajorVersion": {
+          "type": "string"
+        },
+        "browserType": {
+          "type": "string"
+        },
+        "deviceType": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "platformVersion": {
+          "type": "string"
+        },
+        "threeDsServerTransId": {
+          "type": "string"
+        }
+      },
+      "title": "BrowserInfo"
+    },
+    "CReq": {
+      "type": "object",
+      "properties": {
+        "acsTransID": {
+          "type": "string"
+        },
+        "challengeCancel": {
+          "type": "string"
+        },
+        "challengeDataEntry": {
+          "type": "string"
+        },
+        "challengeHTMLDataEntry": {
+          "type": "string"
+        },
+        "challengeNoEntry": {
+          "type": "string"
+        },
+        "challengeWindowSize": {
+          "type": "string"
+        },
+        "messageExtension": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          }
+        },
+        "messageType": {
+          "type": "string"
+        },
+        "messageVersion": {
+          "type": "string"
+        },
+        "oobContinue": {
+          "type": "boolean"
+        },
+        "resendChallenge": {
+          "type": "string"
+        },
+        "sdkCounterStoA": {
+          "type": "string"
+        },
+        "sdkTransID": {
+          "type": "string"
+        },
+        "threeDSRequestorAppURL": {
+          "type": "string"
+        },
+        "threeDSServerTransID": {
+          "type": "string"
+        },
+        "whitelistingDataEntry": {
+          "type": "string"
+        }
+      },
+      "title": "CReq"
+    },
+    "CResInfo": {
+      "type": "object",
+      "properties": {
+        "acsHTML": {
+          "type": "string"
+        },
+        "acsUiType": {
+          "type": "string"
+        },
+        "challengeAddInfo": {
+          "type": "string"
+        },
+        "challengeCompletionInd": {
+          "type": "string"
+        },
+        "challengeInfoHeader": {
+          "type": "string"
+        },
+        "challengeInfoLabel": {
+          "type": "string"
+        },
+        "challengeInfoText": {
+          "type": "string"
+        },
+        "challengeInfoTextIndicator": {
+          "type": "string"
+        },
+        "challengeSelectInfo": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Map«string,string»"
+          }
+        },
+        "expandInfoLabel": {
+          "type": "string"
+        },
+        "expandInfoText": {
+          "type": "string"
+        },
+        "issuerImage": {
+          "$ref": "#/definitions/ThreeDSImage"
+        },
+        "oobAppLabel": {
+          "type": "string"
+        },
+        "oobAppURL": {
+          "type": "string"
+        },
+        "oobContinueLabel": {
+          "type": "string"
+        },
+        "psImage": {
+          "$ref": "#/definitions/ThreeDSImage"
+        },
+        "resendInformationLabel": {
+          "type": "string"
+        },
+        "submitAuthenticationLabel": {
+          "type": "string"
+        },
+        "transStatus": {
+          "type": "string"
+        },
+        "whitelistingInfoText": {
+          "type": "string"
+        },
+        "whyInfoLabel": {
+          "type": "string"
+        },
+        "whyInfoText": {
+          "type": "string"
+        }
+      },
+      "title": "CResInfo"
+    },
+    "CheckAuthResultWebRequest": {
+      "type": "object",
+      "properties": {
+        "acsTransactionId": {
+          "type": "string"
+        }
+      },
+      "title": "CheckAuthResultWebRequest"
+    },
+    "CheckAuthResultWebResponse": {
+      "type": "object",
+      "properties": {
+        "transactionStatus": {
+          "type": "string",
+          "enum": [
+            "AUTHENTICATED",
+            "NOT_AUTHENTICATED",
+            "CHALLENGE_NEEDED",
+            "AUTHENTICATION_ATTEMPT_GENERATED",
+            "UNABLE_TO_AUTHENTICATE",
+            "REJECT",
+            "DECOUPLED",
+            "INFORMATIONAL"
+          ]
+        },
+        "transactionStatusReason": {
+          "type": "string",
+          "enum": [
+            "CARD_AUTHENTICATION_FAILED",
+            "UNKNOWN_DEVICE",
+            "UNSUPPORTED_DEVICE",
+            "EXCEEDS_AUTHENTICATION_LIMIT",
+            "EXPIRED_CARD",
+            "INVALID_CARD_NUMBER",
+            "INVALID_TRANSACTION",
+            "NO_CARD_RECORD",
+            "SECURITY_FAILURE",
+            "STOLEN_CARD",
+            "SUSPECTED_FRAUD",
+            "TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER",
+            "CARDHOLDER_NOT_ENROLLED_IN_SERVICE",
+            "TRANSACTION_TIMED_OUT_AT_THE_ACS",
+            "LOW_CONFIDENCE",
+            "MEDIUM_CONFIDENCE",
+            "HIGH_CONFIDENCE",
+            "VERY_HIGH_CONFIDENCE",
+            "EXCEEDS_ACS_MAXIMUM_CHALLENGES",
+            "NON_PAYMENT_TRANSACTION_NOT_SUPPORTED",
+            "THREE_RI_TRANSACTION_NOT_SUPPORTED"
+          ]
+        }
+      },
+      "title": "CheckAuthResultWebResponse"
+    },
+    "DetokenizeWebRequest": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "DetokenizeWebRequest"
+    },
+    "DetokenizeWebResponse": {
+      "type": "object",
+      "properties": {
+        "cardNumber": {
+          "type": "string"
+        }
+      },
+      "title": "DetokenizeWebResponse"
+    },
+    "EvaluateAuthenticationWebRequest": {
+      "type": "object",
+      "properties": {
+        "aReq": {
+          "$ref": "#/definitions/AReq"
+        },
+        "acsTransactionId": {
+          "type": "string"
+        },
+        "browserInfo": {
+          "$ref": "#/definitions/BrowserInfo"
+        },
+        "threeRIInfo": {
+          "$ref": "#/definitions/ThreeRIInfo"
+        },
+        "whitelistingEnabled": {
+          "type": "boolean"
+        }
+      },
+      "title": "EvaluateAuthenticationWebRequest"
+    },
+    "EvaluateAuthenticationWebResponse": {
+      "type": "object",
+      "properties": {
+        "authenticationMethod": {
+          "type": "string",
+          "enum": [
+            "PASSCODE",
+            "SMS_OTP",
+            "KEY_FOB_OR_EMV_CARD_READER_OTP",
+            "APP_OTP",
+            "APP_OTHER",
+            "KBA",
+            "OOB_BIOMETRICS",
+            "OOB_LOGIN",
+            "OOB_OTHER",
+            "OTHER",
+            "PUSH_CONFIRMATION"
+          ]
+        },
+        "authenticationName": {
+          "type": "string"
+        },
+        "authenticationResult": {
+          "type": "string",
+          "enum": [
+            "CHALLENGE_NEEDED",
+            "AUTHENTICATED",
+            "UNABLE_TO_AUTHENTICATE",
+            "NOT_AUTHENTICATED",
+            "AUTHENTICATION_ATTEMPT",
+            "REJECTED",
+            "INFORMATIONAL_OK",
+            "INFORMATIONAL_DENIED",
+            "DECOUPLED_AUTHENTICATION"
+          ]
+        },
+        "authenticationType": {
+          "type": "string",
+          "enum": [
+            "STATIC",
+            "DYNAMIC",
+            "OOB",
+            "DECOUPLED"
+          ]
+        },
+        "cardEnrolled": {
+          "type": "boolean"
+        },
+        "cardholderInfo": {
+          "type": "string"
+        },
+        "challengeMandatory": {
+          "type": "boolean"
+        },
+        "extensions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          }
+        },
+        "transactionStatusReason": {
+          "type": "string",
+          "enum": [
+            "CARD_AUTHENTICATION_FAILED",
+            "UNKNOWN_DEVICE",
+            "UNSUPPORTED_DEVICE",
+            "EXCEEDS_AUTHENTICATION_LIMIT",
+            "EXPIRED_CARD",
+            "INVALID_CARD_NUMBER",
+            "INVALID_TRANSACTION",
+            "NO_CARD_RECORD",
+            "SECURITY_FAILURE",
+            "STOLEN_CARD",
+            "SUSPECTED_FRAUD",
+            "TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER",
+            "CARDHOLDER_NOT_ENROLLED_IN_SERVICE",
+            "TRANSACTION_TIMED_OUT_AT_THE_ACS",
+            "LOW_CONFIDENCE",
+            "MEDIUM_CONFIDENCE",
+            "HIGH_CONFIDENCE",
+            "VERY_HIGH_CONFIDENCE",
+            "EXCEEDS_ACS_MAXIMUM_CHALLENGES",
+            "NON_PAYMENT_TRANSACTION_NOT_SUPPORTED",
+            "THREE_RI_TRANSACTION_NOT_SUPPORTED"
+          ]
+        },
+        "whitelistStatus": {
+          "type": "string"
+        }
+      },
+      "title": "EvaluateAuthenticationWebResponse"
+    },
+    "EvaluateChallengeStepAuthenticatorWebRequest": {
+      "type": "object",
+      "properties": {
+        "authenticationName": {
+          "type": "string"
+        },
+        "cReq": {
+          "$ref": "#/definitions/CReq"
+        },
+        "cardNumber": {
+          "type": "string"
+        },
+        "challengeType": {
+          "type": "string"
+        },
+        "challengeValue": {
+          "type": "string"
+        },
+        "transactionInfo": {
+          "$ref": "#/definitions/TransactionInfo"
+        },
+        "whitelistingEnabled": {
+          "type": "boolean"
+        },
+        "whitelistingResult": {
+          "type": "string"
+        }
+      },
+      "title": "EvaluateChallengeStepAuthenticatorWebRequest"
+    },
+    "EvaluateChallengeStepAuthenticatorWebResponse": {
+      "type": "object",
+      "properties": {
+        "extensions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          }
+        },
+        "requestWhitelist": {
+          "type": "boolean"
+        },
+        "result": {
+          "type": "string"
+        },
+        "transactionStatusReason": {
+          "type": "string",
+          "enum": [
+            "CARD_AUTHENTICATION_FAILED",
+            "UNKNOWN_DEVICE",
+            "UNSUPPORTED_DEVICE",
+            "EXCEEDS_AUTHENTICATION_LIMIT",
+            "EXPIRED_CARD",
+            "INVALID_CARD_NUMBER",
+            "INVALID_TRANSACTION",
+            "NO_CARD_RECORD",
+            "SECURITY_FAILURE",
+            "STOLEN_CARD",
+            "SUSPECTED_FRAUD",
+            "TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER",
+            "CARDHOLDER_NOT_ENROLLED_IN_SERVICE",
+            "TRANSACTION_TIMED_OUT_AT_THE_ACS",
+            "LOW_CONFIDENCE",
+            "MEDIUM_CONFIDENCE",
+            "HIGH_CONFIDENCE",
+            "VERY_HIGH_CONFIDENCE",
+            "EXCEEDS_ACS_MAXIMUM_CHALLENGES",
+            "NON_PAYMENT_TRANSACTION_NOT_SUPPORTED",
+            "THREE_RI_TRANSACTION_NOT_SUPPORTED"
+          ]
+        }
+      },
+      "title": "EvaluateChallengeStepAuthenticatorWebResponse"
+    },
+    "EvaluateChallengeStepCMWebRequest": {
+      "type": "object",
+      "properties": {
+        "arrivalCondition": {
+          "type": "string"
+        },
+        "authenticationName": {
+          "type": "string"
+        },
+        "cReq": {
+          "$ref": "#/definitions/CReq"
+        },
+        "currStepId": {
+          "type": "string"
+        },
+        "requestWhitelist": {
+          "type": "boolean"
+        },
+        "transactionInfo": {
+          "$ref": "#/definitions/TransactionInfo"
+        }
+      },
+      "title": "EvaluateChallengeStepCMWebRequest"
+    },
+    "EvaluateChallengeStepCMWebResponse": {
+      "type": "object",
+      "properties": {
+        "appNextChallengeInfo": {
+          "$ref": "#/definitions/AppChallengeInfo"
+        },
+        "browserNextChallengeInfo": {
+          "$ref": "#/definitions/BrowserChallengeInfo"
+        },
+        "cResInfo": {
+          "$ref": "#/definitions/CResInfo"
+        },
+        "challengeStatus": {
+          "type": "string",
+          "enum": [
+            "ONGOING",
+            "TERMINATED_WITH_SUCCESS",
+            "TERMINATED_WITH_FAILURE"
+          ]
+        },
+        "nextStepId": {
+          "type": "string"
+        },
+        "requestingWhitelist": {
+          "type": "boolean"
+        }
+      },
+      "title": "EvaluateChallengeStepCMWebResponse"
+    },
+    "ExpectedChallengeType": {
+      "type": "object",
+      "properties": {
+        "authenticationType": {
+          "type": "string"
+        },
+        "fieldName": {
+          "type": "string"
+        }
+      },
+      "title": "ExpectedChallengeType"
+    },
+    "Extension": {
+      "type": "object",
+      "properties": {
+        "criticalityIndicator": {
+          "type": "boolean"
+        },
+        "data": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "Extension"
+    },
+    "InitChallengeAuthenticatorWebRequest": {
+      "type": "object",
+      "properties": {
+        "authenticationName": {
+          "type": "string"
+        },
+        "cReq": {
+          "$ref": "#/definitions/CReq"
+        },
+        "cardNumber": {
+          "type": "string"
+        },
+        "transactionInfo": {
+          "$ref": "#/definitions/TransactionInfo"
+        },
+        "whitelistingEnabled": {
+          "type": "boolean"
+        }
+      },
+      "title": "InitChallengeAuthenticatorWebRequest"
+    },
+    "InitChallengeAuthenticatorWebResponse": {
+      "type": "object",
+      "properties": {
+        "extensions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          }
+        },
+        "requestWhitelist": {
+          "type": "boolean"
+        },
+        "result": {
+          "type": "string"
+        }
+      },
+      "title": "InitChallengeAuthenticatorWebResponse"
+    },
+    "InitChallengeCMWebRequest": {
+      "type": "object",
+      "properties": {
+        "arrivalCondition": {
+          "type": "string"
+        },
+        "authenticationName": {
+          "type": "string"
+        },
+        "cReq": {
+          "$ref": "#/definitions/CReq"
+        },
+        "deviceChannel": {
+          "type": "string"
+        },
+        "requestWhitelist": {
+          "type": "boolean"
+        },
+        "transactionInfo": {
+          "$ref": "#/definitions/TransactionInfo"
+        }
+      },
+      "title": "InitChallengeCMWebRequest"
+    },
+    "InitChallengeCMWebResponse": {
+      "type": "object",
+      "properties": {
+        "appNextChallengeInfo": {
+          "$ref": "#/definitions/AppChallengeInfo"
+        },
+        "browserNextChallengeInfo": {
+          "$ref": "#/definitions/BrowserChallengeInfo"
+        },
+        "cResInfo": {
+          "$ref": "#/definitions/CResInfo"
+        },
+        "currentStepId": {
+          "type": "string"
+        },
+        "requestingWhitelist": {
+          "type": "boolean"
+        }
+      },
+      "title": "InitChallengeCMWebResponse"
+    },
+    "IsChallengeSupportedWebRequest": {
+      "type": "object",
+      "properties": {
+        "aReq": {
+          "$ref": "#/definitions/AReq"
+        },
+        "authenticationName": {
+          "type": "string"
+        },
+        "authenticationType": {
+          "type": "string",
+          "enum": [
+            "STATIC",
+            "DYNAMIC",
+            "OOB",
+            "DECOUPLED"
+          ]
+        },
+        "browserInfo": {
+          "$ref": "#/definitions/BrowserInfo"
+        }
+      },
+      "title": "IsChallengeSupportedWebRequest"
+    },
+    "IsChallengeSupportedWebResponse": {
+      "type": "object",
+      "properties": {
+        "acsMaxChallenges": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "challengeSupported": {
+          "type": "boolean"
+        },
+        "performDecoupledAuthentication": {
+          "type": "boolean"
+        },
+        "threeDSAcsRenderingType": {
+          "$ref": "#/definitions/ThreeDSAcsRenderingType"
+        }
+      },
+      "title": "IsChallengeSupportedWebResponse"
+    },
+    "Map«string,string»": {
+      "type": "object",
+      "title": "Map«string,string»",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "PerformDecoupledAuthWebRequest": {
+      "type": "object",
+      "properties": {
+        "cardNumber": {
+          "type": "string"
+        },
+        "timeout": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "transactionInfo": {
+          "$ref": "#/definitions/TransactionInfo"
+        }
+      },
+      "title": "PerformDecoupledAuthWebRequest"
+    },
+    "PerformDecoupledAuthWebResponse": {
+      "type": "object",
+      "properties": {
+        "cardholderInfo": {
+          "type": "string"
+        }
+      },
+      "title": "PerformDecoupledAuthWebResponse"
+    },
+    "Phone": {
+      "type": "object",
+      "properties": {
+        "cc": {
+          "type": "string"
+        },
+        "subscriber": {
+          "type": "string"
+        }
+      },
+      "title": "Phone"
+    },
+    "PrepareAuthenticationCompletionWebRequest": {
+      "type": "object",
+      "properties": {
+        "acsTransactionId": {
+          "type": "string"
+        },
+        "cardNumber": {
+          "type": "string"
+        },
+        "rReqInfo": {
+          "$ref": "#/definitions/RReqInfo"
+        },
+        "whitelistConfirmed": {
+          "type": "boolean"
+        },
+        "whitelistResultProposal": {
+          "type": "string"
+        }
+      },
+      "title": "PrepareAuthenticationCompletionWebRequest"
+    },
+    "PrepareAuthenticationCompletionWebResponse": {
+      "type": "object",
+      "properties": {
+        "extensions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          }
+        },
+        "whitelistResult": {
+          "type": "string"
+        }
+      },
+      "title": "PrepareAuthenticationCompletionWebResponse"
+    },
+    "RReqInfo": {
+      "type": "object",
+      "properties": {
+        "challengeCancel": {
+          "type": "string"
+        },
+        "transactionStatus": {
+          "type": "string"
+        },
+        "transactionStatusReason": {
+          "type": "string"
+        }
+      },
+      "title": "RReqInfo"
+    },
+    "ResendChallengeWebRequest": {
+      "type": "object",
+      "properties": {
+        "authenticationName": {
+          "type": "string"
+        },
+        "cReq": {
+          "$ref": "#/definitions/CReq"
+        },
+        "cardNumber": {
+          "type": "string"
+        },
+        "transactionInfo": {
+          "$ref": "#/definitions/TransactionInfo"
+        }
+      },
+      "title": "ResendChallengeWebRequest"
+    },
+    "ResendChallengeWebResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      },
+      "title": "ResendChallengeWebResponse"
+    },
+    "SdkEphemPubKey": {
+      "type": "object",
+      "properties": {
+        "crv": {
+          "type": "string"
+        },
+        "kty": {
+          "type": "string"
+        },
+        "x": {
+          "type": "string"
+        },
+        "y": {
+          "type": "string"
+        }
+      },
+      "title": "SdkEphemPubKey"
+    },
+    "ThreeDSAcsRenderingType": {
+      "type": "object",
+      "properties": {
+        "acsInterface": {
+          "type": "string"
+        },
+        "acsUiTemplate": {
+          "type": "string"
+        }
+      },
+      "title": "ThreeDSAcsRenderingType"
+    },
+    "ThreeDSCardholderAccountInfo": {
+      "type": "object",
+      "properties": {
+        "chAccAgeInd": {
+          "type": "string"
+        },
+        "chAccChange": {
+          "type": "string"
+        },
+        "chAccChangeInd": {
+          "type": "string"
+        },
+        "chAccDate": {
+          "type": "string"
+        },
+        "chAccPwChange": {
+          "type": "string"
+        },
+        "chAccPwChangeInd": {
+          "type": "string"
+        },
+        "nbPurchaseAccount": {
+          "type": "string"
+        },
+        "paymentAccAge": {
+          "type": "string"
+        },
+        "paymentAccInd": {
+          "type": "string"
+        },
+        "provisionAttemptsDay": {
+          "type": "string"
+        },
+        "shipAddressUsage": {
+          "type": "string"
+        },
+        "shipAddressUsageInd": {
+          "type": "string"
+        },
+        "shipNameIndicator": {
+          "type": "string"
+        },
+        "suspiciousAccActivity": {
+          "type": "string"
+        },
+        "txnActivityDay": {
+          "type": "string"
+        },
+        "txnActivityYear": {
+          "type": "string"
+        }
+      },
+      "title": "ThreeDSCardholderAccountInfo"
+    },
+    "ThreeDSImage": {
+      "type": "object",
+      "properties": {
+        "extraHigh": {
+          "type": "string"
+        },
+        "high": {
+          "type": "string"
+        },
+        "medium": {
+          "type": "string"
+        }
+      },
+      "title": "ThreeDSImage"
+    },
+    "ThreeDSMerchantRiskIndicator": {
+      "type": "object",
+      "properties": {
+        "deliveryEmailAddress": {
+          "type": "string"
+        },
+        "deliveryTimeframe": {
+          "type": "string"
+        },
+        "giftCardAmount": {
+          "type": "string"
+        },
+        "giftCardCount": {
+          "type": "string"
+        },
+        "giftCardCurr": {
+          "type": "string"
+        },
+        "preOrderDate": {
+          "type": "string"
+        },
+        "preOrderPurchaseInd": {
+          "type": "string"
+        },
+        "reorderItemsInd": {
+          "type": "string"
+        },
+        "shipIndicator": {
+          "type": "string"
+        }
+      },
+      "title": "ThreeDSMerchantRiskIndicator"
+    },
+    "ThreeDSRequestorAuthInfo": {
+      "type": "object",
+      "properties": {
+        "threeDSReqAuthData": {
+          "type": "string"
+        },
+        "threeDSReqAuthMethod": {
+          "type": "string"
+        },
+        "threeDSReqAuthTimestamp": {
+          "type": "string"
+        }
+      },
+      "title": "ThreeDSRequestorAuthInfo"
+    },
+    "ThreeDSRequestorPriorAuthInfo": {
+      "type": "object",
+      "properties": {
+        "threeDSReqPriorAuthData": {
+          "type": "object"
+        },
+        "threeDSReqPriorAuthMethod": {
+          "type": "string"
+        },
+        "threeDSReqPriorAuthTimestamp": {
+          "type": "string"
+        },
+        "threeDSReqPriorRef": {
+          "type": "string"
+        }
+      },
+      "title": "ThreeDSRequestorPriorAuthInfo"
+    },
+    "ThreeDSSdkRenderingOptions": {
+      "type": "object",
+      "properties": {
+        "sdkInterface": {
+          "type": "string"
+        },
+        "sdkUiType": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "ThreeDSSdkRenderingOptions"
+    },
+    "ThreeRIInfo": {
+      "type": "object",
+      "properties": {
+        "relatedTransaction": {
+          "$ref": "#/definitions/TransactionInfo"
+        },
+        "threeRI": {
+          "type": "boolean"
+        }
+      },
+      "title": "ThreeRIInfo"
+    },
+    "TokenizeWebRequest": {
+      "type": "object",
+      "properties": {
+        "cardNumber": {
+          "type": "string"
+        }
+      },
+      "title": "TokenizeWebRequest"
+    },
+    "TokenizeWebResponse": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "TokenizeWebResponse"
+    },
+    "TransactionInfo": {
+      "type": "object",
+      "properties": {
+        "aav": {
+          "type": "string"
+        },
+        "acsMaxChallenges": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "acsRenderingType": {
+          "$ref": "#/definitions/ThreeDSAcsRenderingType"
+        },
+        "acsTransactionId": {
+          "type": "string"
+        },
+        "authenticationMethod": {
+          "type": "string"
+        },
+        "authenticationName": {
+          "type": "string"
+        },
+        "authenticationType": {
+          "type": "string"
+        },
+        "binRangeId": {
+          "type": "string"
+        },
+        "cRes": {
+          "type": "string",
+          "format": "byte"
+        },
+        "completionDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "creationDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "currentStepId": {
+          "type": "string"
+        },
+        "deviceChannel": {
+          "type": "string"
+        },
+        "dsTransactionId": {
+          "type": "string"
+        },
+        "dsUrl": {
+          "type": "string"
+        },
+        "eci": {
+          "type": "string"
+        },
+        "instalment": {
+          "type": "boolean"
+        },
+        "interactionCounter": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "issuerCode": {
+          "type": "string"
+        },
+        "messageCategory": {
+          "type": "string"
+        },
+        "parentTransactionId": {
+          "type": "string"
+        },
+        "processingStep": {
+          "type": "string"
+        },
+        "recurring": {
+          "type": "boolean"
+        },
+        "sdkTransactionId": {
+          "type": "string"
+        },
+        "secureVersion": {
+          "type": "string"
+        },
+        "threedsServerTransactionId": {
+          "type": "string"
+        },
+        "transactionStatus": {
+          "type": "string"
+        },
+        "validationReason": {
+          "type": "string"
+        }
+      },
+      "title": "TransactionInfo"
+    }
+  }
+}

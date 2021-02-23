@@ -10,19 +10,18 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * BrowserInfo
  */
+
 
 public class BrowserInfo {
   @JsonProperty("browser")
@@ -55,7 +54,7 @@ public class BrowserInfo {
    * Get browser
    * @return browser
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBrowser() {
     return browser;
   }
@@ -73,7 +72,7 @@ public class BrowserInfo {
    * Get browserMajorVersion
    * @return browserMajorVersion
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBrowserMajorVersion() {
     return browserMajorVersion;
   }
@@ -91,7 +90,7 @@ public class BrowserInfo {
    * Get browserType
    * @return browserType
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBrowserType() {
     return browserType;
   }
@@ -109,7 +108,7 @@ public class BrowserInfo {
    * Get deviceType
    * @return deviceType
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDeviceType() {
     return deviceType;
   }
@@ -127,7 +126,7 @@ public class BrowserInfo {
    * Get platform
    * @return platform
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPlatform() {
     return platform;
   }
@@ -145,7 +144,7 @@ public class BrowserInfo {
    * Get platformVersion
    * @return platformVersion
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPlatformVersion() {
     return platformVersion;
   }
@@ -163,7 +162,7 @@ public class BrowserInfo {
    * Get threeDsServerTransId
    * @return threeDsServerTransId
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getThreeDsServerTransId() {
     return threeDsServerTransId;
   }
@@ -225,4 +224,3 @@ public class BrowserInfo {
   }
 
 }
-

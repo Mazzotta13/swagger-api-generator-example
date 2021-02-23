@@ -1,6 +1,6 @@
 # AuthenticatorControllerApi
 
-All URIs are relative to *https://localhost:8080/acsemv3dsproxy*
+All URIs are relative to *//localhost:8080/acsemv3dsproxy*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,10 +12,9 @@ Method | HTTP request | Description
 [**prepareAuthenticationCompletionUsingPOST**](AuthenticatorControllerApi.md#prepareAuthenticationCompletionUsingPOST) | **POST** /3ds/auth/{issuer-code}/prepareAuthenticationCompletion | prepareAuthenticationCompletion
 [**resendChallengeUsingPOST**](AuthenticatorControllerApi.md#resendChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/resendChallenge | resendChallenge
 
-
 <a name="checkAuthResultUsingPOST"></a>
 # **checkAuthResultUsingPOST**
-> CheckAuthResultWebResponse checkAuthResultUsingPOST(checkAuthResultWebRequest, issuerCode)
+> CheckAuthResultWebResponse checkAuthResultUsingPOST(body, issuerCode)
 
 checkAuthResult
 
@@ -27,10 +26,10 @@ checkAuthResult
 
 
 AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
-CheckAuthResultWebRequest checkAuthResultWebRequest = new CheckAuthResultWebRequest(); // CheckAuthResultWebRequest | checkAuthResultWebRequest
+CheckAuthResultWebRequest body = new CheckAuthResultWebRequest(); // CheckAuthResultWebRequest | checkAuthResultWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
 try {
-    CheckAuthResultWebResponse result = apiInstance.checkAuthResultUsingPOST(checkAuthResultWebRequest, issuerCode);
+    CheckAuthResultWebResponse result = apiInstance.checkAuthResultUsingPOST(body, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthenticatorControllerApi#checkAuthResultUsingPOST");
@@ -42,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **checkAuthResultWebRequest** | [**CheckAuthResultWebRequest**](CheckAuthResultWebRequest.md)| checkAuthResultWebRequest |
+ **body** | [**CheckAuthResultWebRequest**](CheckAuthResultWebRequest.md)| checkAuthResultWebRequest |
  **issuerCode** | **String**| issuer-code |
 
 ### Return type
@@ -60,7 +59,7 @@ No authorization required
 
 <a name="evaluateAuthenticationUsingPOST"></a>
 # **evaluateAuthenticationUsingPOST**
-> EvaluateAuthenticationWebResponse evaluateAuthenticationUsingPOST(evaluateAuthenticationWebRequest, issuerCode)
+> EvaluateAuthenticationWebResponse evaluateAuthenticationUsingPOST(body, issuerCode)
 
 evaluateAuthentication
 
@@ -72,10 +71,10 @@ evaluateAuthentication
 
 
 AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
-EvaluateAuthenticationWebRequest evaluateAuthenticationWebRequest = new EvaluateAuthenticationWebRequest(); // EvaluateAuthenticationWebRequest | evaluateAuthenticationWebRequest
+EvaluateAuthenticationWebRequest body = new EvaluateAuthenticationWebRequest(); // EvaluateAuthenticationWebRequest | evaluateAuthenticationWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
 try {
-    EvaluateAuthenticationWebResponse result = apiInstance.evaluateAuthenticationUsingPOST(evaluateAuthenticationWebRequest, issuerCode);
+    EvaluateAuthenticationWebResponse result = apiInstance.evaluateAuthenticationUsingPOST(body, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthenticatorControllerApi#evaluateAuthenticationUsingPOST");
@@ -87,7 +86,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **evaluateAuthenticationWebRequest** | [**EvaluateAuthenticationWebRequest**](EvaluateAuthenticationWebRequest.md)| evaluateAuthenticationWebRequest |
+ **body** | [**EvaluateAuthenticationWebRequest**](EvaluateAuthenticationWebRequest.md)| evaluateAuthenticationWebRequest |
  **issuerCode** | **String**| issuer-code |
 
 ### Return type
@@ -105,7 +104,7 @@ No authorization required
 
 <a name="evaluateChallengeStepUsingPOST"></a>
 # **evaluateChallengeStepUsingPOST**
-> EvaluateChallengeStepAuthenticatorWebResponse evaluateChallengeStepUsingPOST(evaluateChallengeStepAuthenticatorWebRequest, issuerCode)
+> EvaluateChallengeStepAuthenticatorWebResponse evaluateChallengeStepUsingPOST(body, issuerCode)
 
 evaluateChallengeStep
 
@@ -117,10 +116,10 @@ evaluateChallengeStep
 
 
 AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
-EvaluateChallengeStepAuthenticatorWebRequest evaluateChallengeStepAuthenticatorWebRequest = new EvaluateChallengeStepAuthenticatorWebRequest(); // EvaluateChallengeStepAuthenticatorWebRequest | evaluateChallengeStepAuthenticatorWebRequest
+EvaluateChallengeStepAuthenticatorWebRequest body = new EvaluateChallengeStepAuthenticatorWebRequest(); // EvaluateChallengeStepAuthenticatorWebRequest | evaluateChallengeStepAuthenticatorWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
 try {
-    EvaluateChallengeStepAuthenticatorWebResponse result = apiInstance.evaluateChallengeStepUsingPOST(evaluateChallengeStepAuthenticatorWebRequest, issuerCode);
+    EvaluateChallengeStepAuthenticatorWebResponse result = apiInstance.evaluateChallengeStepUsingPOST(body, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthenticatorControllerApi#evaluateChallengeStepUsingPOST");
@@ -132,7 +131,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **evaluateChallengeStepAuthenticatorWebRequest** | [**EvaluateChallengeStepAuthenticatorWebRequest**](EvaluateChallengeStepAuthenticatorWebRequest.md)| evaluateChallengeStepAuthenticatorWebRequest |
+ **body** | [**EvaluateChallengeStepAuthenticatorWebRequest**](EvaluateChallengeStepAuthenticatorWebRequest.md)| evaluateChallengeStepAuthenticatorWebRequest |
  **issuerCode** | **String**| issuer-code |
 
 ### Return type
@@ -150,7 +149,7 @@ No authorization required
 
 <a name="initChallengeUsingPOST"></a>
 # **initChallengeUsingPOST**
-> InitChallengeAuthenticatorWebResponse initChallengeUsingPOST(initChallengeAuthenticatorWebRequest, issuerCode)
+> InitChallengeAuthenticatorWebResponse initChallengeUsingPOST(body, issuerCode)
 
 initChallenge
 
@@ -162,10 +161,10 @@ initChallenge
 
 
 AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
-InitChallengeAuthenticatorWebRequest initChallengeAuthenticatorWebRequest = new InitChallengeAuthenticatorWebRequest(); // InitChallengeAuthenticatorWebRequest | initChallengeAuthenticatorWebRequest
+InitChallengeAuthenticatorWebRequest body = new InitChallengeAuthenticatorWebRequest(); // InitChallengeAuthenticatorWebRequest | initChallengeAuthenticatorWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
 try {
-    InitChallengeAuthenticatorWebResponse result = apiInstance.initChallengeUsingPOST(initChallengeAuthenticatorWebRequest, issuerCode);
+    InitChallengeAuthenticatorWebResponse result = apiInstance.initChallengeUsingPOST(body, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthenticatorControllerApi#initChallengeUsingPOST");
@@ -177,7 +176,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **initChallengeAuthenticatorWebRequest** | [**InitChallengeAuthenticatorWebRequest**](InitChallengeAuthenticatorWebRequest.md)| initChallengeAuthenticatorWebRequest |
+ **body** | [**InitChallengeAuthenticatorWebRequest**](InitChallengeAuthenticatorWebRequest.md)| initChallengeAuthenticatorWebRequest |
  **issuerCode** | **String**| issuer-code |
 
 ### Return type
@@ -195,7 +194,7 @@ No authorization required
 
 <a name="performDecoupledAuthenticationUsingPOST"></a>
 # **performDecoupledAuthenticationUsingPOST**
-> PerformDecoupledAuthWebResponse performDecoupledAuthenticationUsingPOST(issuerCode, performDecoupledAuthWebRequest)
+> PerformDecoupledAuthWebResponse performDecoupledAuthenticationUsingPOST(body, issuerCode)
 
 performDecoupledAuthentication
 
@@ -207,10 +206,10 @@ performDecoupledAuthentication
 
 
 AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
+PerformDecoupledAuthWebRequest body = new PerformDecoupledAuthWebRequest(); // PerformDecoupledAuthWebRequest | performDecoupledAuthWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
-PerformDecoupledAuthWebRequest performDecoupledAuthWebRequest = new PerformDecoupledAuthWebRequest(); // PerformDecoupledAuthWebRequest | performDecoupledAuthWebRequest
 try {
-    PerformDecoupledAuthWebResponse result = apiInstance.performDecoupledAuthenticationUsingPOST(issuerCode, performDecoupledAuthWebRequest);
+    PerformDecoupledAuthWebResponse result = apiInstance.performDecoupledAuthenticationUsingPOST(body, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthenticatorControllerApi#performDecoupledAuthenticationUsingPOST");
@@ -222,8 +221,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**PerformDecoupledAuthWebRequest**](PerformDecoupledAuthWebRequest.md)| performDecoupledAuthWebRequest |
  **issuerCode** | **String**| issuer-code |
- **performDecoupledAuthWebRequest** | [**PerformDecoupledAuthWebRequest**](PerformDecoupledAuthWebRequest.md)| performDecoupledAuthWebRequest |
 
 ### Return type
 
@@ -240,7 +239,7 @@ No authorization required
 
 <a name="prepareAuthenticationCompletionUsingPOST"></a>
 # **prepareAuthenticationCompletionUsingPOST**
-> PrepareAuthenticationCompletionWebResponse prepareAuthenticationCompletionUsingPOST(issuerCode, prepareAuthenticationCompletionWebRequest)
+> PrepareAuthenticationCompletionWebResponse prepareAuthenticationCompletionUsingPOST(body, issuerCode)
 
 prepareAuthenticationCompletion
 
@@ -252,10 +251,10 @@ prepareAuthenticationCompletion
 
 
 AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
+PrepareAuthenticationCompletionWebRequest body = new PrepareAuthenticationCompletionWebRequest(); // PrepareAuthenticationCompletionWebRequest | prepareAuthenticationCompletionWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
-PrepareAuthenticationCompletionWebRequest prepareAuthenticationCompletionWebRequest = new PrepareAuthenticationCompletionWebRequest(); // PrepareAuthenticationCompletionWebRequest | prepareAuthenticationCompletionWebRequest
 try {
-    PrepareAuthenticationCompletionWebResponse result = apiInstance.prepareAuthenticationCompletionUsingPOST(issuerCode, prepareAuthenticationCompletionWebRequest);
+    PrepareAuthenticationCompletionWebResponse result = apiInstance.prepareAuthenticationCompletionUsingPOST(body, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthenticatorControllerApi#prepareAuthenticationCompletionUsingPOST");
@@ -267,8 +266,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**PrepareAuthenticationCompletionWebRequest**](PrepareAuthenticationCompletionWebRequest.md)| prepareAuthenticationCompletionWebRequest |
  **issuerCode** | **String**| issuer-code |
- **prepareAuthenticationCompletionWebRequest** | [**PrepareAuthenticationCompletionWebRequest**](PrepareAuthenticationCompletionWebRequest.md)| prepareAuthenticationCompletionWebRequest |
 
 ### Return type
 
@@ -285,7 +284,7 @@ No authorization required
 
 <a name="resendChallengeUsingPOST"></a>
 # **resendChallengeUsingPOST**
-> ResendChallengeWebResponse resendChallengeUsingPOST(issuerCode, resendChallengeWebRequest)
+> ResendChallengeWebResponse resendChallengeUsingPOST(body, issuerCode)
 
 resendChallenge
 
@@ -297,10 +296,10 @@ resendChallenge
 
 
 AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
+ResendChallengeWebRequest body = new ResendChallengeWebRequest(); // ResendChallengeWebRequest | resendChallengeWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
-ResendChallengeWebRequest resendChallengeWebRequest = new ResendChallengeWebRequest(); // ResendChallengeWebRequest | resendChallengeWebRequest
 try {
-    ResendChallengeWebResponse result = apiInstance.resendChallengeUsingPOST(issuerCode, resendChallengeWebRequest);
+    ResendChallengeWebResponse result = apiInstance.resendChallengeUsingPOST(body, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthenticatorControllerApi#resendChallengeUsingPOST");
@@ -312,8 +311,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**ResendChallengeWebRequest**](ResendChallengeWebRequest.md)| resendChallengeWebRequest |
  **issuerCode** | **String**| issuer-code |
- **resendChallengeWebRequest** | [**ResendChallengeWebRequest**](ResendChallengeWebRequest.md)| resendChallengeWebRequest |
 
 ### Return type
 

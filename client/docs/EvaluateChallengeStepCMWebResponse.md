@@ -1,4 +1,3 @@
-
 # EvaluateChallengeStepCMWebResponse
 
 ## Properties
@@ -11,7 +10,6 @@ Name | Type | Description | Notes
 **nextStepId** | **String** |  |  [optional]
 **requestingWhitelist** | **Boolean** |  |  [optional]
 
-
 <a name="ChallengeStatusEnum"></a>
 ## Enum: ChallengeStatusEnum
 Name | Value
@@ -19,6 +17,3 @@ Name | Value
 ONGOING | &quot;ONGOING&quot;
 TERMINATED_WITH_SUCCESS | &quot;TERMINATED_WITH_SUCCESS&quot;
 TERMINATED_WITH_FAILURE | &quot;TERMINATED_WITH_FAILURE&quot;
-
-
-

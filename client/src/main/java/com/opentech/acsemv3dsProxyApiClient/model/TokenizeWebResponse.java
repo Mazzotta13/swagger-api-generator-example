@@ -10,19 +10,18 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * TokenizeWebResponse
  */
+
 
 public class TokenizeWebResponse {
   @JsonProperty("token")
@@ -37,7 +36,7 @@ public class TokenizeWebResponse {
    * Get token
    * @return token
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getToken() {
     return token;
   }
@@ -87,4 +86,3 @@ public class TokenizeWebResponse {
   }
 
 }
-

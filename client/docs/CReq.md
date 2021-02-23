@@ -1,4 +1,3 @@
-
 # CReq
 
 ## Properties
@@ -20,6 +19,3 @@ Name | Type | Description | Notes
 **threeDSRequestorAppURL** | **String** |  |  [optional]
 **threeDSServerTransID** | **String** |  |  [optional]
 **whitelistingDataEntry** | **String** |  |  [optional]
-
-
-

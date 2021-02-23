@@ -10,21 +10,20 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.AReq;
 import com.opentech.acsemv3dsProxyApiClient.model.BrowserInfo;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * IsChallengeSupportedWebRequest
  */
+
 
 public class IsChallengeSupportedWebRequest {
   @JsonProperty("aReq")
@@ -38,11 +37,8 @@ public class IsChallengeSupportedWebRequest {
    */
   public enum AuthenticationTypeEnum {
     STATIC("STATIC"),
-    
     DYNAMIC("DYNAMIC"),
-    
     OOB("OOB"),
-    
     DECOUPLED("DECOUPLED");
 
     private String value;
@@ -50,7 +46,6 @@ public class IsChallengeSupportedWebRequest {
     AuthenticationTypeEnum(String value) {
       this.value = value;
     }
-
     @JsonValue
     public String getValue() {
       return value;
@@ -60,7 +55,6 @@ public class IsChallengeSupportedWebRequest {
     public String toString() {
       return String.valueOf(value);
     }
-
     @JsonCreator
     public static AuthenticationTypeEnum fromValue(String text) {
       for (AuthenticationTypeEnum b : AuthenticationTypeEnum.values()) {
@@ -70,9 +64,8 @@ public class IsChallengeSupportedWebRequest {
       }
       return null;
     }
-  }
 
-  @JsonProperty("authenticationType")
+  }  @JsonProperty("authenticationType")
   private AuthenticationTypeEnum authenticationType = null;
 
   @JsonProperty("browserInfo")
@@ -87,7 +80,7 @@ public class IsChallengeSupportedWebRequest {
    * Get aReq
    * @return aReq
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public AReq getAReq() {
     return aReq;
   }
@@ -105,7 +98,7 @@ public class IsChallengeSupportedWebRequest {
    * Get authenticationName
    * @return authenticationName
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthenticationName() {
     return authenticationName;
   }
@@ -123,7 +116,7 @@ public class IsChallengeSupportedWebRequest {
    * Get authenticationType
    * @return authenticationType
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public AuthenticationTypeEnum getAuthenticationType() {
     return authenticationType;
   }
@@ -141,7 +134,7 @@ public class IsChallengeSupportedWebRequest {
    * Get browserInfo
    * @return browserInfo
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public BrowserInfo getBrowserInfo() {
     return browserInfo;
   }
@@ -197,4 +190,3 @@ public class IsChallengeSupportedWebRequest {
   }
 
 }
-

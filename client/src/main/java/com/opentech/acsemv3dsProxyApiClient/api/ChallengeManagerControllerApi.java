@@ -28,7 +28,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
-
 @Component("com.opentech.acsemv3dsProxyApiClient.api.ChallengeManagerControllerApi")
 public class ChallengeManagerControllerApi {
     private ApiClient apiClient;
@@ -54,24 +53,21 @@ public class ChallengeManagerControllerApi {
      * evaluateChallengeStep
      * 
      * <p><b>200</b> - OK
-     * @param evaluateChallengeStepCMWebRequest evaluateChallengeStepCMWebRequest
+     * @param body evaluateChallengeStepCMWebRequest
      * @param issuerCode issuer-code
      * @return EvaluateChallengeStepCMWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public EvaluateChallengeStepCMWebResponse evaluateChallengeStepUsingPOST1(EvaluateChallengeStepCMWebRequest evaluateChallengeStepCMWebRequest, String issuerCode) throws RestClientException {
-        Object postBody = evaluateChallengeStepCMWebRequest;
-        
-        // verify the required parameter 'evaluateChallengeStepCMWebRequest' is set
-        if (evaluateChallengeStepCMWebRequest == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'evaluateChallengeStepCMWebRequest' when calling evaluateChallengeStepUsingPOST1");
+    public EvaluateChallengeStepCMWebResponse evaluateChallengeStepUsingPOST1(EvaluateChallengeStepCMWebRequest body, String issuerCode) throws RestClientException {
+        Object postBody = body;
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling evaluateChallengeStepUsingPOST1");
         }
-        
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling evaluateChallengeStepUsingPOST1");
         }
-        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -83,11 +79,11 @@ public class ChallengeManagerControllerApi {
 
         final String[] accepts = { 
             "application/json"
-        };
+         };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };
@@ -99,24 +95,21 @@ public class ChallengeManagerControllerApi {
      * initChallenge
      * 
      * <p><b>200</b> - OK
-     * @param initChallengeCMWebRequest initChallengeCMWebRequest
+     * @param body initChallengeCMWebRequest
      * @param issuerCode issuer-code
      * @return InitChallengeCMWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public InitChallengeCMWebResponse initChallengeUsingPOST1(InitChallengeCMWebRequest initChallengeCMWebRequest, String issuerCode) throws RestClientException {
-        Object postBody = initChallengeCMWebRequest;
-        
-        // verify the required parameter 'initChallengeCMWebRequest' is set
-        if (initChallengeCMWebRequest == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'initChallengeCMWebRequest' when calling initChallengeUsingPOST1");
+    public InitChallengeCMWebResponse initChallengeUsingPOST1(InitChallengeCMWebRequest body, String issuerCode) throws RestClientException {
+        Object postBody = body;
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling initChallengeUsingPOST1");
         }
-        
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling initChallengeUsingPOST1");
         }
-        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -128,11 +121,11 @@ public class ChallengeManagerControllerApi {
 
         final String[] accepts = { 
             "application/json"
-        };
+         };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };
@@ -144,24 +137,21 @@ public class ChallengeManagerControllerApi {
      * isChallengeSupported
      * 
      * <p><b>200</b> - OK
-     * @param isChallengeSupportedWebRequest isChallengeSupportedWebRequest
+     * @param body isChallengeSupportedWebRequest
      * @param issuerCode issuer-code
      * @return IsChallengeSupportedWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public IsChallengeSupportedWebResponse isChallengeSupportedUsingPOST(IsChallengeSupportedWebRequest isChallengeSupportedWebRequest, String issuerCode) throws RestClientException {
-        Object postBody = isChallengeSupportedWebRequest;
-        
-        // verify the required parameter 'isChallengeSupportedWebRequest' is set
-        if (isChallengeSupportedWebRequest == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'isChallengeSupportedWebRequest' when calling isChallengeSupportedUsingPOST");
+    public IsChallengeSupportedWebResponse isChallengeSupportedUsingPOST(IsChallengeSupportedWebRequest body, String issuerCode) throws RestClientException {
+        Object postBody = body;
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling isChallengeSupportedUsingPOST");
         }
-        
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling isChallengeSupportedUsingPOST");
         }
-        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -173,11 +163,11 @@ public class ChallengeManagerControllerApi {
 
         final String[] accepts = { 
             "application/json"
-        };
+         };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };

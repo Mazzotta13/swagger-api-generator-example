@@ -1,16 +1,15 @@
 # CardTokenizerControllerApi
 
-All URIs are relative to *https://localhost:8080/acsemv3dsproxy*
+All URIs are relative to *//localhost:8080/acsemv3dsproxy*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**detokenizeUsingPOST**](CardTokenizerControllerApi.md#detokenizeUsingPOST) | **POST** /3ds/{issuer-code}/detokenize | detokenize
 [**tokenizeUsingPOST**](CardTokenizerControllerApi.md#tokenizeUsingPOST) | **POST** /3ds/{issuer-code}/tokenize | tokenize
 
-
 <a name="detokenizeUsingPOST"></a>
 # **detokenizeUsingPOST**
-> DetokenizeWebResponse detokenizeUsingPOST(detokenizeWebRequest, issuerCode)
+> DetokenizeWebResponse detokenizeUsingPOST(body, issuerCode)
 
 detokenize
 
@@ -22,10 +21,10 @@ detokenize
 
 
 CardTokenizerControllerApi apiInstance = new CardTokenizerControllerApi();
-DetokenizeWebRequest detokenizeWebRequest = new DetokenizeWebRequest(); // DetokenizeWebRequest | detokenizeWebRequest
+DetokenizeWebRequest body = new DetokenizeWebRequest(); // DetokenizeWebRequest | detokenizeWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
 try {
-    DetokenizeWebResponse result = apiInstance.detokenizeUsingPOST(detokenizeWebRequest, issuerCode);
+    DetokenizeWebResponse result = apiInstance.detokenizeUsingPOST(body, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CardTokenizerControllerApi#detokenizeUsingPOST");
@@ -37,7 +36,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **detokenizeWebRequest** | [**DetokenizeWebRequest**](DetokenizeWebRequest.md)| detokenizeWebRequest |
+ **body** | [**DetokenizeWebRequest**](DetokenizeWebRequest.md)| detokenizeWebRequest |
  **issuerCode** | **String**| issuer-code |
 
 ### Return type
@@ -55,7 +54,7 @@ No authorization required
 
 <a name="tokenizeUsingPOST"></a>
 # **tokenizeUsingPOST**
-> TokenizeWebResponse tokenizeUsingPOST(issuerCode, tokenizeWebRequest)
+> TokenizeWebResponse tokenizeUsingPOST(body, issuerCode)
 
 tokenize
 
@@ -67,10 +66,10 @@ tokenize
 
 
 CardTokenizerControllerApi apiInstance = new CardTokenizerControllerApi();
+TokenizeWebRequest body = new TokenizeWebRequest(); // TokenizeWebRequest | tokenizeWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
-TokenizeWebRequest tokenizeWebRequest = new TokenizeWebRequest(); // TokenizeWebRequest | tokenizeWebRequest
 try {
-    TokenizeWebResponse result = apiInstance.tokenizeUsingPOST(issuerCode, tokenizeWebRequest);
+    TokenizeWebResponse result = apiInstance.tokenizeUsingPOST(body, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CardTokenizerControllerApi#tokenizeUsingPOST");
@@ -82,8 +81,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**TokenizeWebRequest**](TokenizeWebRequest.md)| tokenizeWebRequest |
  **issuerCode** | **String**| issuer-code |
- **tokenizeWebRequest** | [**TokenizeWebRequest**](TokenizeWebRequest.md)| tokenizeWebRequest |
 
 ### Return type
 

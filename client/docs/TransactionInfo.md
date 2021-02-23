@@ -1,4 +1,3 @@
-
 # TransactionInfo
 
 ## Properties
@@ -32,6 +31,3 @@ Name | Type | Description | Notes
 **threedsServerTransactionId** | **String** |  |  [optional]
 **transactionStatus** | **String** |  |  [optional]
 **validationReason** | **String** |  |  [optional]
-
-
-

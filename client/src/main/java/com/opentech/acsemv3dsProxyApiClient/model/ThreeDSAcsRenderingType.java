@@ -10,19 +10,18 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * ThreeDSAcsRenderingType
  */
+
 
 public class ThreeDSAcsRenderingType {
   @JsonProperty("acsInterface")
@@ -40,7 +39,7 @@ public class ThreeDSAcsRenderingType {
    * Get acsInterface
    * @return acsInterface
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAcsInterface() {
     return acsInterface;
   }
@@ -58,7 +57,7 @@ public class ThreeDSAcsRenderingType {
    * Get acsUiTemplate
    * @return acsUiTemplate
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAcsUiTemplate() {
     return acsUiTemplate;
   }
@@ -110,4 +109,3 @@ public class ThreeDSAcsRenderingType {
   }
 
 }
-

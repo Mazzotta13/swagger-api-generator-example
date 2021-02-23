@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.api;
 
 import com.opentech.acsemv3dsProxyApiClient.model.CheckAuthResultWebRequest;
@@ -43,7 +42,6 @@ public class AuthenticatorControllerApiTest {
 
     private final AuthenticatorControllerApi api = new AuthenticatorControllerApi();
 
-    
     /**
      * checkAuthResult
      *
@@ -54,13 +52,12 @@ public class AuthenticatorControllerApiTest {
      */
     @Test
     public void checkAuthResultUsingPOSTTest() {
-        CheckAuthResultWebRequest checkAuthResultWebRequest = null;
+        CheckAuthResultWebRequest body = null;
         String issuerCode = null;
-        CheckAuthResultWebResponse response = api.checkAuthResultUsingPOST(checkAuthResultWebRequest, issuerCode);
+        CheckAuthResultWebResponse response = api.checkAuthResultUsingPOST(body, issuerCode);
 
         // TODO: test validations
     }
-    
     /**
      * evaluateAuthentication
      *
@@ -71,13 +68,12 @@ public class AuthenticatorControllerApiTest {
      */
     @Test
     public void evaluateAuthenticationUsingPOSTTest() {
-        EvaluateAuthenticationWebRequest evaluateAuthenticationWebRequest = null;
+        EvaluateAuthenticationWebRequest body = null;
         String issuerCode = null;
-        EvaluateAuthenticationWebResponse response = api.evaluateAuthenticationUsingPOST(evaluateAuthenticationWebRequest, issuerCode);
+        EvaluateAuthenticationWebResponse response = api.evaluateAuthenticationUsingPOST(body, issuerCode);
 
         // TODO: test validations
     }
-    
     /**
      * evaluateChallengeStep
      *
@@ -88,13 +84,12 @@ public class AuthenticatorControllerApiTest {
      */
     @Test
     public void evaluateChallengeStepUsingPOSTTest() {
-        EvaluateChallengeStepAuthenticatorWebRequest evaluateChallengeStepAuthenticatorWebRequest = null;
+        EvaluateChallengeStepAuthenticatorWebRequest body = null;
         String issuerCode = null;
-        EvaluateChallengeStepAuthenticatorWebResponse response = api.evaluateChallengeStepUsingPOST(evaluateChallengeStepAuthenticatorWebRequest, issuerCode);
+        EvaluateChallengeStepAuthenticatorWebResponse response = api.evaluateChallengeStepUsingPOST(body, issuerCode);
 
         // TODO: test validations
     }
-    
     /**
      * initChallenge
      *
@@ -105,13 +100,12 @@ public class AuthenticatorControllerApiTest {
      */
     @Test
     public void initChallengeUsingPOSTTest() {
-        InitChallengeAuthenticatorWebRequest initChallengeAuthenticatorWebRequest = null;
+        InitChallengeAuthenticatorWebRequest body = null;
         String issuerCode = null;
-        InitChallengeAuthenticatorWebResponse response = api.initChallengeUsingPOST(initChallengeAuthenticatorWebRequest, issuerCode);
+        InitChallengeAuthenticatorWebResponse response = api.initChallengeUsingPOST(body, issuerCode);
 
         // TODO: test validations
     }
-    
     /**
      * performDecoupledAuthentication
      *
@@ -122,13 +116,12 @@ public class AuthenticatorControllerApiTest {
      */
     @Test
     public void performDecoupledAuthenticationUsingPOSTTest() {
+        PerformDecoupledAuthWebRequest body = null;
         String issuerCode = null;
-        PerformDecoupledAuthWebRequest performDecoupledAuthWebRequest = null;
-        PerformDecoupledAuthWebResponse response = api.performDecoupledAuthenticationUsingPOST(issuerCode, performDecoupledAuthWebRequest);
+        PerformDecoupledAuthWebResponse response = api.performDecoupledAuthenticationUsingPOST(body, issuerCode);
 
         // TODO: test validations
     }
-    
     /**
      * prepareAuthenticationCompletion
      *
@@ -139,13 +132,12 @@ public class AuthenticatorControllerApiTest {
      */
     @Test
     public void prepareAuthenticationCompletionUsingPOSTTest() {
+        PrepareAuthenticationCompletionWebRequest body = null;
         String issuerCode = null;
-        PrepareAuthenticationCompletionWebRequest prepareAuthenticationCompletionWebRequest = null;
-        PrepareAuthenticationCompletionWebResponse response = api.prepareAuthenticationCompletionUsingPOST(issuerCode, prepareAuthenticationCompletionWebRequest);
+        PrepareAuthenticationCompletionWebResponse response = api.prepareAuthenticationCompletionUsingPOST(body, issuerCode);
 
         // TODO: test validations
     }
-    
     /**
      * resendChallenge
      *
@@ -156,11 +148,10 @@ public class AuthenticatorControllerApiTest {
      */
     @Test
     public void resendChallengeUsingPOSTTest() {
+        ResendChallengeWebRequest body = null;
         String issuerCode = null;
-        ResendChallengeWebRequest resendChallengeWebRequest = null;
-        ResendChallengeWebResponse response = api.resendChallengeUsingPOST(issuerCode, resendChallengeWebRequest);
+        ResendChallengeWebResponse response = api.resendChallengeUsingPOST(body, issuerCode);
 
         // TODO: test validations
     }
-    
 }

@@ -10,19 +10,18 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * ThreeDSCardholderAccountInfo
  */
+
 
 public class ThreeDSCardholderAccountInfo {
   @JsonProperty("chAccAgeInd")
@@ -82,7 +81,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get chAccAgeInd
    * @return chAccAgeInd
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChAccAgeInd() {
     return chAccAgeInd;
   }
@@ -100,7 +99,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get chAccChange
    * @return chAccChange
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChAccChange() {
     return chAccChange;
   }
@@ -118,7 +117,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get chAccChangeInd
    * @return chAccChangeInd
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChAccChangeInd() {
     return chAccChangeInd;
   }
@@ -136,7 +135,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get chAccDate
    * @return chAccDate
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChAccDate() {
     return chAccDate;
   }
@@ -154,7 +153,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get chAccPwChange
    * @return chAccPwChange
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChAccPwChange() {
     return chAccPwChange;
   }
@@ -172,7 +171,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get chAccPwChangeInd
    * @return chAccPwChangeInd
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChAccPwChangeInd() {
     return chAccPwChangeInd;
   }
@@ -190,7 +189,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get nbPurchaseAccount
    * @return nbPurchaseAccount
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNbPurchaseAccount() {
     return nbPurchaseAccount;
   }
@@ -208,7 +207,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get paymentAccAge
    * @return paymentAccAge
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentAccAge() {
     return paymentAccAge;
   }
@@ -226,7 +225,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get paymentAccInd
    * @return paymentAccInd
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentAccInd() {
     return paymentAccInd;
   }
@@ -244,7 +243,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get provisionAttemptsDay
    * @return provisionAttemptsDay
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getProvisionAttemptsDay() {
     return provisionAttemptsDay;
   }
@@ -262,7 +261,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get shipAddressUsage
    * @return shipAddressUsage
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getShipAddressUsage() {
     return shipAddressUsage;
   }
@@ -280,7 +279,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get shipAddressUsageInd
    * @return shipAddressUsageInd
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getShipAddressUsageInd() {
     return shipAddressUsageInd;
   }
@@ -298,7 +297,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get shipNameIndicator
    * @return shipNameIndicator
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getShipNameIndicator() {
     return shipNameIndicator;
   }
@@ -316,7 +315,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get suspiciousAccActivity
    * @return suspiciousAccActivity
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSuspiciousAccActivity() {
     return suspiciousAccActivity;
   }
@@ -334,7 +333,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get txnActivityDay
    * @return txnActivityDay
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTxnActivityDay() {
     return txnActivityDay;
   }
@@ -352,7 +351,7 @@ public class ThreeDSCardholderAccountInfo {
    * Get txnActivityYear
    * @return txnActivityYear
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTxnActivityYear() {
     return txnActivityYear;
   }
@@ -432,4 +431,3 @@ public class ThreeDSCardholderAccountInfo {
   }
 
 }
-

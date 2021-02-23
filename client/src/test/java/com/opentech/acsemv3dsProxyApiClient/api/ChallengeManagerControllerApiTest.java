@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.api;
 
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateChallengeStepCMWebRequest;
@@ -35,7 +34,6 @@ public class ChallengeManagerControllerApiTest {
 
     private final ChallengeManagerControllerApi api = new ChallengeManagerControllerApi();
 
-    
     /**
      * evaluateChallengeStep
      *
@@ -46,13 +44,12 @@ public class ChallengeManagerControllerApiTest {
      */
     @Test
     public void evaluateChallengeStepUsingPOST1Test() {
-        EvaluateChallengeStepCMWebRequest evaluateChallengeStepCMWebRequest = null;
+        EvaluateChallengeStepCMWebRequest body = null;
         String issuerCode = null;
-        EvaluateChallengeStepCMWebResponse response = api.evaluateChallengeStepUsingPOST1(evaluateChallengeStepCMWebRequest, issuerCode);
+        EvaluateChallengeStepCMWebResponse response = api.evaluateChallengeStepUsingPOST1(body, issuerCode);
 
         // TODO: test validations
     }
-    
     /**
      * initChallenge
      *
@@ -63,13 +60,12 @@ public class ChallengeManagerControllerApiTest {
      */
     @Test
     public void initChallengeUsingPOST1Test() {
-        InitChallengeCMWebRequest initChallengeCMWebRequest = null;
+        InitChallengeCMWebRequest body = null;
         String issuerCode = null;
-        InitChallengeCMWebResponse response = api.initChallengeUsingPOST1(initChallengeCMWebRequest, issuerCode);
+        InitChallengeCMWebResponse response = api.initChallengeUsingPOST1(body, issuerCode);
 
         // TODO: test validations
     }
-    
     /**
      * isChallengeSupported
      *
@@ -80,11 +76,10 @@ public class ChallengeManagerControllerApiTest {
      */
     @Test
     public void isChallengeSupportedUsingPOSTTest() {
-        IsChallengeSupportedWebRequest isChallengeSupportedWebRequest = null;
+        IsChallengeSupportedWebRequest body = null;
         String issuerCode = null;
-        IsChallengeSupportedWebResponse response = api.isChallengeSupportedUsingPOST(isChallengeSupportedWebRequest, issuerCode);
+        IsChallengeSupportedWebResponse response = api.isChallengeSupportedUsingPOST(body, issuerCode);
 
         // TODO: test validations
     }
-    
 }

@@ -10,22 +10,21 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.Extension;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * EvaluateChallengeStepAuthenticatorWebResponse
  */
+
 
 public class EvaluateChallengeStepAuthenticatorWebResponse {
   @JsonProperty("extensions")
@@ -42,45 +41,25 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
    */
   public enum TransactionStatusReasonEnum {
     CARD_AUTHENTICATION_FAILED("CARD_AUTHENTICATION_FAILED"),
-    
     UNKNOWN_DEVICE("UNKNOWN_DEVICE"),
-    
     UNSUPPORTED_DEVICE("UNSUPPORTED_DEVICE"),
-    
     EXCEEDS_AUTHENTICATION_LIMIT("EXCEEDS_AUTHENTICATION_LIMIT"),
-    
     EXPIRED_CARD("EXPIRED_CARD"),
-    
     INVALID_CARD_NUMBER("INVALID_CARD_NUMBER"),
-    
     INVALID_TRANSACTION("INVALID_TRANSACTION"),
-    
     NO_CARD_RECORD("NO_CARD_RECORD"),
-    
     SECURITY_FAILURE("SECURITY_FAILURE"),
-    
     STOLEN_CARD("STOLEN_CARD"),
-    
     SUSPECTED_FRAUD("SUSPECTED_FRAUD"),
-    
     TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER("TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER"),
-    
     CARDHOLDER_NOT_ENROLLED_IN_SERVICE("CARDHOLDER_NOT_ENROLLED_IN_SERVICE"),
-    
     TRANSACTION_TIMED_OUT_AT_THE_ACS("TRANSACTION_TIMED_OUT_AT_THE_ACS"),
-    
     LOW_CONFIDENCE("LOW_CONFIDENCE"),
-    
     MEDIUM_CONFIDENCE("MEDIUM_CONFIDENCE"),
-    
     HIGH_CONFIDENCE("HIGH_CONFIDENCE"),
-    
     VERY_HIGH_CONFIDENCE("VERY_HIGH_CONFIDENCE"),
-    
     EXCEEDS_ACS_MAXIMUM_CHALLENGES("EXCEEDS_ACS_MAXIMUM_CHALLENGES"),
-    
     NON_PAYMENT_TRANSACTION_NOT_SUPPORTED("NON_PAYMENT_TRANSACTION_NOT_SUPPORTED"),
-    
     THREE_RI_TRANSACTION_NOT_SUPPORTED("THREE_RI_TRANSACTION_NOT_SUPPORTED");
 
     private String value;
@@ -88,7 +67,6 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
     TransactionStatusReasonEnum(String value) {
       this.value = value;
     }
-
     @JsonValue
     public String getValue() {
       return value;
@@ -98,7 +76,6 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
     public String toString() {
       return String.valueOf(value);
     }
-
     @JsonCreator
     public static TransactionStatusReasonEnum fromValue(String text) {
       for (TransactionStatusReasonEnum b : TransactionStatusReasonEnum.values()) {
@@ -108,9 +85,8 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
       }
       return null;
     }
-  }
 
-  @JsonProperty("transactionStatusReason")
+  }  @JsonProperty("transactionStatusReason")
   private TransactionStatusReasonEnum transactionStatusReason = null;
 
   public EvaluateChallengeStepAuthenticatorWebResponse extensions(List<Extension> extensions) {
@@ -130,7 +106,7 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
    * Get extensions
    * @return extensions
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public List<Extension> getExtensions() {
     return extensions;
   }
@@ -148,7 +124,7 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
    * Get requestWhitelist
    * @return requestWhitelist
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isRequestWhitelist() {
     return requestWhitelist;
   }
@@ -166,7 +142,7 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
    * Get result
    * @return result
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getResult() {
     return result;
   }
@@ -184,7 +160,7 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
    * Get transactionStatusReason
    * @return transactionStatusReason
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public TransactionStatusReasonEnum getTransactionStatusReason() {
     return transactionStatusReason;
   }
@@ -240,4 +216,3 @@ public class EvaluateChallengeStepAuthenticatorWebResponse {
   }
 
 }
-

@@ -10,21 +10,20 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.CReq;
 import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * InitChallengeCMWebRequest
  */
+
 
 public class InitChallengeCMWebRequest {
   @JsonProperty("arrivalCondition")
@@ -54,7 +53,7 @@ public class InitChallengeCMWebRequest {
    * Get arrivalCondition
    * @return arrivalCondition
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrivalCondition() {
     return arrivalCondition;
   }
@@ -72,7 +71,7 @@ public class InitChallengeCMWebRequest {
    * Get authenticationName
    * @return authenticationName
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthenticationName() {
     return authenticationName;
   }
@@ -90,7 +89,7 @@ public class InitChallengeCMWebRequest {
    * Get cReq
    * @return cReq
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public CReq getCReq() {
     return cReq;
   }
@@ -108,7 +107,7 @@ public class InitChallengeCMWebRequest {
    * Get deviceChannel
    * @return deviceChannel
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDeviceChannel() {
     return deviceChannel;
   }
@@ -126,7 +125,7 @@ public class InitChallengeCMWebRequest {
    * Get requestWhitelist
    * @return requestWhitelist
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isRequestWhitelist() {
     return requestWhitelist;
   }
@@ -144,7 +143,7 @@ public class InitChallengeCMWebRequest {
    * Get transactionInfo
    * @return transactionInfo
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public TransactionInfo getTransactionInfo() {
     return transactionInfo;
   }
@@ -204,4 +203,3 @@ public class InitChallengeCMWebRequest {
   }
 
 }
-

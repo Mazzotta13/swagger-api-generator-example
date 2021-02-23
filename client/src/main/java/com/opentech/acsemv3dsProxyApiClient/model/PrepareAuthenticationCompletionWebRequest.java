@@ -10,20 +10,19 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.RReqInfo;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * PrepareAuthenticationCompletionWebRequest
  */
+
 
 public class PrepareAuthenticationCompletionWebRequest {
   @JsonProperty("acsTransactionId")
@@ -50,7 +49,7 @@ public class PrepareAuthenticationCompletionWebRequest {
    * Get acsTransactionId
    * @return acsTransactionId
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAcsTransactionId() {
     return acsTransactionId;
   }
@@ -68,7 +67,7 @@ public class PrepareAuthenticationCompletionWebRequest {
    * Get cardNumber
    * @return cardNumber
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCardNumber() {
     return cardNumber;
   }
@@ -86,7 +85,7 @@ public class PrepareAuthenticationCompletionWebRequest {
    * Get rReqInfo
    * @return rReqInfo
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public RReqInfo getRReqInfo() {
     return rReqInfo;
   }
@@ -104,7 +103,7 @@ public class PrepareAuthenticationCompletionWebRequest {
    * Get whitelistConfirmed
    * @return whitelistConfirmed
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isWhitelistConfirmed() {
     return whitelistConfirmed;
   }
@@ -122,7 +121,7 @@ public class PrepareAuthenticationCompletionWebRequest {
    * Get whitelistResultProposal
    * @return whitelistResultProposal
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWhitelistResultProposal() {
     return whitelistResultProposal;
   }
@@ -180,4 +179,3 @@ public class PrepareAuthenticationCompletionWebRequest {
   }
 
 }
-

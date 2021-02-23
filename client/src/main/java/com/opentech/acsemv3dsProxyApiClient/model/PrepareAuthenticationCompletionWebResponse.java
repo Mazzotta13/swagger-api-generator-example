@@ -10,22 +10,21 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.Extension;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * PrepareAuthenticationCompletionWebResponse
  */
+
 
 public class PrepareAuthenticationCompletionWebResponse {
   @JsonProperty("extensions")
@@ -51,7 +50,7 @@ public class PrepareAuthenticationCompletionWebResponse {
    * Get extensions
    * @return extensions
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public List<Extension> getExtensions() {
     return extensions;
   }
@@ -69,7 +68,7 @@ public class PrepareAuthenticationCompletionWebResponse {
    * Get whitelistResult
    * @return whitelistResult
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWhitelistResult() {
     return whitelistResult;
   }
@@ -121,4 +120,3 @@ public class PrepareAuthenticationCompletionWebResponse {
   }
 
 }
-

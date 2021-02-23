@@ -10,22 +10,21 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.Extension;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * InitChallengeAuthenticatorWebResponse
  */
+
 
 public class InitChallengeAuthenticatorWebResponse {
   @JsonProperty("extensions")
@@ -54,7 +53,7 @@ public class InitChallengeAuthenticatorWebResponse {
    * Get extensions
    * @return extensions
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public List<Extension> getExtensions() {
     return extensions;
   }
@@ -72,7 +71,7 @@ public class InitChallengeAuthenticatorWebResponse {
    * Get requestWhitelist
    * @return requestWhitelist
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isRequestWhitelist() {
     return requestWhitelist;
   }
@@ -90,7 +89,7 @@ public class InitChallengeAuthenticatorWebResponse {
    * Get result
    * @return result
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getResult() {
     return result;
   }
@@ -144,4 +143,3 @@ public class InitChallengeAuthenticatorWebResponse {
   }
 
 }
-

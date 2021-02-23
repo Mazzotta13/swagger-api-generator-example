@@ -10,19 +10,18 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * Phone
  */
+
 
 public class Phone {
   @JsonProperty("cc")
@@ -40,7 +39,7 @@ public class Phone {
    * Get cc
    * @return cc
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCc() {
     return cc;
   }
@@ -58,7 +57,7 @@ public class Phone {
    * Get subscriber
    * @return subscriber
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSubscriber() {
     return subscriber;
   }
@@ -110,4 +109,3 @@ public class Phone {
   }
 
 }
-

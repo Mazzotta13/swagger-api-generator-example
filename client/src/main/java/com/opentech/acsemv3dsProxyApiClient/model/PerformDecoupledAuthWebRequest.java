@@ -10,20 +10,19 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * PerformDecoupledAuthWebRequest
  */
+
 
 public class PerformDecoupledAuthWebRequest {
   @JsonProperty("cardNumber")
@@ -44,7 +43,7 @@ public class PerformDecoupledAuthWebRequest {
    * Get cardNumber
    * @return cardNumber
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCardNumber() {
     return cardNumber;
   }
@@ -62,7 +61,7 @@ public class PerformDecoupledAuthWebRequest {
    * Get timeout
    * @return timeout
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTimeout() {
     return timeout;
   }
@@ -80,7 +79,7 @@ public class PerformDecoupledAuthWebRequest {
    * Get transactionInfo
    * @return transactionInfo
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public TransactionInfo getTransactionInfo() {
     return transactionInfo;
   }
@@ -134,4 +133,3 @@ public class PerformDecoupledAuthWebRequest {
   }
 
 }
-

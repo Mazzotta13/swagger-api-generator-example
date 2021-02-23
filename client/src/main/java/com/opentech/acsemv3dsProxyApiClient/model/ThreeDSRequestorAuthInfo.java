@@ -10,19 +10,18 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * ThreeDSRequestorAuthInfo
  */
+
 
 public class ThreeDSRequestorAuthInfo {
   @JsonProperty("threeDSReqAuthData")
@@ -43,7 +42,7 @@ public class ThreeDSRequestorAuthInfo {
    * Get threeDSReqAuthData
    * @return threeDSReqAuthData
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getThreeDSReqAuthData() {
     return threeDSReqAuthData;
   }
@@ -61,7 +60,7 @@ public class ThreeDSRequestorAuthInfo {
    * Get threeDSReqAuthMethod
    * @return threeDSReqAuthMethod
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getThreeDSReqAuthMethod() {
     return threeDSReqAuthMethod;
   }
@@ -79,7 +78,7 @@ public class ThreeDSRequestorAuthInfo {
    * Get threeDSReqAuthTimestamp
    * @return threeDSReqAuthTimestamp
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getThreeDSReqAuthTimestamp() {
     return threeDSReqAuthTimestamp;
   }
@@ -133,4 +132,3 @@ public class ThreeDSRequestorAuthInfo {
   }
 
 }
-

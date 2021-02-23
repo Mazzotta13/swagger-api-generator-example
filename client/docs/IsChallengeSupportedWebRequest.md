@@ -1,4 +1,3 @@
-
 # IsChallengeSupportedWebRequest
 
 ## Properties
@@ -9,7 +8,6 @@ Name | Type | Description | Notes
 **authenticationType** | [**AuthenticationTypeEnum**](#AuthenticationTypeEnum) |  |  [optional]
 **browserInfo** | [**BrowserInfo**](BrowserInfo.md) |  |  [optional]
 
-
 <a name="AuthenticationTypeEnum"></a>
 ## Enum: AuthenticationTypeEnum
 Name | Value
@@ -18,6 +16,3 @@ STATIC | &quot;STATIC&quot;
 DYNAMIC | &quot;DYNAMIC&quot;
 OOB | &quot;OOB&quot;
 DECOUPLED | &quot;DECOUPLED&quot;
-
-
-

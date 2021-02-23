@@ -10,26 +10,28 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 /**
  * Extension
  */
+
 
 public class Extension {
   @JsonProperty("criticalityIndicator")
   private Boolean criticalityIndicator = null;
 
   @JsonProperty("data")
-  private Object data = null;
+  private Map<String, Object> data = null;
 
   @JsonProperty("id")
   private String id = null;
@@ -46,7 +48,7 @@ public class Extension {
    * Get criticalityIndicator
    * @return criticalityIndicator
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCriticalityIndicator() {
     return criticalityIndicator;
   }
@@ -55,8 +57,16 @@ public class Extension {
     this.criticalityIndicator = criticalityIndicator;
   }
 
-  public Extension data(Object data) {
+  public Extension data(Map<String, Object> data) {
     this.data = data;
+    return this;
+  }
+
+  public Extension putDataItem(String key, Object dataItem) {
+    if (this.data == null) {
+      this.data = new HashMap<String, Object>();
+    }
+    this.data.put(key, dataItem);
     return this;
   }
 
@@ -64,12 +74,12 @@ public class Extension {
    * Get data
    * @return data
   **/
-  @ApiModelProperty(value = "")
-  public Object getData() {
+  @Schema(description = "")
+  public Map<String, Object> getData() {
     return data;
   }
 
-  public void setData(Object data) {
+  public void setData(Map<String, Object> data) {
     this.data = data;
   }
 
@@ -82,7 +92,7 @@ public class Extension {
    * Get id
    * @return id
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getId() {
     return id;
   }
@@ -100,7 +110,7 @@ public class Extension {
    * Get name
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -156,4 +166,3 @@ public class Extension {
   }
 
 }
-

@@ -36,7 +36,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
-
 @Component("com.opentech.acsemv3dsProxyApiClient.api.AuthenticatorControllerApi")
 public class AuthenticatorControllerApi {
     private ApiClient apiClient;
@@ -62,24 +61,21 @@ public class AuthenticatorControllerApi {
      * checkAuthResult
      * 
      * <p><b>200</b> - OK
-     * @param checkAuthResultWebRequest checkAuthResultWebRequest
+     * @param body checkAuthResultWebRequest
      * @param issuerCode issuer-code
      * @return CheckAuthResultWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public CheckAuthResultWebResponse checkAuthResultUsingPOST(CheckAuthResultWebRequest checkAuthResultWebRequest, String issuerCode) throws RestClientException {
-        Object postBody = checkAuthResultWebRequest;
-        
-        // verify the required parameter 'checkAuthResultWebRequest' is set
-        if (checkAuthResultWebRequest == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'checkAuthResultWebRequest' when calling checkAuthResultUsingPOST");
+    public CheckAuthResultWebResponse checkAuthResultUsingPOST(CheckAuthResultWebRequest body, String issuerCode) throws RestClientException {
+        Object postBody = body;
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling checkAuthResultUsingPOST");
         }
-        
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling checkAuthResultUsingPOST");
         }
-        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -91,11 +87,11 @@ public class AuthenticatorControllerApi {
 
         final String[] accepts = { 
             "application/json"
-        };
+         };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };
@@ -107,24 +103,21 @@ public class AuthenticatorControllerApi {
      * evaluateAuthentication
      * 
      * <p><b>200</b> - OK
-     * @param evaluateAuthenticationWebRequest evaluateAuthenticationWebRequest
+     * @param body evaluateAuthenticationWebRequest
      * @param issuerCode issuer-code
      * @return EvaluateAuthenticationWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public EvaluateAuthenticationWebResponse evaluateAuthenticationUsingPOST(EvaluateAuthenticationWebRequest evaluateAuthenticationWebRequest, String issuerCode) throws RestClientException {
-        Object postBody = evaluateAuthenticationWebRequest;
-        
-        // verify the required parameter 'evaluateAuthenticationWebRequest' is set
-        if (evaluateAuthenticationWebRequest == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'evaluateAuthenticationWebRequest' when calling evaluateAuthenticationUsingPOST");
+    public EvaluateAuthenticationWebResponse evaluateAuthenticationUsingPOST(EvaluateAuthenticationWebRequest body, String issuerCode) throws RestClientException {
+        Object postBody = body;
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling evaluateAuthenticationUsingPOST");
         }
-        
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling evaluateAuthenticationUsingPOST");
         }
-        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -136,11 +129,11 @@ public class AuthenticatorControllerApi {
 
         final String[] accepts = { 
             "application/json"
-        };
+         };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };
@@ -152,24 +145,21 @@ public class AuthenticatorControllerApi {
      * evaluateChallengeStep
      * 
      * <p><b>200</b> - OK
-     * @param evaluateChallengeStepAuthenticatorWebRequest evaluateChallengeStepAuthenticatorWebRequest
+     * @param body evaluateChallengeStepAuthenticatorWebRequest
      * @param issuerCode issuer-code
      * @return EvaluateChallengeStepAuthenticatorWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public EvaluateChallengeStepAuthenticatorWebResponse evaluateChallengeStepUsingPOST(EvaluateChallengeStepAuthenticatorWebRequest evaluateChallengeStepAuthenticatorWebRequest, String issuerCode) throws RestClientException {
-        Object postBody = evaluateChallengeStepAuthenticatorWebRequest;
-        
-        // verify the required parameter 'evaluateChallengeStepAuthenticatorWebRequest' is set
-        if (evaluateChallengeStepAuthenticatorWebRequest == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'evaluateChallengeStepAuthenticatorWebRequest' when calling evaluateChallengeStepUsingPOST");
+    public EvaluateChallengeStepAuthenticatorWebResponse evaluateChallengeStepUsingPOST(EvaluateChallengeStepAuthenticatorWebRequest body, String issuerCode) throws RestClientException {
+        Object postBody = body;
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling evaluateChallengeStepUsingPOST");
         }
-        
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling evaluateChallengeStepUsingPOST");
         }
-        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -181,11 +171,11 @@ public class AuthenticatorControllerApi {
 
         final String[] accepts = { 
             "application/json"
-        };
+         };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };
@@ -197,24 +187,21 @@ public class AuthenticatorControllerApi {
      * initChallenge
      * 
      * <p><b>200</b> - OK
-     * @param initChallengeAuthenticatorWebRequest initChallengeAuthenticatorWebRequest
+     * @param body initChallengeAuthenticatorWebRequest
      * @param issuerCode issuer-code
      * @return InitChallengeAuthenticatorWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public InitChallengeAuthenticatorWebResponse initChallengeUsingPOST(InitChallengeAuthenticatorWebRequest initChallengeAuthenticatorWebRequest, String issuerCode) throws RestClientException {
-        Object postBody = initChallengeAuthenticatorWebRequest;
-        
-        // verify the required parameter 'initChallengeAuthenticatorWebRequest' is set
-        if (initChallengeAuthenticatorWebRequest == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'initChallengeAuthenticatorWebRequest' when calling initChallengeUsingPOST");
+    public InitChallengeAuthenticatorWebResponse initChallengeUsingPOST(InitChallengeAuthenticatorWebRequest body, String issuerCode) throws RestClientException {
+        Object postBody = body;
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling initChallengeUsingPOST");
         }
-        
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling initChallengeUsingPOST");
         }
-        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -226,11 +213,11 @@ public class AuthenticatorControllerApi {
 
         final String[] accepts = { 
             "application/json"
-        };
+         };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };
@@ -242,24 +229,21 @@ public class AuthenticatorControllerApi {
      * performDecoupledAuthentication
      * 
      * <p><b>200</b> - OK
+     * @param body performDecoupledAuthWebRequest
      * @param issuerCode issuer-code
-     * @param performDecoupledAuthWebRequest performDecoupledAuthWebRequest
      * @return PerformDecoupledAuthWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public PerformDecoupledAuthWebResponse performDecoupledAuthenticationUsingPOST(String issuerCode, PerformDecoupledAuthWebRequest performDecoupledAuthWebRequest) throws RestClientException {
-        Object postBody = performDecoupledAuthWebRequest;
-        
+    public PerformDecoupledAuthWebResponse performDecoupledAuthenticationUsingPOST(PerformDecoupledAuthWebRequest body, String issuerCode) throws RestClientException {
+        Object postBody = body;
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling performDecoupledAuthenticationUsingPOST");
+        }
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling performDecoupledAuthenticationUsingPOST");
         }
-        
-        // verify the required parameter 'performDecoupledAuthWebRequest' is set
-        if (performDecoupledAuthWebRequest == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'performDecoupledAuthWebRequest' when calling performDecoupledAuthenticationUsingPOST");
-        }
-        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -271,11 +255,11 @@ public class AuthenticatorControllerApi {
 
         final String[] accepts = { 
             "application/json"
-        };
+         };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };
@@ -287,24 +271,21 @@ public class AuthenticatorControllerApi {
      * prepareAuthenticationCompletion
      * 
      * <p><b>200</b> - OK
+     * @param body prepareAuthenticationCompletionWebRequest
      * @param issuerCode issuer-code
-     * @param prepareAuthenticationCompletionWebRequest prepareAuthenticationCompletionWebRequest
      * @return PrepareAuthenticationCompletionWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public PrepareAuthenticationCompletionWebResponse prepareAuthenticationCompletionUsingPOST(String issuerCode, PrepareAuthenticationCompletionWebRequest prepareAuthenticationCompletionWebRequest) throws RestClientException {
-        Object postBody = prepareAuthenticationCompletionWebRequest;
-        
+    public PrepareAuthenticationCompletionWebResponse prepareAuthenticationCompletionUsingPOST(PrepareAuthenticationCompletionWebRequest body, String issuerCode) throws RestClientException {
+        Object postBody = body;
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling prepareAuthenticationCompletionUsingPOST");
+        }
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling prepareAuthenticationCompletionUsingPOST");
         }
-        
-        // verify the required parameter 'prepareAuthenticationCompletionWebRequest' is set
-        if (prepareAuthenticationCompletionWebRequest == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'prepareAuthenticationCompletionWebRequest' when calling prepareAuthenticationCompletionUsingPOST");
-        }
-        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -316,11 +297,11 @@ public class AuthenticatorControllerApi {
 
         final String[] accepts = { 
             "application/json"
-        };
+         };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };
@@ -332,24 +313,21 @@ public class AuthenticatorControllerApi {
      * resendChallenge
      * 
      * <p><b>200</b> - OK
+     * @param body resendChallengeWebRequest
      * @param issuerCode issuer-code
-     * @param resendChallengeWebRequest resendChallengeWebRequest
      * @return ResendChallengeWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResendChallengeWebResponse resendChallengeUsingPOST(String issuerCode, ResendChallengeWebRequest resendChallengeWebRequest) throws RestClientException {
-        Object postBody = resendChallengeWebRequest;
-        
+    public ResendChallengeWebResponse resendChallengeUsingPOST(ResendChallengeWebRequest body, String issuerCode) throws RestClientException {
+        Object postBody = body;
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling resendChallengeUsingPOST");
+        }
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling resendChallengeUsingPOST");
         }
-        
-        // verify the required parameter 'resendChallengeWebRequest' is set
-        if (resendChallengeWebRequest == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'resendChallengeWebRequest' when calling resendChallengeUsingPOST");
-        }
-        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -361,11 +339,11 @@ public class AuthenticatorControllerApi {
 
         final String[] accepts = { 
             "application/json"
-        };
+         };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };

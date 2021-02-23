@@ -10,20 +10,19 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.ThreeDSAcsRenderingType;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * IsChallengeSupportedWebResponse
  */
+
 
 public class IsChallengeSupportedWebResponse {
   @JsonProperty("acsMaxChallenges")
@@ -47,7 +46,7 @@ public class IsChallengeSupportedWebResponse {
    * Get acsMaxChallenges
    * @return acsMaxChallenges
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getAcsMaxChallenges() {
     return acsMaxChallenges;
   }
@@ -65,7 +64,7 @@ public class IsChallengeSupportedWebResponse {
    * Get challengeSupported
    * @return challengeSupported
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isChallengeSupported() {
     return challengeSupported;
   }
@@ -83,7 +82,7 @@ public class IsChallengeSupportedWebResponse {
    * Get performDecoupledAuthentication
    * @return performDecoupledAuthentication
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isPerformDecoupledAuthentication() {
     return performDecoupledAuthentication;
   }
@@ -101,7 +100,7 @@ public class IsChallengeSupportedWebResponse {
    * Get threeDSAcsRenderingType
    * @return threeDSAcsRenderingType
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ThreeDSAcsRenderingType getThreeDSAcsRenderingType() {
     return threeDSAcsRenderingType;
   }
@@ -157,4 +156,3 @@ public class IsChallengeSupportedWebResponse {
   }
 
 }
-

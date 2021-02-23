@@ -1,4 +1,3 @@
-
 # ResendChallengeWebRequest
 
 ## Properties
@@ -8,6 +7,3 @@ Name | Type | Description | Notes
 **cReq** | [**CReq**](CReq.md) |  |  [optional]
 **cardNumber** | **String** |  |  [optional]
 **transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
-
-
-

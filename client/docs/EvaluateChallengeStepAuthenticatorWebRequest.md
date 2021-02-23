@@ -1,4 +1,3 @@
-
 # EvaluateChallengeStepAuthenticatorWebRequest
 
 ## Properties
@@ -12,6 +11,3 @@ Name | Type | Description | Notes
 **transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
 **whitelistingEnabled** | **Boolean** |  |  [optional]
 **whitelistingResult** | **String** |  |  [optional]
-
-
-

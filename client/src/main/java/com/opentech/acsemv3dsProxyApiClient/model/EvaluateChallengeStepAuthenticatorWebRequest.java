@@ -10,21 +10,20 @@
  * Do not edit the class manually.
  */
 
-
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.CReq;
 import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * EvaluateChallengeStepAuthenticatorWebRequest
  */
+
 
 public class EvaluateChallengeStepAuthenticatorWebRequest {
   @JsonProperty("authenticationName")
@@ -60,7 +59,7 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
    * Get authenticationName
    * @return authenticationName
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthenticationName() {
     return authenticationName;
   }
@@ -78,7 +77,7 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
    * Get cReq
    * @return cReq
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public CReq getCReq() {
     return cReq;
   }
@@ -96,7 +95,7 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
    * Get cardNumber
    * @return cardNumber
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCardNumber() {
     return cardNumber;
   }
@@ -114,7 +113,7 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
    * Get challengeType
    * @return challengeType
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChallengeType() {
     return challengeType;
   }
@@ -132,7 +131,7 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
    * Get challengeValue
    * @return challengeValue
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChallengeValue() {
     return challengeValue;
   }
@@ -150,7 +149,7 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
    * Get transactionInfo
    * @return transactionInfo
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public TransactionInfo getTransactionInfo() {
     return transactionInfo;
   }
@@ -168,7 +167,7 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
    * Get whitelistingEnabled
    * @return whitelistingEnabled
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isWhitelistingEnabled() {
     return whitelistingEnabled;
   }
@@ -186,7 +185,7 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
    * Get whitelistingResult
    * @return whitelistingResult
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWhitelistingResult() {
     return whitelistingResult;
   }
@@ -250,4 +249,3 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
   }
 
 }
-

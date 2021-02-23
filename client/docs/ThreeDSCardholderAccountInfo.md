@@ -1,4 +1,3 @@
-
 # ThreeDSCardholderAccountInfo
 
 ## Properties
@@ -20,6 +19,3 @@ Name | Type | Description | Notes
 **suspiciousAccActivity** | **String** |  |  [optional]
 **txnActivityDay** | **String** |  |  [optional]
 **txnActivityYear** | **String** |  |  [optional]
-
-
-
