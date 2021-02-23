@@ -4,7 +4,7 @@
 
     <groupId>com.opentech</groupId>
     <artifactId>acsemv3ds-ProxyApi</artifactId>
-    <version>1.23</version>
+    <version>1.24-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -31,7 +31,7 @@
 
     <scm>
         <developerConnection>scm:git:ssh://git@svn/~/git/acsemv3ds-ProxyApi</developerConnection>
-        <tag>acsemv3ds-ProxyApi-1.23</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <repositories>
