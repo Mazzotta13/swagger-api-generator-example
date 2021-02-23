@@ -39,7 +39,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.opentech</groupId>
   <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
-  <version>1.21-SNAPSHOT</version>
+  <version>1.22-SNAPSHOT</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -49,7 +49,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.opentech:acsemv3ds-ProxyApi-Client:1.21-SNAPSHOT"
+compile "com.opentech:acsemv3ds-ProxyApi-Client:1.22-SNAPSHOT"
 ```
 
 ### Others
@@ -62,7 +62,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/acsemv3ds-ProxyApi-Client-1.21-SNAPSHOT.jar`
+* `target/acsemv3ds-ProxyApi-Client-1.22-SNAPSHOT.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
