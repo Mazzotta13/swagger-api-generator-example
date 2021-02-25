@@ -10,20 +10,21 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.ThreeDSAcsRenderingType;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+
 /**
  * TransactionInfo
  */
-
 
 public class TransactionInfo {
   @JsonProperty("aav")
@@ -119,7 +120,7 @@ public class TransactionInfo {
    * Get aav
    * @return aav
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAav() {
     return aav;
   }
@@ -137,7 +138,7 @@ public class TransactionInfo {
    * Get acsMaxChallenges
    * @return acsMaxChallenges
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Integer getAcsMaxChallenges() {
     return acsMaxChallenges;
   }
@@ -155,7 +156,7 @@ public class TransactionInfo {
    * Get acsRenderingType
    * @return acsRenderingType
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public ThreeDSAcsRenderingType getAcsRenderingType() {
     return acsRenderingType;
   }
@@ -173,7 +174,7 @@ public class TransactionInfo {
    * Get acsTransactionId
    * @return acsTransactionId
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAcsTransactionId() {
     return acsTransactionId;
   }
@@ -191,7 +192,7 @@ public class TransactionInfo {
    * Get authenticationMethod
    * @return authenticationMethod
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAuthenticationMethod() {
     return authenticationMethod;
   }
@@ -209,7 +210,7 @@ public class TransactionInfo {
    * Get authenticationName
    * @return authenticationName
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAuthenticationName() {
     return authenticationName;
   }
@@ -227,7 +228,7 @@ public class TransactionInfo {
    * Get authenticationType
    * @return authenticationType
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAuthenticationType() {
     return authenticationType;
   }
@@ -245,7 +246,7 @@ public class TransactionInfo {
    * Get binRangeId
    * @return binRangeId
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBinRangeId() {
     return binRangeId;
   }
@@ -263,7 +264,7 @@ public class TransactionInfo {
    * Get cRes
    * @return cRes
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public byte[] getCRes() {
     return cRes;
   }
@@ -281,7 +282,7 @@ public class TransactionInfo {
    * Get completionDate
    * @return completionDate
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Date getCompletionDate() {
     return completionDate;
   }
@@ -299,7 +300,7 @@ public class TransactionInfo {
    * Get creationDate
    * @return creationDate
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Date getCreationDate() {
     return creationDate;
   }
@@ -317,7 +318,7 @@ public class TransactionInfo {
    * Get currentStepId
    * @return currentStepId
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getCurrentStepId() {
     return currentStepId;
   }
@@ -335,7 +336,7 @@ public class TransactionInfo {
    * Get deviceChannel
    * @return deviceChannel
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getDeviceChannel() {
     return deviceChannel;
   }
@@ -353,7 +354,7 @@ public class TransactionInfo {
    * Get dsTransactionId
    * @return dsTransactionId
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getDsTransactionId() {
     return dsTransactionId;
   }
@@ -371,7 +372,7 @@ public class TransactionInfo {
    * Get dsUrl
    * @return dsUrl
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getDsUrl() {
     return dsUrl;
   }
@@ -389,7 +390,7 @@ public class TransactionInfo {
    * Get eci
    * @return eci
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getEci() {
     return eci;
   }
@@ -407,7 +408,7 @@ public class TransactionInfo {
    * Get instalment
    * @return instalment
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isInstalment() {
     return instalment;
   }
@@ -425,7 +426,7 @@ public class TransactionInfo {
    * Get interactionCounter
    * @return interactionCounter
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Integer getInteractionCounter() {
     return interactionCounter;
   }
@@ -443,7 +444,7 @@ public class TransactionInfo {
    * Get issuerCode
    * @return issuerCode
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getIssuerCode() {
     return issuerCode;
   }
@@ -461,7 +462,7 @@ public class TransactionInfo {
    * Get messageCategory
    * @return messageCategory
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getMessageCategory() {
     return messageCategory;
   }
@@ -479,7 +480,7 @@ public class TransactionInfo {
    * Get parentTransactionId
    * @return parentTransactionId
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getParentTransactionId() {
     return parentTransactionId;
   }
@@ -497,7 +498,7 @@ public class TransactionInfo {
    * Get processingStep
    * @return processingStep
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getProcessingStep() {
     return processingStep;
   }
@@ -515,7 +516,7 @@ public class TransactionInfo {
    * Get recurring
    * @return recurring
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isRecurring() {
     return recurring;
   }
@@ -533,7 +534,7 @@ public class TransactionInfo {
    * Get sdkTransactionId
    * @return sdkTransactionId
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getSdkTransactionId() {
     return sdkTransactionId;
   }
@@ -551,7 +552,7 @@ public class TransactionInfo {
    * Get secureVersion
    * @return secureVersion
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getSecureVersion() {
     return secureVersion;
   }
@@ -569,7 +570,7 @@ public class TransactionInfo {
    * Get threedsServerTransactionId
    * @return threedsServerTransactionId
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreedsServerTransactionId() {
     return threedsServerTransactionId;
   }
@@ -587,7 +588,7 @@ public class TransactionInfo {
    * Get transactionStatus
    * @return transactionStatus
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getTransactionStatus() {
     return transactionStatus;
   }
@@ -605,7 +606,7 @@ public class TransactionInfo {
    * Get validationReason
    * @return validationReason
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getValidationReason() {
     return validationReason;
   }
@@ -632,7 +633,7 @@ public class TransactionInfo {
         Objects.equals(this.authenticationName, transactionInfo.authenticationName) &&
         Objects.equals(this.authenticationType, transactionInfo.authenticationType) &&
         Objects.equals(this.binRangeId, transactionInfo.binRangeId) &&
-        Arrays.equals(this.cRes, transactionInfo.cRes) &&
+        Objects.equals(this.cRes, transactionInfo.cRes) &&
         Objects.equals(this.completionDate, transactionInfo.completionDate) &&
         Objects.equals(this.creationDate, transactionInfo.creationDate) &&
         Objects.equals(this.currentStepId, transactionInfo.currentStepId) &&
@@ -656,7 +657,7 @@ public class TransactionInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(aav, acsMaxChallenges, acsRenderingType, acsTransactionId, authenticationMethod, authenticationName, authenticationType, binRangeId, Arrays.hashCode(cRes), completionDate, creationDate, currentStepId, deviceChannel, dsTransactionId, dsUrl, eci, instalment, interactionCounter, issuerCode, messageCategory, parentTransactionId, processingStep, recurring, sdkTransactionId, secureVersion, threedsServerTransactionId, transactionStatus, validationReason);
+    return Objects.hash(aav, acsMaxChallenges, acsRenderingType, acsTransactionId, authenticationMethod, authenticationName, authenticationType, binRangeId, cRes, completionDate, creationDate, currentStepId, deviceChannel, dsTransactionId, dsUrl, eci, instalment, interactionCounter, issuerCode, messageCategory, parentTransactionId, processingStep, recurring, sdkTransactionId, secureVersion, threedsServerTransactionId, transactionStatus, validationReason);
   }
 
 
@@ -709,3 +710,4 @@ public class TransactionInfo {
   }
 
 }
+

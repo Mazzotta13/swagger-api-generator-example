@@ -10,18 +10,19 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * RReqInfo
  */
-
 
 public class RReqInfo {
   @JsonProperty("challengeCancel")
@@ -42,7 +43,7 @@ public class RReqInfo {
    * Get challengeCancel
    * @return challengeCancel
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeCancel() {
     return challengeCancel;
   }
@@ -60,7 +61,7 @@ public class RReqInfo {
    * Get transactionStatus
    * @return transactionStatus
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getTransactionStatus() {
     return transactionStatus;
   }
@@ -78,7 +79,7 @@ public class RReqInfo {
    * Get transactionStatusReason
    * @return transactionStatusReason
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getTransactionStatusReason() {
     return transactionStatusReason;
   }
@@ -132,3 +133,4 @@ public class RReqInfo {
   }
 
 }
+

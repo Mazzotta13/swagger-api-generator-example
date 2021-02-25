@@ -10,18 +10,19 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * ThreeDSMerchantRiskIndicator
  */
-
 
 public class ThreeDSMerchantRiskIndicator {
   @JsonProperty("deliveryEmailAddress")
@@ -60,7 +61,7 @@ public class ThreeDSMerchantRiskIndicator {
    * Get deliveryEmailAddress
    * @return deliveryEmailAddress
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getDeliveryEmailAddress() {
     return deliveryEmailAddress;
   }
@@ -78,7 +79,7 @@ public class ThreeDSMerchantRiskIndicator {
    * Get deliveryTimeframe
    * @return deliveryTimeframe
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getDeliveryTimeframe() {
     return deliveryTimeframe;
   }
@@ -96,7 +97,7 @@ public class ThreeDSMerchantRiskIndicator {
    * Get giftCardAmount
    * @return giftCardAmount
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getGiftCardAmount() {
     return giftCardAmount;
   }
@@ -114,7 +115,7 @@ public class ThreeDSMerchantRiskIndicator {
    * Get giftCardCount
    * @return giftCardCount
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getGiftCardCount() {
     return giftCardCount;
   }
@@ -132,7 +133,7 @@ public class ThreeDSMerchantRiskIndicator {
    * Get giftCardCurr
    * @return giftCardCurr
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getGiftCardCurr() {
     return giftCardCurr;
   }
@@ -150,7 +151,7 @@ public class ThreeDSMerchantRiskIndicator {
    * Get preOrderDate
    * @return preOrderDate
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getPreOrderDate() {
     return preOrderDate;
   }
@@ -168,7 +169,7 @@ public class ThreeDSMerchantRiskIndicator {
    * Get preOrderPurchaseInd
    * @return preOrderPurchaseInd
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getPreOrderPurchaseInd() {
     return preOrderPurchaseInd;
   }
@@ -186,7 +187,7 @@ public class ThreeDSMerchantRiskIndicator {
    * Get reorderItemsInd
    * @return reorderItemsInd
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getReorderItemsInd() {
     return reorderItemsInd;
   }
@@ -204,7 +205,7 @@ public class ThreeDSMerchantRiskIndicator {
    * Get shipIndicator
    * @return shipIndicator
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getShipIndicator() {
     return shipIndicator;
   }
@@ -270,3 +271,4 @@ public class ThreeDSMerchantRiskIndicator {
   }
 
 }
+

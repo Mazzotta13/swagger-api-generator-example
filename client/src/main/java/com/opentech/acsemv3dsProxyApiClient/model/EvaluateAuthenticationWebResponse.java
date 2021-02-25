@@ -10,21 +10,22 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.Extension;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * EvaluateAuthenticationWebResponse
  */
-
 
 public class EvaluateAuthenticationWebResponse {
   /**
@@ -32,15 +33,25 @@ public class EvaluateAuthenticationWebResponse {
    */
   public enum AuthenticationMethodEnum {
     PASSCODE("PASSCODE"),
+    
     SMS_OTP("SMS_OTP"),
+    
     KEY_FOB_OR_EMV_CARD_READER_OTP("KEY_FOB_OR_EMV_CARD_READER_OTP"),
+    
     APP_OTP("APP_OTP"),
+    
     APP_OTHER("APP_OTHER"),
+    
     KBA("KBA"),
+    
     OOB_BIOMETRICS("OOB_BIOMETRICS"),
+    
     OOB_LOGIN("OOB_LOGIN"),
+    
     OOB_OTHER("OOB_OTHER"),
+    
     OTHER("OTHER"),
+    
     PUSH_CONFIRMATION("PUSH_CONFIRMATION");
 
     private String value;
@@ -48,6 +59,7 @@ public class EvaluateAuthenticationWebResponse {
     AuthenticationMethodEnum(String value) {
       this.value = value;
     }
+
     @JsonValue
     public String getValue() {
       return value;
@@ -57,6 +69,7 @@ public class EvaluateAuthenticationWebResponse {
     public String toString() {
       return String.valueOf(value);
     }
+
     @JsonCreator
     public static AuthenticationMethodEnum fromValue(String text) {
       for (AuthenticationMethodEnum b : AuthenticationMethodEnum.values()) {
@@ -66,8 +79,9 @@ public class EvaluateAuthenticationWebResponse {
       }
       return null;
     }
+  }
 
-  }  @JsonProperty("authenticationMethod")
+  @JsonProperty("authenticationMethod")
   private AuthenticationMethodEnum authenticationMethod = null;
 
   @JsonProperty("authenticationName")
@@ -78,13 +92,21 @@ public class EvaluateAuthenticationWebResponse {
    */
   public enum AuthenticationResultEnum {
     CHALLENGE_NEEDED("CHALLENGE_NEEDED"),
+    
     AUTHENTICATED("AUTHENTICATED"),
+    
     UNABLE_TO_AUTHENTICATE("UNABLE_TO_AUTHENTICATE"),
+    
     NOT_AUTHENTICATED("NOT_AUTHENTICATED"),
+    
     AUTHENTICATION_ATTEMPT("AUTHENTICATION_ATTEMPT"),
+    
     REJECTED("REJECTED"),
+    
     INFORMATIONAL_OK("INFORMATIONAL_OK"),
+    
     INFORMATIONAL_DENIED("INFORMATIONAL_DENIED"),
+    
     DECOUPLED_AUTHENTICATION("DECOUPLED_AUTHENTICATION");
 
     private String value;
@@ -92,6 +114,7 @@ public class EvaluateAuthenticationWebResponse {
     AuthenticationResultEnum(String value) {
       this.value = value;
     }
+
     @JsonValue
     public String getValue() {
       return value;
@@ -101,6 +124,7 @@ public class EvaluateAuthenticationWebResponse {
     public String toString() {
       return String.valueOf(value);
     }
+
     @JsonCreator
     public static AuthenticationResultEnum fromValue(String text) {
       for (AuthenticationResultEnum b : AuthenticationResultEnum.values()) {
@@ -110,8 +134,9 @@ public class EvaluateAuthenticationWebResponse {
       }
       return null;
     }
+  }
 
-  }  @JsonProperty("authenticationResult")
+  @JsonProperty("authenticationResult")
   private AuthenticationResultEnum authenticationResult = null;
 
   /**
@@ -119,8 +144,11 @@ public class EvaluateAuthenticationWebResponse {
    */
   public enum AuthenticationTypeEnum {
     STATIC("STATIC"),
+    
     DYNAMIC("DYNAMIC"),
+    
     OOB("OOB"),
+    
     DECOUPLED("DECOUPLED");
 
     private String value;
@@ -128,6 +156,7 @@ public class EvaluateAuthenticationWebResponse {
     AuthenticationTypeEnum(String value) {
       this.value = value;
     }
+
     @JsonValue
     public String getValue() {
       return value;
@@ -137,6 +166,7 @@ public class EvaluateAuthenticationWebResponse {
     public String toString() {
       return String.valueOf(value);
     }
+
     @JsonCreator
     public static AuthenticationTypeEnum fromValue(String text) {
       for (AuthenticationTypeEnum b : AuthenticationTypeEnum.values()) {
@@ -146,8 +176,9 @@ public class EvaluateAuthenticationWebResponse {
       }
       return null;
     }
+  }
 
-  }  @JsonProperty("authenticationType")
+  @JsonProperty("authenticationType")
   private AuthenticationTypeEnum authenticationType = null;
 
   @JsonProperty("cardEnrolled")
@@ -167,25 +198,45 @@ public class EvaluateAuthenticationWebResponse {
    */
   public enum TransactionStatusReasonEnum {
     CARD_AUTHENTICATION_FAILED("CARD_AUTHENTICATION_FAILED"),
+    
     UNKNOWN_DEVICE("UNKNOWN_DEVICE"),
+    
     UNSUPPORTED_DEVICE("UNSUPPORTED_DEVICE"),
+    
     EXCEEDS_AUTHENTICATION_LIMIT("EXCEEDS_AUTHENTICATION_LIMIT"),
+    
     EXPIRED_CARD("EXPIRED_CARD"),
+    
     INVALID_CARD_NUMBER("INVALID_CARD_NUMBER"),
+    
     INVALID_TRANSACTION("INVALID_TRANSACTION"),
+    
     NO_CARD_RECORD("NO_CARD_RECORD"),
+    
     SECURITY_FAILURE("SECURITY_FAILURE"),
+    
     STOLEN_CARD("STOLEN_CARD"),
+    
     SUSPECTED_FRAUD("SUSPECTED_FRAUD"),
+    
     TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER("TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER"),
+    
     CARDHOLDER_NOT_ENROLLED_IN_SERVICE("CARDHOLDER_NOT_ENROLLED_IN_SERVICE"),
+    
     TRANSACTION_TIMED_OUT_AT_THE_ACS("TRANSACTION_TIMED_OUT_AT_THE_ACS"),
+    
     LOW_CONFIDENCE("LOW_CONFIDENCE"),
+    
     MEDIUM_CONFIDENCE("MEDIUM_CONFIDENCE"),
+    
     HIGH_CONFIDENCE("HIGH_CONFIDENCE"),
+    
     VERY_HIGH_CONFIDENCE("VERY_HIGH_CONFIDENCE"),
+    
     EXCEEDS_ACS_MAXIMUM_CHALLENGES("EXCEEDS_ACS_MAXIMUM_CHALLENGES"),
+    
     NON_PAYMENT_TRANSACTION_NOT_SUPPORTED("NON_PAYMENT_TRANSACTION_NOT_SUPPORTED"),
+    
     THREE_RI_TRANSACTION_NOT_SUPPORTED("THREE_RI_TRANSACTION_NOT_SUPPORTED");
 
     private String value;
@@ -193,6 +244,7 @@ public class EvaluateAuthenticationWebResponse {
     TransactionStatusReasonEnum(String value) {
       this.value = value;
     }
+
     @JsonValue
     public String getValue() {
       return value;
@@ -202,6 +254,7 @@ public class EvaluateAuthenticationWebResponse {
     public String toString() {
       return String.valueOf(value);
     }
+
     @JsonCreator
     public static TransactionStatusReasonEnum fromValue(String text) {
       for (TransactionStatusReasonEnum b : TransactionStatusReasonEnum.values()) {
@@ -211,8 +264,9 @@ public class EvaluateAuthenticationWebResponse {
       }
       return null;
     }
+  }
 
-  }  @JsonProperty("transactionStatusReason")
+  @JsonProperty("transactionStatusReason")
   private TransactionStatusReasonEnum transactionStatusReason = null;
 
   @JsonProperty("whitelistStatus")
@@ -227,7 +281,7 @@ public class EvaluateAuthenticationWebResponse {
    * Get authenticationMethod
    * @return authenticationMethod
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public AuthenticationMethodEnum getAuthenticationMethod() {
     return authenticationMethod;
   }
@@ -245,7 +299,7 @@ public class EvaluateAuthenticationWebResponse {
    * Get authenticationName
    * @return authenticationName
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAuthenticationName() {
     return authenticationName;
   }
@@ -263,7 +317,7 @@ public class EvaluateAuthenticationWebResponse {
    * Get authenticationResult
    * @return authenticationResult
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public AuthenticationResultEnum getAuthenticationResult() {
     return authenticationResult;
   }
@@ -281,7 +335,7 @@ public class EvaluateAuthenticationWebResponse {
    * Get authenticationType
    * @return authenticationType
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public AuthenticationTypeEnum getAuthenticationType() {
     return authenticationType;
   }
@@ -299,7 +353,7 @@ public class EvaluateAuthenticationWebResponse {
    * Get cardEnrolled
    * @return cardEnrolled
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isCardEnrolled() {
     return cardEnrolled;
   }
@@ -317,7 +371,7 @@ public class EvaluateAuthenticationWebResponse {
    * Get cardholderInfo
    * @return cardholderInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getCardholderInfo() {
     return cardholderInfo;
   }
@@ -335,7 +389,7 @@ public class EvaluateAuthenticationWebResponse {
    * Get challengeMandatory
    * @return challengeMandatory
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isChallengeMandatory() {
     return challengeMandatory;
   }
@@ -361,7 +415,7 @@ public class EvaluateAuthenticationWebResponse {
    * Get extensions
    * @return extensions
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public List<Extension> getExtensions() {
     return extensions;
   }
@@ -379,7 +433,7 @@ public class EvaluateAuthenticationWebResponse {
    * Get transactionStatusReason
    * @return transactionStatusReason
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public TransactionStatusReasonEnum getTransactionStatusReason() {
     return transactionStatusReason;
   }
@@ -397,7 +451,7 @@ public class EvaluateAuthenticationWebResponse {
    * Get whitelistStatus
    * @return whitelistStatus
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getWhitelistStatus() {
     return whitelistStatus;
   }
@@ -465,3 +519,4 @@ public class EvaluateAuthenticationWebResponse {
   }
 
 }
+

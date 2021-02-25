@@ -1,6 +1,6 @@
 # ChallengeManagerControllerApi
 
-All URIs are relative to *//localhost:8080/acsemv3dsproxy*
+All URIs are relative to *https://localhost:8080/acsemv3dsproxy*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,9 +8,10 @@ Method | HTTP request | Description
 [**initChallengeUsingPOST1**](ChallengeManagerControllerApi.md#initChallengeUsingPOST1) | **POST** /3ds/challenge/{issuer-code}/initChallenge | initChallenge
 [**isChallengeSupportedUsingPOST**](ChallengeManagerControllerApi.md#isChallengeSupportedUsingPOST) | **POST** /3ds/challenge/{issuer-code}/isChallengeSupported | isChallengeSupported
 
+
 <a name="evaluateChallengeStepUsingPOST1"></a>
 # **evaluateChallengeStepUsingPOST1**
-> EvaluateChallengeStepCMWebResponse evaluateChallengeStepUsingPOST1(body, issuerCode)
+> EvaluateChallengeStepCMWebResponse evaluateChallengeStepUsingPOST1(evaluateChallengeStepCMWebRequest, issuerCode)
 
 evaluateChallengeStep
 
@@ -22,10 +23,10 @@ evaluateChallengeStep
 
 
 ChallengeManagerControllerApi apiInstance = new ChallengeManagerControllerApi();
-EvaluateChallengeStepCMWebRequest body = new EvaluateChallengeStepCMWebRequest(); // EvaluateChallengeStepCMWebRequest | evaluateChallengeStepCMWebRequest
+EvaluateChallengeStepCMWebRequest evaluateChallengeStepCMWebRequest = new EvaluateChallengeStepCMWebRequest(); // EvaluateChallengeStepCMWebRequest | evaluateChallengeStepCMWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
 try {
-    EvaluateChallengeStepCMWebResponse result = apiInstance.evaluateChallengeStepUsingPOST1(body, issuerCode);
+    EvaluateChallengeStepCMWebResponse result = apiInstance.evaluateChallengeStepUsingPOST1(evaluateChallengeStepCMWebRequest, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ChallengeManagerControllerApi#evaluateChallengeStepUsingPOST1");
@@ -37,7 +38,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**EvaluateChallengeStepCMWebRequest**](EvaluateChallengeStepCMWebRequest.md)| evaluateChallengeStepCMWebRequest |
+ **evaluateChallengeStepCMWebRequest** | [**EvaluateChallengeStepCMWebRequest**](EvaluateChallengeStepCMWebRequest.md)| evaluateChallengeStepCMWebRequest |
  **issuerCode** | **String**| issuer-code |
 
 ### Return type
@@ -55,7 +56,7 @@ No authorization required
 
 <a name="initChallengeUsingPOST1"></a>
 # **initChallengeUsingPOST1**
-> InitChallengeCMWebResponse initChallengeUsingPOST1(body, issuerCode)
+> InitChallengeCMWebResponse initChallengeUsingPOST1(initChallengeCMWebRequest, issuerCode)
 
 initChallenge
 
@@ -67,10 +68,10 @@ initChallenge
 
 
 ChallengeManagerControllerApi apiInstance = new ChallengeManagerControllerApi();
-InitChallengeCMWebRequest body = new InitChallengeCMWebRequest(); // InitChallengeCMWebRequest | initChallengeCMWebRequest
+InitChallengeCMWebRequest initChallengeCMWebRequest = new InitChallengeCMWebRequest(); // InitChallengeCMWebRequest | initChallengeCMWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
 try {
-    InitChallengeCMWebResponse result = apiInstance.initChallengeUsingPOST1(body, issuerCode);
+    InitChallengeCMWebResponse result = apiInstance.initChallengeUsingPOST1(initChallengeCMWebRequest, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ChallengeManagerControllerApi#initChallengeUsingPOST1");
@@ -82,7 +83,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**InitChallengeCMWebRequest**](InitChallengeCMWebRequest.md)| initChallengeCMWebRequest |
+ **initChallengeCMWebRequest** | [**InitChallengeCMWebRequest**](InitChallengeCMWebRequest.md)| initChallengeCMWebRequest |
  **issuerCode** | **String**| issuer-code |
 
 ### Return type
@@ -100,7 +101,7 @@ No authorization required
 
 <a name="isChallengeSupportedUsingPOST"></a>
 # **isChallengeSupportedUsingPOST**
-> IsChallengeSupportedWebResponse isChallengeSupportedUsingPOST(body, issuerCode)
+> IsChallengeSupportedWebResponse isChallengeSupportedUsingPOST(isChallengeSupportedWebRequest, issuerCode)
 
 isChallengeSupported
 
@@ -112,10 +113,10 @@ isChallengeSupported
 
 
 ChallengeManagerControllerApi apiInstance = new ChallengeManagerControllerApi();
-IsChallengeSupportedWebRequest body = new IsChallengeSupportedWebRequest(); // IsChallengeSupportedWebRequest | isChallengeSupportedWebRequest
+IsChallengeSupportedWebRequest isChallengeSupportedWebRequest = new IsChallengeSupportedWebRequest(); // IsChallengeSupportedWebRequest | isChallengeSupportedWebRequest
 String issuerCode = "issuerCode_example"; // String | issuer-code
 try {
-    IsChallengeSupportedWebResponse result = apiInstance.isChallengeSupportedUsingPOST(body, issuerCode);
+    IsChallengeSupportedWebResponse result = apiInstance.isChallengeSupportedUsingPOST(isChallengeSupportedWebRequest, issuerCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ChallengeManagerControllerApi#isChallengeSupportedUsingPOST");
@@ -127,7 +128,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**IsChallengeSupportedWebRequest**](IsChallengeSupportedWebRequest.md)| isChallengeSupportedWebRequest |
+ **isChallengeSupportedWebRequest** | [**IsChallengeSupportedWebRequest**](IsChallengeSupportedWebRequest.md)| isChallengeSupportedWebRequest |
  **issuerCode** | **String**| issuer-code |
 
 ### Return type

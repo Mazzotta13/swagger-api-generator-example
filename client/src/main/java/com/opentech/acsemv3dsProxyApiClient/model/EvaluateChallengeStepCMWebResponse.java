@@ -10,21 +10,22 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.AppChallengeInfo;
 import com.opentech.acsemv3dsProxyApiClient.model.BrowserChallengeInfo;
 import com.opentech.acsemv3dsProxyApiClient.model.CResInfo;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * EvaluateChallengeStepCMWebResponse
  */
-
 
 public class EvaluateChallengeStepCMWebResponse {
   @JsonProperty("appNextChallengeInfo")
@@ -41,7 +42,9 @@ public class EvaluateChallengeStepCMWebResponse {
    */
   public enum ChallengeStatusEnum {
     ONGOING("ONGOING"),
+    
     TERMINATED_WITH_SUCCESS("TERMINATED_WITH_SUCCESS"),
+    
     TERMINATED_WITH_FAILURE("TERMINATED_WITH_FAILURE");
 
     private String value;
@@ -49,6 +52,7 @@ public class EvaluateChallengeStepCMWebResponse {
     ChallengeStatusEnum(String value) {
       this.value = value;
     }
+
     @JsonValue
     public String getValue() {
       return value;
@@ -58,6 +62,7 @@ public class EvaluateChallengeStepCMWebResponse {
     public String toString() {
       return String.valueOf(value);
     }
+
     @JsonCreator
     public static ChallengeStatusEnum fromValue(String text) {
       for (ChallengeStatusEnum b : ChallengeStatusEnum.values()) {
@@ -67,8 +72,9 @@ public class EvaluateChallengeStepCMWebResponse {
       }
       return null;
     }
+  }
 
-  }  @JsonProperty("challengeStatus")
+  @JsonProperty("challengeStatus")
   private ChallengeStatusEnum challengeStatus = null;
 
   @JsonProperty("nextStepId")
@@ -86,7 +92,7 @@ public class EvaluateChallengeStepCMWebResponse {
    * Get appNextChallengeInfo
    * @return appNextChallengeInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public AppChallengeInfo getAppNextChallengeInfo() {
     return appNextChallengeInfo;
   }
@@ -104,7 +110,7 @@ public class EvaluateChallengeStepCMWebResponse {
    * Get browserNextChallengeInfo
    * @return browserNextChallengeInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public BrowserChallengeInfo getBrowserNextChallengeInfo() {
     return browserNextChallengeInfo;
   }
@@ -122,7 +128,7 @@ public class EvaluateChallengeStepCMWebResponse {
    * Get cResInfo
    * @return cResInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public CResInfo getCResInfo() {
     return cResInfo;
   }
@@ -140,7 +146,7 @@ public class EvaluateChallengeStepCMWebResponse {
    * Get challengeStatus
    * @return challengeStatus
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public ChallengeStatusEnum getChallengeStatus() {
     return challengeStatus;
   }
@@ -158,7 +164,7 @@ public class EvaluateChallengeStepCMWebResponse {
    * Get nextStepId
    * @return nextStepId
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getNextStepId() {
     return nextStepId;
   }
@@ -176,7 +182,7 @@ public class EvaluateChallengeStepCMWebResponse {
    * Get requestingWhitelist
    * @return requestingWhitelist
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isRequestingWhitelist() {
     return requestingWhitelist;
   }
@@ -236,3 +242,4 @@ public class EvaluateChallengeStepCMWebResponse {
   }
 
 }
+

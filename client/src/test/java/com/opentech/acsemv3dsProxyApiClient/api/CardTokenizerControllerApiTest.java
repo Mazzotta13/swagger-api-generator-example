@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.api;
 
 import com.opentech.acsemv3dsProxyApiClient.model.DetokenizeWebRequest;
@@ -32,6 +33,7 @@ public class CardTokenizerControllerApiTest {
 
     private final CardTokenizerControllerApi api = new CardTokenizerControllerApi();
 
+    
     /**
      * detokenize
      *
@@ -42,12 +44,13 @@ public class CardTokenizerControllerApiTest {
      */
     @Test
     public void detokenizeUsingPOSTTest() {
-        DetokenizeWebRequest body = null;
+        DetokenizeWebRequest detokenizeWebRequest = null;
         String issuerCode = null;
-        DetokenizeWebResponse response = api.detokenizeUsingPOST(body, issuerCode);
+        DetokenizeWebResponse response = api.detokenizeUsingPOST(detokenizeWebRequest, issuerCode);
 
         // TODO: test validations
     }
+    
     /**
      * tokenize
      *
@@ -58,10 +61,11 @@ public class CardTokenizerControllerApiTest {
      */
     @Test
     public void tokenizeUsingPOSTTest() {
-        TokenizeWebRequest body = null;
         String issuerCode = null;
-        TokenizeWebResponse response = api.tokenizeUsingPOST(body, issuerCode);
+        TokenizeWebRequest tokenizeWebRequest = null;
+        TokenizeWebResponse response = api.tokenizeUsingPOST(issuerCode, tokenizeWebRequest);
 
         // TODO: test validations
     }
+    
 }

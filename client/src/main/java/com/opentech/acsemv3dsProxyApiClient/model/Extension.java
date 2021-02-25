@@ -10,21 +10,22 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 /**
  * Extension
  */
-
 
 public class Extension {
   @JsonProperty("criticalityIndicator")
@@ -48,7 +49,7 @@ public class Extension {
    * Get criticalityIndicator
    * @return criticalityIndicator
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isCriticalityIndicator() {
     return criticalityIndicator;
   }
@@ -74,7 +75,7 @@ public class Extension {
    * Get data
    * @return data
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Map<String, Object> getData() {
     return data;
   }
@@ -92,7 +93,7 @@ public class Extension {
    * Get id
    * @return id
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
@@ -110,7 +111,7 @@ public class Extension {
    * Get name
    * @return name
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -166,3 +167,4 @@ public class Extension {
   }
 
 }
+

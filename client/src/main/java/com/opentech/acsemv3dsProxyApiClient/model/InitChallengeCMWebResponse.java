@@ -10,21 +10,22 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.AppChallengeInfo;
 import com.opentech.acsemv3dsProxyApiClient.model.BrowserChallengeInfo;
 import com.opentech.acsemv3dsProxyApiClient.model.CResInfo;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * InitChallengeCMWebResponse
  */
-
 
 public class InitChallengeCMWebResponse {
   @JsonProperty("appNextChallengeInfo")
@@ -51,7 +52,7 @@ public class InitChallengeCMWebResponse {
    * Get appNextChallengeInfo
    * @return appNextChallengeInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public AppChallengeInfo getAppNextChallengeInfo() {
     return appNextChallengeInfo;
   }
@@ -69,7 +70,7 @@ public class InitChallengeCMWebResponse {
    * Get browserNextChallengeInfo
    * @return browserNextChallengeInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public BrowserChallengeInfo getBrowserNextChallengeInfo() {
     return browserNextChallengeInfo;
   }
@@ -87,7 +88,7 @@ public class InitChallengeCMWebResponse {
    * Get cResInfo
    * @return cResInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public CResInfo getCResInfo() {
     return cResInfo;
   }
@@ -105,7 +106,7 @@ public class InitChallengeCMWebResponse {
    * Get currentStepId
    * @return currentStepId
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getCurrentStepId() {
     return currentStepId;
   }
@@ -123,7 +124,7 @@ public class InitChallengeCMWebResponse {
    * Get requestingWhitelist
    * @return requestingWhitelist
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isRequestingWhitelist() {
     return requestingWhitelist;
   }
@@ -181,3 +182,4 @@ public class InitChallengeCMWebResponse {
   }
 
 }
+

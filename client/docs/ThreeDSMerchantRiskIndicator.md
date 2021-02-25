@@ -1,3 +1,4 @@
+
 # ThreeDSMerchantRiskIndicator
 
 ## Properties
@@ -12,3 +13,6 @@ Name | Type | Description | Notes
 **preOrderPurchaseInd** | **String** |  |  [optional]
 **reorderItemsInd** | **String** |  |  [optional]
 **shipIndicator** | **String** |  |  [optional]
+
+
+

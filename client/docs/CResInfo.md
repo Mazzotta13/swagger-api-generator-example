@@ -1,3 +1,4 @@
+
 # CResInfo
 
 ## Properties
@@ -25,3 +26,6 @@ Name | Type | Description | Notes
 **whitelistingInfoText** | **String** |  |  [optional]
 **whyInfoLabel** | **String** |  |  [optional]
 **whyInfoText** | **String** |  |  [optional]
+
+
+

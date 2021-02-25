@@ -1,3 +1,4 @@
+
 # InitChallengeAuthenticatorWebRequest
 
 ## Properties
@@ -8,3 +9,6 @@ Name | Type | Description | Notes
 **cardNumber** | **String** |  |  [optional]
 **transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
 **whitelistingEnabled** | **Boolean** |  |  [optional]
+
+
+

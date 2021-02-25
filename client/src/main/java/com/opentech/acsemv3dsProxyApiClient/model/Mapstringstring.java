@@ -10,16 +10,16 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * Mapstringstring
  */
-
 
 public class Mapstringstring extends HashMap<String, String> {
 
@@ -61,3 +61,4 @@ public class Mapstringstring extends HashMap<String, String> {
   }
 
 }
+

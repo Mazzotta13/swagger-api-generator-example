@@ -10,20 +10,21 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.CReq;
 import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * InitChallengeAuthenticatorWebRequest
  */
-
 
 public class InitChallengeAuthenticatorWebRequest {
   @JsonProperty("authenticationName")
@@ -50,7 +51,7 @@ public class InitChallengeAuthenticatorWebRequest {
    * Get authenticationName
    * @return authenticationName
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAuthenticationName() {
     return authenticationName;
   }
@@ -68,7 +69,7 @@ public class InitChallengeAuthenticatorWebRequest {
    * Get cReq
    * @return cReq
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public CReq getCReq() {
     return cReq;
   }
@@ -86,7 +87,7 @@ public class InitChallengeAuthenticatorWebRequest {
    * Get cardNumber
    * @return cardNumber
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getCardNumber() {
     return cardNumber;
   }
@@ -104,7 +105,7 @@ public class InitChallengeAuthenticatorWebRequest {
    * Get transactionInfo
    * @return transactionInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public TransactionInfo getTransactionInfo() {
     return transactionInfo;
   }
@@ -122,7 +123,7 @@ public class InitChallengeAuthenticatorWebRequest {
    * Get whitelistingEnabled
    * @return whitelistingEnabled
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isWhitelistingEnabled() {
     return whitelistingEnabled;
   }
@@ -180,3 +181,4 @@ public class InitChallengeAuthenticatorWebRequest {
   }
 
 }
+

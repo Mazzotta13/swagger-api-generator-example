@@ -10,18 +10,19 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * ThreeDSImage
  */
-
 
 public class ThreeDSImage {
   @JsonProperty("extraHigh")
@@ -42,7 +43,7 @@ public class ThreeDSImage {
    * Get extraHigh
    * @return extraHigh
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getExtraHigh() {
     return extraHigh;
   }
@@ -60,7 +61,7 @@ public class ThreeDSImage {
    * Get high
    * @return high
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getHigh() {
     return high;
   }
@@ -78,7 +79,7 @@ public class ThreeDSImage {
    * Get medium
    * @return medium
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getMedium() {
     return medium;
   }
@@ -132,3 +133,4 @@ public class ThreeDSImage {
   }
 
 }
+

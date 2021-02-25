@@ -1,3 +1,4 @@
+
 # CheckAuthResultWebResponse
 
 ## Properties
@@ -5,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **transactionStatus** | [**TransactionStatusEnum**](#TransactionStatusEnum) |  |  [optional]
 **transactionStatusReason** | [**TransactionStatusReasonEnum**](#TransactionStatusReasonEnum) |  |  [optional]
+
 
 <a name="TransactionStatusEnum"></a>
 ## Enum: TransactionStatusEnum
@@ -18,6 +20,7 @@ UNABLE_TO_AUTHENTICATE | &quot;UNABLE_TO_AUTHENTICATE&quot;
 REJECT | &quot;REJECT&quot;
 DECOUPLED | &quot;DECOUPLED&quot;
 INFORMATIONAL | &quot;INFORMATIONAL&quot;
+
 
 <a name="TransactionStatusReasonEnum"></a>
 ## Enum: TransactionStatusReasonEnum
@@ -44,3 +47,6 @@ VERY_HIGH_CONFIDENCE | &quot;VERY_HIGH_CONFIDENCE&quot;
 EXCEEDS_ACS_MAXIMUM_CHALLENGES | &quot;EXCEEDS_ACS_MAXIMUM_CHALLENGES&quot;
 NON_PAYMENT_TRANSACTION_NOT_SUPPORTED | &quot;NON_PAYMENT_TRANSACTION_NOT_SUPPORTED&quot;
 THREE_RI_TRANSACTION_NOT_SUPPORTED | &quot;THREE_RI_TRANSACTION_NOT_SUPPORTED&quot;
+
+
+

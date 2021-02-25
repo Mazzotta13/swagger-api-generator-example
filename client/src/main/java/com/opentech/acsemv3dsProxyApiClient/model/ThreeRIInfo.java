@@ -10,19 +10,20 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * ThreeRIInfo
  */
-
 
 public class ThreeRIInfo {
   @JsonProperty("relatedTransaction")
@@ -40,7 +41,7 @@ public class ThreeRIInfo {
    * Get relatedTransaction
    * @return relatedTransaction
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public TransactionInfo getRelatedTransaction() {
     return relatedTransaction;
   }
@@ -58,7 +59,7 @@ public class ThreeRIInfo {
    * Get threeRI
    * @return threeRI
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isThreeRI() {
     return threeRI;
   }
@@ -110,3 +111,4 @@ public class ThreeRIInfo {
   }
 
 }
+

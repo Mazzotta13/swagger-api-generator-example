@@ -10,22 +10,23 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.Mapstringstring;
 import com.opentech.acsemv3dsProxyApiClient.model.ThreeDSImage;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * CResInfo
  */
-
 
 public class CResInfo {
   @JsonProperty("acsHTML")
@@ -103,7 +104,7 @@ public class CResInfo {
    * Get acsHTML
    * @return acsHTML
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAcsHTML() {
     return acsHTML;
   }
@@ -121,7 +122,7 @@ public class CResInfo {
    * Get acsUiType
    * @return acsUiType
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAcsUiType() {
     return acsUiType;
   }
@@ -139,7 +140,7 @@ public class CResInfo {
    * Get challengeAddInfo
    * @return challengeAddInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeAddInfo() {
     return challengeAddInfo;
   }
@@ -157,7 +158,7 @@ public class CResInfo {
    * Get challengeCompletionInd
    * @return challengeCompletionInd
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeCompletionInd() {
     return challengeCompletionInd;
   }
@@ -175,7 +176,7 @@ public class CResInfo {
    * Get challengeInfoHeader
    * @return challengeInfoHeader
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeInfoHeader() {
     return challengeInfoHeader;
   }
@@ -193,7 +194,7 @@ public class CResInfo {
    * Get challengeInfoLabel
    * @return challengeInfoLabel
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeInfoLabel() {
     return challengeInfoLabel;
   }
@@ -211,7 +212,7 @@ public class CResInfo {
    * Get challengeInfoText
    * @return challengeInfoText
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeInfoText() {
     return challengeInfoText;
   }
@@ -229,7 +230,7 @@ public class CResInfo {
    * Get challengeInfoTextIndicator
    * @return challengeInfoTextIndicator
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeInfoTextIndicator() {
     return challengeInfoTextIndicator;
   }
@@ -255,7 +256,7 @@ public class CResInfo {
    * Get challengeSelectInfo
    * @return challengeSelectInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public List<Mapstringstring> getChallengeSelectInfo() {
     return challengeSelectInfo;
   }
@@ -273,7 +274,7 @@ public class CResInfo {
    * Get expandInfoLabel
    * @return expandInfoLabel
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getExpandInfoLabel() {
     return expandInfoLabel;
   }
@@ -291,7 +292,7 @@ public class CResInfo {
    * Get expandInfoText
    * @return expandInfoText
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getExpandInfoText() {
     return expandInfoText;
   }
@@ -309,7 +310,7 @@ public class CResInfo {
    * Get issuerImage
    * @return issuerImage
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public ThreeDSImage getIssuerImage() {
     return issuerImage;
   }
@@ -327,7 +328,7 @@ public class CResInfo {
    * Get oobAppLabel
    * @return oobAppLabel
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getOobAppLabel() {
     return oobAppLabel;
   }
@@ -345,7 +346,7 @@ public class CResInfo {
    * Get oobAppURL
    * @return oobAppURL
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getOobAppURL() {
     return oobAppURL;
   }
@@ -363,7 +364,7 @@ public class CResInfo {
    * Get oobContinueLabel
    * @return oobContinueLabel
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getOobContinueLabel() {
     return oobContinueLabel;
   }
@@ -381,7 +382,7 @@ public class CResInfo {
    * Get psImage
    * @return psImage
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public ThreeDSImage getPsImage() {
     return psImage;
   }
@@ -399,7 +400,7 @@ public class CResInfo {
    * Get resendInformationLabel
    * @return resendInformationLabel
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getResendInformationLabel() {
     return resendInformationLabel;
   }
@@ -417,7 +418,7 @@ public class CResInfo {
    * Get submitAuthenticationLabel
    * @return submitAuthenticationLabel
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getSubmitAuthenticationLabel() {
     return submitAuthenticationLabel;
   }
@@ -435,7 +436,7 @@ public class CResInfo {
    * Get transStatus
    * @return transStatus
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getTransStatus() {
     return transStatus;
   }
@@ -453,7 +454,7 @@ public class CResInfo {
    * Get whitelistingInfoText
    * @return whitelistingInfoText
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getWhitelistingInfoText() {
     return whitelistingInfoText;
   }
@@ -471,7 +472,7 @@ public class CResInfo {
    * Get whyInfoLabel
    * @return whyInfoLabel
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getWhyInfoLabel() {
     return whyInfoLabel;
   }
@@ -489,7 +490,7 @@ public class CResInfo {
    * Get whyInfoText
    * @return whyInfoText
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getWhyInfoText() {
     return whyInfoText;
   }
@@ -581,3 +582,4 @@ public class CResInfo {
   }
 
 }
+

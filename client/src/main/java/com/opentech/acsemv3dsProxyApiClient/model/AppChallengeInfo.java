@@ -10,21 +10,22 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.ExpectedChallengeType;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * AppChallengeInfo
  */
-
 
 public class AppChallengeInfo {
   @JsonProperty("expectedChallengeTypes")
@@ -47,7 +48,7 @@ public class AppChallengeInfo {
    * Get expectedChallengeTypes
    * @return expectedChallengeTypes
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public List<ExpectedChallengeType> getExpectedChallengeTypes() {
     return expectedChallengeTypes;
   }
@@ -97,3 +98,4 @@ public class AppChallengeInfo {
   }
 
 }
+

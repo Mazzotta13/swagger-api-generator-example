@@ -10,10 +10,10 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -25,13 +25,14 @@ import com.opentech.acsemv3dsProxyApiClient.model.ThreeDSMerchantRiskIndicator;
 import com.opentech.acsemv3dsProxyApiClient.model.ThreeDSRequestorAuthInfo;
 import com.opentech.acsemv3dsProxyApiClient.model.ThreeDSRequestorPriorAuthInfo;
 import com.opentech.acsemv3dsProxyApiClient.model.ThreeDSSdkRenderingOptions;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * AReq
  */
-
 
 public class AReq {
   @JsonProperty("acctID")
@@ -301,7 +302,7 @@ public class AReq {
    * Get acctID
    * @return acctID
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAcctID() {
     return acctID;
   }
@@ -319,7 +320,7 @@ public class AReq {
    * Get acctInfo
    * @return acctInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public ThreeDSCardholderAccountInfo getAcctInfo() {
     return acctInfo;
   }
@@ -337,7 +338,7 @@ public class AReq {
    * Get acctNumber
    * @return acctNumber
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAcctNumber() {
     return acctNumber;
   }
@@ -355,7 +356,7 @@ public class AReq {
    * Get acctType
    * @return acctType
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAcctType() {
     return acctType;
   }
@@ -373,7 +374,7 @@ public class AReq {
    * Get acquirerBIN
    * @return acquirerBIN
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAcquirerBIN() {
     return acquirerBIN;
   }
@@ -391,7 +392,7 @@ public class AReq {
    * Get acquirerMerchantID
    * @return acquirerMerchantID
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAcquirerMerchantID() {
     return acquirerMerchantID;
   }
@@ -409,7 +410,7 @@ public class AReq {
    * Get addrMatch
    * @return addrMatch
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAddrMatch() {
     return addrMatch;
   }
@@ -427,7 +428,7 @@ public class AReq {
    * Get billAddrCity
    * @return billAddrCity
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBillAddrCity() {
     return billAddrCity;
   }
@@ -445,7 +446,7 @@ public class AReq {
    * Get billAddrCountry
    * @return billAddrCountry
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBillAddrCountry() {
     return billAddrCountry;
   }
@@ -463,7 +464,7 @@ public class AReq {
    * Get billAddrLine1
    * @return billAddrLine1
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBillAddrLine1() {
     return billAddrLine1;
   }
@@ -481,7 +482,7 @@ public class AReq {
    * Get billAddrLine2
    * @return billAddrLine2
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBillAddrLine2() {
     return billAddrLine2;
   }
@@ -499,7 +500,7 @@ public class AReq {
    * Get billAddrLine3
    * @return billAddrLine3
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBillAddrLine3() {
     return billAddrLine3;
   }
@@ -517,7 +518,7 @@ public class AReq {
    * Get billAddrPostCode
    * @return billAddrPostCode
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBillAddrPostCode() {
     return billAddrPostCode;
   }
@@ -535,7 +536,7 @@ public class AReq {
    * Get billAddrState
    * @return billAddrState
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBillAddrState() {
     return billAddrState;
   }
@@ -553,7 +554,7 @@ public class AReq {
    * Get broadInfo
    * @return broadInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Object getBroadInfo() {
     return broadInfo;
   }
@@ -571,7 +572,7 @@ public class AReq {
    * Get browserAcceptHeader
    * @return browserAcceptHeader
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBrowserAcceptHeader() {
     return browserAcceptHeader;
   }
@@ -589,7 +590,7 @@ public class AReq {
    * Get browserColorDepth
    * @return browserColorDepth
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBrowserColorDepth() {
     return browserColorDepth;
   }
@@ -607,7 +608,7 @@ public class AReq {
    * Get browserIP
    * @return browserIP
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBrowserIP() {
     return browserIP;
   }
@@ -625,7 +626,7 @@ public class AReq {
    * Get browserJavaEnabled
    * @return browserJavaEnabled
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isBrowserJavaEnabled() {
     return browserJavaEnabled;
   }
@@ -643,7 +644,7 @@ public class AReq {
    * Get browserJavascriptEnabled
    * @return browserJavascriptEnabled
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isBrowserJavascriptEnabled() {
     return browserJavascriptEnabled;
   }
@@ -661,7 +662,7 @@ public class AReq {
    * Get browserLanguage
    * @return browserLanguage
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBrowserLanguage() {
     return browserLanguage;
   }
@@ -679,7 +680,7 @@ public class AReq {
    * Get browserScreenHeight
    * @return browserScreenHeight
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBrowserScreenHeight() {
     return browserScreenHeight;
   }
@@ -697,7 +698,7 @@ public class AReq {
    * Get browserScreenWidth
    * @return browserScreenWidth
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBrowserScreenWidth() {
     return browserScreenWidth;
   }
@@ -715,7 +716,7 @@ public class AReq {
    * Get browserTZ
    * @return browserTZ
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBrowserTZ() {
     return browserTZ;
   }
@@ -733,7 +734,7 @@ public class AReq {
    * Get browserUserAgent
    * @return browserUserAgent
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getBrowserUserAgent() {
     return browserUserAgent;
   }
@@ -751,7 +752,7 @@ public class AReq {
    * Get cardExpiryDate
    * @return cardExpiryDate
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getCardExpiryDate() {
     return cardExpiryDate;
   }
@@ -769,7 +770,7 @@ public class AReq {
    * Get cardholderName
    * @return cardholderName
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getCardholderName() {
     return cardholderName;
   }
@@ -787,7 +788,7 @@ public class AReq {
    * Get deviceChannel
    * @return deviceChannel
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getDeviceChannel() {
     return deviceChannel;
   }
@@ -805,7 +806,7 @@ public class AReq {
    * Get deviceInfo
    * @return deviceInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Object getDeviceInfo() {
     return deviceInfo;
   }
@@ -823,7 +824,7 @@ public class AReq {
    * Get deviceRenderOptions
    * @return deviceRenderOptions
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public ThreeDSSdkRenderingOptions getDeviceRenderOptions() {
     return deviceRenderOptions;
   }
@@ -841,7 +842,7 @@ public class AReq {
    * Get dsReferenceNumber
    * @return dsReferenceNumber
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getDsReferenceNumber() {
     return dsReferenceNumber;
   }
@@ -859,7 +860,7 @@ public class AReq {
    * Get dsTransID
    * @return dsTransID
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getDsTransID() {
     return dsTransID;
   }
@@ -877,7 +878,7 @@ public class AReq {
    * Get dsURL
    * @return dsURL
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getDsURL() {
     return dsURL;
   }
@@ -895,7 +896,7 @@ public class AReq {
    * Get email
    * @return email
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -913,7 +914,7 @@ public class AReq {
    * Get homePhone
    * @return homePhone
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Phone getHomePhone() {
     return homePhone;
   }
@@ -931,7 +932,7 @@ public class AReq {
    * Get mcc
    * @return mcc
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getMcc() {
     return mcc;
   }
@@ -949,7 +950,7 @@ public class AReq {
    * Get merchantCountryCode
    * @return merchantCountryCode
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getMerchantCountryCode() {
     return merchantCountryCode;
   }
@@ -967,7 +968,7 @@ public class AReq {
    * Get merchantName
    * @return merchantName
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getMerchantName() {
     return merchantName;
   }
@@ -985,7 +986,7 @@ public class AReq {
    * Get merchantRiskIndicator
    * @return merchantRiskIndicator
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public ThreeDSMerchantRiskIndicator getMerchantRiskIndicator() {
     return merchantRiskIndicator;
   }
@@ -1003,7 +1004,7 @@ public class AReq {
    * Get messageCategory
    * @return messageCategory
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getMessageCategory() {
     return messageCategory;
   }
@@ -1029,7 +1030,7 @@ public class AReq {
    * Get messageExtension
    * @return messageExtension
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public List<Extension> getMessageExtension() {
     return messageExtension;
   }
@@ -1047,7 +1048,7 @@ public class AReq {
    * Get messageType
    * @return messageType
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getMessageType() {
     return messageType;
   }
@@ -1065,7 +1066,7 @@ public class AReq {
    * Get messageVersion
    * @return messageVersion
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getMessageVersion() {
     return messageVersion;
   }
@@ -1083,7 +1084,7 @@ public class AReq {
    * Get mobilePhone
    * @return mobilePhone
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Phone getMobilePhone() {
     return mobilePhone;
   }
@@ -1101,7 +1102,7 @@ public class AReq {
    * Get notificationURL
    * @return notificationURL
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getNotificationURL() {
     return notificationURL;
   }
@@ -1119,7 +1120,7 @@ public class AReq {
    * Get payTokenInd
    * @return payTokenInd
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isPayTokenInd() {
     return payTokenInd;
   }
@@ -1137,7 +1138,7 @@ public class AReq {
    * Get payTokenSource
    * @return payTokenSource
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getPayTokenSource() {
     return payTokenSource;
   }
@@ -1155,7 +1156,7 @@ public class AReq {
    * Get purchaseAmount
    * @return purchaseAmount
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getPurchaseAmount() {
     return purchaseAmount;
   }
@@ -1173,7 +1174,7 @@ public class AReq {
    * Get purchaseCurrency
    * @return purchaseCurrency
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getPurchaseCurrency() {
     return purchaseCurrency;
   }
@@ -1191,7 +1192,7 @@ public class AReq {
    * Get purchaseDate
    * @return purchaseDate
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getPurchaseDate() {
     return purchaseDate;
   }
@@ -1209,7 +1210,7 @@ public class AReq {
    * Get purchaseExponent
    * @return purchaseExponent
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getPurchaseExponent() {
     return purchaseExponent;
   }
@@ -1227,7 +1228,7 @@ public class AReq {
    * Get purchaseInstalData
    * @return purchaseInstalData
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getPurchaseInstalData() {
     return purchaseInstalData;
   }
@@ -1245,7 +1246,7 @@ public class AReq {
    * Get recurringExpiry
    * @return recurringExpiry
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getRecurringExpiry() {
     return recurringExpiry;
   }
@@ -1263,7 +1264,7 @@ public class AReq {
    * Get recurringFrequency
    * @return recurringFrequency
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getRecurringFrequency() {
     return recurringFrequency;
   }
@@ -1281,7 +1282,7 @@ public class AReq {
    * Get sdkAppID
    * @return sdkAppID
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getSdkAppID() {
     return sdkAppID;
   }
@@ -1299,7 +1300,7 @@ public class AReq {
    * Get sdkEphemPubKey
    * @return sdkEphemPubKey
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public SdkEphemPubKey getSdkEphemPubKey() {
     return sdkEphemPubKey;
   }
@@ -1317,7 +1318,7 @@ public class AReq {
    * Get sdkMaxTimeout
    * @return sdkMaxTimeout
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getSdkMaxTimeout() {
     return sdkMaxTimeout;
   }
@@ -1335,7 +1336,7 @@ public class AReq {
    * Get sdkReferenceNumber
    * @return sdkReferenceNumber
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getSdkReferenceNumber() {
     return sdkReferenceNumber;
   }
@@ -1353,7 +1354,7 @@ public class AReq {
    * Get sdkTransID
    * @return sdkTransID
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getSdkTransID() {
     return sdkTransID;
   }
@@ -1371,7 +1372,7 @@ public class AReq {
    * Get shipAddrCity
    * @return shipAddrCity
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getShipAddrCity() {
     return shipAddrCity;
   }
@@ -1389,7 +1390,7 @@ public class AReq {
    * Get shipAddrCountry
    * @return shipAddrCountry
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getShipAddrCountry() {
     return shipAddrCountry;
   }
@@ -1407,7 +1408,7 @@ public class AReq {
    * Get shipAddrLine1
    * @return shipAddrLine1
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getShipAddrLine1() {
     return shipAddrLine1;
   }
@@ -1425,7 +1426,7 @@ public class AReq {
    * Get shipAddrLine2
    * @return shipAddrLine2
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getShipAddrLine2() {
     return shipAddrLine2;
   }
@@ -1443,7 +1444,7 @@ public class AReq {
    * Get shipAddrLine3
    * @return shipAddrLine3
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getShipAddrLine3() {
     return shipAddrLine3;
   }
@@ -1461,7 +1462,7 @@ public class AReq {
    * Get shipAddrPostCode
    * @return shipAddrPostCode
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getShipAddrPostCode() {
     return shipAddrPostCode;
   }
@@ -1479,7 +1480,7 @@ public class AReq {
    * Get shipAddrState
    * @return shipAddrState
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getShipAddrState() {
     return shipAddrState;
   }
@@ -1497,7 +1498,7 @@ public class AReq {
    * Get threeDSCompInd
    * @return threeDSCompInd
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSCompInd() {
     return threeDSCompInd;
   }
@@ -1515,7 +1516,7 @@ public class AReq {
    * Get threeDSReqAuthMethodInd
    * @return threeDSReqAuthMethodInd
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSReqAuthMethodInd() {
     return threeDSReqAuthMethodInd;
   }
@@ -1533,7 +1534,7 @@ public class AReq {
    * Get threeDSRequestorAuthenticationInd
    * @return threeDSRequestorAuthenticationInd
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSRequestorAuthenticationInd() {
     return threeDSRequestorAuthenticationInd;
   }
@@ -1551,7 +1552,7 @@ public class AReq {
    * Get threeDSRequestorAuthenticationInfo
    * @return threeDSRequestorAuthenticationInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public ThreeDSRequestorAuthInfo getThreeDSRequestorAuthenticationInfo() {
     return threeDSRequestorAuthenticationInfo;
   }
@@ -1569,7 +1570,7 @@ public class AReq {
    * Get threeDSRequestorChallengeInd
    * @return threeDSRequestorChallengeInd
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSRequestorChallengeInd() {
     return threeDSRequestorChallengeInd;
   }
@@ -1587,7 +1588,7 @@ public class AReq {
    * Get threeDSRequestorDecMaxTime
    * @return threeDSRequestorDecMaxTime
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSRequestorDecMaxTime() {
     return threeDSRequestorDecMaxTime;
   }
@@ -1605,7 +1606,7 @@ public class AReq {
    * Get threeDSRequestorDecReqInd
    * @return threeDSRequestorDecReqInd
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSRequestorDecReqInd() {
     return threeDSRequestorDecReqInd;
   }
@@ -1623,7 +1624,7 @@ public class AReq {
    * Get threeDSRequestorID
    * @return threeDSRequestorID
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSRequestorID() {
     return threeDSRequestorID;
   }
@@ -1641,7 +1642,7 @@ public class AReq {
    * Get threeDSRequestorName
    * @return threeDSRequestorName
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSRequestorName() {
     return threeDSRequestorName;
   }
@@ -1659,7 +1660,7 @@ public class AReq {
    * Get threeDSRequestorPriorAuthenticationInfo
    * @return threeDSRequestorPriorAuthenticationInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public ThreeDSRequestorPriorAuthInfo getThreeDSRequestorPriorAuthenticationInfo() {
     return threeDSRequestorPriorAuthenticationInfo;
   }
@@ -1677,7 +1678,7 @@ public class AReq {
    * Get threeDSRequestorURL
    * @return threeDSRequestorURL
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSRequestorURL() {
     return threeDSRequestorURL;
   }
@@ -1695,7 +1696,7 @@ public class AReq {
    * Get threeDSServerOperatorID
    * @return threeDSServerOperatorID
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSServerOperatorID() {
     return threeDSServerOperatorID;
   }
@@ -1713,7 +1714,7 @@ public class AReq {
    * Get threeDSServerRefNumber
    * @return threeDSServerRefNumber
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSServerRefNumber() {
     return threeDSServerRefNumber;
   }
@@ -1731,7 +1732,7 @@ public class AReq {
    * Get threeDSServerTransID
    * @return threeDSServerTransID
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSServerTransID() {
     return threeDSServerTransID;
   }
@@ -1749,7 +1750,7 @@ public class AReq {
    * Get threeDSServerURL
    * @return threeDSServerURL
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSServerURL() {
     return threeDSServerURL;
   }
@@ -1767,7 +1768,7 @@ public class AReq {
    * Get threeRIInd
    * @return threeRIInd
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeRIInd() {
     return threeRIInd;
   }
@@ -1785,7 +1786,7 @@ public class AReq {
    * Get transType
    * @return transType
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getTransType() {
     return transType;
   }
@@ -1803,7 +1804,7 @@ public class AReq {
    * Get whiteListStatus
    * @return whiteListStatus
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getWhiteListStatus() {
     return whiteListStatus;
   }
@@ -1821,7 +1822,7 @@ public class AReq {
    * Get whiteListStatusSource
    * @return whiteListStatusSource
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getWhiteListStatusSource() {
     return whiteListStatusSource;
   }
@@ -1839,7 +1840,7 @@ public class AReq {
    * Get workPhone
    * @return workPhone
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Phone getWorkPhone() {
     return workPhone;
   }
@@ -2059,3 +2060,4 @@ public class AReq {
   }
 
 }
+

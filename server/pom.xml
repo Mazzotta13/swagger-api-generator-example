@@ -11,12 +11,63 @@
         <version>1.24-SNAPSHOT</version>
     </parent>
 
+    <properties>
+        <swagger.codegen.template.directory>codegencustomtemplates/Java</swagger.codegen.template.directory>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
-                <groupId>io.swagger.codegen.v3</groupId>
-                <artifactId>swagger-codegen-maven-plugin</artifactId> <!-- vedi nota su openapi 3 -->
-                <version>3.0.24</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <id>Update Rules</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>${basedir}/updateRules.sh</executable>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>
+                                ${basedir}/target/checkout/server/${swagger.codegen.template.directory}
+                            </outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>
+                                        ${swagger.codegen.template.directory}
+                                    </directory>
+                                    <filtering>false</filtering>
+                                    <includes>
+                                        <include>**/*.*</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-codegen-maven-plugin</artifactId>
+                <version>2.4.12</version>
                 <executions>
                     <execution>
                         <goals>
@@ -25,6 +76,7 @@
                         <configuration>
                             <configHelp>false</configHelp> <!-- Mettere a true per stampare help -->
                             <language>java</language>
+                            <templateDirectory>${project.basedir}/${swagger.codegen.template.directory}</templateDirectory> <!-- Da aggiungere alla configurazione -->
                             <inputSpec>${project.basedir}/src/main/resources/swagger_api.json</inputSpec>  <!-- Riferimento a file swagger -->
                             <output>${project.basedir}/../client</output>
                             <artifactId>acsemv3ds-ProxyApi-Client</artifactId>

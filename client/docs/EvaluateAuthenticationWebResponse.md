@@ -1,3 +1,4 @@
+
 # EvaluateAuthenticationWebResponse
 
 ## Properties
@@ -13,6 +14,7 @@ Name | Type | Description | Notes
 **extensions** | [**List&lt;Extension&gt;**](Extension.md) |  |  [optional]
 **transactionStatusReason** | [**TransactionStatusReasonEnum**](#TransactionStatusReasonEnum) |  |  [optional]
 **whitelistStatus** | **String** |  |  [optional]
+
 
 <a name="AuthenticationMethodEnum"></a>
 ## Enum: AuthenticationMethodEnum
@@ -30,6 +32,7 @@ OOB_OTHER | &quot;OOB_OTHER&quot;
 OTHER | &quot;OTHER&quot;
 PUSH_CONFIRMATION | &quot;PUSH_CONFIRMATION&quot;
 
+
 <a name="AuthenticationResultEnum"></a>
 ## Enum: AuthenticationResultEnum
 Name | Value
@@ -44,6 +47,7 @@ INFORMATIONAL_OK | &quot;INFORMATIONAL_OK&quot;
 INFORMATIONAL_DENIED | &quot;INFORMATIONAL_DENIED&quot;
 DECOUPLED_AUTHENTICATION | &quot;DECOUPLED_AUTHENTICATION&quot;
 
+
 <a name="AuthenticationTypeEnum"></a>
 ## Enum: AuthenticationTypeEnum
 Name | Value
@@ -52,6 +56,7 @@ STATIC | &quot;STATIC&quot;
 DYNAMIC | &quot;DYNAMIC&quot;
 OOB | &quot;OOB&quot;
 DECOUPLED | &quot;DECOUPLED&quot;
+
 
 <a name="TransactionStatusReasonEnum"></a>
 ## Enum: TransactionStatusReasonEnum
@@ -78,3 +83,6 @@ VERY_HIGH_CONFIDENCE | &quot;VERY_HIGH_CONFIDENCE&quot;
 EXCEEDS_ACS_MAXIMUM_CHALLENGES | &quot;EXCEEDS_ACS_MAXIMUM_CHALLENGES&quot;
 NON_PAYMENT_TRANSACTION_NOT_SUPPORTED | &quot;NON_PAYMENT_TRANSACTION_NOT_SUPPORTED&quot;
 THREE_RI_TRANSACTION_NOT_SUPPORTED | &quot;THREE_RI_TRANSACTION_NOT_SUPPORTED&quot;
+
+
+

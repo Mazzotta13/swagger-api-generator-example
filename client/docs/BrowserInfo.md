@@ -1,3 +1,4 @@
+
 # BrowserInfo
 
 ## Properties
@@ -10,3 +11,6 @@ Name | Type | Description | Notes
 **platform** | **String** |  |  [optional]
 **platformVersion** | **String** |  |  [optional]
 **threeDsServerTransId** | **String** |  |  [optional]
+
+
+

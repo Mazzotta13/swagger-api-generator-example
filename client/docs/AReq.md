@@ -1,3 +1,4 @@
+
 # AReq
 
 ## Properties
@@ -89,3 +90,6 @@ Name | Type | Description | Notes
 **whiteListStatus** | **String** |  |  [optional]
 **whiteListStatusSource** | **String** |  |  [optional]
 **workPhone** | [**Phone**](Phone.md) |  |  [optional]
+
+
+

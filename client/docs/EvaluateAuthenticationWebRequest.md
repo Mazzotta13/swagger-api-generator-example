@@ -1,3 +1,4 @@
+
 # EvaluateAuthenticationWebRequest
 
 ## Properties
@@ -8,3 +9,6 @@ Name | Type | Description | Notes
 **browserInfo** | [**BrowserInfo**](BrowserInfo.md) |  |  [optional]
 **threeRIInfo** | [**ThreeRIInfo**](ThreeRIInfo.md) |  |  [optional]
 **whitelistingEnabled** | **Boolean** |  |  [optional]
+
+
+

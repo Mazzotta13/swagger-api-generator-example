@@ -1,3 +1,4 @@
+
 # InitChallengeCMWebResponse
 
 ## Properties
@@ -8,3 +9,6 @@ Name | Type | Description | Notes
 **cResInfo** | [**CResInfo**](CResInfo.md) |  |  [optional]
 **currentStepId** | **String** |  |  [optional]
 **requestingWhitelist** | **Boolean** |  |  [optional]
+
+
+

@@ -26,46 +26,47 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
-@Component("com.opentech.acsemv3dsProxyApiClient.api.CardTokenizerControllerApi")
-public class CardTokenizerControllerApi {
+
+public abstract class CardTokenizerControllerApi {
+
     private ApiClient apiClient;
 
-    public CardTokenizerControllerApi() {
-        this(new ApiClient());
-    }
-
-    @Autowired
-    public CardTokenizerControllerApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
+    protected ApiClient getApiClient() {
         return apiClient;
     }
 
-    public void setApiClient(ApiClient apiClient) {
+    protected void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
+
+    public static final String detokenizeUsingPOST ="/3ds/{issuer-code}/detokenize";
+    public static final String tokenizeUsingPOST ="/3ds/{issuer-code}/tokenize";
+
+    public abstract DetokenizeWebResponse detokenizeUsingPOST(DetokenizeWebRequest detokenizeWebRequest, String issuerCode) throws RestClientException;
+    public abstract TokenizeWebResponse tokenizeUsingPOST(String issuerCode, TokenizeWebRequest tokenizeWebRequest) throws RestClientException;
 
     /**
      * detokenize
      * 
      * <p><b>200</b> - OK
-     * @param body detokenizeWebRequest
+     * @param detokenizeWebRequest detokenizeWebRequest
      * @param issuerCode issuer-code
      * @return DetokenizeWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public DetokenizeWebResponse detokenizeUsingPOST(DetokenizeWebRequest body, String issuerCode) throws RestClientException {
-        Object postBody = body;
-        // verify the required parameter 'body' is set
-        if (body == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling detokenizeUsingPOST");
+    protected DetokenizeWebResponse detokenizeUsingPOSTinternal(DetokenizeWebRequest detokenizeWebRequest, String issuerCode) throws RestClientException {
+        Object postBody = detokenizeWebRequest;
+        
+        // verify the required parameter 'detokenizeWebRequest' is set
+        if (detokenizeWebRequest == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'detokenizeWebRequest' when calling detokenizeUsingPOST");
         }
+        
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling detokenizeUsingPOST");
         }
+        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -77,11 +78,11 @@ public class CardTokenizerControllerApi {
 
         final String[] accepts = { 
             "application/json"
-         };
+        };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-         };
+        };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };
@@ -93,21 +94,24 @@ public class CardTokenizerControllerApi {
      * tokenize
      * 
      * <p><b>200</b> - OK
-     * @param body tokenizeWebRequest
      * @param issuerCode issuer-code
+     * @param tokenizeWebRequest tokenizeWebRequest
      * @return TokenizeWebResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public TokenizeWebResponse tokenizeUsingPOST(TokenizeWebRequest body, String issuerCode) throws RestClientException {
-        Object postBody = body;
-        // verify the required parameter 'body' is set
-        if (body == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'body' when calling tokenizeUsingPOST");
-        }
+    protected TokenizeWebResponse tokenizeUsingPOSTinternal(String issuerCode, TokenizeWebRequest tokenizeWebRequest) throws RestClientException {
+        Object postBody = tokenizeWebRequest;
+        
         // verify the required parameter 'issuerCode' is set
         if (issuerCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling tokenizeUsingPOST");
         }
+        
+        // verify the required parameter 'tokenizeWebRequest' is set
+        if (tokenizeWebRequest == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'tokenizeWebRequest' when calling tokenizeUsingPOST");
+        }
+        
         // create path and map variables
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("issuer-code", issuerCode);
@@ -119,11 +123,11 @@ public class CardTokenizerControllerApi {
 
         final String[] accepts = { 
             "application/json"
-         };
+        };
         final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
         final String[] contentTypes = { 
             "application/json"
-         };
+        };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] {  };

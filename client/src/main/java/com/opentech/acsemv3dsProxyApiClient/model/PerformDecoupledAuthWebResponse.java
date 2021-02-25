@@ -10,18 +10,19 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * PerformDecoupledAuthWebResponse
  */
-
 
 public class PerformDecoupledAuthWebResponse {
   @JsonProperty("cardholderInfo")
@@ -36,7 +37,7 @@ public class PerformDecoupledAuthWebResponse {
    * Get cardholderInfo
    * @return cardholderInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getCardholderInfo() {
     return cardholderInfo;
   }
@@ -86,3 +87,4 @@ public class PerformDecoupledAuthWebResponse {
   }
 
 }
+

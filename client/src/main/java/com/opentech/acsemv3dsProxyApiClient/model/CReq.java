@@ -10,21 +10,22 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.Extension;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * CReq
  */
-
 
 public class CReq {
   @JsonProperty("acsTransID")
@@ -84,7 +85,7 @@ public class CReq {
    * Get acsTransID
    * @return acsTransID
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAcsTransID() {
     return acsTransID;
   }
@@ -102,7 +103,7 @@ public class CReq {
    * Get challengeCancel
    * @return challengeCancel
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeCancel() {
     return challengeCancel;
   }
@@ -120,7 +121,7 @@ public class CReq {
    * Get challengeDataEntry
    * @return challengeDataEntry
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeDataEntry() {
     return challengeDataEntry;
   }
@@ -138,7 +139,7 @@ public class CReq {
    * Get challengeHTMLDataEntry
    * @return challengeHTMLDataEntry
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeHTMLDataEntry() {
     return challengeHTMLDataEntry;
   }
@@ -156,7 +157,7 @@ public class CReq {
    * Get challengeNoEntry
    * @return challengeNoEntry
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeNoEntry() {
     return challengeNoEntry;
   }
@@ -174,7 +175,7 @@ public class CReq {
    * Get challengeWindowSize
    * @return challengeWindowSize
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getChallengeWindowSize() {
     return challengeWindowSize;
   }
@@ -200,7 +201,7 @@ public class CReq {
    * Get messageExtension
    * @return messageExtension
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public List<Extension> getMessageExtension() {
     return messageExtension;
   }
@@ -218,7 +219,7 @@ public class CReq {
    * Get messageType
    * @return messageType
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getMessageType() {
     return messageType;
   }
@@ -236,7 +237,7 @@ public class CReq {
    * Get messageVersion
    * @return messageVersion
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getMessageVersion() {
     return messageVersion;
   }
@@ -254,7 +255,7 @@ public class CReq {
    * Get oobContinue
    * @return oobContinue
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isOobContinue() {
     return oobContinue;
   }
@@ -272,7 +273,7 @@ public class CReq {
    * Get resendChallenge
    * @return resendChallenge
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getResendChallenge() {
     return resendChallenge;
   }
@@ -290,7 +291,7 @@ public class CReq {
    * Get sdkCounterStoA
    * @return sdkCounterStoA
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getSdkCounterStoA() {
     return sdkCounterStoA;
   }
@@ -308,7 +309,7 @@ public class CReq {
    * Get sdkTransID
    * @return sdkTransID
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getSdkTransID() {
     return sdkTransID;
   }
@@ -326,7 +327,7 @@ public class CReq {
    * Get threeDSRequestorAppURL
    * @return threeDSRequestorAppURL
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSRequestorAppURL() {
     return threeDSRequestorAppURL;
   }
@@ -344,7 +345,7 @@ public class CReq {
    * Get threeDSServerTransID
    * @return threeDSServerTransID
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getThreeDSServerTransID() {
     return threeDSServerTransID;
   }
@@ -362,7 +363,7 @@ public class CReq {
    * Get whitelistingDataEntry
    * @return whitelistingDataEntry
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getWhitelistingDataEntry() {
     return whitelistingDataEntry;
   }
@@ -442,3 +443,4 @@ public class CReq {
   }
 
 }
+

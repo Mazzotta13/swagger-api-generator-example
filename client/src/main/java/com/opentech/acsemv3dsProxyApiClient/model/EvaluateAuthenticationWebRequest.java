@@ -10,21 +10,22 @@
  * Do not edit the class manually.
  */
 
+
 package com.opentech.acsemv3dsProxyApiClient.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.AReq;
 import com.opentech.acsemv3dsProxyApiClient.model.BrowserInfo;
 import com.opentech.acsemv3dsProxyApiClient.model.ThreeRIInfo;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * EvaluateAuthenticationWebRequest
  */
-
 
 public class EvaluateAuthenticationWebRequest {
   @JsonProperty("aReq")
@@ -51,7 +52,7 @@ public class EvaluateAuthenticationWebRequest {
    * Get aReq
    * @return aReq
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public AReq getAReq() {
     return aReq;
   }
@@ -69,7 +70,7 @@ public class EvaluateAuthenticationWebRequest {
    * Get acsTransactionId
    * @return acsTransactionId
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getAcsTransactionId() {
     return acsTransactionId;
   }
@@ -87,7 +88,7 @@ public class EvaluateAuthenticationWebRequest {
    * Get browserInfo
    * @return browserInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public BrowserInfo getBrowserInfo() {
     return browserInfo;
   }
@@ -105,7 +106,7 @@ public class EvaluateAuthenticationWebRequest {
    * Get threeRIInfo
    * @return threeRIInfo
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public ThreeRIInfo getThreeRIInfo() {
     return threeRIInfo;
   }
@@ -123,7 +124,7 @@ public class EvaluateAuthenticationWebRequest {
    * Get whitelistingEnabled
    * @return whitelistingEnabled
   **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public Boolean isWhitelistingEnabled() {
     return whitelistingEnabled;
   }
@@ -181,3 +182,4 @@ public class EvaluateAuthenticationWebRequest {
   }
 
 }
+

@@ -50,6 +50,7 @@ import com.opentech.acsemv3dsProxyApiClient.auth.HttpBasicAuth;
 import com.opentech.acsemv3dsProxyApiClient.auth.ApiKeyAuth;
 import com.opentech.acsemv3dsProxyApiClient.auth.OAuth;
 
+
 @Component("com.opentech.acsemv3dsProxyApiClient.ApiClient")
 public class ApiClient {
     public enum CollectionFormat {
@@ -69,7 +70,7 @@ public class ApiClient {
     
     private HttpHeaders defaultHeaders = new HttpHeaders();
     
-    private String basePath = "//localhost:8080/acsemv3dsproxy";
+    private String basePath = "https://localhost:8080/acsemv3dsproxy";
 
     private RestTemplate restTemplate;
 
@@ -103,7 +104,7 @@ public class ApiClient {
         setUserAgent("Java-SDK");
 
         // Setup authentications (key: authentication name, value: authentication).
-    authentications = new HashMap<String, Authentication>();
+        authentications = new HashMap<String, Authentication>();
         // Prevent the authentications from being modified.
         authentications = Collections.unmodifiableMap(authentications);
     }
@@ -248,6 +249,9 @@ public class ApiClient {
      * @return ApiClient this client
      */
     public ApiClient addDefaultHeader(String name, String value) {
+        if (defaultHeaders.containsKey(name)) {
+            defaultHeaders.remove(name);
+        }
         defaultHeaders.add(name, value);
         return this;
     }

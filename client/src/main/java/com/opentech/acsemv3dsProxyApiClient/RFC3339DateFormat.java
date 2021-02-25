@@ -9,6 +9,7 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+
 package com.opentech.acsemv3dsProxyApiClient;
 
 import com.fasterxml.jackson.databind.util.ISO8601DateFormat;

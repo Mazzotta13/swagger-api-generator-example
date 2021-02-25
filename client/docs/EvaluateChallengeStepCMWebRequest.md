@@ -1,3 +1,4 @@
+
 # EvaluateChallengeStepCMWebRequest
 
 ## Properties
@@ -9,3 +10,6 @@ Name | Type | Description | Notes
 **currStepId** | **String** |  |  [optional]
 **requestWhitelist** | **Boolean** |  |  [optional]
 **transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
+
+
+

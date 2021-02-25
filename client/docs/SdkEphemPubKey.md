@@ -1,3 +1,4 @@
+
 # SdkEphemPubKey
 
 ## Properties
@@ -7,3 +8,6 @@ Name | Type | Description | Notes
 **kty** | **String** |  |  [optional]
 **x** | **String** |  |  [optional]
 **y** | **String** |  |  [optional]
+
+
+

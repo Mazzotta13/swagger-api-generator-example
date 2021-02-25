@@ -1,3 +1,4 @@
+
 # EvaluateChallengeStepAuthenticatorWebResponse
 
 ## Properties
@@ -7,6 +8,7 @@ Name | Type | Description | Notes
 **requestWhitelist** | **Boolean** |  |  [optional]
 **result** | **String** |  |  [optional]
 **transactionStatusReason** | [**TransactionStatusReasonEnum**](#TransactionStatusReasonEnum) |  |  [optional]
+
 
 <a name="TransactionStatusReasonEnum"></a>
 ## Enum: TransactionStatusReasonEnum
@@ -33,3 +35,6 @@ VERY_HIGH_CONFIDENCE | &quot;VERY_HIGH_CONFIDENCE&quot;
 EXCEEDS_ACS_MAXIMUM_CHALLENGES | &quot;EXCEEDS_ACS_MAXIMUM_CHALLENGES&quot;
 NON_PAYMENT_TRANSACTION_NOT_SUPPORTED | &quot;NON_PAYMENT_TRANSACTION_NOT_SUPPORTED&quot;
 THREE_RI_TRANSACTION_NOT_SUPPORTED | &quot;THREE_RI_TRANSACTION_NOT_SUPPORTED&quot;
+
+
+
