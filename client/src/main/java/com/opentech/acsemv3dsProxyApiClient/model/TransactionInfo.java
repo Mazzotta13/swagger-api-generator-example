@@ -18,8 +18,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.opentech.acsemv3dsProxyApiClient.model.ThreeDSAcsRenderingType;
+import com.opentech.acsemv3dsProxyApiClient.model.TransactionOtherInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -27,8 +29,11 @@ import java.util.Date;
  */
 
 public class TransactionInfo {
-  @JsonProperty("aav")
-  private String aav = null;
+  @JsonProperty("acquirerBin")
+  private String acquirerBin = null;
+
+  @JsonProperty("acquirerMerchantId")
+  private String acquirerMerchantId = null;
 
   @JsonProperty("acsMaxChallenges")
   private Integer acsMaxChallenges = null;
@@ -38,6 +43,9 @@ public class TransactionInfo {
 
   @JsonProperty("acsTransactionId")
   private String acsTransactionId = null;
+
+  @JsonProperty("amount")
+  private BigDecimal amount = null;
 
   @JsonProperty("authenticationMethod")
   private String authenticationMethod = null;
@@ -60,6 +68,12 @@ public class TransactionInfo {
   @JsonProperty("creationDate")
   private Date creationDate = null;
 
+  @JsonProperty("currencyCode")
+  private String currencyCode = null;
+
+  @JsonProperty("currencyExponent")
+  private String currencyExponent = null;
+
   @JsonProperty("currentStepId")
   private String currentStepId = null;
 
@@ -72,8 +86,17 @@ public class TransactionInfo {
   @JsonProperty("dsUrl")
   private String dsUrl = null;
 
-  @JsonProperty("eci")
-  private String eci = null;
+  @JsonProperty("errorCode")
+  private String errorCode = null;
+
+  @JsonProperty("errorCodeText")
+  private String errorCodeText = null;
+
+  @JsonProperty("errorDescription")
+  private String errorDescription = null;
+
+  @JsonProperty("errorDetail")
+  private String errorDetail = null;
 
   @JsonProperty("instalment")
   private Boolean instalment = null;
@@ -81,11 +104,20 @@ public class TransactionInfo {
   @JsonProperty("interactionCounter")
   private Integer interactionCounter = null;
 
+  @JsonProperty("internalTransactionStatus")
+  private String internalTransactionStatus = null;
+
+  @JsonProperty("internalTransactionStatusReason")
+  private String internalTransactionStatusReason = null;
+
   @JsonProperty("issuerCode")
   private String issuerCode = null;
 
   @JsonProperty("messageCategory")
   private String messageCategory = null;
+
+  @JsonProperty("otherInfo")
+  private TransactionOtherInfo otherInfo = null;
 
   @JsonProperty("parentTransactionId")
   private String parentTransactionId = null;
@@ -93,8 +125,17 @@ public class TransactionInfo {
   @JsonProperty("processingStep")
   private String processingStep = null;
 
+  @JsonProperty("purchaseDate")
+  private Date purchaseDate = null;
+
   @JsonProperty("recurring")
   private Boolean recurring = null;
+
+  @JsonProperty("rresResultStatus")
+  private String rresResultStatus = null;
+
+  @JsonProperty("sdkMaxTimeout")
+  private String sdkMaxTimeout = null;
 
   @JsonProperty("sdkTransactionId")
   private String sdkTransactionId = null;
@@ -108,25 +149,46 @@ public class TransactionInfo {
   @JsonProperty("transactionStatus")
   private String transactionStatus = null;
 
-  @JsonProperty("validationReason")
-  private String validationReason = null;
+  @JsonProperty("transactionStatusReason")
+  private String transactionStatusReason = null;
 
-  public TransactionInfo aav(String aav) {
-    this.aav = aav;
+  @JsonProperty("txLanguage")
+  private String txLanguage = null;
+
+  public TransactionInfo acquirerBin(String acquirerBin) {
+    this.acquirerBin = acquirerBin;
     return this;
   }
 
    /**
-   * Get aav
-   * @return aav
+   * Get acquirerBin
+   * @return acquirerBin
   **/
   @ApiModelProperty(value = "")
-  public String getAav() {
-    return aav;
+  public String getAcquirerBin() {
+    return acquirerBin;
   }
 
-  public void setAav(String aav) {
-    this.aav = aav;
+  public void setAcquirerBin(String acquirerBin) {
+    this.acquirerBin = acquirerBin;
+  }
+
+  public TransactionInfo acquirerMerchantId(String acquirerMerchantId) {
+    this.acquirerMerchantId = acquirerMerchantId;
+    return this;
+  }
+
+   /**
+   * Get acquirerMerchantId
+   * @return acquirerMerchantId
+  **/
+  @ApiModelProperty(value = "")
+  public String getAcquirerMerchantId() {
+    return acquirerMerchantId;
+  }
+
+  public void setAcquirerMerchantId(String acquirerMerchantId) {
+    this.acquirerMerchantId = acquirerMerchantId;
   }
 
   public TransactionInfo acsMaxChallenges(Integer acsMaxChallenges) {
@@ -181,6 +243,24 @@ public class TransactionInfo {
 
   public void setAcsTransactionId(String acsTransactionId) {
     this.acsTransactionId = acsTransactionId;
+  }
+
+  public TransactionInfo amount(BigDecimal amount) {
+    this.amount = amount;
+    return this;
+  }
+
+   /**
+   * Get amount
+   * @return amount
+  **/
+  @ApiModelProperty(value = "")
+  public BigDecimal getAmount() {
+    return amount;
+  }
+
+  public void setAmount(BigDecimal amount) {
+    this.amount = amount;
   }
 
   public TransactionInfo authenticationMethod(String authenticationMethod) {
@@ -309,6 +389,42 @@ public class TransactionInfo {
     this.creationDate = creationDate;
   }
 
+  public TransactionInfo currencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
+    return this;
+  }
+
+   /**
+   * Get currencyCode
+   * @return currencyCode
+  **/
+  @ApiModelProperty(value = "")
+  public String getCurrencyCode() {
+    return currencyCode;
+  }
+
+  public void setCurrencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
+  }
+
+  public TransactionInfo currencyExponent(String currencyExponent) {
+    this.currencyExponent = currencyExponent;
+    return this;
+  }
+
+   /**
+   * Get currencyExponent
+   * @return currencyExponent
+  **/
+  @ApiModelProperty(value = "")
+  public String getCurrencyExponent() {
+    return currencyExponent;
+  }
+
+  public void setCurrencyExponent(String currencyExponent) {
+    this.currencyExponent = currencyExponent;
+  }
+
   public TransactionInfo currentStepId(String currentStepId) {
     this.currentStepId = currentStepId;
     return this;
@@ -381,22 +497,76 @@ public class TransactionInfo {
     this.dsUrl = dsUrl;
   }
 
-  public TransactionInfo eci(String eci) {
-    this.eci = eci;
+  public TransactionInfo errorCode(String errorCode) {
+    this.errorCode = errorCode;
     return this;
   }
 
    /**
-   * Get eci
-   * @return eci
+   * Get errorCode
+   * @return errorCode
   **/
   @ApiModelProperty(value = "")
-  public String getEci() {
-    return eci;
+  public String getErrorCode() {
+    return errorCode;
   }
 
-  public void setEci(String eci) {
-    this.eci = eci;
+  public void setErrorCode(String errorCode) {
+    this.errorCode = errorCode;
+  }
+
+  public TransactionInfo errorCodeText(String errorCodeText) {
+    this.errorCodeText = errorCodeText;
+    return this;
+  }
+
+   /**
+   * Get errorCodeText
+   * @return errorCodeText
+  **/
+  @ApiModelProperty(value = "")
+  public String getErrorCodeText() {
+    return errorCodeText;
+  }
+
+  public void setErrorCodeText(String errorCodeText) {
+    this.errorCodeText = errorCodeText;
+  }
+
+  public TransactionInfo errorDescription(String errorDescription) {
+    this.errorDescription = errorDescription;
+    return this;
+  }
+
+   /**
+   * Get errorDescription
+   * @return errorDescription
+  **/
+  @ApiModelProperty(value = "")
+  public String getErrorDescription() {
+    return errorDescription;
+  }
+
+  public void setErrorDescription(String errorDescription) {
+    this.errorDescription = errorDescription;
+  }
+
+  public TransactionInfo errorDetail(String errorDetail) {
+    this.errorDetail = errorDetail;
+    return this;
+  }
+
+   /**
+   * Get errorDetail
+   * @return errorDetail
+  **/
+  @ApiModelProperty(value = "")
+  public String getErrorDetail() {
+    return errorDetail;
+  }
+
+  public void setErrorDetail(String errorDetail) {
+    this.errorDetail = errorDetail;
   }
 
   public TransactionInfo instalment(Boolean instalment) {
@@ -435,6 +605,42 @@ public class TransactionInfo {
     this.interactionCounter = interactionCounter;
   }
 
+  public TransactionInfo internalTransactionStatus(String internalTransactionStatus) {
+    this.internalTransactionStatus = internalTransactionStatus;
+    return this;
+  }
+
+   /**
+   * Get internalTransactionStatus
+   * @return internalTransactionStatus
+  **/
+  @ApiModelProperty(value = "")
+  public String getInternalTransactionStatus() {
+    return internalTransactionStatus;
+  }
+
+  public void setInternalTransactionStatus(String internalTransactionStatus) {
+    this.internalTransactionStatus = internalTransactionStatus;
+  }
+
+  public TransactionInfo internalTransactionStatusReason(String internalTransactionStatusReason) {
+    this.internalTransactionStatusReason = internalTransactionStatusReason;
+    return this;
+  }
+
+   /**
+   * Get internalTransactionStatusReason
+   * @return internalTransactionStatusReason
+  **/
+  @ApiModelProperty(value = "")
+  public String getInternalTransactionStatusReason() {
+    return internalTransactionStatusReason;
+  }
+
+  public void setInternalTransactionStatusReason(String internalTransactionStatusReason) {
+    this.internalTransactionStatusReason = internalTransactionStatusReason;
+  }
+
   public TransactionInfo issuerCode(String issuerCode) {
     this.issuerCode = issuerCode;
     return this;
@@ -469,6 +675,24 @@ public class TransactionInfo {
 
   public void setMessageCategory(String messageCategory) {
     this.messageCategory = messageCategory;
+  }
+
+  public TransactionInfo otherInfo(TransactionOtherInfo otherInfo) {
+    this.otherInfo = otherInfo;
+    return this;
+  }
+
+   /**
+   * Get otherInfo
+   * @return otherInfo
+  **/
+  @ApiModelProperty(value = "")
+  public TransactionOtherInfo getOtherInfo() {
+    return otherInfo;
+  }
+
+  public void setOtherInfo(TransactionOtherInfo otherInfo) {
+    this.otherInfo = otherInfo;
   }
 
   public TransactionInfo parentTransactionId(String parentTransactionId) {
@@ -507,6 +731,24 @@ public class TransactionInfo {
     this.processingStep = processingStep;
   }
 
+  public TransactionInfo purchaseDate(Date purchaseDate) {
+    this.purchaseDate = purchaseDate;
+    return this;
+  }
+
+   /**
+   * Get purchaseDate
+   * @return purchaseDate
+  **/
+  @ApiModelProperty(value = "")
+  public Date getPurchaseDate() {
+    return purchaseDate;
+  }
+
+  public void setPurchaseDate(Date purchaseDate) {
+    this.purchaseDate = purchaseDate;
+  }
+
   public TransactionInfo recurring(Boolean recurring) {
     this.recurring = recurring;
     return this;
@@ -523,6 +765,42 @@ public class TransactionInfo {
 
   public void setRecurring(Boolean recurring) {
     this.recurring = recurring;
+  }
+
+  public TransactionInfo rresResultStatus(String rresResultStatus) {
+    this.rresResultStatus = rresResultStatus;
+    return this;
+  }
+
+   /**
+   * Get rresResultStatus
+   * @return rresResultStatus
+  **/
+  @ApiModelProperty(value = "")
+  public String getRresResultStatus() {
+    return rresResultStatus;
+  }
+
+  public void setRresResultStatus(String rresResultStatus) {
+    this.rresResultStatus = rresResultStatus;
+  }
+
+  public TransactionInfo sdkMaxTimeout(String sdkMaxTimeout) {
+    this.sdkMaxTimeout = sdkMaxTimeout;
+    return this;
+  }
+
+   /**
+   * Get sdkMaxTimeout
+   * @return sdkMaxTimeout
+  **/
+  @ApiModelProperty(value = "")
+  public String getSdkMaxTimeout() {
+    return sdkMaxTimeout;
+  }
+
+  public void setSdkMaxTimeout(String sdkMaxTimeout) {
+    this.sdkMaxTimeout = sdkMaxTimeout;
   }
 
   public TransactionInfo sdkTransactionId(String sdkTransactionId) {
@@ -597,22 +875,40 @@ public class TransactionInfo {
     this.transactionStatus = transactionStatus;
   }
 
-  public TransactionInfo validationReason(String validationReason) {
-    this.validationReason = validationReason;
+  public TransactionInfo transactionStatusReason(String transactionStatusReason) {
+    this.transactionStatusReason = transactionStatusReason;
     return this;
   }
 
    /**
-   * Get validationReason
-   * @return validationReason
+   * Get transactionStatusReason
+   * @return transactionStatusReason
   **/
   @ApiModelProperty(value = "")
-  public String getValidationReason() {
-    return validationReason;
+  public String getTransactionStatusReason() {
+    return transactionStatusReason;
   }
 
-  public void setValidationReason(String validationReason) {
-    this.validationReason = validationReason;
+  public void setTransactionStatusReason(String transactionStatusReason) {
+    this.transactionStatusReason = transactionStatusReason;
+  }
+
+  public TransactionInfo txLanguage(String txLanguage) {
+    this.txLanguage = txLanguage;
+    return this;
+  }
+
+   /**
+   * Get txLanguage
+   * @return txLanguage
+  **/
+  @ApiModelProperty(value = "")
+  public String getTxLanguage() {
+    return txLanguage;
+  }
+
+  public void setTxLanguage(String txLanguage) {
+    this.txLanguage = txLanguage;
   }
 
 
@@ -625,10 +921,12 @@ public class TransactionInfo {
       return false;
     }
     TransactionInfo transactionInfo = (TransactionInfo) o;
-    return Objects.equals(this.aav, transactionInfo.aav) &&
+    return Objects.equals(this.acquirerBin, transactionInfo.acquirerBin) &&
+        Objects.equals(this.acquirerMerchantId, transactionInfo.acquirerMerchantId) &&
         Objects.equals(this.acsMaxChallenges, transactionInfo.acsMaxChallenges) &&
         Objects.equals(this.acsRenderingType, transactionInfo.acsRenderingType) &&
         Objects.equals(this.acsTransactionId, transactionInfo.acsTransactionId) &&
+        Objects.equals(this.amount, transactionInfo.amount) &&
         Objects.equals(this.authenticationMethod, transactionInfo.authenticationMethod) &&
         Objects.equals(this.authenticationName, transactionInfo.authenticationName) &&
         Objects.equals(this.authenticationType, transactionInfo.authenticationType) &&
@@ -636,28 +934,40 @@ public class TransactionInfo {
         Objects.equals(this.cRes, transactionInfo.cRes) &&
         Objects.equals(this.completionDate, transactionInfo.completionDate) &&
         Objects.equals(this.creationDate, transactionInfo.creationDate) &&
+        Objects.equals(this.currencyCode, transactionInfo.currencyCode) &&
+        Objects.equals(this.currencyExponent, transactionInfo.currencyExponent) &&
         Objects.equals(this.currentStepId, transactionInfo.currentStepId) &&
         Objects.equals(this.deviceChannel, transactionInfo.deviceChannel) &&
         Objects.equals(this.dsTransactionId, transactionInfo.dsTransactionId) &&
         Objects.equals(this.dsUrl, transactionInfo.dsUrl) &&
-        Objects.equals(this.eci, transactionInfo.eci) &&
+        Objects.equals(this.errorCode, transactionInfo.errorCode) &&
+        Objects.equals(this.errorCodeText, transactionInfo.errorCodeText) &&
+        Objects.equals(this.errorDescription, transactionInfo.errorDescription) &&
+        Objects.equals(this.errorDetail, transactionInfo.errorDetail) &&
         Objects.equals(this.instalment, transactionInfo.instalment) &&
         Objects.equals(this.interactionCounter, transactionInfo.interactionCounter) &&
+        Objects.equals(this.internalTransactionStatus, transactionInfo.internalTransactionStatus) &&
+        Objects.equals(this.internalTransactionStatusReason, transactionInfo.internalTransactionStatusReason) &&
         Objects.equals(this.issuerCode, transactionInfo.issuerCode) &&
         Objects.equals(this.messageCategory, transactionInfo.messageCategory) &&
+        Objects.equals(this.otherInfo, transactionInfo.otherInfo) &&
         Objects.equals(this.parentTransactionId, transactionInfo.parentTransactionId) &&
         Objects.equals(this.processingStep, transactionInfo.processingStep) &&
+        Objects.equals(this.purchaseDate, transactionInfo.purchaseDate) &&
         Objects.equals(this.recurring, transactionInfo.recurring) &&
+        Objects.equals(this.rresResultStatus, transactionInfo.rresResultStatus) &&
+        Objects.equals(this.sdkMaxTimeout, transactionInfo.sdkMaxTimeout) &&
         Objects.equals(this.sdkTransactionId, transactionInfo.sdkTransactionId) &&
         Objects.equals(this.secureVersion, transactionInfo.secureVersion) &&
         Objects.equals(this.threedsServerTransactionId, transactionInfo.threedsServerTransactionId) &&
         Objects.equals(this.transactionStatus, transactionInfo.transactionStatus) &&
-        Objects.equals(this.validationReason, transactionInfo.validationReason);
+        Objects.equals(this.transactionStatusReason, transactionInfo.transactionStatusReason) &&
+        Objects.equals(this.txLanguage, transactionInfo.txLanguage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aav, acsMaxChallenges, acsRenderingType, acsTransactionId, authenticationMethod, authenticationName, authenticationType, binRangeId, cRes, completionDate, creationDate, currentStepId, deviceChannel, dsTransactionId, dsUrl, eci, instalment, interactionCounter, issuerCode, messageCategory, parentTransactionId, processingStep, recurring, sdkTransactionId, secureVersion, threedsServerTransactionId, transactionStatus, validationReason);
+    return Objects.hash(acquirerBin, acquirerMerchantId, acsMaxChallenges, acsRenderingType, acsTransactionId, amount, authenticationMethod, authenticationName, authenticationType, binRangeId, cRes, completionDate, creationDate, currencyCode, currencyExponent, currentStepId, deviceChannel, dsTransactionId, dsUrl, errorCode, errorCodeText, errorDescription, errorDetail, instalment, interactionCounter, internalTransactionStatus, internalTransactionStatusReason, issuerCode, messageCategory, otherInfo, parentTransactionId, processingStep, purchaseDate, recurring, rresResultStatus, sdkMaxTimeout, sdkTransactionId, secureVersion, threedsServerTransactionId, transactionStatus, transactionStatusReason, txLanguage);
   }
 
 
@@ -666,10 +976,12 @@ public class TransactionInfo {
     StringBuilder sb = new StringBuilder();
     sb.append("class TransactionInfo {\n");
     
-    sb.append("    aav: ").append(toIndentedString(aav)).append("\n");
+    sb.append("    acquirerBin: ").append(toIndentedString(acquirerBin)).append("\n");
+    sb.append("    acquirerMerchantId: ").append(toIndentedString(acquirerMerchantId)).append("\n");
     sb.append("    acsMaxChallenges: ").append(toIndentedString(acsMaxChallenges)).append("\n");
     sb.append("    acsRenderingType: ").append(toIndentedString(acsRenderingType)).append("\n");
     sb.append("    acsTransactionId: ").append(toIndentedString(acsTransactionId)).append("\n");
+    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    authenticationMethod: ").append(toIndentedString(authenticationMethod)).append("\n");
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
     sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
@@ -677,23 +989,35 @@ public class TransactionInfo {
     sb.append("    cRes: ").append(toIndentedString(cRes)).append("\n");
     sb.append("    completionDate: ").append(toIndentedString(completionDate)).append("\n");
     sb.append("    creationDate: ").append(toIndentedString(creationDate)).append("\n");
+    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    currencyExponent: ").append(toIndentedString(currencyExponent)).append("\n");
     sb.append("    currentStepId: ").append(toIndentedString(currentStepId)).append("\n");
     sb.append("    deviceChannel: ").append(toIndentedString(deviceChannel)).append("\n");
     sb.append("    dsTransactionId: ").append(toIndentedString(dsTransactionId)).append("\n");
     sb.append("    dsUrl: ").append(toIndentedString(dsUrl)).append("\n");
-    sb.append("    eci: ").append(toIndentedString(eci)).append("\n");
+    sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
+    sb.append("    errorCodeText: ").append(toIndentedString(errorCodeText)).append("\n");
+    sb.append("    errorDescription: ").append(toIndentedString(errorDescription)).append("\n");
+    sb.append("    errorDetail: ").append(toIndentedString(errorDetail)).append("\n");
     sb.append("    instalment: ").append(toIndentedString(instalment)).append("\n");
     sb.append("    interactionCounter: ").append(toIndentedString(interactionCounter)).append("\n");
+    sb.append("    internalTransactionStatus: ").append(toIndentedString(internalTransactionStatus)).append("\n");
+    sb.append("    internalTransactionStatusReason: ").append(toIndentedString(internalTransactionStatusReason)).append("\n");
     sb.append("    issuerCode: ").append(toIndentedString(issuerCode)).append("\n");
     sb.append("    messageCategory: ").append(toIndentedString(messageCategory)).append("\n");
+    sb.append("    otherInfo: ").append(toIndentedString(otherInfo)).append("\n");
     sb.append("    parentTransactionId: ").append(toIndentedString(parentTransactionId)).append("\n");
     sb.append("    processingStep: ").append(toIndentedString(processingStep)).append("\n");
+    sb.append("    purchaseDate: ").append(toIndentedString(purchaseDate)).append("\n");
     sb.append("    recurring: ").append(toIndentedString(recurring)).append("\n");
+    sb.append("    rresResultStatus: ").append(toIndentedString(rresResultStatus)).append("\n");
+    sb.append("    sdkMaxTimeout: ").append(toIndentedString(sdkMaxTimeout)).append("\n");
     sb.append("    sdkTransactionId: ").append(toIndentedString(sdkTransactionId)).append("\n");
     sb.append("    secureVersion: ").append(toIndentedString(secureVersion)).append("\n");
     sb.append("    threedsServerTransactionId: ").append(toIndentedString(threedsServerTransactionId)).append("\n");
     sb.append("    transactionStatus: ").append(toIndentedString(transactionStatus)).append("\n");
-    sb.append("    validationReason: ").append(toIndentedString(validationReason)).append("\n");
+    sb.append("    transactionStatusReason: ").append(toIndentedString(transactionStatusReason)).append("\n");
+    sb.append("    txLanguage: ").append(toIndentedString(txLanguage)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -2,6 +2,8 @@ package com.opentech.acsemv3dsProxyApiClient.api;
 
 import com.opentech.acsemv3dsProxyApiClient.ApiClient;
 
+import com.opentech.acsemv3dsProxyApiClient.model.DetectTransactionLanguageWebRequest;
+import com.opentech.acsemv3dsProxyApiClient.model.DetectTransactionLanguageWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateChallengeStepCMWebRequest;
 import com.opentech.acsemv3dsProxyApiClient.model.EvaluateChallengeStepCMWebResponse;
 import com.opentech.acsemv3dsProxyApiClient.model.InitChallengeCMWebRequest;
@@ -41,14 +43,61 @@ public abstract class ChallengeManagerControllerApi {
         this.apiClient = apiClient;
     }
 
+    public static final String detectTransactionLanguageUsingPOST ="/3ds/challenge/{issuer-code}/detectTransactionLanguage";
     public static final String evaluateChallengeStepUsingPOST1 ="/3ds/challenge/{issuer-code}/evaluateChallengeStep";
     public static final String initChallengeUsingPOST1 ="/3ds/challenge/{issuer-code}/initChallenge";
     public static final String isChallengeSupportedUsingPOST ="/3ds/challenge/{issuer-code}/isChallengeSupported";
 
+    public abstract DetectTransactionLanguageWebResponse detectTransactionLanguageUsingPOST(DetectTransactionLanguageWebRequest detectTransactionLanguageWebRequest, String issuerCode) throws RestClientException;
     public abstract EvaluateChallengeStepCMWebResponse evaluateChallengeStepUsingPOST1(EvaluateChallengeStepCMWebRequest evaluateChallengeStepCMWebRequest, String issuerCode) throws RestClientException;
     public abstract InitChallengeCMWebResponse initChallengeUsingPOST1(InitChallengeCMWebRequest initChallengeCMWebRequest, String issuerCode) throws RestClientException;
     public abstract IsChallengeSupportedWebResponse isChallengeSupportedUsingPOST(IsChallengeSupportedWebRequest isChallengeSupportedWebRequest, String issuerCode) throws RestClientException;
 
+    /**
+     * detectTransactionLanguage
+     * 
+     * <p><b>200</b> - OK
+     * @param detectTransactionLanguageWebRequest detectTransactionLanguageWebRequest
+     * @param issuerCode issuer-code
+     * @return DetectTransactionLanguageWebResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    protected DetectTransactionLanguageWebResponse detectTransactionLanguageUsingPOSTinternal(DetectTransactionLanguageWebRequest detectTransactionLanguageWebRequest, String issuerCode) throws RestClientException {
+        Object postBody = detectTransactionLanguageWebRequest;
+        
+        // verify the required parameter 'detectTransactionLanguageWebRequest' is set
+        if (detectTransactionLanguageWebRequest == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'detectTransactionLanguageWebRequest' when calling detectTransactionLanguageUsingPOST");
+        }
+        
+        // verify the required parameter 'issuerCode' is set
+        if (issuerCode == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'issuerCode' when calling detectTransactionLanguageUsingPOST");
+        }
+        
+        // create path and map variables
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        uriVariables.put("issuer-code", issuerCode);
+        String path = UriComponentsBuilder.fromPath("/3ds/challenge/{issuer-code}/detectTransactionLanguage").buildAndExpand(uriVariables).toUriString();
+        
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] accepts = { 
+            "application/json"
+        };
+        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
+        final String[] contentTypes = { 
+            "application/json"
+        };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] {  };
+
+        ParameterizedTypeReference<DetectTransactionLanguageWebResponse> returnType = new ParameterizedTypeReference<DetectTransactionLanguageWebResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    }
     /**
      * evaluateChallengeStep
      * 

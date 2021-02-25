@@ -35,6 +35,9 @@ public class PerformDecoupledAuthWebRequest {
   @JsonProperty("transactionInfo")
   private TransactionInfo transactionInfo = null;
 
+  @JsonProperty("transactionLanguage")
+  private String transactionLanguage = null;
+
   public PerformDecoupledAuthWebRequest cardNumber(String cardNumber) {
     this.cardNumber = cardNumber;
     return this;
@@ -89,6 +92,24 @@ public class PerformDecoupledAuthWebRequest {
     this.transactionInfo = transactionInfo;
   }
 
+  public PerformDecoupledAuthWebRequest transactionLanguage(String transactionLanguage) {
+    this.transactionLanguage = transactionLanguage;
+    return this;
+  }
+
+   /**
+   * Get transactionLanguage
+   * @return transactionLanguage
+  **/
+  @ApiModelProperty(value = "")
+  public String getTransactionLanguage() {
+    return transactionLanguage;
+  }
+
+  public void setTransactionLanguage(String transactionLanguage) {
+    this.transactionLanguage = transactionLanguage;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -101,12 +122,13 @@ public class PerformDecoupledAuthWebRequest {
     PerformDecoupledAuthWebRequest performDecoupledAuthWebRequest = (PerformDecoupledAuthWebRequest) o;
     return Objects.equals(this.cardNumber, performDecoupledAuthWebRequest.cardNumber) &&
         Objects.equals(this.timeout, performDecoupledAuthWebRequest.timeout) &&
-        Objects.equals(this.transactionInfo, performDecoupledAuthWebRequest.transactionInfo);
+        Objects.equals(this.transactionInfo, performDecoupledAuthWebRequest.transactionInfo) &&
+        Objects.equals(this.transactionLanguage, performDecoupledAuthWebRequest.transactionLanguage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cardNumber, timeout, transactionInfo);
+    return Objects.hash(cardNumber, timeout, transactionInfo, transactionLanguage);
   }
 
 
@@ -118,6 +140,7 @@ public class PerformDecoupledAuthWebRequest {
     sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
     sb.append("    timeout: ").append(toIndentedString(timeout)).append("\n");
     sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
+    sb.append("    transactionLanguage: ").append(toIndentedString(transactionLanguage)).append("\n");
     sb.append("}");
     return sb.toString();
   }

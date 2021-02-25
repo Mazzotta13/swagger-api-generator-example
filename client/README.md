@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.opentech</groupId>
     <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
-    <version>1.24-SNAPSHOT</version>
+    <version>1.25-SNAPSHOT</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.opentech:acsemv3ds-ProxyApi-Client:1.24-SNAPSHOT"
+compile "com.opentech:acsemv3ds-ProxyApi-Client:1.25-SNAPSHOT"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/acsemv3ds-ProxyApi-Client-1.24-SNAPSHOT.jar
+* target/acsemv3ds-ProxyApi-Client-1.25-SNAPSHOT.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -100,6 +100,7 @@ Class | Method | HTTP request | Description
 *AuthenticatorControllerApi* | [**resendChallengeUsingPOST**](docs/AuthenticatorControllerApi.md#resendChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/resendChallenge | resendChallenge
 *CardTokenizerControllerApi* | [**detokenizeUsingPOST**](docs/CardTokenizerControllerApi.md#detokenizeUsingPOST) | **POST** /3ds/{issuer-code}/detokenize | detokenize
 *CardTokenizerControllerApi* | [**tokenizeUsingPOST**](docs/CardTokenizerControllerApi.md#tokenizeUsingPOST) | **POST** /3ds/{issuer-code}/tokenize | tokenize
+*ChallengeManagerControllerApi* | [**detectTransactionLanguageUsingPOST**](docs/ChallengeManagerControllerApi.md#detectTransactionLanguageUsingPOST) | **POST** /3ds/challenge/{issuer-code}/detectTransactionLanguage | detectTransactionLanguage
 *ChallengeManagerControllerApi* | [**evaluateChallengeStepUsingPOST1**](docs/ChallengeManagerControllerApi.md#evaluateChallengeStepUsingPOST1) | **POST** /3ds/challenge/{issuer-code}/evaluateChallengeStep | evaluateChallengeStep
 *ChallengeManagerControllerApi* | [**initChallengeUsingPOST1**](docs/ChallengeManagerControllerApi.md#initChallengeUsingPOST1) | **POST** /3ds/challenge/{issuer-code}/initChallenge | initChallenge
 *ChallengeManagerControllerApi* | [**isChallengeSupportedUsingPOST**](docs/ChallengeManagerControllerApi.md#isChallengeSupportedUsingPOST) | **POST** /3ds/challenge/{issuer-code}/isChallengeSupported | isChallengeSupported
@@ -115,6 +116,8 @@ Class | Method | HTTP request | Description
  - [CResInfo](docs/CResInfo.md)
  - [CheckAuthResultWebRequest](docs/CheckAuthResultWebRequest.md)
  - [CheckAuthResultWebResponse](docs/CheckAuthResultWebResponse.md)
+ - [DetectTransactionLanguageWebRequest](docs/DetectTransactionLanguageWebRequest.md)
+ - [DetectTransactionLanguageWebResponse](docs/DetectTransactionLanguageWebResponse.md)
  - [DetokenizeWebRequest](docs/DetokenizeWebRequest.md)
  - [DetokenizeWebResponse](docs/DetokenizeWebResponse.md)
  - [EvaluateAuthenticationWebRequest](docs/EvaluateAuthenticationWebRequest.md)
@@ -152,6 +155,7 @@ Class | Method | HTTP request | Description
  - [TokenizeWebRequest](docs/TokenizeWebRequest.md)
  - [TokenizeWebResponse](docs/TokenizeWebResponse.md)
  - [TransactionInfo](docs/TransactionInfo.md)
+ - [TransactionOtherInfo](docs/TransactionOtherInfo.md)
 
 
 ## Documentation for Authorization

@@ -78,6 +78,9 @@ public class IsChallengeSupportedWebRequest {
   @JsonProperty("browserInfo")
   private BrowserInfo browserInfo = null;
 
+  @JsonProperty("transactionLanguage")
+  private String transactionLanguage = null;
+
   public IsChallengeSupportedWebRequest aReq(AReq aReq) {
     this.aReq = aReq;
     return this;
@@ -150,6 +153,24 @@ public class IsChallengeSupportedWebRequest {
     this.browserInfo = browserInfo;
   }
 
+  public IsChallengeSupportedWebRequest transactionLanguage(String transactionLanguage) {
+    this.transactionLanguage = transactionLanguage;
+    return this;
+  }
+
+   /**
+   * Get transactionLanguage
+   * @return transactionLanguage
+  **/
+  @ApiModelProperty(value = "")
+  public String getTransactionLanguage() {
+    return transactionLanguage;
+  }
+
+  public void setTransactionLanguage(String transactionLanguage) {
+    this.transactionLanguage = transactionLanguage;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -163,12 +184,13 @@ public class IsChallengeSupportedWebRequest {
     return Objects.equals(this.aReq, isChallengeSupportedWebRequest.aReq) &&
         Objects.equals(this.authenticationName, isChallengeSupportedWebRequest.authenticationName) &&
         Objects.equals(this.authenticationType, isChallengeSupportedWebRequest.authenticationType) &&
-        Objects.equals(this.browserInfo, isChallengeSupportedWebRequest.browserInfo);
+        Objects.equals(this.browserInfo, isChallengeSupportedWebRequest.browserInfo) &&
+        Objects.equals(this.transactionLanguage, isChallengeSupportedWebRequest.transactionLanguage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aReq, authenticationName, authenticationType, browserInfo);
+    return Objects.hash(aReq, authenticationName, authenticationType, browserInfo, transactionLanguage);
   }
 
 
@@ -181,6 +203,7 @@ public class IsChallengeSupportedWebRequest {
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
     sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
     sb.append("    browserInfo: ").append(toIndentedString(browserInfo)).append("\n");
+    sb.append("    transactionLanguage: ").append(toIndentedString(transactionLanguage)).append("\n");
     sb.append("}");
     return sb.toString();
   }

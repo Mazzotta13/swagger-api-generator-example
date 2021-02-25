@@ -4,10 +4,56 @@ All URIs are relative to *https://localhost:8080/acsemv3dsproxy*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**detectTransactionLanguageUsingPOST**](ChallengeManagerControllerApi.md#detectTransactionLanguageUsingPOST) | **POST** /3ds/challenge/{issuer-code}/detectTransactionLanguage | detectTransactionLanguage
 [**evaluateChallengeStepUsingPOST1**](ChallengeManagerControllerApi.md#evaluateChallengeStepUsingPOST1) | **POST** /3ds/challenge/{issuer-code}/evaluateChallengeStep | evaluateChallengeStep
 [**initChallengeUsingPOST1**](ChallengeManagerControllerApi.md#initChallengeUsingPOST1) | **POST** /3ds/challenge/{issuer-code}/initChallenge | initChallenge
 [**isChallengeSupportedUsingPOST**](ChallengeManagerControllerApi.md#isChallengeSupportedUsingPOST) | **POST** /3ds/challenge/{issuer-code}/isChallengeSupported | isChallengeSupported
 
+
+<a name="detectTransactionLanguageUsingPOST"></a>
+# **detectTransactionLanguageUsingPOST**
+> DetectTransactionLanguageWebResponse detectTransactionLanguageUsingPOST(detectTransactionLanguageWebRequest, issuerCode)
+
+detectTransactionLanguage
+
+### Example
+```java
+// Import classes:
+//import com.opentech.acsemv3dsProxyApiClient.ApiException;
+//import com.opentech.acsemv3dsProxyApiClient.api.ChallengeManagerControllerApi;
+
+
+ChallengeManagerControllerApi apiInstance = new ChallengeManagerControllerApi();
+DetectTransactionLanguageWebRequest detectTransactionLanguageWebRequest = new DetectTransactionLanguageWebRequest(); // DetectTransactionLanguageWebRequest | detectTransactionLanguageWebRequest
+String issuerCode = "issuerCode_example"; // String | issuer-code
+try {
+    DetectTransactionLanguageWebResponse result = apiInstance.detectTransactionLanguageUsingPOST(detectTransactionLanguageWebRequest, issuerCode);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ChallengeManagerControllerApi#detectTransactionLanguageUsingPOST");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **detectTransactionLanguageWebRequest** | [**DetectTransactionLanguageWebRequest**](DetectTransactionLanguageWebRequest.md)| detectTransactionLanguageWebRequest |
+ **issuerCode** | **String**| issuer-code |
+
+### Return type
+
+[**DetectTransactionLanguageWebResponse**](DetectTransactionLanguageWebResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="evaluateChallengeStepUsingPOST1"></a>
 # **evaluateChallengeStepUsingPOST1**

@@ -322,6 +322,48 @@
         "deprecated": false
       }
     },
+    "/3ds/challenge/{issuer-code}/detectTransactionLanguage": {
+      "post": {
+        "tags": [
+          "challenge-manager-controller"
+        ],
+        "summary": "detectTransactionLanguage",
+        "operationId": "detectTransactionLanguageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "detectTransactionLanguageWebRequest",
+            "description": "detectTransactionLanguageWebRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DetectTransactionLanguageWebRequest"
+            }
+          },
+          {
+            "name": "issuer-code",
+            "in": "path",
+            "description": "issuer-code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/DetectTransactionLanguageWebResponse"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/3ds/challenge/{issuer-code}/evaluateChallengeStep": {
       "post": {
         "tags": [
@@ -1038,6 +1080,33 @@
       },
       "title": "CheckAuthResultWebResponse"
     },
+    "DetectTransactionLanguageWebRequest": {
+      "type": "object",
+      "properties": {
+        "aReq": {
+          "$ref": "#/definitions/AReq"
+        },
+        "browserInfo": {
+          "$ref": "#/definitions/BrowserInfo"
+        },
+        "priorTransactionInfo": {
+          "$ref": "#/definitions/TransactionInfo"
+        },
+        "transactionInfo": {
+          "$ref": "#/definitions/TransactionInfo"
+        }
+      },
+      "title": "DetectTransactionLanguageWebRequest"
+    },
+    "DetectTransactionLanguageWebResponse": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string"
+        }
+      },
+      "title": "DetectTransactionLanguageWebResponse"
+    },
     "DetokenizeWebRequest": {
       "type": "object",
       "properties": {
@@ -1070,6 +1139,9 @@
         },
         "threeRIInfo": {
           "$ref": "#/definitions/ThreeRIInfo"
+        },
+        "transactionLanguage": {
+          "type": "string"
         },
         "whitelistingEnabled": {
           "type": "boolean"
@@ -1433,6 +1505,9 @@
         },
         "browserInfo": {
           "$ref": "#/definitions/BrowserInfo"
+        },
+        "transactionLanguage": {
+          "type": "string"
         }
       },
       "title": "IsChallengeSupportedWebRequest"
@@ -1475,6 +1550,9 @@
         },
         "transactionInfo": {
           "$ref": "#/definitions/TransactionInfo"
+        },
+        "transactionLanguage": {
+          "type": "string"
         }
       },
       "title": "PerformDecoupledAuthWebRequest"
@@ -1809,7 +1887,10 @@
     "TransactionInfo": {
       "type": "object",
       "properties": {
-        "aav": {
+        "acquirerBin": {
+          "type": "string"
+        },
+        "acquirerMerchantId": {
           "type": "string"
         },
         "acsMaxChallenges": {
@@ -1821,6 +1902,9 @@
         },
         "acsTransactionId": {
           "type": "string"
+        },
+        "amount": {
+          "type": "number"
         },
         "authenticationMethod": {
           "type": "string"
@@ -1846,6 +1930,12 @@
           "type": "string",
           "format": "date-time"
         },
+        "currencyCode": {
+          "type": "string"
+        },
+        "currencyExponent": {
+          "type": "string"
+        },
         "currentStepId": {
           "type": "string"
         },
@@ -1858,7 +1948,16 @@
         "dsUrl": {
           "type": "string"
         },
-        "eci": {
+        "errorCode": {
+          "type": "string"
+        },
+        "errorCodeText": {
+          "type": "string"
+        },
+        "errorDescription": {
+          "type": "string"
+        },
+        "errorDetail": {
           "type": "string"
         },
         "instalment": {
@@ -1868,11 +1967,20 @@
           "type": "integer",
           "format": "int32"
         },
+        "internalTransactionStatus": {
+          "type": "string"
+        },
+        "internalTransactionStatusReason": {
+          "type": "string"
+        },
         "issuerCode": {
           "type": "string"
         },
         "messageCategory": {
           "type": "string"
+        },
+        "otherInfo": {
+          "$ref": "#/definitions/TransactionOtherInfo"
         },
         "parentTransactionId": {
           "type": "string"
@@ -1880,8 +1988,18 @@
         "processingStep": {
           "type": "string"
         },
+        "purchaseDate": {
+          "type": "string",
+          "format": "date-time"
+        },
         "recurring": {
           "type": "boolean"
+        },
+        "rresResultStatus": {
+          "type": "string"
+        },
+        "sdkMaxTimeout": {
+          "type": "string"
         },
         "sdkTransactionId": {
           "type": "string"
@@ -1895,11 +2013,59 @@
         "transactionStatus": {
           "type": "string"
         },
-        "validationReason": {
+        "transactionStatusReason": {
+          "type": "string"
+        },
+        "txLanguage": {
           "type": "string"
         }
       },
       "title": "TransactionInfo"
+    },
+    "TransactionOtherInfo": {
+      "type": "object",
+      "properties": {
+        "merchantCountryCode": {
+          "type": "string"
+        },
+        "merchantName": {
+          "type": "string"
+        },
+        "purchaseInstalData": {
+          "type": "string"
+        },
+        "recurringExpiry": {
+          "type": "string"
+        },
+        "recurringFrequency": {
+          "type": "string"
+        },
+        "threeDSRequestorAuthenticationInd": {
+          "type": "string"
+        },
+        "threeDSRequestorDecMaxTime": {
+          "type": "string"
+        },
+        "threeDSRequestorDecReqInd": {
+          "type": "string"
+        },
+        "threeDSRequestorID": {
+          "type": "string"
+        },
+        "threeDSRequestorName": {
+          "type": "string"
+        },
+        "threeDSServerRefNumber": {
+          "type": "string"
+        },
+        "threeRIInd": {
+          "type": "string"
+        },
+        "transType": {
+          "type": "string"
+        }
+      },
+      "title": "TransactionOtherInfo"
     }
   }
 }
