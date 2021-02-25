@@ -74,10 +74,10 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <configHelp>false</configHelp> <!-- Mettere a true per stampare help -->
+                            <configHelp>false</configHelp>
                             <language>java</language>
-                            <templateDirectory>${project.basedir}/${swagger.codegen.template.directory}</templateDirectory> <!-- Da aggiungere alla configurazione -->
-                            <inputSpec>${project.basedir}/src/main/resources/swagger_api.json</inputSpec>  <!-- Riferimento a file swagger -->
+                            <templateDirectory>${project.basedir}/${swagger.codegen.template.directory}</templateDirectory>
+                            <inputSpec>${project.basedir}/src/main/resources/swagger_api.json</inputSpec>
                             <output>${project.basedir}/../client</output>
                             <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
                             <artifactVersion>${project.version}</artifactVersion>

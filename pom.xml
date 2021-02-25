@@ -16,6 +16,10 @@
         </module>
     </modules>
 
+    <properties>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+    </properties>
+
     <distributionManagement>
         <repository>
             <id>archiva.internal</id>
