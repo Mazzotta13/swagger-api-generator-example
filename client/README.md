@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.opentech</groupId>
     <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
-    <version>1.25-SNAPSHOT</version>
+    <version>1.26-SNAPSHOT</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.opentech:acsemv3ds-ProxyApi-Client:1.25-SNAPSHOT"
+compile "com.opentech:acsemv3ds-ProxyApi-Client:1.26-SNAPSHOT"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/acsemv3ds-ProxyApi-Client-1.25-SNAPSHOT.jar
+* target/acsemv3ds-ProxyApi-Client-1.26-SNAPSHOT.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -71,13 +71,13 @@ public class AuthenticatorControllerApiExample {
     public static void main(String[] args) {
         
         AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
-        CheckAuthResultWebRequest checkAuthResultWebRequest = new CheckAuthResultWebRequest(); // CheckAuthResultWebRequest | checkAuthResultWebRequest
+        EvaluateAuthenticationWebRequest evaluateAuthenticationWebRequest = new EvaluateAuthenticationWebRequest(); // EvaluateAuthenticationWebRequest | evaluateAuthenticationWebRequest
         String issuerCode = "issuerCode_example"; // String | issuer-code
         try {
-            CheckAuthResultWebResponse result = apiInstance.checkAuthResultUsingPOST(checkAuthResultWebRequest, issuerCode);
+            EvaluateAuthenticationWebResponse result = apiInstance.evaluateAuthenticationUsingPOST(evaluateAuthenticationWebRequest, issuerCode);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AuthenticatorControllerApi#checkAuthResultUsingPOST");
+            System.err.println("Exception when calling AuthenticatorControllerApi#evaluateAuthenticationUsingPOST");
             e.printStackTrace();
         }
     }
@@ -91,7 +91,6 @@ All URIs are relative to *https://localhost:8080/acsemv3dsproxy*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuthenticatorControllerApi* | [**checkAuthResultUsingPOST**](docs/AuthenticatorControllerApi.md#checkAuthResultUsingPOST) | **POST** /3ds/auth/{issuer-code}/checkAuthResult | checkAuthResult
 *AuthenticatorControllerApi* | [**evaluateAuthenticationUsingPOST**](docs/AuthenticatorControllerApi.md#evaluateAuthenticationUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateAuthentication | evaluateAuthentication
 *AuthenticatorControllerApi* | [**evaluateChallengeStepUsingPOST**](docs/AuthenticatorControllerApi.md#evaluateChallengeStepUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateChallengeStep | evaluateChallengeStep
 *AuthenticatorControllerApi* | [**initChallengeUsingPOST**](docs/AuthenticatorControllerApi.md#initChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/initChallenge | initChallenge
@@ -114,8 +113,6 @@ Class | Method | HTTP request | Description
  - [BrowserInfo](docs/BrowserInfo.md)
  - [CReq](docs/CReq.md)
  - [CResInfo](docs/CResInfo.md)
- - [CheckAuthResultWebRequest](docs/CheckAuthResultWebRequest.md)
- - [CheckAuthResultWebResponse](docs/CheckAuthResultWebResponse.md)
  - [DetectTransactionLanguageWebRequest](docs/DetectTransactionLanguageWebRequest.md)
  - [DetectTransactionLanguageWebResponse](docs/DetectTransactionLanguageWebResponse.md)
  - [DetokenizeWebRequest](docs/DetokenizeWebRequest.md)
