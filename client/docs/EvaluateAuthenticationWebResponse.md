@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **cardEnrolled** | **Boolean** |  |  [optional]
 **cardholderInfo** | **String** |  |  [optional]
 **challengeMandatory** | **Boolean** |  |  [optional]
+**decoupledSupported** | **Boolean** |  |  [optional]
 **extensions** | [**List&lt;Extension&gt;**](Extension.md) |  |  [optional]
 **transactionStatusReason** | [**TransactionStatusReasonEnum**](#TransactionStatusReasonEnum) |  |  [optional]
 **whitelistStatus** | **String** |  |  [optional]

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **challengeType** | **String** |  |  [optional]
 **challengeValue** | **String** |  |  [optional]
 **transactionInfo** | [**TransactionInfo**](TransactionInfo.md) |  |  [optional]
+**webChallenges** | **Map&lt;String, String&gt;** |  |  [optional]
 **whitelistingEnabled** | **Boolean** |  |  [optional]
 **whitelistingResult** | **String** |  |  [optional]
 

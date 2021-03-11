@@ -1107,6 +1107,9 @@
         "challengeMandatory": {
           "type": "boolean"
         },
+        "decoupledSupported": {
+          "type": "boolean"
+        },
         "extensions": {
           "type": "array",
           "items": {
@@ -1165,6 +1168,12 @@
         },
         "transactionInfo": {
           "$ref": "#/definitions/TransactionInfo"
+        },
+        "webChallenges": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
         },
         "whitelistingEnabled": {
           "type": "boolean"
@@ -1409,6 +1418,9 @@
         },
         "browserInfo": {
           "$ref": "#/definitions/BrowserInfo"
+        },
+        "decoupledSupported": {
+          "type": "boolean"
         },
         "transactionLanguage": {
           "type": "string"

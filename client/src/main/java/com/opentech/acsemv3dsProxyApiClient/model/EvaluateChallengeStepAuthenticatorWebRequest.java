@@ -21,6 +21,9 @@ import com.opentech.acsemv3dsProxyApiClient.model.CReq;
 import com.opentech.acsemv3dsProxyApiClient.model.TransactionInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * EvaluateChallengeStepAuthenticatorWebRequest
@@ -44,6 +47,9 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
 
   @JsonProperty("transactionInfo")
   private TransactionInfo transactionInfo = null;
+
+  @JsonProperty("webChallenges")
+  private Map<String, String> webChallenges = null;
 
   @JsonProperty("whitelistingEnabled")
   private Boolean whitelistingEnabled = null;
@@ -159,6 +165,32 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
     this.transactionInfo = transactionInfo;
   }
 
+  public EvaluateChallengeStepAuthenticatorWebRequest webChallenges(Map<String, String> webChallenges) {
+    this.webChallenges = webChallenges;
+    return this;
+  }
+
+  public EvaluateChallengeStepAuthenticatorWebRequest putWebChallengesItem(String key, String webChallengesItem) {
+    if (this.webChallenges == null) {
+      this.webChallenges = new HashMap<String, String>();
+    }
+    this.webChallenges.put(key, webChallengesItem);
+    return this;
+  }
+
+   /**
+   * Get webChallenges
+   * @return webChallenges
+  **/
+  @ApiModelProperty(value = "")
+  public Map<String, String> getWebChallenges() {
+    return webChallenges;
+  }
+
+  public void setWebChallenges(Map<String, String> webChallenges) {
+    this.webChallenges = webChallenges;
+  }
+
   public EvaluateChallengeStepAuthenticatorWebRequest whitelistingEnabled(Boolean whitelistingEnabled) {
     this.whitelistingEnabled = whitelistingEnabled;
     return this;
@@ -211,13 +243,14 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
         Objects.equals(this.challengeType, evaluateChallengeStepAuthenticatorWebRequest.challengeType) &&
         Objects.equals(this.challengeValue, evaluateChallengeStepAuthenticatorWebRequest.challengeValue) &&
         Objects.equals(this.transactionInfo, evaluateChallengeStepAuthenticatorWebRequest.transactionInfo) &&
+        Objects.equals(this.webChallenges, evaluateChallengeStepAuthenticatorWebRequest.webChallenges) &&
         Objects.equals(this.whitelistingEnabled, evaluateChallengeStepAuthenticatorWebRequest.whitelistingEnabled) &&
         Objects.equals(this.whitelistingResult, evaluateChallengeStepAuthenticatorWebRequest.whitelistingResult);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationName, cReq, cardNumber, challengeType, challengeValue, transactionInfo, whitelistingEnabled, whitelistingResult);
+    return Objects.hash(authenticationName, cReq, cardNumber, challengeType, challengeValue, transactionInfo, webChallenges, whitelistingEnabled, whitelistingResult);
   }
 
 
@@ -232,6 +265,7 @@ public class EvaluateChallengeStepAuthenticatorWebRequest {
     sb.append("    challengeType: ").append(toIndentedString(challengeType)).append("\n");
     sb.append("    challengeValue: ").append(toIndentedString(challengeValue)).append("\n");
     sb.append("    transactionInfo: ").append(toIndentedString(transactionInfo)).append("\n");
+    sb.append("    webChallenges: ").append(toIndentedString(webChallenges)).append("\n");
     sb.append("    whitelistingEnabled: ").append(toIndentedString(whitelistingEnabled)).append("\n");
     sb.append("    whitelistingResult: ").append(toIndentedString(whitelistingResult)).append("\n");
     sb.append("}");

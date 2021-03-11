@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **authenticationName** | **String** |  |  [optional]
 **authenticationType** | [**AuthenticationTypeEnum**](#AuthenticationTypeEnum) |  |  [optional]
 **browserInfo** | [**BrowserInfo**](BrowserInfo.md) |  |  [optional]
+**decoupledSupported** | **Boolean** |  |  [optional]
 **transactionLanguage** | **String** |  |  [optional]
 
 

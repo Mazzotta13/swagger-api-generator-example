@@ -190,6 +190,9 @@ public class EvaluateAuthenticationWebResponse {
   @JsonProperty("challengeMandatory")
   private Boolean challengeMandatory = null;
 
+  @JsonProperty("decoupledSupported")
+  private Boolean decoupledSupported = null;
+
   @JsonProperty("extensions")
   private List<Extension> extensions = null;
 
@@ -398,6 +401,24 @@ public class EvaluateAuthenticationWebResponse {
     this.challengeMandatory = challengeMandatory;
   }
 
+  public EvaluateAuthenticationWebResponse decoupledSupported(Boolean decoupledSupported) {
+    this.decoupledSupported = decoupledSupported;
+    return this;
+  }
+
+   /**
+   * Get decoupledSupported
+   * @return decoupledSupported
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isDecoupledSupported() {
+    return decoupledSupported;
+  }
+
+  public void setDecoupledSupported(Boolean decoupledSupported) {
+    this.decoupledSupported = decoupledSupported;
+  }
+
   public EvaluateAuthenticationWebResponse extensions(List<Extension> extensions) {
     this.extensions = extensions;
     return this;
@@ -477,6 +498,7 @@ public class EvaluateAuthenticationWebResponse {
         Objects.equals(this.cardEnrolled, evaluateAuthenticationWebResponse.cardEnrolled) &&
         Objects.equals(this.cardholderInfo, evaluateAuthenticationWebResponse.cardholderInfo) &&
         Objects.equals(this.challengeMandatory, evaluateAuthenticationWebResponse.challengeMandatory) &&
+        Objects.equals(this.decoupledSupported, evaluateAuthenticationWebResponse.decoupledSupported) &&
         Objects.equals(this.extensions, evaluateAuthenticationWebResponse.extensions) &&
         Objects.equals(this.transactionStatusReason, evaluateAuthenticationWebResponse.transactionStatusReason) &&
         Objects.equals(this.whitelistStatus, evaluateAuthenticationWebResponse.whitelistStatus);
@@ -484,7 +506,7 @@ public class EvaluateAuthenticationWebResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationMethod, authenticationName, authenticationResult, authenticationType, cardEnrolled, cardholderInfo, challengeMandatory, extensions, transactionStatusReason, whitelistStatus);
+    return Objects.hash(authenticationMethod, authenticationName, authenticationResult, authenticationType, cardEnrolled, cardholderInfo, challengeMandatory, decoupledSupported, extensions, transactionStatusReason, whitelistStatus);
   }
 
 
@@ -500,6 +522,7 @@ public class EvaluateAuthenticationWebResponse {
     sb.append("    cardEnrolled: ").append(toIndentedString(cardEnrolled)).append("\n");
     sb.append("    cardholderInfo: ").append(toIndentedString(cardholderInfo)).append("\n");
     sb.append("    challengeMandatory: ").append(toIndentedString(challengeMandatory)).append("\n");
+    sb.append("    decoupledSupported: ").append(toIndentedString(decoupledSupported)).append("\n");
     sb.append("    extensions: ").append(toIndentedString(extensions)).append("\n");
     sb.append("    transactionStatusReason: ").append(toIndentedString(transactionStatusReason)).append("\n");
     sb.append("    whitelistStatus: ").append(toIndentedString(whitelistStatus)).append("\n");

@@ -78,6 +78,9 @@ public class IsChallengeSupportedWebRequest {
   @JsonProperty("browserInfo")
   private BrowserInfo browserInfo = null;
 
+  @JsonProperty("decoupledSupported")
+  private Boolean decoupledSupported = null;
+
   @JsonProperty("transactionLanguage")
   private String transactionLanguage = null;
 
@@ -153,6 +156,24 @@ public class IsChallengeSupportedWebRequest {
     this.browserInfo = browserInfo;
   }
 
+  public IsChallengeSupportedWebRequest decoupledSupported(Boolean decoupledSupported) {
+    this.decoupledSupported = decoupledSupported;
+    return this;
+  }
+
+   /**
+   * Get decoupledSupported
+   * @return decoupledSupported
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isDecoupledSupported() {
+    return decoupledSupported;
+  }
+
+  public void setDecoupledSupported(Boolean decoupledSupported) {
+    this.decoupledSupported = decoupledSupported;
+  }
+
   public IsChallengeSupportedWebRequest transactionLanguage(String transactionLanguage) {
     this.transactionLanguage = transactionLanguage;
     return this;
@@ -185,12 +206,13 @@ public class IsChallengeSupportedWebRequest {
         Objects.equals(this.authenticationName, isChallengeSupportedWebRequest.authenticationName) &&
         Objects.equals(this.authenticationType, isChallengeSupportedWebRequest.authenticationType) &&
         Objects.equals(this.browserInfo, isChallengeSupportedWebRequest.browserInfo) &&
+        Objects.equals(this.decoupledSupported, isChallengeSupportedWebRequest.decoupledSupported) &&
         Objects.equals(this.transactionLanguage, isChallengeSupportedWebRequest.transactionLanguage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aReq, authenticationName, authenticationType, browserInfo, transactionLanguage);
+    return Objects.hash(aReq, authenticationName, authenticationType, browserInfo, decoupledSupported, transactionLanguage);
   }
 
 
@@ -203,6 +225,7 @@ public class IsChallengeSupportedWebRequest {
     sb.append("    authenticationName: ").append(toIndentedString(authenticationName)).append("\n");
     sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
     sb.append("    browserInfo: ").append(toIndentedString(browserInfo)).append("\n");
+    sb.append("    decoupledSupported: ").append(toIndentedString(decoupledSupported)).append("\n");
     sb.append("    transactionLanguage: ").append(toIndentedString(transactionLanguage)).append("\n");
     sb.append("}");
     return sb.toString();
