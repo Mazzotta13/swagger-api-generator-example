@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.opentech</groupId>
-    <artifactId>acsemv3ds-ProxyApi</artifactId>
-    <version>1.29-SNAPSHOT</version>
+    <groupId>com.alessio</groupId>
+    <artifactId>SwaggerApiGeneratorExample</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -20,52 +20,23 @@
         <maven.javadoc.skip>true</maven.javadoc.skip>
     </properties>
 
-    <distributionManagement>
-        <repository>
-            <id>archiva.internal</id>
-            <name>Opentech Internal Repository</name>
-            <url>http://maven.opentech.com/repository/internal/</url>
-        </repository>
-        <snapshotRepository>
-            <id>archiva.snapshots</id>
-            <name>Archiva Managed Snapshot Repository</name>
-            <url>http://maven.opentech.com/repository/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
-    <scm>
-        <developerConnection>scm:git:ssh://git@svn/~/git/acsemv3ds-ProxyApi</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
     <repositories>
         <repository>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>fail</checksumPolicy>
-            </releases>
-            <id>Opentech Internal Repository</id>
-            <name>internal</name>
-            <url>http://maven.opentech.com/repository/internal</url>
-            <layout>default</layout>
-        </repository>
-        <repository>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>fail</checksumPolicy>
-            </releases>
-            <id>Opentech Snapshot Repository</id>
-            <name>internal</name>
-            <url>http://maven.opentech.com/repository/snapshots/</url>
-            <layout>default</layout>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
+            <id>maven-group</id>
+            <url>http://localhost:8081/repository/maven-group/</url>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <plugins>

@@ -1,3 +1,3 @@
-<manifest package="com.opentech.acsemv3dsProxyApiClient" xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="com.alessio.exampleApiClient" xmlns:android="http://schemas.android.com/apk/res/android">
     <application />
 </manifest>

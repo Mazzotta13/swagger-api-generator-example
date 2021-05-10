@@ -6,9 +6,9 @@
     <version>1.29-SNAPSHOT</version>
 
     <parent>
-        <groupId>com.opentech</groupId>
-        <artifactId>acsemv3ds-ProxyApi</artifactId>
-        <version>1.29-SNAPSHOT</version>
+        <groupId>com.alessio</groupId>
+        <artifactId>SwaggerApiGeneratorExample</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <properties>
@@ -84,9 +84,9 @@
                             <groupId>${project.groupId}</groupId>
                             <addCompileSourceRoot>false</addCompileSourceRoot>
                             <library>resttemplate</library>
-                            <apiPackage>com.opentech.acsemv3dsProxyApiClient.api</apiPackage>
-                            <modelPackage>com.opentech.acsemv3dsProxyApiClient.model</modelPackage>
-                            <invokerPackage>com.opentech.acsemv3dsProxyApiClient</invokerPackage>
+                            <apiPackage>com.alessio.exampleApiClient.api</apiPackage>
+                            <modelPackage>com.alessio.exampleApiClient.model</modelPackage>
+                            <invokerPackage>com.alessio.exampleApiClient</invokerPackage>
                             <configOptions>
                                 <hideGenerationTimestamp>true</hideGenerationTimestamp>
                                 <dateLibrary>legacy</dateLibrary>

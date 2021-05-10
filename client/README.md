@@ -26,9 +26,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-    <groupId>com.opentech</groupId>
+    <groupId>com.alessio</groupId>
     <artifactId>acsemv3ds-ProxyApi-Client</artifactId>
-    <version>1.28-SNAPSHOT</version>
+    <version>1.29-SNAPSHOT</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.opentech:acsemv3ds-ProxyApi-Client:1.28-SNAPSHOT"
+compile "com.alessio:acsemv3ds-ProxyApi-Client:1.29-SNAPSHOT"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/acsemv3ds-ProxyApi-Client-1.28-SNAPSHOT.jar
+* target/acsemv3ds-ProxyApi-Client-1.29-SNAPSHOT.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -58,26 +58,24 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import com.opentech.acsemv3dsProxyApiClient.*;
-import com.opentech.acsemv3dsProxyApiClient.auth.*;
-import com.opentech.acsemv3dsProxyApiClient.model.*;
-import com.opentech.acsemv3dsProxyApiClient.api.AuthenticatorControllerApi;
+import com.alessio.exampleApiClient.*;
+import com.alessio.exampleApiClient.auth.*;
+import com.alessio.exampleApiClient.model.*;
+import com.alessio.exampleApiClient.api.BasicErrorControllerApi;
 
 import java.io.File;
 import java.util.*;
 
-public class AuthenticatorControllerApiExample {
+public class BasicErrorControllerApiExample {
 
     public static void main(String[] args) {
         
-        AuthenticatorControllerApi apiInstance = new AuthenticatorControllerApi();
-        EvaluateAuthenticationWebRequest evaluateAuthenticationWebRequest = new EvaluateAuthenticationWebRequest(); // EvaluateAuthenticationWebRequest | evaluateAuthenticationWebRequest
-        String issuerCode = "issuerCode_example"; // String | issuer-code
+        BasicErrorControllerApi apiInstance = new BasicErrorControllerApi();
         try {
-            EvaluateAuthenticationWebResponse result = apiInstance.evaluateAuthenticationUsingPOST(evaluateAuthenticationWebRequest, issuerCode);
+            ModelAndView result = apiInstance.errorHtmlUsingDELETE();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AuthenticatorControllerApi#evaluateAuthenticationUsingPOST");
+            System.err.println("Exception when calling BasicErrorControllerApi#errorHtmlUsingDELETE");
             e.printStackTrace();
         }
     }
@@ -87,72 +85,24 @@ public class AuthenticatorControllerApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://localhost:8080/acsemv3dsproxy*
+All URIs are relative to *https://localhost:8080/appRoot*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuthenticatorControllerApi* | [**evaluateAuthenticationUsingPOST**](docs/AuthenticatorControllerApi.md#evaluateAuthenticationUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateAuthentication | evaluateAuthentication
-*AuthenticatorControllerApi* | [**evaluateChallengeStepUsingPOST**](docs/AuthenticatorControllerApi.md#evaluateChallengeStepUsingPOST) | **POST** /3ds/auth/{issuer-code}/evaluateChallengeStep | evaluateChallengeStep
-*AuthenticatorControllerApi* | [**initChallengeUsingPOST**](docs/AuthenticatorControllerApi.md#initChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/initChallenge | initChallenge
-*AuthenticatorControllerApi* | [**performDecoupledAuthenticationUsingPOST**](docs/AuthenticatorControllerApi.md#performDecoupledAuthenticationUsingPOST) | **POST** /3ds/auth/{issuer-code}/performDecoupledAuthentication | performDecoupledAuthentication
-*AuthenticatorControllerApi* | [**prepareAuthenticationCompletionUsingPOST**](docs/AuthenticatorControllerApi.md#prepareAuthenticationCompletionUsingPOST) | **POST** /3ds/auth/{issuer-code}/prepareAuthenticationCompletion | prepareAuthenticationCompletion
-*AuthenticatorControllerApi* | [**resendChallengeUsingPOST**](docs/AuthenticatorControllerApi.md#resendChallengeUsingPOST) | **POST** /3ds/auth/{issuer-code}/resendChallenge | resendChallenge
-*CardTokenizerControllerApi* | [**detokenizeUsingPOST**](docs/CardTokenizerControllerApi.md#detokenizeUsingPOST) | **POST** /3ds/{issuer-code}/detokenize | detokenize
-*CardTokenizerControllerApi* | [**tokenizeUsingPOST**](docs/CardTokenizerControllerApi.md#tokenizeUsingPOST) | **POST** /3ds/{issuer-code}/tokenize | tokenize
-*ChallengeManagerControllerApi* | [**detectTransactionLanguageUsingPOST**](docs/ChallengeManagerControllerApi.md#detectTransactionLanguageUsingPOST) | **POST** /3ds/challenge/{issuer-code}/detectTransactionLanguage | detectTransactionLanguage
-*ChallengeManagerControllerApi* | [**evaluateChallengeStepUsingPOST1**](docs/ChallengeManagerControllerApi.md#evaluateChallengeStepUsingPOST1) | **POST** /3ds/challenge/{issuer-code}/evaluateChallengeStep | evaluateChallengeStep
-*ChallengeManagerControllerApi* | [**initChallengeUsingPOST1**](docs/ChallengeManagerControllerApi.md#initChallengeUsingPOST1) | **POST** /3ds/challenge/{issuer-code}/initChallenge | initChallenge
-*ChallengeManagerControllerApi* | [**isChallengeSupportedUsingPOST**](docs/ChallengeManagerControllerApi.md#isChallengeSupportedUsingPOST) | **POST** /3ds/challenge/{issuer-code}/isChallengeSupported | isChallengeSupported
+*BasicErrorControllerApi* | [**errorHtmlUsingDELETE**](docs/BasicErrorControllerApi.md#errorHtmlUsingDELETE) | **DELETE** /error | errorHtml
+*BasicErrorControllerApi* | [**errorHtmlUsingGET**](docs/BasicErrorControllerApi.md#errorHtmlUsingGET) | **GET** /error | errorHtml
+*BasicErrorControllerApi* | [**errorHtmlUsingHEAD**](docs/BasicErrorControllerApi.md#errorHtmlUsingHEAD) | **HEAD** /error | errorHtml
+*BasicErrorControllerApi* | [**errorHtmlUsingOPTIONS**](docs/BasicErrorControllerApi.md#errorHtmlUsingOPTIONS) | **OPTIONS** /error | errorHtml
+*BasicErrorControllerApi* | [**errorHtmlUsingPATCH**](docs/BasicErrorControllerApi.md#errorHtmlUsingPATCH) | **PATCH** /error | errorHtml
+*BasicErrorControllerApi* | [**errorHtmlUsingPOST**](docs/BasicErrorControllerApi.md#errorHtmlUsingPOST) | **POST** /error | errorHtml
+*BasicErrorControllerApi* | [**errorHtmlUsingPUT**](docs/BasicErrorControllerApi.md#errorHtmlUsingPUT) | **PUT** /error | errorHtml
+*HelloControllerApi* | [**helloUsingGET**](docs/HelloControllerApi.md#helloUsingGET) | **GET** /hello | hello
 
 
 ## Documentation for Models
 
- - [AReq](docs/AReq.md)
- - [AppChallengeInfo](docs/AppChallengeInfo.md)
- - [BrowserChallengeInfo](docs/BrowserChallengeInfo.md)
- - [BrowserInfo](docs/BrowserInfo.md)
- - [CReq](docs/CReq.md)
- - [CResInfo](docs/CResInfo.md)
- - [DetectTransactionLanguageWebRequest](docs/DetectTransactionLanguageWebRequest.md)
- - [DetectTransactionLanguageWebResponse](docs/DetectTransactionLanguageWebResponse.md)
- - [DetokenizeWebRequest](docs/DetokenizeWebRequest.md)
- - [DetokenizeWebResponse](docs/DetokenizeWebResponse.md)
- - [EvaluateAuthenticationWebRequest](docs/EvaluateAuthenticationWebRequest.md)
- - [EvaluateAuthenticationWebResponse](docs/EvaluateAuthenticationWebResponse.md)
- - [EvaluateChallengeStepAuthenticatorWebRequest](docs/EvaluateChallengeStepAuthenticatorWebRequest.md)
- - [EvaluateChallengeStepAuthenticatorWebResponse](docs/EvaluateChallengeStepAuthenticatorWebResponse.md)
- - [EvaluateChallengeStepCMWebRequest](docs/EvaluateChallengeStepCMWebRequest.md)
- - [EvaluateChallengeStepCMWebResponse](docs/EvaluateChallengeStepCMWebResponse.md)
- - [ExpectedChallengeType](docs/ExpectedChallengeType.md)
- - [Extension](docs/Extension.md)
- - [InitChallengeAuthenticatorWebRequest](docs/InitChallengeAuthenticatorWebRequest.md)
- - [InitChallengeAuthenticatorWebResponse](docs/InitChallengeAuthenticatorWebResponse.md)
- - [InitChallengeCMWebRequest](docs/InitChallengeCMWebRequest.md)
- - [InitChallengeCMWebResponse](docs/InitChallengeCMWebResponse.md)
- - [IsChallengeSupportedWebRequest](docs/IsChallengeSupportedWebRequest.md)
- - [IsChallengeSupportedWebResponse](docs/IsChallengeSupportedWebResponse.md)
- - [Mapstringstring](docs/Mapstringstring.md)
- - [PerformDecoupledAuthWebRequest](docs/PerformDecoupledAuthWebRequest.md)
- - [PerformDecoupledAuthWebResponse](docs/PerformDecoupledAuthWebResponse.md)
- - [Phone](docs/Phone.md)
- - [PrepareAuthenticationCompletionWebRequest](docs/PrepareAuthenticationCompletionWebRequest.md)
- - [PrepareAuthenticationCompletionWebResponse](docs/PrepareAuthenticationCompletionWebResponse.md)
- - [RReqInfo](docs/RReqInfo.md)
- - [ResendChallengeWebRequest](docs/ResendChallengeWebRequest.md)
- - [ResendChallengeWebResponse](docs/ResendChallengeWebResponse.md)
- - [SdkEphemPubKey](docs/SdkEphemPubKey.md)
- - [ThreeDSAcsRenderingType](docs/ThreeDSAcsRenderingType.md)
- - [ThreeDSCardholderAccountInfo](docs/ThreeDSCardholderAccountInfo.md)
- - [ThreeDSImage](docs/ThreeDSImage.md)
- - [ThreeDSMerchantRiskIndicator](docs/ThreeDSMerchantRiskIndicator.md)
- - [ThreeDSRequestorAuthInfo](docs/ThreeDSRequestorAuthInfo.md)
- - [ThreeDSRequestorPriorAuthInfo](docs/ThreeDSRequestorPriorAuthInfo.md)
- - [ThreeDSSdkRenderingOptions](docs/ThreeDSSdkRenderingOptions.md)
- - [ThreeRIInfo](docs/ThreeRIInfo.md)
- - [TokenizeWebRequest](docs/TokenizeWebRequest.md)
- - [TokenizeWebResponse](docs/TokenizeWebResponse.md)
- - [TransactionInfo](docs/TransactionInfo.md)
- - [TransactionOtherInfo](docs/TransactionOtherInfo.md)
+ - [ModelAndView](docs/ModelAndView.md)
+ - [View](docs/View.md)
 
 
 ## Documentation for Authorization
